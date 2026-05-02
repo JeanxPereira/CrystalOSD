@@ -1,0 +1,31 @@
+# Build artifacts
+*.o
+*.elf
+*.bin
+*.map
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local overrides
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Original binary (never commit)
+*.rom
+*.bios
+OSDSYS.elf
+baserom.*
+
+# Dependencies
+node_modules/
+
+# Generated
+__pycache__/
+*.pyc

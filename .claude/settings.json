@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Bash(make *)",
+      "Bash(python3 *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(diff *)",
+      "Bash(clang-format *)",
+      "mcp__ghidra-mcp__*"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(sudo *)",
+      "Bash(curl * | sh)",
+      "Bash(wget * | sh)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "command": "if echo \"$TOOL_INPUT\" | grep -qE '\\.(c|h)$'; then echo '[hook] C file modified — remember to verify against Ghidra'; fi"
+      }
+    ],
+    "SessionStart": [
+      {
+        "command": "echo '=== CrystalOSD Session ===' && echo \"Files in src/: $(find src/ -name '*.c' 2>/dev/null | wc -l | tr -d ' ') source files\" && echo \"Files in asm/: $(find asm/ -name '*.s' 2>/dev/null | wc -l | tr -d ' ') asm files\" && echo '========================'"
+      }
+    ]
+  }
+}
