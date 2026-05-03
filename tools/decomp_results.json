@@ -1,0 +1,171 @@
+{
+  "graph_reset_related1": {
+    "best_score": 0,
+    "max_score": 2800,
+    "match_pct": 100.0,
+    "best_slug": "oMHm2",
+    "url": "https://decomp.me/scratch/oMHm2",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 2,
+    "last_updated": "2026-05-03T03:17:17"
+  },
+  "draw_menu_item": {
+    "best_score": 0,
+    "max_score": 4000,
+    "match_pct": 100.0,
+    "best_slug": "JBvDb",
+    "url": "https://decomp.me/scratch/JBvDb",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 4,
+    "last_updated": "2026-05-03T03:17:56"
+  },
+  "do_read_cdvd_config_entry": {
+    "best_score": 0,
+    "max_score": 3700,
+    "match_pct": 100.0,
+    "best_slug": "wNh08",
+    "url": "https://decomp.me/scratch/wNh08",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-02T22:00:00"
+  },
+  "graph_swap_frame_thread_proc": {
+    "best_score": 10,
+    "max_score": 1400,
+    "match_pct": 99.3,
+    "best_slug": "p0ITM",
+    "url": "https://decomp.me/scratch/p0ITM",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 4,
+    "last_updated": "2026-05-03T03:18:30"
+  },
+  "config_get_spdif_mode": {
+    "best_score": 10,
+    "max_score": 400,
+    "match_pct": 97.5,
+    "best_slug": "GQoSe",
+    "url": "https://decomp.me/scratch/GQoSe",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:06:42"
+  },
+  "config_set_spdif_mode": {
+    "best_score": 15,
+    "max_score": 900,
+    "match_pct": 98.3,
+    "best_slug": "nqAmC",
+    "url": "https://decomp.me/scratch/nqAmC",
+    "asm_file": "asm/config/config.s",
+    "attempts": 3,
+    "last_updated": "2026-05-03T03:08:32"
+  },
+  "config_get_video_output": {
+    "best_score": 10,
+    "max_score": 500,
+    "match_pct": 98.0,
+    "best_slug": "oCxSs",
+    "url": "https://decomp.me/scratch/oCxSs",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:06:44"
+  },
+  "config_get_daylight_saving": {
+    "best_score": 10,
+    "max_score": 500,
+    "match_pct": 98.0,
+    "best_slug": "1qtRI",
+    "url": "https://decomp.me/scratch/1qtRI",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:06:46"
+  },
+  "config_get_time_format": {
+    "best_score": 10,
+    "max_score": 500,
+    "match_pct": 98.0,
+    "best_slug": "1ALs9",
+    "url": "https://decomp.me/scratch/1ALs9",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:06:48"
+  },
+  "config_get_timezone_offset": {
+    "best_score": 10,
+    "max_score": 500,
+    "match_pct": 98.0,
+    "best_slug": "P6S5u",
+    "url": "https://decomp.me/scratch/P6S5u",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:06:50"
+  },
+  "config_get_aspect_ratio": {
+    "best_score": 10,
+    "max_score": 700,
+    "match_pct": 98.6,
+    "best_slug": "elgzH",
+    "url": "https://decomp.me/scratch/elgzH",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:07:38"
+  },
+  "config_get_date_format": {
+    "best_score": 10,
+    "max_score": 600,
+    "match_pct": 98.3,
+    "best_slug": "lpYMr",
+    "url": "https://decomp.me/scratch/lpYMr",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:07:40"
+  },
+  "config_set_keyboard_type": {
+    "best_score": 10,
+    "max_score": 400,
+    "match_pct": 97.5,
+    "best_slug": "pvBAb",
+    "url": "https://decomp.me/scratch/pvBAb",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:07:42"
+  },
+  "config_get_keyboard_type": {
+    "best_score": 10,
+    "max_score": 300,
+    "match_pct": 96.7,
+    "best_slug": "vunzY",
+    "url": "https://decomp.me/scratch/vunzY",
+    "asm_file": "asm/config/config.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T03:07:44"
+  },
+  "graph_reset_related3": {
+    "best_score": 550,
+    "max_score": 4900,
+    "match_pct": 88.8,
+    "best_slug": "WKxVP",
+    "url": "https://decomp.me/scratch/WKxVP",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 7,
+    "last_updated": "2026-05-03T03:20:30"
+  },
+  "GetTexExponent": {
+    "best_score": 335,
+    "max_score": 1700,
+    "match_pct": 80.3,
+    "best_slug": "mpGrA",
+    "url": "https://decomp.me/scratch/mpGrA",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 25,
+    "last_updated": "2026-05-03T03:04:20"
+  },
+  "gsAllocExtraBuffers": {
+    "best_score": 858,
+    "max_score": 2400,
+    "match_pct": 64.2,
+    "best_slug": "2IRDJ",
+    "url": "https://decomp.me/scratch/2IRDJ",
+    "attempts": 1,
+    "last_updated": "2026-05-03T00:21:54.522278"
+  }
+}

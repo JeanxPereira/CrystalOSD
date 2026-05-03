@@ -1,75 +1,85 @@
 ---
 name: decomp-workflow
-description: Standard decomp workflow for reconstructing OSDSYS functions. Invoked when decompiling, analyzing, or reconstructing functions from the binary.
+description: Standard decomp workflow for reconstructing OSDSYS functions. Covers Ghidra analysis, decomp.me matching, and source code verification.
 ---
 
 # CrystalOSD Decomp Workflow
+
+## Compiler & Flags
+- **Compiler**: `ee-gcc2.9-991111` (Sony EE GCC for R5900)
+- **Flags**: `-O2 -G0`
+- **Platform**: `ps2`
+- **Confirmed** via `do_read_cdvd_config_entry` and `graph_reset_related1` perfect matches on decomp.me
 
 ## Step-by-Step Process
 
 ### 1. Identify Target
 - Use `ghidra-mcp` to find the function (by name or address)
-- Check if the function is already named or still `FUN_XXXXXXXX`
+- Check asm files in `asm/<subsystem>/` for extracted assembly
 - Get function metrics (complexity, basic blocks, call count)
 
-### 2. Decompile & Analyze
-- Use `mcp_ghidra-mcp_decompile_function` to get pseudocode
-- Use `mcp_ghidra-mcp_disassemble_function` for assembly when decompiler output is unclear
-- Identify patterns:
-  - State machines (switch on state variable)
-  - GS packet building (writes to 128-bit aligned buffers)
-  - IOP RPC calls (sceSdRemote, sceCd*, sceMc*)
-  - Kernel syscalls (syscall instruction)
+### 2. Extract ASM
+```bash
+python3 tools/decomp_match.py extract <func_name> asm/<subsystem>/<file>.s
+```
+This extracts the function between `glabel`/`endlabel` markers and formats for decomp.me.
 
-### 3. Cross-Reference with PS2SDK
-- Search PS2SDK source at `/Users/jeanxpereira/CodingProjects/ps2sdk/`
-- Key locations:
-  - `common/include/gs_gp.h` → GS register macros
-  - `ee/rpc/cdvd/` → CDVD APIs
-  - `ee/packet/` → GIF packet building
-  - `ee/graph/` → Graphics utilities
-  - `ee/kernel/` → EE kernel/syscall wrappers
+### 3. Write C Reconstruction
+Place in `src/<subsystem>/` directory. Follow these rules:
 
-### 4. Cross-Reference with PCSX2
-- Search PCSX2 source at `/Users/jeanxpereira/CodingProjects/pcsx2/`
-- Key locations:
-  - `pcsx2/GS/GSRegs.h` → GS register bitfield structs
-  - `pcsx2/GS/GSState.cpp` → GS state machine emulation
-  - `pcsx2/Vif.h` → VIF register structs
-  - `pcsx2/SPU2/` → Sound emulation
-  - `pcsx2/CDVD/` → CDVD emulation
-  - `pcsx2/R5900.cpp` → CPU/syscall emulation
+**Compiler quirks (CRITICAL for matching):**
+- `(s32)var & -N` → forces single `addiu` instruction for mask (not `lui+ori`)
+- `int one = 1;` then `one << exp` → forces constant into separate register for `sllv`
+- `bnel` (branch not equal likely) is used for loop back-edges by this GCC version
+- Goto structures often match better than structured `for`/`while` loops
+- Declaration order may affect register allocation (but not always)
+- `u32` vs `int` controls `sltiu` vs `slti` — match the target instruction
 
-### 5. Write Reconstruction
-```c
-/* 0x001F72D8 — InitDraw
- * Initializes the GS drawing environment.
- * Clears the draw counter and calls the internal GS setup.
- */
-void InitDraw(void)
+**Global variables accessed via `%hi`/`%lo` (config getters/setters):**
+- These produce `lui+lw`/`lui+sw` — score 10-15 off on decomp.me is symbol-only diff (perfect match locally)
+
+**GP-relative accesses (`%gp_rel`):**
+- Cannot match on decomp.me (no GP context) — requires local toolchain
+
+### 4. Submit to decomp.me
+```bash
+# Single function from file
+python3 tools/decomp_match.py submit <func_name> asm/<sub>/<file>.s src/<sub>/<file>.c
+
+# Inline (for quick iteration)
+python3 tools/decomp_match.py submit_inline <func_name> --asm "..." --source "..."
+
+# Batch from manifest
+python3 tools/decomp_match.py batch tools/graph_manifest.json
+```
+
+### 5. Interpret Scores
+| Score | Meaning |
+|-------|---------|
+| 0 | ✅ Perfect match |
+| 10-15 | 🟡 Symbol address diff only — matching with local toolchain |
+| < 100 | 🔶 Very close — instruction scheduling or condition order |
+| > 100 | 🔸 Structural difference — wrong loop/branch pattern |
+
+### 6. Track Results
+```bash
+python3 tools/decomp_match.py results
+```
+All results persist in `tools/decomp_results.json`.
+
+## Batch Manifest Format
+```json
 {
-    g_draw_count = 0;
-    gs_setup_environment();
+  "default_asm_file": "asm/graph/graph.s",
+  "default_flags": "-O2 -G0",
+  "functions": [
+    {
+      "name": "GetTexExponent",
+      "source": "int GetTexExponent(int d) { ... }"
+    }
+  ]
 }
 ```
-- **Always** include the Ghidra address as a comment
-- **Always** include a brief description of what the function does
-- Place in the correct `src/<subsystem>/` directory
-- Use PS2SDK types and APIs
-
-### 6. Build & Verify
-- `make` to compile
-- Test on PCSX2
-- Compare behavior with original OSDSYS
-
-## Quality Scoring
-| Score | Criteria |
-|-------|----------|
-| 100 | Perfect match — identical behavior to original |
-| 80-99 | Functionally correct, minor style differences |
-| 60-79 | Mostly correct, some uncertain branches |
-| 40-59 | Skeleton complete, logic needs verification |
-| 0-39 | Stub or placeholder only |
 
 ## Common MIPS/Ghidra Patterns
 - `$a0-$a3` = function arguments (param_1 through param_4)
@@ -77,5 +87,6 @@ void InitDraw(void)
 - `$s0-$s7` = callee-saved (local variables across calls)
 - `$t0-$t9` = caller-saved (temporaries)
 - `$ra` = return address
-- `uRamXXXXXXXX` = global variable at address
-- `DAT_XXXXXXXX` = global data at address
+- `daddu` = 64-bit add (used as `move` on R5900)
+- `mult` (3-operand) = R5900 3-register multiply
+- `mult1`/`mflo1`/`mfhi1` = R5900 second multiply pipeline

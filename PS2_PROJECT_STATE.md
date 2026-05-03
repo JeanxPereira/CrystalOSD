@@ -10,7 +10,7 @@
 | Named functions | ~500+ confirmed via ghidra-mcp |
 | Community symbols imported | ✅ Many imported via ImportOsdsysCsv.java |
 | Functions reconstructed | 73 (across 5 files) |
-| Functions matching | 0 (no build system yet) |
+| Functions matching (decomp.me) | 2 perfect + 28 symbol-only (30 total) |
 | Subsystems started | 4/9 (config, sound, core, graph) |
 
 ## Current Focus
@@ -52,9 +52,14 @@ Most named functions decompile cleanly — focus on those first.
 - [x] OSDSYS wiki knowledge base created
 - [x] CrystalClockVK analysis archived to reference/
 - [x] First 10 functions reconstructed across 4 subsystems
-- [ ] Build system (Makefile + PS2SDK)
+- [x] First matching function on decomp.me (`do_read_cdvd_config_entry` — 0/3700)
+- [x] Perfect match: `graph_reset_related1` (0/2800)
+- [x] Perfect match: `draw_menu_item` (0/4000)
+- [x] Compiler flags confirmed: `ee-gcc2.9-991111` + `-O2 -G0`
+- [x] Built unified `tools/decomp_match.py` for automated iteration
+- [ ] Build system (Makefile + PS2SDK toolchain install)
 - [ ] splat integration
-- [ ] First matching function (objdiff)
+- [ ] First matching function locally (objdiff)
 - [ ] Re-dump latest OSDSYS from BIOS (optional fresh start)
 
 ## Open Questions
@@ -63,13 +68,14 @@ Most named functions decompile cleanly — focus on those first.
 - Original ELF: `hddosd.elf` at `/Users/jeanxpereira/CodingProjects/OSDSYS-RE/hddosd.elf`
 
 ## Last Session
-- **Date**: 2026-05-02
-- **Focus**: Full `config_*` reconstruction (67 functions). Mechacon param 1/2 bitfield map fully documented and cross-referenced against `OSDConfigStore_t` in `reference/osdsys_launcher_ref.md`.
-- **Addresses analyzed**: 0x00203a20-0x002041e0 (mechacon get/set + peripheral wrappers), 0x002041f0-0x00204e70 (hdd_prepare/write_keys, mechacon_prepare, rc/dvdp), 0x00204ea0-0x00206be0 (INI open/close/parse/write), 0x00208170, 0x0020c8e0, 0x00234f88-0x002352d0 (clock UI load/save)
-- **Functions reconstructed**: 73 total (67 new in osd_config.c)
-- **Key discoveries**:
-  - `var_mechacon_config_param_1` @ 0x00371818 is u32 packed view of EEPROM 0x0F-0x14
-  - `var_mechacon_config_param_2` @ 0x0037181c holds date_format/rc/dvdp bits
-  - Bit layout in u32 is repacked vs EEPROM byte stream — fields match Launcher ref `OSDConfigStore_t`
-  - HDD .ini stores keyboard/mouse/atok/softkb (not Mechacon EEPROM) with originals snapshot for diff-based writes
-  - Address shift: old osd_config.c used 0x001f4xxx (different binary version) — current Ghidra import uses 0x00203xxx
+- **Date**: 2026-05-03
+- **Focus**: Unified decomp.me tooling and graph subsystem matching
+- **Key results**:
+  - Perfect matches (0 pts): `do_read_cdvd_config_entry`, `graph_reset_related1`, `draw_menu_item`
+  - Symbol-only diffs (10-15 pts): `graph_swap_frame_thread_proc`, plus 28 config getters/setters
+  - `graph_reset_related3`: 550/4900 (88.8%) — tail call optimization diff (`j` vs `jal; jr ra`)
+  - `GetTexExponent`: 335/1700 (80.3%)
+- **Tooling**:
+  - Created `tools/decomp_match.py` to automate extraction, submission, inline testing, and batch runs
+  - Cleaned up scattered Python scripts
+  - Updated `.claude/skills/decomp-workflow/SKILL.md` with instructions and compiler quirks

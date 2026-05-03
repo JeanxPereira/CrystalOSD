@@ -6,6 +6,8 @@ Built by analyzing the binary in [Ghidra](https://ghidra-sre.org/) and cross-ref
 
 ## Status
 
+![progress](https://decomp.dev/JeanxPereira/CrystalOSD/HDDOSD_110U.svg?mode=shield&label=progress)
+
 | Metric | Count |
 |--------|-------|
 | Total Functions | 2,008 |

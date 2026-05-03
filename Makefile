@@ -16,12 +16,12 @@ LD      := $(PREFIX)ld
 OBJCOPY := $(PREFIX)objcopy
 
 # ── Compiler Flags ─────────────────────────────────────
-# Match the original OSDSYS compilation flags as closely as possible
-# Sony's ee-gcc was typically GCC 2.95.x/3.x with -O2
-CFLAGS  := -O2 -G0 -mips3 -mgp32 -mabi=32 -Wall -D_EE
+# Match the original OSDSYS compilation flags
+# Confirmed via decomp.me: ee-gcc2.9-991111 + -O2 -G0
+CFLAGS  := -O2 -G0 -Wall -D_EE
 CFLAGS  += -fno-common -fno-exceptions
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
-ASFLAGS := -march=r5900 -mabi=32 -mgp32 -G0 -I include
+ASFLAGS := -march=r5900 -G0 -I include
 
 # ── Directories ────────────────────────────────────────
 ASM_DIR     := asm
