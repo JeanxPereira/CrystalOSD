@@ -14,27 +14,21 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt-get update
-          sudo apt-get install -y libc6:i386 libstdc++6:i386 make curl
+          sudo apt-get install -y binutils-mips-linux-gnu libc6:i386 libstdc++6:i386 make curl
 
-      - name: Download PS2DEV Toolchain (Modern)
+      - name: Download PS2SDK (Headers)
         run: |
           curl -sSL https://github.com/ps2dev/ps2dev/releases/latest/download/ps2dev-ubuntu-latest.tar.gz | tar -xz -C /tmp
-          echo "PS2DEV=/tmp/ps2dev" >> $GITHUB_ENV
           echo "PS2SDK=/tmp/ps2dev/ps2sdk" >> $GITHUB_ENV
-          echo "/tmp/ps2dev/bin:/tmp/ps2dev/ee/bin" >> $GITHUB_PATH
 
-      - name: Download ee-gcc 2.9 (Classic)
+      - name: Download ee-gcc 2.9 (Classic Compiler)
         run: |
           mkdir -p /tmp/compiler
-          curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.gz | tar -xz -C /tmp/compiler
-          
-      - name: Download wibo
-        run: |
-          curl -sL https://github.com/decompals/wibo/releases/latest/download/wibo -o /tmp/wibo
-          chmod +x /tmp/wibo
+          curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz | tar -xJ -C /tmp/compiler
+          echo "COMPILER_DIR=/tmp/compiler" >> $GITHUB_ENV
 
       - name: Build
-        run: make all CC="/tmp/wibo /tmp/compiler/bin/ee-gcc.exe"
+        run: make all PREFIX=mips-linux-gnu- CC=$COMPILER_DIR/bin/ee-gcc
 
       - name: Download objdiff-cli
         run: |
