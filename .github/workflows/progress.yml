@@ -11,7 +11,7 @@ jobs:
       image: ghcr.io/ps2dev/ps2dev:latest
     steps:
       - name: Install build tools
-        run: apk add --no-cache make curl
+        run: apk add --no-cache make curl mpc1 mpfr4 gmp
 
       - uses: actions/checkout@v4
 

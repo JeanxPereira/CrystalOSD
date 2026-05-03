@@ -31,6 +31,31 @@
       "name": "sound/spu2",
       "target_path": "build/target/sound/spu2.o",
       "base_path": "build/base/sound/spu2.o"
+    },
+    {
+      "name": "core/core",
+      "target_path": "build/target/core/core.o",
+      "base_path": null
+    },
+    {
+      "name": "graph/graph",
+      "target_path": "build/target/graph/graph.o",
+      "base_path": null
+    },
+    {
+      "name": "browser/browser",
+      "target_path": "build/target/browser/browser.o",
+      "base_path": null
+    },
+    {
+      "name": "sound/sound",
+      "target_path": "build/target/sound/sound.o",
+      "base_path": null
+    },
+    {
+      "name": "clock/clock",
+      "target_path": "build/target/clock/clock.o",
+      "base_path": null
     }
   ]
 }
