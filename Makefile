@@ -19,7 +19,7 @@ OBJCOPY := $(PREFIX)objcopy
 # Match the original OSDSYS compilation flags
 # Confirmed via decomp.me: ee-gcc2.9-991111 + -O2 -G0
 CFLAGS  := -O2 -G0 -Wall -D_EE
-CFLAGS  += -march=r5900 -mabi=eabi
+CFLAGS  += -march=r5900 -mabi=eabi -mno-abicalls
 CFLAGS  += -fno-common -fno-exceptions
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
 ASFLAGS := -march=r5900 -mabi=eabi -G0 -I include
