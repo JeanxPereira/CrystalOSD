@@ -7,22 +7,33 @@ on:
 jobs:
   report:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/ps2dev/ps2dev:latest
     steps:
-      - name: Install build tools
-        run: apk add --no-cache make curl ca-certificates mpc1 mpfr4 gmp
-
       - uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt-get update
+          sudo apt-get install -y libc6:i386 libstdc++6:i386 make curl
+
+      - name: Download PS2DEV Toolchain (Modern)
+        run: |
+          curl -sSL https://github.com/ps2dev/ps2dev/releases/latest/download/ps2dev-ubuntu-latest-x86_64.tar.gz | tar -xz -C /tmp
+          echo "PS2DEV=/tmp/ps2dev" >> $GITHUB_ENV
+          echo "PS2SDK=/tmp/ps2dev/ps2sdk" >> $GITHUB_ENV
+          echo "/tmp/ps2dev/bin:/tmp/ps2dev/ee/bin" >> $GITHUB_PATH
+
+      - name: Download ee-gcc 2.9 (Classic)
+        run: |
+          curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.gz | tar -xz -C /tmp
+          echo "COMPILER_DIR=/tmp/ee-gcc2.9-991111" >> $GITHUB_ENV
+
       - name: Build
-        run: make all
+        run: make all CC=$COMPILER_DIR/bin/ee-gcc
 
       - name: Download objdiff-cli
         run: |
-          curl -sSL \
-            https://github.com/encounter/objdiff/releases/download/v3.6.1/objdiff-cli-linux-x86_64 \
-            -o objdiff-cli
+          curl -sSL https://github.com/encounter/objdiff/releases/download/v3.6.1/objdiff-cli-linux-x86_64 -o objdiff-cli
           chmod +x objdiff-cli
 
       - name: Generate progress report
