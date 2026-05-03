@@ -39,6 +39,7 @@
 
 #include <tamtypes.h>
 #include <string.h>
+#include <stdint.h>
 
 /* ---------------------------------------------------------------- */
 /*  Globals — addresses match hddosd.elf v1.10U                     */
@@ -152,7 +153,7 @@ extern const char aTmp[]; /* ".tmp" */
 /* 0x00371878 */ extern u8 g_mechacon_raw_buf[];
 
 /* External helpers (PS2SDK / other OSDSYS subsystems — kept extern) */
-extern long do_read_cdvd_config_entry(void *buf);
+extern void do_read_cdvd_config_entry(void *buf);
 extern long get_vidmode_with_fallback(void);
 extern long get_timezone_info_struct(void);
 extern long callback_queue_submit(u32 cb, u32 arg);
@@ -204,10 +205,12 @@ extern s32 iRam001f0d1c;
 extern u32 uRam001f0d20, uRam001f0d24, uRam001f0d28, uRam001f0d2c, uRam001f0d30;
 
 /* Forward decls */
+u32 config_mechacon_prepare(void *out_bytes, void *out_packed);
+void config_hdd_prepare(void);
 u32 config_get_osd_language(void);
-u32 config_get_timezone_offset(void);
+s32 config_get_timezone_offset(void);
 u32 config_get_daylight_saving(void);
-long config_hdd_open_read_ini(const char *path);
+u32 config_hdd_open_read_ini(const char *path);
 long config_hdd_close_ini(void);
 long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long opt);
 long config_hdd_write_single_key(const char *sec, const char *key, u32 val, int base);
