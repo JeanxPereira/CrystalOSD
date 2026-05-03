@@ -29,3 +29,7 @@ node_modules/
 # Generated
 __pycache__/
 *.pyc
+
+# Reference repos (cloned externally, not our code)
+reference/osdsys_re/
+reference/ps2-recomp-Agent-SKILL/

@@ -1,0 +1,20 @@
+{
+    "mcpServers": {
+        "ghidra-mcp": {
+            "command": "/usr/local/bin/python3",
+            "args": [
+                "/Users/jeanxpereira/Documents/bridge_mcp_ghidra.py"
+            ]
+        },
+        "context-mode": {
+            "command": "context-mode"
+        },
+        "decomp-me-mcp": {
+            "command": "/Users/jeanxpereira/CodingProjects/decomp-me-mcp/.venv/bin/python",
+            "args": [
+                "-m",
+                "decomp_mcp.server"
+            ]
+        }
+    }
+}

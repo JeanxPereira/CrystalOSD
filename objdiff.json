@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/encounter/objdiff/main/config.schema.json",
+  "custom_make": "make",
+  "custom_args": ["-j4"],
+  "build_target": true,
+  "build_base": true,
+  "watch_patterns": ["*.c", "*.h", "*.s", "*.S", "Makefile"],
+  "ignore_patterns": ["reference/**/*", ".git/**/*"],
+  "units": [
+    {
+      "name": "config/osd_config",
+      "target_path": "build/target/config/osd_config.o",
+      "base_path": "build/base/config/osd_config.o"
+    },
+    {
+      "name": "core/romdir",
+      "target_path": "build/target/core/romdir.o",
+      "base_path": "build/base/core/romdir.o"
+    },
+    {
+      "name": "core/expand",
+      "target_path": "build/target/core/expand.o",
+      "base_path": "build/base/core/expand.o"
+    },
+    {
+      "name": "graph/gs_util",
+      "target_path": "build/target/graph/gs_util.o",
+      "base_path": "build/base/graph/gs_util.o"
+    },
+    {
+      "name": "sound/spu2",
+      "target_path": "build/target/sound/spu2.o",
+      "base_path": "build/base/sound/spu2.o"
+    }
+  ]
+}
