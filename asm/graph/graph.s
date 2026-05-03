@@ -176,12 +176,12 @@ glabel gsAllocExtraBuffers
     /* 1C1D0 0021B1D0 B80CC38C */  lw         $v1, (0x1F0CB8 & 0xFFFF)($a2)
     /* 1C1D4 0021B1D4 EA70080C */  jal        gsAllocBuffer
     /* 1C1D8 0021B1D8 0C00A3AF */   sw        $v1, 0xC($sp)
-    /* 1C1DC 0021B1DC 2B00103C */  lui        $s0, %hi(D_002B0C40)
+    /* 1C1DC 0021B1DC 2B00103C */  lui        $s0, %hi(gsExtraBuffers)
     /* 1C1E0 0021B1E0 2D200000 */  daddu      $a0, $zero, $zero
-    /* 1C1E4 0021B1E4 400C02FE */  sd         $v0, %lo(D_002B0C40)($s0)
+    /* 1C1E4 0021B1E4 400C02FE */  sd         $v0, %lo(gsExtraBuffers)($s0)
     /* 1C1E8 0021B1E8 2D28A003 */  daddu      $a1, $sp, $zero
     /* 1C1EC 0021B1EC EA70080C */  jal        gsAllocBuffer
-    /* 1C1F0 0021B1F0 400C1026 */   addiu     $s0, $s0, %lo(D_002B0C40)
+    /* 1C1F0 0021B1F0 400C1026 */   addiu     $s0, $s0, %lo(gsExtraBuffers)
     /* 1C1F4 0021B1F4 080002FE */  sd         $v0, 0x8($s0)
     /* 1C1F8 0021B1F8 2000BFDF */  ld         $ra, 0x20($sp)
     /* 1C1FC 0021B1FC 1000B0DF */  ld         $s0, 0x10($sp)

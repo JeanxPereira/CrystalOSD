@@ -2143,12 +2143,12 @@ glabel module_opening_225728
     /* 26728 00225728 D0FFBD27 */  addiu      $sp, $sp, -0x30
     /* 2672C 0022572C 1F00093C */  lui        $t1, (0x1F0CB4 >> 16)
     /* 26730 00225730 2000BFFF */  sd         $ra, 0x20($sp)
-    /* 26734 00225734 2B00023C */  lui        $v0, %hi(D_002B0C40)
+    /* 26734 00225734 2B00023C */  lui        $v0, %hi(gsExtraBuffers)
     /* 26738 00225738 1000A0AF */  sw         $zero, 0x10($sp)
     /* 2673C 0022573C 3600063C */  lui        $a2, %hi(D_003654E8)
     /* 26740 00225740 1400A0AF */  sw         $zero, 0x14($sp)
     /* 26744 00225744 2D280000 */  daddu      $a1, $zero, $zero
-    /* 26748 00225748 400C44DC */  ld         $a0, %lo(D_002B0C40)($v0)
+    /* 26748 00225748 400C44DC */  ld         $a0, %lo(gsExtraBuffers)($v0)
     /* 2674C 0022574C 01000824 */  addiu      $t0, $zero, 0x1
     /* 26750 00225750 B40C238D */  lw         $v1, (0x1F0CB4 & 0xFFFF)($t1)
     /* 26754 00225754 1800A3AF */  sw         $v1, 0x18($sp)

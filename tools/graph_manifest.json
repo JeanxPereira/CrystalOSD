@@ -1,30 +1,50 @@
 {
   "default_asm_file": "asm/graph/graph.s",
   "default_flags": "-O2 -G0",
-  "default_context": "typedef unsigned char u8;\ntypedef unsigned short u16;\ntypedef unsigned int u32;\ntypedef signed char s8;\ntypedef signed short s16;\ntypedef signed int s32;\ntypedef unsigned long u64;\ntypedef signed long s64;\n\nextern void sceDevVif0Reset(void);\nextern void sceDevVu0Reset(void);\nextern void sceDevVif1Reset(void);\nextern void sceDevVu1Reset(void);\nextern void sceDevGifReset(void);\nextern void sceGsResetPath(void);\nextern void sceDmaReset(int);\nextern void *memset(void *, int, int);\nextern int psmToBppGS(u32);\nextern int config_get_video_output(void);\nextern void SetGsVParam(int);\nextern int is_pal_vmode_p9_tgt(void);\nextern void sceGsResetGraph(int, int, int, int);\nextern int WaitSema(int);\nextern int SignalSema(int);\nextern void SwapBuffers(void);\nextern int gsAllocBuffer(u32, int*);\n\ntypedef struct {\n    int field_00;\n    int field_04;\n    int field_08;\n    int field_0c;\n    int field_10;\n    int field_14;\n    int field_18;\n    int field_1c;\n    int field_20;\n    int field_24;\n    int field_28;\n    int field_2c;\n    int field_30;\n    int sema_swap;\n    int sema_done;\n} graph_thread_data_t;\n\nextern int D_002AD980;\nextern u64 D_002B0C40;\n",
+  "default_context": "typedef unsigned char u8;\ntypedef unsigned short u16;\ntypedef unsigned int u32;\ntypedef signed char s8;\ntypedef signed short s16;\ntypedef signed int s32;\ntypedef unsigned long u64;\ntypedef signed long s64;\n\nextern void sceDevVif0Reset(void);\nextern void sceDevVu0Reset(void);\nextern void sceDevVif1Reset(void);\nextern void sceDevVu1Reset(void);\nextern void sceDevGifReset(void);\nextern void sceGsResetPath(void);\nextern void sceDmaReset(int);\nextern void *memset(void *, int, int);\nextern int psmToBppGS(u32);\nextern int config_get_video_output(void);\nextern void SetGsVParam(int);\nextern int is_pal_vmode_p9_tgt(void);\nextern void sceGsResetGraph(int, int, int, int);\nextern int WaitSema(int);\nextern int SignalSema(int);\nextern void SwapBuffers(void);\nextern int gsAllocBuffer(u32, int*);\nextern int screenW;\nextern int screenH;\n\ntypedef struct {\n    char pad[0x34];\n    int sema_swap;\n    int sema_done;\n} graph_thread_data_t;\n\nextern graph_thread_data_t threadid_2AE5D8;\nextern int D_002AD980;\nextern u64 gsExtraBuffers[2];\n\nstatic int g_gs_vram_ptr;\nstatic u32 g_gs_current_psm;\n",
   "functions": [
+    {
+      "name": "graph_reset_related3",
+      "source": "void graph_reset_related3(void)\n{\n    int vid;\n    int pal;\n    int field;\n\n    vid = config_get_video_output();\n    if (vid == D_002AD980)\n        return;\n\n    vid = config_get_video_output();\n    D_002AD980 = vid;\n\n    if (vid == 0) {\n        SetGsVParam(0);\n        pal = is_pal_vmode_p9_tgt();\n        field = pal ? 3 : 2;\n        sceGsResetGraph(2, 1, field, 1);\n        return;\n    }\n    if (vid == 1) {\n        SetGsVParam(1);\n        pal = is_pal_vmode_p9_tgt();\n        field = pal ? 3 : 2;\n        sceGsResetGraph(2, 1, field, 1);\n        return;\n    }\n}"
+    },
     {
       "name": "graph_reset_related1",
       "source": "void graph_reset_related1(void)\n{\n    sceDevVif0Reset();\n    sceDevVu0Reset();\n    sceDevVif1Reset();\n    sceDevVu1Reset();\n    sceDevGifReset();\n    sceGsResetPath();\n    sceDmaReset(1);\n    memset((void *)0x11004000, 0, 0x1000);\n    memset((void *)0x1100C000, 0, 0x4000);\n}"
     },
     {
-      "name": "graph_reset_related3",
-      "source": "void graph_reset_related3(void)\n{\n    int vidout;\n\n    vidout = config_get_video_output();\n    if (vidout == D_002AD980)\n        return;\n\n    vidout = config_get_video_output();\n    D_002AD980 = vidout;\n\n    if (vidout == 0) {\n        SetGsVParam(0);\n        if (is_pal_vmode_p9_tgt())\n            sceGsResetGraph(2, 1, 3, 1);\n        else\n            sceGsResetGraph(2, 1, 2, 1);\n    } else if (vidout == 1) {\n        SetGsVParam(1);\n        if (is_pal_vmode_p9_tgt())\n            sceGsResetGraph(2, 1, 3, 1);\n        else\n            sceGsResetGraph(2, 1, 2, 1);\n    }\n}"
+      "name": "graph_swap_frame_thread_proc",
+      "source": "void graph_swap_frame_thread_proc(void)\n{\n    while (1) {\n        WaitSema(threadid_2AE5D8.sema_swap);\n        SwapBuffers();\n        SignalSema(threadid_2AE5D8.sema_done);\n    }\n}"
     },
     {
-      "name": "graph_swap_frame_thread_proc",
-      "source": "void graph_swap_frame_thread_proc(void *arg)\n{\n    graph_thread_data_t *data = (graph_thread_data_t *)arg;\n\n    while (1) {\n        WaitSema(data->sema_swap);\n        SwapBuffers();\n        SignalSema(data->sema_done);\n    }\n}",
-      "context": "typedef unsigned char u8;\ntypedef unsigned short u16;\ntypedef unsigned int u32;\ntypedef signed char s8;\ntypedef signed short s16;\ntypedef signed int s32;\n\nextern int WaitSema(int);\nextern int SignalSema(int);\nextern void SwapBuffers(void);\n\ntypedef struct {\n    int field_00;\n    int field_04;\n    int field_08;\n    int field_0c;\n    int field_10;\n    int field_14;\n    int field_18;\n    int field_1c;\n    int field_20;\n    int field_24;\n    int field_28;\n    int field_2c;\n    int field_30;\n    int sema_swap;\n    int sema_done;\n} graph_thread_data_t;\n"
+      "name": "GetTexExponent",
+      "source": "u32 GetTexExponent(int dimension)\n{\n    u32 exp;\n\n    if (dimension <= 1)\n        return 0;\n\n    exp = 1;\n    while (exp < 11 && (1 << exp) < dimension)\n        exp++;\n\n    if (exp >= 11)\n        return 0;\n    return exp;\n}"
+    },
+    {
+      "name": "gsAllocBuffer",
+      "source": "int gsAllocBuffer(u32 psm, int *params)\n{\n    int start_page = g_gs_vram_ptr;\n    int bpp;\n    int total_bytes;\n    int pages;\n\n    bpp = psmToBppGS(psm);\n    g_gs_current_psm = psm;\n\n    total_bytes = ((params[2] + 63) & ~63) * params[3] * bpp;\n    pages = (total_bytes + 31) / 32;\n    pages = (pages + 63) / 64;\n    g_gs_vram_ptr += pages;\n\n    return start_page;\n}"
+    },
+    {
+      "name": "gsInitAlloc",
+      "source": "void gsInitAlloc(void)\n{\n    int n;\n\n    g_gs_current_psm = (u32)-1;\n    n = screenW * screenH;\n    g_gs_vram_ptr = (n / 64) * 3;\n}"
     },
     {
       "name": "gsAllocExtraBuffers",
-      "source": "extern int gs_width_global;\nextern int gs_height_global;\n\ntypedef struct {\n    int field_00;\n    int field_04;\n    int width;\n    int height;\n} gs_buf_params_t;\n\nvoid gsAllocExtraBuffers(void)\n{\n    gs_buf_params_t params;\n    u64 result[2];\n\n    params.field_00 = 0;\n    params.field_04 = 0;\n    params.width = gs_width_global;\n    params.height = gs_height_global;\n\n    result[0] = gsAllocBuffer(0, (int *)&params);\n    result[1] = gsAllocBuffer(0, (int *)&params);\n}",
-      "context": "typedef unsigned char u8;\ntypedef unsigned short u16;\ntypedef unsigned int u32;\ntypedef signed char s8;\ntypedef signed short s16;\ntypedef signed int s32;\ntypedef unsigned long u64;\ntypedef signed long s64;\n\nextern int gsAllocBuffer(u32, int*);\nextern int gs_width_global;\nextern int gs_height_global;\n"
+      "source": "void gsAllocExtraBuffers(void)\n{\n    int params[4];\n\n    params[0] = 0;\n    params[1] = 0;\n    params[2] = screenW;\n    params[3] = screenH;\n    gsExtraBuffers[0] = gsAllocBuffer(0, params);\n    gsExtraBuffers[1] = gsAllocBuffer(0, params);\n}"
     },
     {
       "name": "draw_menu_item",
-      "source": "extern int func_00213EE8(void *str);\nextern void DrawNonSelectableItem(int x, int y, void *colors, int height, void *str);\n\nvoid draw_menu_item(int x, int y, int height, int max_width, void *str)\n{\n    if (max_width >= 16) {\n        int len = func_00213EE8(str);\n        int centered_x = x - ((unsigned int)len + ((unsigned int)len >> 31)) >> 1;\n        DrawNonSelectableItem(centered_x, y, (void *)height, max_width, str);\n    }\n}",
+      "source": "void draw_menu_item(int x, int y, void *height_ptr, int max_width, void *str)\n{\n    int len;\n\n    if (max_width < 16)\n        return;\n    len = func_00213EE8(str);\n    DrawNonSelectableItem(x - len / 2, y, height_ptr, max_width, str);\n}",
       "context": "typedef unsigned char u8;\ntypedef unsigned short u16;\ntypedef unsigned int u32;\ntypedef signed char s8;\ntypedef signed short s16;\ntypedef signed int s32;\n\nextern int func_00213EE8(void *str);\nextern void DrawNonSelectableItem(int x, int y, void *colors, int height, void *str);\n"
+    },
+    {
+      "name": "GsGetIMR",
+      "source": "int GsGetIMR(void)\n{\n    __asm__ volatile(\"addiu $v1, $zero, 0x70\\nsyscall\");\n}",
+      "context": ""
+    },
+    {
+      "name": "GsPutIMR",
+      "source": "void GsPutIMR(int imr)\n{\n    (void)imr;\n    __asm__ volatile(\"addiu $v1, $zero, 0x71\\nsyscall\");\n}",
+      "context": ""
     }
   ]
 }

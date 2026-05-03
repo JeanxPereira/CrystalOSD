@@ -169,7 +169,7 @@ extern long FUN_002050a8(void);
 extern void FUN_00206578(long);
 extern long FUN_00203490(void *dst, void *src);
 extern void FUN_00203850(void *dst, void *src);
-extern long FUN_00206080(void);
+extern long FUN_00206080(const char *);
 extern long FUN_002062a8(const void *key);
 extern long FUN_00205720(void);
 extern long FUN_00205ba8(long c);
@@ -818,8 +818,10 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
     u32  mask;
     long after;
 
-    if (FUN_00206080() < 0) return 0;
-    if (FUN_002062a8(key) < 0) return 0;
+    int rv;
+
+    if ((rv = FUN_00206080(sec)) < 0) return rv;
+    if ((rv = FUN_002062a8(key)) < 0) return rv;
 
     acc = 0;
     c = FUN_00205720();
@@ -884,8 +886,8 @@ long config_hdd_write_single_key(const char *sec, const char *key, u32 val, int 
     u8  *p = buf;
     int remain;
 
-    if (FUN_002057c0() < 0) return 0;
-    if (FUN_002059c0(sec, key) < 0) { FUN_00205808(); return 0; }
+    if ((rv = FUN_002057c0(sec)) < 0) return rv;
+    if ((rv = FUN_002059c0(sec, key)) < 0) { FUN_00205808(); return rv; }
 
     rv = FUN_002076f0(val, buf, base);
     remain = (int)rv - 1;
@@ -932,7 +934,7 @@ long config_check_timezone_city(u32 city)
 {
     int i;
     for (i = 0; i < g_timezone_city_count; i++) {
-        if ((u8)city == g_timezone_city_table[i * 0x18]) {
+        if ((u8)city == g_timezone_city_table[i * 0x18 + 2]) {
             return i;
         }
     }
@@ -1024,36 +1026,32 @@ void config_load_clock_osd(void)
  * sync flushes them to the real RTC. */
 void config_item_change_cb_clock_write_mechacon(void)
 {
-    int year  = g_clock_year;
-    u32 month = (u32)g_clock_month;
-    u32 day   = (u32)g_clock_day;
-    u32 hour  = (u32)g_clock_hour;
-    u32 min   = (u32)g_clock_min;
-    u32 sec[3];
-    sec[0] = (u32)g_clock_sec;
+    u32 time[6];
 
-    FUN_002148b8(&year,
-                 ((u32)(uintptr_t)&year) | 4,
-                 ((u32)(uintptr_t)&year) | 8,
-                 ((u32)(uintptr_t)&year) | 0xc,
-                 &min, sec);
+    time[0] = g_clock_year;
+    time[1] = g_clock_month;
+    time[2] = g_clock_day;
+    time[3] = g_clock_hour;
+    time[4] = g_clock_min;
+    time[5] = g_clock_sec;
 
-    uRam001f0d17 = FUN_00235138(year % 100);
-    bRam001f0d16 = FUN_00235138((int)month);
-    bRam001f0d16 |= 0x80;                      /* month "valid" marker bit */
-    bRam001f0d15 = FUN_00235138((int)day);
-    bRam001f0d13 = FUN_00235138((int)hour);
-    uRam001f0d12 = FUN_00235138((int)min);
-    uRam001f0d11 = FUN_00235138((int)sec[0]);
+    FUN_002148b8(&time[0], &time[1], &time[2], &time[3], &time[4], &time[5]);
+
+    uRam001f0d17 = FUN_00235138((int)time[0] % 100);
+    bRam001f0d16 = FUN_00235138(time[1]) | 0x80;
+    bRam001f0d15 = FUN_00235138(time[2]);
+    bRam001f0d13 = FUN_00235138(time[3]);
+    uRam001f0d12 = FUN_00235138(time[4]);
+    uRam001f0d11 = FUN_00235138(time[5]);
     var_clock_is_dirty = 1;
 
     /* Snapshot raw values for later diffing/writeback */
-    iRam001f0d1c = year;
-    uRam001f0d20 = month;
-    uRam001f0d24 = day;
-    uRam001f0d28 = hour;
-    uRam001f0d2c = min;
-    uRam001f0d30 = sec[0];
+    iRam001f0d1c = time[0];
+    uRam001f0d20 = time[1];
+    uRam001f0d24 = time[2];
+    uRam001f0d28 = time[3];
+    uRam001f0d2c = time[4];
+    uRam001f0d30 = time[5];
 }
 
 /* 0x002352d0 — config_save_clock_osd
