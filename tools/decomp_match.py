@@ -88,9 +88,9 @@ def extract_function_asm(asm_file, func_name):
             break
         if in_func:
             # Strip line comments with address info, keep instruction
-            m = re.match(r'\s*/\*.*\*/\s*(.*)', stripped)
+            m = re.match(r'\s*/\*.*?\*/\s*(.*)', stripped)
             if m:
-                instr = m.group(1).strip()
+                instr = m.group(1).split('/*')[0].strip()
                 if instr:
                     asm_lines.append(f"    {instr}")
             elif stripped.startswith(".L"):

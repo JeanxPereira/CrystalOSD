@@ -167,5 +167,25 @@
     "url": "https://decomp.me/scratch/2IRDJ",
     "attempts": 1,
     "last_updated": "2026-05-03T00:21:54.522278"
+  },
+  "GsGetIMR": {
+    "best_score": 100,
+    "max_score": 300,
+    "match_pct": 66.7,
+    "best_slug": "SJXZP",
+    "url": "https://decomp.me/scratch/SJXZP",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T16:35:16.830348"
+  },
+  "GsPutIMR": {
+    "best_score": 0,
+    "max_score": 400,
+    "match_pct": 100.0,
+    "best_slug": "VMOsj",
+    "url": "https://decomp.me/scratch/VMOsj",
+    "asm_file": "asm/graph/graph.s",
+    "attempts": 1,
+    "last_updated": "2026-05-03T16:40:25.582166"
   }
 }

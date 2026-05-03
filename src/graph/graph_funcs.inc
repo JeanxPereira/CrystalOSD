@@ -35,34 +35,33 @@ extern graph_thread_data_t threadid_2AE5D8;
 extern int D_002AD980;
 extern u64 gsExtraBuffers[2];
 
-/* 0x0020BE38 - graph_reset_related3 */
 void graph_reset_related3(void)
 {
     int vid;
     int pal;
-    int field;
 
     vid = config_get_video_output();
-    if (vid == D_002AD980)
+    if (D_002AD980 == vid)
         return;
 
     vid = config_get_video_output();
     D_002AD980 = vid;
 
-    if (vid == 0) {
-        SetGsVParam(0);
-        pal = is_pal_vmode_p9_tgt();
-        field = pal ? 3 : 2;
-        sceGsResetGraph(2, 1, field, 1);
-        return;
-    }
-    if (vid == 1) {
-        SetGsVParam(1);
-        pal = is_pal_vmode_p9_tgt();
-        field = pal ? 3 : 2;
-        sceGsResetGraph(2, 1, field, 1);
-        return;
-    }
+    if (vid == 0)
+        goto case_0;
+    if (vid == 1)
+        goto case_1;
+    return;
+
+case_0:
+    SetGsVParam(0);
+    pal = is_pal_vmode_p9_tgt();
+    return sceGsResetGraph(2, 1, pal ? 3 : 2, 1);
+
+case_1:
+    SetGsVParam(1);
+    pal = is_pal_vmode_p9_tgt();
+    return sceGsResetGraph(2, 1, pal ? 3 : 2, 1);
 }
 
 /* 0x0020CBE0 - graph_reset_related1 */
@@ -124,13 +123,11 @@ void draw_menu_item(int x, int y, void *height_ptr, int max_width, void *str)
 /* 0x002A4720 - GsGetIMR */
 int GsGetIMR(void)
 {
-    int ret;
-    __asm__ volatile("addiu $3, $0, 0x70\n\tsyscall\n\tmove %0, $2" : "=r"(ret));
-    return ret;
+    __asm__ volatile("addiu $3, $0, 0x70\n\tsyscall");
 }
 
 /* 0x002A4730 - GsPutIMR */
 void GsPutIMR(int imr)
 {
-    __asm__ volatile("move $4, %0\n\taddiu $3, $0, 0x71\n\tsyscall" : : "r"(imr));
+    __asm__ volatile("addiu $3, $0, 0x71\n\tsyscall");
 }
