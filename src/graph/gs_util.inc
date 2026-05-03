@@ -16,6 +16,7 @@
 
 #include <tamtypes.h>
 
+extern int psmToBppEE(int psm);
 /* GS VRAM allocation pointer (in 256-byte pages) */
 /* 0x gp-0x7874 */ static int g_gs_vram_ptr;
 

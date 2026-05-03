@@ -1,2 +1,2 @@
-#include "cdvd_config.inc.c"
-#include "osd_config.inc.c"
+#include "cdvd_config.inc"
+#include "osd_config.inc"

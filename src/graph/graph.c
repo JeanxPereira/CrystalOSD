@@ -1,2 +1,2 @@
-#include "gs_util.inc.c"
-#include "graph_funcs.inc.c"
+#include "gs_util.inc"
+#include "graph_funcs.inc"
