@@ -72,7 +72,7 @@ target: $(ASM_OBJS)
 
 $(TARGET_DIR)/%.o: $(ASM_DIR)/%.s | dirs
 	@mkdir -p $(dir $@)
-	$(AS) $(ASFLAGS) -o $@ $<
+	sed 's/\.set[ \t]*noat/.set at/g' $< | $(AS) $(ASFLAGS) -o $@ -
 
 # ── Base: compile our .c → .o ─────────────────────────
 base: $(C_OBJS)
