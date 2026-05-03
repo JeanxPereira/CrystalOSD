@@ -11,7 +11,7 @@ jobs:
       image: ghcr.io/ps2dev/ps2dev:latest
     steps:
       - name: Install build tools
-        run: apk add --no-cache make curl mpc1 mpfr4 gmp
+        run: apk add --no-cache make curl ca-certificates mpc1 mpfr4 gmp
 
       - uses: actions/checkout@v4
 
@@ -20,7 +20,8 @@ jobs:
 
       - name: Download objdiff-cli
         run: |
-          curl -sSL https://github.com/encounter/objdiff/releases/latest/download/objdiff-cli-x86_64-unknown-linux-musl \
+          curl -sSL \
+            https://github.com/encounter/objdiff/releases/download/v3.1.0/objdiff-cli-x86_64-unknown-linux-musl \
             -o objdiff-cli
           chmod +x objdiff-cli
 
