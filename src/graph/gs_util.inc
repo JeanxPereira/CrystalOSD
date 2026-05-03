@@ -11,18 +11,14 @@ static u32 g_gs_current_psm;
 u32 GetTexExponent(int dimension)
 {
     u32 result = 0;
+    int exp = 0;
 
-    if (1 < dimension) {
-        int one = 1;
-        int exp = 1;
-loop:
-        if (exp < 11) {
-            if ((one << exp) < dimension) {
-                exp++;
-                goto loop;
-            }
+    while (exp < 11) {
+        if (!((1 << exp) < dimension)) {
             result = exp;
+            break;
         }
+        exp++;
     }
 
     return result;
@@ -40,8 +36,7 @@ int gsAllocBuffer(u32 psm, int *params)
     g_gs_current_psm = psm;
 
     total_bytes = ((params[2] + 63) & ~63) * params[3] * bpp;
-    pages = (total_bytes + 31) / 32;
-    pages = (pages + 63) / 64;
+    pages = ((total_bytes + 31) / 32 + 63) / 64;
     g_gs_vram_ptr += pages;
 
     return start_page;
