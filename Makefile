@@ -21,7 +21,7 @@ OBJCOPY := $(PREFIX)objcopy
 CFLAGS  := -O2 -G0 -mips3 -mgp32 -mabi=32 -Wall
 CFLAGS  += -fno-common -fno-exceptions
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
-ASFLAGS := -march=r5900 -mabi=32 -G0
+ASFLAGS := -march=r5900 -mabi=32 -G0 -I include
 
 # ── Directories ────────────────────────────────────────
 ASM_DIR     := asm
