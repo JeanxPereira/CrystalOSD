@@ -10,12 +10,13 @@ jobs:
     container:
       image: ghcr.io/ps2dev/ps2dev:latest
     steps:
+      - name: Install build tools
+        run: apk add --no-cache make curl
+
       - uses: actions/checkout@v4
 
       - name: Build
         run: make
-        env:
-          PS2SDK: /usr/local/ps2dev/ps2sdk
 
       - name: Download objdiff-cli
         run: |
