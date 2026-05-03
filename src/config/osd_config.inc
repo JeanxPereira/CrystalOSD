@@ -181,7 +181,7 @@ extern long FUN_00205ca8(long c);
 extern long FUN_00205bf0(long c);
 extern void FUN_00205798(void);
 extern void FUN_00205df8(void);
-extern long FUN_002057c0(void);
+extern long FUN_002057c0(const char *);
 extern long FUN_002059c0(const void *sec, const void *key);
 extern long FUN_002076f0(u32 value, void *out, int base);
 extern long FUN_002058a8(u8 c);
@@ -189,7 +189,7 @@ extern long FUN_00205aa0(void);
 extern long FUN_00205858(void);
 extern void FUN_00205808(void);
 extern long FUN_00212320(void);
-extern long FUN_002148b8(void *, u32, u32, u32, void *, void *);
+extern long FUN_002148b8(void *, void *, void *, void *, void *, void *);
 extern u8   FUN_00235138(int);
 extern long FUN_002357c0(void);
 extern long FUN_002357b0(void);
@@ -212,7 +212,7 @@ s32 config_get_timezone_offset(void);
 u32 config_get_daylight_saving(void);
 u32 config_hdd_open_read_ini(const char *path);
 long config_hdd_close_ini(void);
-long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long opt);
+long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, int *base_out);
 long config_hdd_write_single_key(const char *sec, const char *key, u32 val, int base);
 long config_check_timezone_city(u32 city);
 
@@ -807,7 +807,7 @@ long config_hdd_close_ini(void)
  * base from prefix: "0x" hex, "0" octal, otherwise decimal.
  * Optional leading +/- sign. base_out (if non-null) receives the
  * detected base for round-trip writeback. Returns 0 ok, -4 parse err. */
-long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base_out)
+long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, int *base_out)
 {
     int  iVar1;
     long lVar2;
@@ -833,7 +833,7 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
         long lookahead = FUN_00205720();
         long is_x = FUN_00205ba8(lookahead);
         if (is_x == 'x') {
-            if (base_out) *(int *)base_out = 16;
+            if (base_out) *base_out = 16;
             mask = (sign == 0) ? 0xffffffff : 0x7fffffff;
             for (;;) {
                 long ch, stop, lc;
@@ -846,7 +846,7 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
                 acc = (iVar1 + (int)lc) & mask;
             }
         } else {
-            if (base_out) *(int *)base_out = 8;
+            if (base_out) *base_out = 8;
             FUN_00205798();
             mask = (sign == 0) ? 0xffffffff : 0x7fffffff;
             for (;;) {
@@ -858,7 +858,7 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
         }
     } else {
         if (FUN_00205bf0(c) == 0) return -4;
-        if (base_out) *(int *)base_out = 10;
+        if (base_out) *base_out = 10;
         FUN_00205798();
         for (;;) {
             long ch = FUN_00205720();
