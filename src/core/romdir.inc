@@ -114,6 +114,7 @@ romdir_result_t *romdir_search_entry(romdir_ctx_t *ctx, const char *name, romdir
     u32 data_offset;
     u32 ext_offset;
     int i;
+    u32 file_size;
 
     /* Pad name into 3 words (12 bytes) */
     name_words[0] = 0;
@@ -149,7 +150,7 @@ romdir_result_t *romdir_search_entry(romdir_ctx_t *ctx, const char *name, romdir
         }
 
         /* Accumulate offset for next entry */
-        u32 file_size = entry[3];
+        file_size = entry[3];
         ext_offset += *(short *)((u8 *)entry + 10);
         data_offset += (file_size + 0xF) & 0xFFFFFFF0;  /* Align to 16 */
         entry += 4;  /* Next 16-byte entry */
