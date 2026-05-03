@@ -12,7 +12,8 @@ Show the current state of the CrystalOSD reconstruction.
 2. Count functions with Ghidra address comments
 3. Compare against known function totals from Ghidra (2,008 total)
 4. Break down by subsystem
-5. Suggest next high-impact targets
+5. Check build state: `make verify` (byte-perfect rebuild status)
+6. Suggest next high-impact targets
 
 ## Expected Output
 ```

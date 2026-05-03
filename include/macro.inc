@@ -31,7 +31,6 @@
 # A label referenced by an error handler table.
 .macro ehlabel label, visibility=global
     .\visibility "\label"
-    .type "\label", @function
     "\label":
 .endm
 

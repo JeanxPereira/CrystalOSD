@@ -1,0 +1,48 @@
+name: Decrypted, unpacked OSDSYS_A.XLF from HDD Utility Disc 1.10U from SUDC4
+sha1: e932f3508313e2807467a0f354acc56869ea77f6
+options:
+    # paths
+    basename: OSDSYS_A
+    target_path: OSDSYS_A_XLF_decrypted_unpacked.elf
+    base_path: .
+    
+    asm_path: asm
+    src_path: src
+    build_path: build
+    
+    symbol_addrs_path: symbol_addrs.txt
+    undefined_funcs_auto_path: undefined_funcs_auto.txt
+    undefined_syms_auto_path: undefined_syms_auto.txt
+    
+    # compiler 
+    compiler: GCC
+    platform: ps2
+    
+    string_encoding: UTF-8
+    rodata_string_guesser_level: 2
+    disasm_unknown: True
+    named_regs_for_c_funcs: False
+    gp_value: 0x377970
+    subalign: 8
+    
+    find_file_boundaries: False
+    section_order: [".text", ".data", ".rodata", ".bss"]
+segments:
+    - [0, databin, elf_header]
+    - name: main
+      type: code
+      start: 0x1000
+      vram: 0x200000
+      bss_size: 0x199de0
+      # subalign: null
+      subsegments:
+        - [0x1000, asm, texttmp]
+        - [0xa57a0, data, datasect]
+        - [0x1487e0, rodata, rodatasect]
+        - [0x170980, sdata, sdatasect]
+        - [0x1719a0, bss, sbsssect]
+        - [0x171c98, bss, bsssect]
+        # - [0x1719a0, bss, bsssect]
+        - [0x30b780, databin, module_storage] # module storage here
+        - [0x5AE830]
+

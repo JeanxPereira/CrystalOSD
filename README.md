@@ -16,10 +16,22 @@ Built by analyzing the binary in [Ghidra](https://ghidra-sre.org/) and cross-ref
 
 ## Building
 
-### PS2 (native ELF)
+### PS2 (native ELF — byte-perfect rebuild)
 ```bash
-# Requires ps2toolchain installed
-make
+# Requires ps2dev toolchain at $HOME/ps2dev (see CLAUDE.md for install)
+export PATH=$HOME/ps2dev/ee/bin:$PATH
+
+make split    # run splat → asm/, OSDSYS_A.ld, undefined_*.txt
+make elf      # link → build/OSDSYS.elf
+make verify   # cmp build/OSDSYS.elf == OSDSYS_A_XLF_decrypted_unpacked.elf
+```
+
+`make verify` succeeds — rebuild is byte-identical to original 3,864,601-byte ELF.
+
+### objdiff matching
+```bash
+make all      # compiles src/*.c and asm/<subsys>/*.s for diff
+objdiff -p .  # GUI for diffing target vs base objects
 ```
 
 ### Desktop (future)

@@ -17,11 +17,20 @@ build/
 .claude/settings.local.json
 CLAUDE.local.md
 
-# Original binary (never commit)
+# Original binary (never commit — copyright)
 *.rom
 *.bios
 OSDSYS.elf
 baserom.*
+OSDSYS_A_XLF_decrypted_unpacked.elf
+
+# Splat-generated artifacts (regenerable via `make split`)
+asm/texttmp.s
+asm/data/
+assets/
+.splache
+undefined_funcs_auto.txt
+undefined_syms_auto.txt
 
 # Dependencies
 node_modules/
