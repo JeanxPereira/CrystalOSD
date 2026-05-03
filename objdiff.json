@@ -7,15 +7,13 @@
   "watch_patterns": ["*.c", "*.h", "*.s", "*.S", "Makefile"],
   "ignore_patterns": ["reference/**/*", ".git/**/*"],
   "units": [
-    { "name": "config/osd_config", "target_path": "build/target/config/osd_config.o", "base_path": null },
-    { "name": "core/romdir",       "target_path": "build/target/core/romdir.o",        "base_path": null },
-    { "name": "core/expand",       "target_path": "build/target/core/expand.o",        "base_path": null },
-    { "name": "graph/gs_util",     "target_path": "build/target/graph/gs_util.o",      "base_path": null },
-    { "name": "sound/spu2",        "target_path": "build/target/sound/spu2.o",         "base_path": null },
-    { "name": "core/core",         "target_path": "build/target/core/core.o",           "base_path": null },
-    { "name": "graph/graph",       "target_path": "build/target/graph/graph.o",        "base_path": null },
-    { "name": "browser/browser",   "target_path": "build/target/browser/browser.o",    "base_path": null },
-    { "name": "sound/sound",       "target_path": "build/target/sound/sound.o",        "base_path": null },
-    { "name": "clock/clock",       "target_path": "build/target/clock/clock.o",        "base_path": null }
+    { "name": "browser/browser", "target_path": "build/target/browser/browser.o", "base_path": null },
+    { "name": "clock/clock",     "target_path": "build/target/clock/clock.o",     "base_path": null },
+    { "name": "config/config",   "target_path": "build/target/config/config.o",   "base_path": null },
+    { "name": "core/core",       "target_path": "build/target/core/core.o",        "base_path": null },
+    { "name": "graph/graph",     "target_path": "build/target/graph/graph.o",      "base_path": null },
+    { "name": "module/module",   "target_path": "build/target/module/module.o",   "base_path": null },
+    { "name": "opening/opening", "target_path": "build/target/opening/opening.o", "base_path": null },
+    { "name": "sound/sound",     "target_path": "build/target/sound/sound.o",     "base_path": null }
   ]
 }
