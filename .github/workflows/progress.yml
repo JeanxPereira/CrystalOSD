@@ -18,7 +18,7 @@ jobs:
 
       - name: Download PS2DEV Toolchain (Modern)
         run: |
-          curl -sSL https://github.com/ps2dev/ps2dev/releases/latest/download/ps2dev-ubuntu-latest-x86_64.tar.gz | tar -xz -C /tmp
+          curl -sSL https://github.com/ps2dev/ps2dev/releases/latest/download/ps2dev-ubuntu-latest.tar.gz | tar -xz -C /tmp
           echo "PS2DEV=/tmp/ps2dev" >> $GITHUB_ENV
           echo "PS2SDK=/tmp/ps2dev/ps2sdk" >> $GITHUB_ENV
           echo "/tmp/ps2dev/bin:/tmp/ps2dev/ee/bin" >> $GITHUB_PATH
