@@ -7,7 +7,7 @@ extern void sceDevVu1Reset(void);
 extern void sceDevGifReset(void);
 extern void sceGsResetPath(void);
 extern void sceDmaReset(int);
-extern void *memset(void *, int, int);
+extern void *memset(void *, int, unsigned int);
 
 extern int func_00213EE8(void *str);
 extern void DrawNonSelectableItem(int x, int y, void *colors, int height, void *str);
@@ -124,12 +124,13 @@ void draw_menu_item(int x, int y, void *height_ptr, int max_width, void *str)
 /* 0x002A4720 - GsGetIMR */
 int GsGetIMR(void)
 {
-    __asm__ volatile("addiu $v1, $zero, 0x70\nsyscall");
+    int ret;
+    __asm__ volatile("addiu $3, $0, 0x70\n\tsyscall\n\tmove %0, $2" : "=r"(ret));
+    return ret;
 }
 
 /* 0x002A4730 - GsPutIMR */
 void GsPutIMR(int imr)
 {
-    (void)imr;
-    __asm__ volatile("addiu $v1, $zero, 0x71\nsyscall");
+    __asm__ volatile("move $4, %0\n\taddiu $3, $0, 0x71\n\tsyscall" : : "r"(imr));
 }
