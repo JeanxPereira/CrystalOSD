@@ -21,7 +21,7 @@ jobs:
       - name: Download objdiff-cli
         run: |
           curl -sSL \
-            https://github.com/encounter/objdiff/releases/download/v3.1.0/objdiff-cli-x86_64-unknown-linux-musl \
+            https://github.com/encounter/objdiff/releases/download/v3.6.1/objdiff-cli-linux-x86_64 \
             -o objdiff-cli
           chmod +x objdiff-cli
 
