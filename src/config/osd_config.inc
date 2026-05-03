@@ -502,12 +502,13 @@ void config_hdd_set_uninit(void)
 u32 config_get_keyboard_type_with_fallback(void)
 {
     long vidmode = get_vidmode_with_fallback();
+    u32 lang;
 
     if (vidmode == 0) {
         if ((u32)var_hddsys_keyboard_type < 2) {
             return (u32)var_hddsys_keyboard_type;
         }
-        long lang = config_get_osd_language();
+        lang = config_get_osd_language();
         var_hddsys_keyboard_type = (lang == 1) ? 1 : 0;
         g_orig_keyboard_type = -1;
         return (u32)var_hddsys_keyboard_type;
@@ -518,7 +519,7 @@ u32 config_get_keyboard_type_with_fallback(void)
         return (u32)var_hddsys_keyboard_type;
     }
 
-    u32 lang = config_get_osd_language();
+    lang = config_get_osd_language();
     if (vidmode == 2) {
         switch (lang) {
         case 1: var_hddsys_keyboard_type = 8; break;
@@ -571,6 +572,7 @@ void config_hdd_set_default(void)
 void config_hdd_prepare(void)
 {
     long rv;
+    long ctx;
 
     config_hdd_set_uninit();
     rv = config_hdd_open_read_ini(g_hdd_ini_filename);
@@ -579,7 +581,7 @@ void config_hdd_prepare(void)
         return;
     }
 
-    long ctx = FUN_002050a8();
+    ctx = FUN_002050a8();
     FUN_00206578(ctx);
 
     if (config_hdd_do_get_key(g_sec_keyboard, g_key_kbd_type,    (u32 *)&var_hddsys_keyboard_type,    0) < 0) var_hddsys_keyboard_type    = -1;
@@ -814,6 +816,7 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
     u32  acc;
     int  sign;
     u32  mask;
+    long after;
 
     if (FUN_00206080() < 0) return 0;
     if (FUN_002062a8(key) < 0) return 0;
@@ -831,10 +834,11 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
             if (base_out) *(int *)base_out = 16;
             mask = (sign == 0) ? 0xffffffff : 0x7fffffff;
             for (;;) {
-                long ch  = FUN_00205720();
-                long stop = FUN_00205c40(ch);
+                long ch, stop, lc;
+                ch  = FUN_00205720();
+                stop = FUN_00205c40(ch);
                 if (stop || FUN_00205c80(ch) || FUN_00205ca8(ch)) break;
-                long lc  = FUN_00205ba8(ch);
+                lc  = FUN_00205ba8(ch);
                 if (FUN_00205c10(lc) == 0) return -4;
                 iVar1 = (lc < 0x61) ? (acc * 16 - 0x30) : (acc * 16 - 0x57);
                 acc = (iVar1 + (int)lc) & mask;
@@ -864,7 +868,7 @@ long config_hdd_do_get_key(const char *sec, const char *key, u32 *out, long base
     FUN_00205798();
     *out = (sign < 0) ? (u32)(-(s32)acc) : acc;
     FUN_00205df8();
-    long after = FUN_00205720();
+    after = FUN_00205720();
     valid = FUN_00205c40(after);
     lVar2 = valid ? 0 : -4;
     return lVar2;
@@ -878,12 +882,13 @@ long config_hdd_write_single_key(const char *sec, const char *key, u32 val, int 
     long rv;
     u8   buf[16];
     u8  *p = buf;
+    int remain;
 
     if (FUN_002057c0() < 0) return 0;
     if (FUN_002059c0(sec, key) < 0) { FUN_00205808(); return 0; }
 
     rv = FUN_002076f0(val, buf, base);
-    int remain = (int)rv - 1;
+    remain = (int)rv - 1;
     if (rv < 0) { FUN_00205808(); return -6; }
 
     if (remain != -1) {
@@ -955,6 +960,7 @@ void config_load_clock_osd(void)
     u8 *src;
     u32 *dst;
     float f;
+    u32 tz, dst_;
 
     if (g_config_load_first_pass == 1) {
         var_config_spdif_mode                       = (s32)config_get_spdif_mode();
@@ -981,16 +987,17 @@ void config_load_clock_osd(void)
         src = &var_ps1drv_config;
         i = 0xe;
         do {
+            u8 byte;
             i--;
             dst[-1] = (u32)(*src & 0x07);          /* low nibble field */
-            u8 byte = *src;
+            byte = *src;
             src++;
             *dst    = (u32)((byte & 0x70) >> 4);   /* high nibble field */
             dst    += 2;
         } while (i >= 0);
 
-        u32 tz   = (u32)config_get_timezone_offset();
-        u32 dst_ = config_get_daylight_saving();
+        tz   = (u32)config_get_timezone_offset();
+        dst_ = config_get_daylight_saving();
         module_clock_set_anim_offset(tz, dst_);
 
         g_config_204DD8_mirror                      = (s32)config_get_204DD8();
@@ -1056,6 +1063,7 @@ void config_item_change_cb_clock_write_mechacon(void)
 u32 config_save_clock_osd(void)
 {
     long rv;
+    u32 tz, dst;
 
     if (var_config_dirty == 0)              return 0;
     if (var_config_writeinprogress != 0)    return 0;
@@ -1076,8 +1084,8 @@ u32 config_save_clock_osd(void)
     }
     config_set_daylight_saving((u32)var_config_daylight_saving);
 
-    u32 tz = (u32)config_get_timezone_offset();
-    u32 dst = config_get_daylight_saving();
+    tz = (u32)config_get_timezone_offset();
+    dst = config_get_daylight_saving();
     module_clock_set_anim_offset(tz, dst);
 
     config_set_rc_gameplay((u32)var_config_rc_gameplay);
