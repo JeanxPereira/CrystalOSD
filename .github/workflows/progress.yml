@@ -25,9 +25,6 @@ jobs:
         run: |
           mkdir -p /tmp/compiler
           curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz | tar -xJ -C /tmp/compiler
-          mkdir -p /tmp/compiler/ee/include
-          cp -r /tmp/ps2dev/ee/ee/include/* /tmp/compiler/ee/include/ 2>/dev/null || true
-          cp -r /tmp/ps2dev/ee/ee/sys-include/* /tmp/compiler/ee/include/ 2>/dev/null || true
           echo "COMPILER_DIR=/tmp/compiler" >> $GITHUB_ENV
 
       - name: Build
