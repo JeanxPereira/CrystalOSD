@@ -18,13 +18,16 @@ jobs:
 
       - name: Download PS2SDK (Headers)
         run: |
-          curl -sSL https://github.com/ps2dev/ps2dev/releases/latest/download/ps2dev-ubuntu-latest.tar.gz | tar -xz -C /tmp
+          curl -sSL https://github.com/ps2dev/ps2dev/releases/download/v1.2.0/ps2dev-ubuntu-latest.tar.gz | tar -xz -C /tmp
           echo "PS2SDK=/tmp/ps2dev/ps2sdk" >> $GITHUB_ENV
 
       - name: Download ee-gcc 2.9 (Classic Compiler)
         run: |
           mkdir -p /tmp/compiler
           curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz | tar -xJ -C /tmp/compiler
+          mkdir -p /tmp/compiler/ee/include
+          cp -r /tmp/ps2dev/ee/ee/include/* /tmp/compiler/ee/include/ 2>/dev/null || true
+          cp -r /tmp/ps2dev/ee/ee/sys-include/* /tmp/compiler/ee/include/ 2>/dev/null || true
           echo "COMPILER_DIR=/tmp/compiler" >> $GITHUB_ENV
 
       - name: Build
