@@ -1,0 +1,33 @@
+name: Progress Report
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ps2dev/ps2dev:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: make
+        env:
+          PS2SDK: /usr/local/ps2dev/ps2sdk
+
+      - name: Download objdiff-cli
+        run: |
+          curl -sSL https://github.com/encounter/objdiff/releases/latest/download/objdiff-cli-x86_64-unknown-linux-musl \
+            -o objdiff-cli
+          chmod +x objdiff-cli
+
+      - name: Generate progress report
+        run: ./objdiff-cli report generate -o report.json
+
+      - name: Upload progress report
+        uses: actions/upload-artifact@v4
+        with:
+          name: HDDOSD_110U_report
+          path: report.json
