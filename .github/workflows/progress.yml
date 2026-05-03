@@ -25,11 +25,16 @@ jobs:
 
       - name: Download ee-gcc 2.9 (Classic)
         run: |
-          curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.gz | tar -xz -C /tmp
-          echo "COMPILER_DIR=/tmp/ee-gcc2.9-991111" >> $GITHUB_ENV
+          mkdir -p /tmp/compiler
+          curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.gz | tar -xz -C /tmp/compiler
+          
+      - name: Download wibo
+        run: |
+          curl -sL https://github.com/decompals/wibo/releases/latest/download/wibo -o /tmp/wibo
+          chmod +x /tmp/wibo
 
       - name: Build
-        run: make all CC=$COMPILER_DIR/bin/ee-gcc
+        run: make all CC="/tmp/wibo /tmp/compiler/bin/ee-gcc.exe"
 
       - name: Download objdiff-cli
         run: |
