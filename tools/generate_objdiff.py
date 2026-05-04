@@ -15,27 +15,50 @@ def main():
     project_root = script_dir.parent
     os.chdir(project_root)
 
+    asm_dir = Path("asm")
     src_dir = Path("src")
-    c_files = list(src_dir.rglob("*.c"))
+    
+    subsystems = ["core", "browser", "cdvd", "clock", "config", "graph", "history", "module", "opening", "sound"]
+
+    progress_categories = []
+    for subsys in subsystems:
+        progress_categories.append({
+            "id": subsys,
+            "name": subsys.capitalize()
+        })
 
     units = []
-    for c_file in sorted(c_files):
-        # c_file is something like src/core/get_clock_should_render_orbs.c
-        rel_path = c_file.relative_to(src_dir)
-        # e.g. core/get_clock_should_render_orbs.c
-        subsys = rel_path.parent
-        name = rel_path.stem
-
-        target_path = f"build/target/{subsys}/{name}.o"
-        base_path = f"build/base/{subsys}/{name}.o"
-
-        # Also add any manually verified units even if they don't have C files yet?
-        # Actually objdiff is best used for files we are working on.
-        units.append({
-            "name": f"{subsys}/{name}",
-            "target_path": target_path,
-            "base_path": base_path
-        })
+    for subsys in subsystems:
+        subsys_dir = asm_dir / subsys
+        if not subsys_dir.exists():
+            continue
+            
+        for s_file in sorted(subsys_dir.rglob("*.s")):
+            name = s_file.stem
+            
+            target_path = f"build/target/{subsys}/{name}.o"
+            
+            # Check if C file exists
+            c_file = src_dir / subsys / f"{name}.c"
+            
+            if c_file.exists():
+                base_path = f"build/base/{subsys}/{name}.o"
+                metadata = {
+                    "progress_categories": [subsys]
+                }
+            else:
+                base_path = None
+                metadata = {
+                    "progress_categories": [subsys],
+                    "auto_generated": True
+                }
+            
+            units.append({
+                "name": f"{subsys}/{name}",
+                "target_path": target_path,
+                "base_path": base_path,
+                "metadata": metadata
+            })
 
     config = {
         "$schema": "https://raw.githubusercontent.com/encounter/objdiff/main/config.schema.json",
@@ -45,6 +68,7 @@ def main():
         "build_base": True,
         "watch_patterns": ["*.c", "*.h", "*.s", "*.S", "Makefile", "include/**/*.h"],
         "ignore_patterns": ["reference/**/*", ".git/**/*"],
+        "progress_categories": progress_categories,
         "units": units
     }
 
