@@ -26,11 +26,12 @@ OBJCOPY := $(PREFIX)objcopy
 
 # ── Compiler Flags ─────────────────────────────────────
 # Match original OSDSYS: ee-gcc 2.9-991111 + -O2 -G0
-CFLAGS  := -O2 -G0 -Wall -D_EE
+CFLAGS  := -O2 -G0 -Wall -D_EE -mabi=eabi -mno-abicalls
 CFLAGS  += -fno-common -fno-exceptions
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
 ASFLAGS := -march=r5900 -mabi=eabi -G0 -I include
-LDFLAGS := -m elf32lr5900 -EL -nostdlib --no-check-sections -G 0x10000 --defsym=_gp=0x377970 -e 0x200008 -s
+LDFLAGS := -m elf32lr5900 -EL -nostdlib --no-check-sections -G 0 --defsym=_gp=0x377970 -e 0x200008 -s
+LDFLAGS += -T undefined_syms_auto.txt -T undefined_funcs_auto.txt
 
 # ── Directories ────────────────────────────────────────
 ASM_DIR     := asm
@@ -41,28 +42,27 @@ ASM_BUILD   := build/asm
 ELF_OUT     := build/OSDSYS.elf
 ELF_MAP     := build/OSDSYS.map
 ORIG_ELF    := OSDSYS_A_XLF_decrypted_unpacked.elf
-LINKER      := OSDSYS_link.ld
+LINKER      := OSDSYS_A.ld
 
 # ── ELF link inputs ────────────────────────────────────
-# Order matters: must match linker script section order
-ELF_OBJS := \
-	$(ASM_BUILD)/texttmp.s.o \
-	$(ASM_BUILD)/data/datasect.data.s.o \
-	$(ASM_BUILD)/data/module_storage.s.o \
-	$(ASM_BUILD)/data/rodatasect.rodata.s.o \
-	$(ASM_BUILD)/data/sdatasect.sdata.s.o \
-	$(ASM_BUILD)/data/sbsssect.bss.s.o \
-	$(ASM_BUILD)/data/bsssect.bss.s.o
+# Automatically grab all splat-generated .s files (excluding nonmatchings which are included by other .s files)
+ALL_SPLIT_ASM := $(shell find $(ASM_DIR) -name '*.s' -not -path '*/nonmatchings/*' -type f 2>/dev/null)
+ELF_OBJS := $(patsubst $(ASM_DIR)/%.s,$(ASM_BUILD)/%.s.o,$(ALL_SPLIT_ASM))
 
-# ── objdiff inputs (matching workflow) ────────────────
-SUBSYSTEMS := config core graph sound browser clock opening cdvd history module
-ASM_MATCH_SRCS := $(foreach s,$(SUBSYSTEMS),$(wildcard $(ASM_DIR)/$(s)/*.s))
-ASM_MATCH_OBJS := $(patsubst $(ASM_DIR)/%.s,$(TARGET_DIR)/%.o,$(ASM_MATCH_SRCS))
-C_SRCS         := $(shell find $(SRC_DIR) -name '*.c' 2>/dev/null)
+# Also include any C files that are matched and built (this will be improved later)
+# For now, we rely on the split asm.
+
+# ── objdiff match inputs ───────────────────────────────
+SUBSYSTEMS     := core browser cdvd clock config graph history module opening sound
+ASM_SRCS       := $(shell find $(ASM_DIR) -mindepth 2 -name '*.s' -type f 2>/dev/null)
+C_SRCS         := $(shell find $(SRC_DIR) -name '*.c' -type f 2>/dev/null)
+
+ASM_MATCH_OBJS := $(patsubst $(ASM_DIR)/%.s,$(TARGET_DIR)/%.o,$(ASM_SRCS))
+C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 
 # ── Phony targets ──────────────────────────────────────
-.PHONY: all elf split verify clean check-toolchain dirs target base progress help
+.PHONY: all elf split verify clean check-toolchain dirs target base progress progress-json progress-crossref progress-md stats coverage help
 
 # default: objdiff workflow (legacy behaviour)
 all: check-toolchain dirs target base
@@ -81,14 +81,21 @@ $(ELF_OUT): $(ELF_OBJS) $(LINKER)
 	@mkdir -p $(dir $@)
 	$(LD) $(LDFLAGS) -T $(LINKER) -Map=$(ELF_MAP) -o $@.tmp $(ELF_OBJS)
 	$(OBJCOPY) --strip-section-headers $@.tmp $@
-	@dd if=/dev/zero of=$@ bs=1 count=4 seek=36 conv=notrunc 2>/dev/null
-	@rm -f $@.tmp
+	@dd if=$@ of=$@.payload bs=4096 skip=2 2>/dev/null
+	@dd if=$(ORIG_ELF) of=$@.header bs=4096 count=1 2>/dev/null
+	@cat $@.header $@.payload > $@
+	@rm -f $@.tmp $@.payload $@.header
 	@echo "=== ELF built: $@ ==="
 
 # Pattern: asm/foo.s  →  build/asm/foo.s.o   (note: extension preserved)
 $(ASM_BUILD)/%.s.o: $(ASM_DIR)/%.s
 	@mkdir -p $(dir $@)
 	$(AS) $(ASFLAGS) -o $@ $<
+
+# Pattern: src/foo.c → build/src/foo.c.o
+build/src/%.c.o: src/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 # Verify byte-perfect rebuild against original
 verify: $(ELF_OUT)
@@ -130,15 +137,28 @@ clean:
 
 # ── Progress ──────────────────────────────────────────
 progress:
-	@echo "=== CrystalOSD Progress ==="
-	@echo "Splat asm files:    $$(find $(ASM_DIR) -maxdepth 2 -name 'texttmp.s' -o -name 'data/*.s' 2>/dev/null | wc -l | tr -d ' ')"
-	@echo "Match asm files:    $$(find $(ASM_DIR) -mindepth 2 -name '*.s' 2>/dev/null | wc -l | tr -d ' ')"
-	@echo "C files:            $$(find $(SRC_DIR) -name '*.c' 2>/dev/null | wc -l | tr -d ' ')"
-	@echo "Functions named:    1,675 (from symbol import)"
-	@echo "Functions total:    ~2,000+"
+	@python3 tools/progress.py
+
+progress-json:
+	@python3 tools/progress.py --json
+
+progress-crossref:
+	@python3 tools/progress.py --crossref
+
+progress-md:
+	@python3 tools/progress.py --markdown
+
+# ── Subsystem Stats ──────────────────────────────────
+stats:
+	@python3 tools/split_functions.py --stats
+
+coverage:
+	@python3 tools/split_functions.py --check-coverage
 
 help:
 	@echo "CrystalOSD Makefile"
+	@echo ""
+	@echo "Build:"
 	@echo "  make split    — Run splat (regenerate asm/ + OSDSYS_A.ld)"
 	@echo "  make elf      — Link full ELF from splat output → build/OSDSYS.elf"
 	@echo "  make verify   — Compare rebuilt ELF against original (byte-perfect)"
@@ -146,7 +166,14 @@ help:
 	@echo "  make target   — Assemble per-subsystem matching .s → .o"
 	@echo "  make base     — Compile our .c → .o"
 	@echo "  make clean    — Remove build/"
-	@echo "  make progress — Stats"
+	@echo ""
+	@echo "Progress:"
+	@echo "  make progress        — Console progress bars"
+	@echo "  make progress-json   — JSON output for decomp.dev"
+	@echo "  make progress-md     — Markdown progress table"
+	@echo "  make progress-crossref — Theseus-style cross-reference"
+	@echo "  make stats           — Subsystem code size breakdown"
+	@echo "  make coverage        — Check .text address coverage"
 	@echo ""
 	@echo "Workflow:"
 	@echo "  1. make split          (run once after symbol changes)"

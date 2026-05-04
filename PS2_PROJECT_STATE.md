@@ -15,7 +15,15 @@
 | **ELF rebuild** | ✅ **byte-perfect match** (3,864,601 bytes) |
 
 ## Current Focus
-Build infrastructure complete. Next: per-function asm split for incremental C overrides.
+Build infrastructure is complete and byte-perfect match has been achieved! 
+The absolute focus now is **Decompilation (Decomp)** of individual functions from Assembly to C using the `objdiff` workflow.
+
+### Workflow:
+1. Pick a function from `asm/`.
+2. Write C equivalent in `src/`.
+3. Verify matching assembly output with `objdiff`.
+4. Update `splat_config.yml` to compile the C file instead of asm.
+5. Commit using `decomp(module): description`.
 
 ### Reconstructed Files
 
@@ -105,9 +113,9 @@ make verify   # cmp build/OSDSYS.elf OSDSYS_A_XLF_decrypted_unpacked.elf
 - [x] **Splat integration** (full asm split + linker script)
 - [x] **ELF link infrastructure** (Makefile `make elf` target)
 - [x] **🎯 Byte-perfect ELF rebuild** (3,864,601 bytes match)
-- [ ] Test rebuilt ELF in PCSX2 (boot validation)
-- [ ] Per-function asm split (so individual C reconstructions can replace asm)
-- [ ] First C-substituted ELF link (with at least one C function in place of asm)
+- [x] Test rebuilt ELF in PCSX2 (boot validation)
+- [x] Per-function asm split (so individual C reconstructions can replace asm)
+- [x] First C-substituted ELF link (with at least one C function in place of asm)
 - [ ] Re-dump latest OSDSYS from BIOS (optional fresh start)
 
 ## Open Questions

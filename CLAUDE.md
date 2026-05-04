@@ -75,6 +75,18 @@ make all      # objdiff matching workflow (target/base .o for diffs)
 - GS register writes use `GS_SET_*` macros from `gs_gp.h`
 - VIF1 packets use `packet_t` from PS2SDK
 
+## Git Commit Convention
+We follow a strict **Conventional Commits** format: `type(scope): description`.
+- **`decomp(scope)`**: Matching decompiled functions (e.g., `decomp(graph): match gsAllocBuffer`).
+- **`build(scope)`**: Changes to `Makefile`, `splat_config.yml`, `configure.py`, or linker scripts.
+- **`docs(scope)`**: Updates to documentation, `.md` files, or comments.
+- **`tools(scope)`**: Scripts, tools, or CI updates.
+- **`fix(scope)`**: Fixes to previously decompiled code or scripts.
+- **`chore(scope)`**: Minor maintenance, formatting, renaming.
+- **`feat(scope)`**: New project features (e.g., desktop port, new scripts).
+
+Scope should be the module name (`graph`, `core`, `browser`, `sound`, etc.) or left empty for global changes.
+
 ## Subsystems
 | Module | Directory | Description |
 |--------|-----------|-------------|
