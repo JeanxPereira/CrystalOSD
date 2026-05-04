@@ -63,6 +63,7 @@ C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 
 # default: objdiff workflow (legacy behaviour)
 all: check-toolchain dirs target base
+	@python3 tools/generate_objdiff.py
 	@echo "=== objdiff build complete ==="
 	@echo "Target objects: $(words $(ASM_MATCH_OBJS))"
 	@echo "Base objects:   $(words $(C_OBJS))"
@@ -120,7 +121,7 @@ target: $(ASM_MATCH_OBJS)
 
 $(TARGET_DIR)/%.o: $(ASM_DIR)/%.s | dirs
 	@mkdir -p $(dir $@)
-	sed 's/\.set[ \t]*noat/.set at/g' $< | $(AS) $(ASFLAGS) -o $@ -
+	$(AS) $(ASFLAGS) -o $@ $<
 
 base: $(C_OBJS)
 
