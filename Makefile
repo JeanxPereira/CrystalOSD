@@ -45,12 +45,9 @@ ORIG_ELF    := OSDSYS_A_XLF_decrypted_unpacked.elf
 LINKER      := OSDSYS_A.ld
 
 # ── ELF link inputs ────────────────────────────────────
-# Automatically grab all splat-generated .s files (excluding nonmatchings which are included by other .s files)
+# Automatically grab all splat-generated .s files
 ALL_SPLIT_ASM := $(shell find $(ASM_DIR) -name '*.s' -not -path '*/nonmatchings/*' -type f 2>/dev/null)
 ELF_OBJS := $(patsubst $(ASM_DIR)/%.s,$(ASM_BUILD)/%.s.o,$(ALL_SPLIT_ASM))
-
-# Also include any C files that are matched and built (this will be improved later)
-# For now, we rely on the split asm.
 
 # ── objdiff match inputs ───────────────────────────────
 SUBSYSTEMS     := core browser cdvd clock config graph history module opening sound
