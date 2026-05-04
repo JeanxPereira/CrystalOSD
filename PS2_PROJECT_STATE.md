@@ -65,8 +65,8 @@ Most named functions decompile cleanly — focus on those first.
 - Splat 0.40.0; spimdisasm 1.40.2
 
 ### Linker Script
-- `OSDSYS_A.ld` — splat-generated (regenerated each `make split`); has layout BUG (places `module_storage` between data and rodata; should be after bss)
-- `OSDSYS_link.ld` — handcrafted wrapper, fixes layout, includes `undefined_*.txt`. **This is what Makefile uses.**
+- `OSDSYS_A.ld` — splat-generated, post-processed by `configure.py` to fix module_storage placement and alignments. **This is what Makefile uses.**
+- `OSDSYS_link.ld` — legacy handcrafted wrapper (NO LONGER USED; kept for reference)
 
 ### Build Flow
 ```bash
@@ -76,12 +76,12 @@ make verify   # cmp build/OSDSYS.elf OSDSYS_A_XLF_decrypted_unpacked.elf
 ```
 
 ### Linker tricks for byte-perfect match
-- `-m elf32lr5900` (eabi variant, NOT n32; matches assembler `eabi64` output)
-- `-G 0x10000 --defsym=_gp=0x377970` (large small-data threshold + explicit GP)
+- `-G 0` (NOT -G 0x10000; prevents GPREL16 overflow)
+- `--defsym=_gp=0x377970` (explicit GP)
 - `-e 0x200008` (entry symbol; first 8 bytes are nop padding)
 - `-s` (strip)
 - `objcopy --strip-section-headers` (remove SHT entirely)
-- `dd` overwrites `e_flags` (offset 36-39) with zeros (original has 0; ours has `0x20924001` from MIPS abi flags)
+- ELF header replacement: strips linker-generated header, prepends original 4KB header from reference ELF
 
 ## Reference Library
 - `reference/ps2-hardware-docs/` — Hardware registers, ISA, VU instructions
@@ -125,18 +125,12 @@ make verify   # cmp build/OSDSYS.elf OSDSYS_A_XLF_decrypted_unpacked.elf
 - **`gsInitAlloc` matching**: requires `screenW`/`screenH` placed at exactly `0x1F0CB4`/`0x1F0CB8`. Linker script can do this with `--defsym` or PROVIDE.
 
 ## Last Session
-- **Date**: 2026-05-03
-- **Focus**: Build infrastructure — splat + toolchain + linker script + byte-perfect ELF rebuild
+- **Date**: 2026-05-04
+- **Focus**: Per-function asm split + GPREL16 fix + byte-perfect rebuild
 - **Key results**:
-  - Splat config promoted from `reference/osdsys_re/` to root; runs cleanly with splat 0.40
-  - PS2 toolchain installed via GitHub Actions artifact (no Docker, no source build)
-  - Custom `OSDSYS_link.ld` corrects splat-generated layout bug
-  - `make elf` produces ELF byte-identical to `OSDSYS_A_XLF_decrypted_unpacked.elf`
-  - Total bytes diff: 0 (verified with `cmp`)
-- **Files added/changed at root**:
-  - `splat_config.yml`, `OSDSYS_A.ld` (splat-gen), `OSDSYS_link.ld` (handcrafted), `configure.py`
-  - `OSDSYS_A_XLF_decrypted_unpacked.elf` (gitignored), `symbol_addrs.txt` (6372 syms)
-  - `undefined_funcs_auto.txt`, `undefined_syms_auto.txt` (splat-gen)
-  - `Makefile` rewritten with `split`/`elf`/`verify` targets
-  - `.gitignore` updated for splat artifacts
-- **Symbol fix**: `gsExtraBuffers` had `type:data` (invalid); changed to `type:u32`
+  - `configure.py` now post-processes `OSDSYS_A.ld`: moves module_storage, fixes alignment, patches .bss floats
+  - GPREL16 overflow fixed (module_storage moved to `.main_modstor`)
+  - `subalign: 4`, `ld_bss_is_noload: False`, `-G 0` confirmed working
+  - Per-function split: 2,578 individual `.s` files in `asm/`
+  - `make elf && make verify` → ✅ byte-perfect match (3,864,601 bytes)
+- **Build command**: `python3 configure.py -c && make -j16 elf && make verify`
