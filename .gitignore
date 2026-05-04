@@ -16,6 +16,7 @@ build/
 # Local overrides
 .claude/settings.local.json
 CLAUDE.local.md
+.mcp.json
 
 # Original binary (never commit — copyright)
 *.rom
@@ -24,13 +25,21 @@ OSDSYS.elf
 baserom.*
 OSDSYS_A_XLF_decrypted_unpacked.elf
 
-# Splat-generated artifacts (regenerable via `make split`)
+# Splat-generated artifacts (regenerable via `python3 configure.py -c`)
 asm/texttmp.s
 asm/data/
 assets/
 .splache
 undefined_funcs_auto.txt
 undefined_syms_auto.txt
+
+# Temp/scratch files (agent debugging leftovers)
+*.bak
+test_*.c
+test_*.s
+base.txt
+target.txt
+session_summary.md
 
 # Dependencies
 node_modules/
