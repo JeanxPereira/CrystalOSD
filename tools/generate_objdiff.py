@@ -39,10 +39,16 @@ def main():
             target_path = f"build/target/{subsys}/{name}.o"
             
             # Check if C file exists
-            c_file = src_dir / subsys / f"{name}.c"
+            c_file_exact = src_dir / subsys / f"{name}.c"
+            c_file_subsys = src_dir / subsys / f"{subsys}.c"
             
-            if c_file.exists():
+            if c_file_exact.exists():
                 base_path = f"build/base/{subsys}/{name}.o"
+                metadata = {
+                    "progress_categories": [subsys]
+                }
+            elif c_file_subsys.exists():
+                base_path = f"build/base/{subsys}/{subsys}.o"
                 metadata = {
                     "progress_categories": [subsys]
                 }
