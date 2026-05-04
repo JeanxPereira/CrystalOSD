@@ -27,17 +27,31 @@ SECTIONS
         FILL(0x00000000);
 
         main_TEXT_START = .;
-        build/asm/texttmp.s.o(.text)
+        build/asm/code_001000.s.o(.text)
+        build/src/graph/draw_button.c.o(.text)
+        build/asm/code_027958.s.o(.text)
+        build/src/graph/draw_clock.c.o(.text)
+        build/asm/code_0332DC.s.o(.text)
         main_TEXT_END = .;
 
         main_DATA_START = .;
-        build/asm/texttmp.s.o(.data)
+        build/asm/code_001000.s.o(.data)
+        build/src/graph/draw_button.c.o(.data)
+        build/asm/code_027958.s.o(.data)
+        build/src/graph/draw_clock.c.o(.data)
+        build/asm/code_0332DC.s.o(.data)
         build/asm/data/datasect.data.s.o(.data)
+        *(.data.*)
         main_DATA_END = .;
 
         main_RODATA_START = .;
-        build/asm/texttmp.s.o(.rodata)
+        build/asm/code_001000.s.o(.rodata)
+        build/src/graph/draw_button.c.o(.rodata)
+        build/asm/code_027958.s.o(.rodata)
+        build/src/graph/draw_clock.c.o(.rodata)
+        build/asm/code_0332DC.s.o(.rodata)
         build/asm/data/rodatasect.rodata.s.o(.rodata)
+        *(.rodata.*)
         main_RODATA_END = .;
 
         main_SDATA_START = .;
@@ -45,7 +59,11 @@ SECTIONS
         main_SDATA_END = .;
 
         main_BSS_START = .;
-        build/asm/texttmp.s.o(.bss)
+        build/asm/code_001000.s.o(.bss)
+        build/src/graph/draw_button.c.o(.bss)
+        build/asm/code_027958.s.o(.bss)
+        build/src/graph/draw_clock.c.o(.bss)
+        build/asm/code_0332DC.s.o(.bss)
         build/asm/data/sbsssect.bss.s.o(.bss)
         build/asm/data/bsssect.bss.s.o(.bss)
         main_BSS_END = .;
