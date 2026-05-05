@@ -847,5 +847,148 @@
     "slug": "oD008",
     "attempts": 1,
     "last_updated": "2026-05-04T23:28:57.429913"
+  },
+  "module_clock_232458": {
+    "best_score": 0,
+    "max_score": 2700,
+    "match_pct": 100.0,
+    "best_slug": "AcQuY",
+    "url": "https://decomp.me/scratch/AcQuY",
+    "asm_file": "asm/clock/module_clock_232458.s",
+    "slug": "AcQuY",
+    "attempts": 1,
+    "last_updated": "2026-05-04T23:34:26.258551"
+  },
+  "module_clock_thread_proc": {
+    "best_score": 0,
+    "max_score": 2600,
+    "match_pct": 100.0,
+    "best_slug": "mXkbm",
+    "url": "https://decomp.me/scratch/mXkbm",
+    "asm_file": "asm/clock/module_clock_thread_proc.s",
+    "slug": "mXkbm",
+    "attempts": 1,
+    "last_updated": "2026-05-04T23:34:26.369856"
+  },
+  "module_clock_22FCA8": {
+    "best_score": 486,
+    "max_score": 2600,
+    "match_pct": 81.3,
+    "best_slug": "fLLcC",
+    "url": "https://decomp.me/scratch/fLLcC",
+    "asm_file": "asm/clock/module_clock_22FCA8.s",
+    "slug": "fLLcC",
+    "attempts": 1,
+    "last_updated": "2026-05-04T23:34:26.823369"
+  },
+  "module_clock_prepare": {
+    "best_score": 2700,
+    "max_score": 2700,
+    "match_pct": 0.0,
+    "best_slug": "wuKl8",
+    "url": "https://decomp.me/scratch/wuKl8",
+    "asm_file": "asm/clock/module_clock_prepare.s",
+    "slug": "wuKl8",
+    "attempts": 1,
+    "last_updated": "2026-05-04T23:36:14.388307"
+  },
+  "module_clock_2356C0": {
+    "best_score": 120,
+    "max_score": 2700,
+    "match_pct": 95.6,
+    "best_slug": "Qhp9T",
+    "url": "https://decomp.me/scratch/Qhp9T",
+    "asm_file": "asm/clock/module_clock_2356C0.s",
+    "slug": "Qhp9T",
+    "attempts": 1,
+    "last_updated": "2026-05-04T23:36:14.420490"
+  },
+  "main": {
+    "best_score": 74536,
+    "max_score": 92200,
+    "match_pct": 19.2,
+    "best_slug": "iYuEg",
+    "url": "https://decomp.me/scratch/iYuEg",
+    "asm_file": "asm/core/main.s",
+    "slug": "iYuEg",
+    "attempts": 2,
+    "last_updated": "2026-05-04T23:44:25.986594"
+  },
+  "get_system_folder_name": {
+    "best_score": 0,
+    "max_score": 300,
+    "match_pct": 100.0,
+    "best_slug": "aS16P",
+    "url": "https://decomp.me/scratch/aS16P",
+    "asm_file": "asm/core/get_system_folder_name.s",
+    "slug": "aS16P",
+    "attempts": 1,
+    "last_updated": "2026-05-05T10:16:39.088449"
+  },
+  "poweroff_callback_211A28": {
+    "best_score": 110,
+    "max_score": 1100,
+    "match_pct": 90.0,
+    "best_slug": "WEvAQ",
+    "url": "https://decomp.me/scratch/WEvAQ",
+    "asm_file": "asm/core/poweroff_callback_211A28.s",
+    "slug": "WEvAQ",
+    "attempts": 2,
+    "last_updated": "2026-05-05T10:17:17.353944"
+  },
+  "CB_DelayTh": {
+    "best_score": 0,
+    "max_score": 900,
+    "match_pct": 100.0,
+    "best_slug": "sdw2j",
+    "url": "https://decomp.me/scratch/sdw2j",
+    "asm_file": "asm/core/CB_DelayTh.s",
+    "slug": "sdw2j",
+    "attempts": 1,
+    "last_updated": "2026-05-05T10:17:51.086160"
+  },
+  "fileops_cmd_umount": {
+    "best_score": 0,
+    "max_score": 1900,
+    "match_pct": 100.0,
+    "best_slug": "QCOSz",
+    "url": "https://decomp.me/scratch/QCOSz",
+    "asm_file": "asm/core/fileops_cmd_umount.s",
+    "slug": "QCOSz",
+    "attempts": 1,
+    "last_updated": "2026-05-05T10:17:52.275275"
+  },
+  "fileops_cmd_read": {
+    "best_score": 77,
+    "max_score": 2600,
+    "match_pct": 97.0,
+    "best_slug": "RX92D",
+    "url": "https://decomp.me/scratch/RX92D",
+    "asm_file": "asm/core/fileops_cmd_read.s",
+    "slug": "RX92D",
+    "attempts": 1,
+    "last_updated": "2026-05-05T10:17:55.971287"
+  },
+  "topThread": {
+    "best_score": 495,
+    "max_score": 5400,
+    "match_pct": 90.8,
+    "best_slug": "Ab9l4",
+    "url": "https://decomp.me/scratch/Ab9l4",
+    "asm_file": "asm/core/topThread.s",
+    "slug": "Ab9l4",
+    "attempts": 4,
+    "last_updated": "2026-05-05T10:24:45.473939"
+  },
+  "do_format_time": {
+    "best_score": 3090,
+    "max_score": 5800,
+    "match_pct": 46.7,
+    "best_slug": "V7Jjh",
+    "url": "https://decomp.me/scratch/V7Jjh",
+    "asm_file": "asm/core/do_format_time.s",
+    "slug": "V7Jjh",
+    "attempts": 2,
+    "last_updated": "2026-05-05T10:33:25.402515"
   }
 }

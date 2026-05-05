@@ -52,6 +52,9 @@ __pycache__/
 reference/osdsys_re/
 reference/ps2-recomp-Agent-SKILL/
 
+# Ghidra batch export stubs (raw decompiler output, not clean code)
+src/stubs/
+
 # Transmuter Output
 *-*.c
 session-*.json

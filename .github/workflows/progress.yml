@@ -1,25 +1,40 @@
-name: Progress Report
+name: Build & Progress
 
 on:
   push:
     branches: [main]
+  pull_request:
 
 jobs:
-  report:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # Restore cached build artifacts
+      - name: Cache build
+        uses: actions/cache@v4
+        with:
+          path: |
+            build
+          key: ${{ runner.os }}-build-${{ github.sha }}
+          restore-keys: ${{ runner.os }}-build-
 
       - name: Install dependencies
         run: |
           sudo dpkg --add-architecture i386
           sudo apt-get update
-          sudo apt-get install -y binutils-mips-linux-gnu libc6:i386 libstdc++6:i386 make curl
+          sudo apt-get install -y binutils-mips-linux-gnu libc6:i386 libstdc++6:i386 make curl python3
 
       - name: Download PS2SDK (Headers)
         run: |
           curl -sSL https://github.com/ps2dev/ps2dev/releases/download/v1.2.0/ps2dev-ubuntu-latest.tar.gz | tar -xz -C /tmp
           echo "PS2SDK=/tmp/ps2dev/ps2sdk" >> $GITHUB_ENV
+          echo "PS2DEV=/tmp/ps2dev" >> $GITHUB_ENV
 
       - name: Download ee-gcc 2.9 (Classic Compiler)
         run: |
@@ -27,9 +42,38 @@ jobs:
           curl -sSL https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz | tar -xJ -C /tmp/compiler
           echo "COMPILER_DIR=/tmp/compiler" >> $GITHUB_ENV
 
+      # Clone private build repo with original ELF for verification
+      - name: Fetch original ELF
+        if: github.event_name == 'push'
+        run: |
+          if [ -n "${{ secrets.BUILD_REPO_TOKEN }}" ]; then
+            git clone --depth 1 https://x-access-token:${{ secrets.BUILD_REPO_TOKEN }}@github.com/JeanxPereira/crystalosd-build.git /tmp/orig
+            if [ -f /tmp/orig/OSDSYS_A_XLF_decrypted_unpacked.elf ]; then
+              cp /tmp/orig/OSDSYS_A_XLF_decrypted_unpacked.elf .
+              echo "HAVE_ORIG_ELF=1" >> $GITHUB_ENV
+            fi
+            rm -rf /tmp/orig
+          fi
+
+      # Build matching objects (target + base)
       - name: Build
         run: make all PREFIX=mips-linux-gnu- CC=$COMPILER_DIR/bin/ee-gcc
 
+      # SHA1 verification (works without original ELF)
+      - name: SHA1 Verify
+        run: |
+          if [ -f build/OSDSYS.elf ]; then
+            make sha1
+          else
+            echo "⚠️ No ELF built — skipping SHA1 check"
+          fi
+
+      # Byte-perfect verification (only if original ELF available)
+      - name: Byte-perfect Verify
+        if: env.HAVE_ORIG_ELF == '1'
+        run: make verify
+
+      # Generate objdiff progress report
       - name: Download objdiff-cli
         run: |
           curl -sSL https://github.com/encounter/objdiff/releases/download/v3.6.1/objdiff-cli-linux-x86_64 -o objdiff-cli
@@ -43,3 +87,17 @@ jobs:
         with:
           name: HDDOSD_110U_report
           path: report.json
+
+      # Upload to decomp.dev (on push to main only)
+      - name: Upload to decomp.dev
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        continue-on-error: true
+        run: |
+          if [ -n "${{ secrets.DECOMP_ME_API_KEY }}" ]; then
+            curl -X POST "https://decomp.dev/api/v1/projects/JeanxPereira/CrystalOSD/report" \
+              -H "Authorization: Bearer ${{ secrets.DECOMP_ME_API_KEY }}" \
+              -H "Content-Type: application/json" \
+              -d @report.json
+          else
+            echo "⚠️ DECOMP_ME_API_KEY not set — skipping upload"
+          fi

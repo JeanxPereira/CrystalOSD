@@ -1,0 +1,2 @@
+# decomp-permuter settings for CrystalOSD (PS2 EE / ee-gcc 2.9)
+compiler_type = "gcc"

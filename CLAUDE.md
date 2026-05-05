@@ -37,6 +37,22 @@
 7. Iterate match on decomp.me (`tools/decomp_match.py`)
 8. Build full ELF with `make elf` → test on PCSX2
 
+## Batch Export (Ghidra → Stubs → Transmuter)
+For bulk processing, use the batch pipeline instead of manual function-by-function decompilation:
+
+1. **Export stubs from Ghidra**: Run `BatchExportToC.java` in Ghidra Script Manager
+   - Select CrystalOSD project root when prompted
+   - Reads `asm/` to find unmatched functions (skips `FUN_*`, `gap_*`, `j_*`)
+   - Skips functions already decompiled in `src/` or `src/stubs/`
+   - Resolves addresses from `symbol_addrs.txt`
+   - Exports to `src/stubs/<subsystem>/<function>.c`
+2. **Run Transmuter on stubs**: `./tools/run_batch_transmuter.sh [subsystem]`
+   - No args = all subsystems; with arg = single subsystem (e.g., `graph`)
+3. **Review and promote**: Move cleaned stubs from `src/stubs/` to `src/` after verification
+4. **Match**: Run `tools/decomp_match.py` or `tools/decomp-permuter` on promoted files
+
+> ⚠️ `src/stubs/` contains raw Ghidra output (`uVar1`, `puVar2`, etc.) — never commit directly to `src/`
+
 ## Build Commands
 ```bash
 # Pre-flight (every new shell): export toolchain — USE ABSOLUTE PATHS
@@ -230,3 +246,32 @@ If `make verify` fails, your change broke something. Revert it.
 ## Transmuter (Automated Matching)
 - Run via: `node tools/transmuter/packages/cli/dist/index.js match src/subsys/file.c --target build/target/subsys/file.o --function function_name`
 - Uses `decomp.yaml` to invoke ee-gcc.
+
+## decomp-permuter (Brute-force Matching)
+Submodule at `tools/decomp-permuter/`. Randomly permutes C source to find matching compiler output.
+Supports MIPS natively — ideal for "last mile" matching where code is close but exact syntax is elusive.
+
+```bash
+# Import a function for permutation
+./tools/permuter_import.sh <func_name> <src_file>
+# Example:
+./tools/permuter_import.sh gsAllocBuffer src/graph/gs_util.c
+
+# Run permuter (multi-threaded)
+cd tools/decomp-permuter
+python3 ./permuter.py nonmatchings/<func_name> -j8
+```
+
+PERM macros can be used in source to guide permutation:
+- `PERM_GENERAL(a, b)` — try both alternatives
+- `PERM_RANDOMIZE` — enable random permutation in a region
+- `PERM_LINESWAP(lines)` — try all orderings of statements
+
+Compile script: `tools/permuter/compile.sh` (wraps ee-gcc with project flags).
+
+## SHA1 Verification
+```bash
+make sha1    # Compare build/OSDSYS.elf SHA1 against config/build.sha1
+```
+CI-friendly alternative to `make verify` — doesn't require the original ELF on disk.
+Hash stored in `config/build.sha1` (committed to repo).

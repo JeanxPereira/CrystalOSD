@@ -125,6 +125,16 @@ make verify   # cmp build/OSDSYS.elf OSDSYS_A_XLF_decrypted_unpacked.elf
 - **`gsInitAlloc` matching**: requires `screenW`/`screenH` placed at exactly `0x1F0CB4`/`0x1F0CB8`. Linker script can do this with `--defsym` or PROVIDE.
 
 ## Last Session
+- **Date**: 2026-05-05
+- **Focus**: Adopt afe-decomp methodologies (CI, SHA1 verify, decomp-permuter)
+- **Key results**:
+  - `decomp-permuter` submodule added and configured for PS2 ee-gcc (`tools/permuter/compile.sh`)
+  - Created `tools/permuter_import.sh` for easy one-click imports of non-matching functions
+  - Added `make sha1` verification target (doesn't require original ELF)
+  - Created private `crystalosd-build` repo to hold the original ELF for CI byte-perfect checks
+  - Overhauled `progress.yml` with build caching, SHA1 verification, and `make verify` via private repo
+
+## Previous Session
 - **Date**: 2026-05-04
 - **Focus**: Per-function asm split + GPREL16 fix + byte-perfect rebuild
 - **Key results**:

@@ -59,7 +59,7 @@ C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 
 # ── Phony targets ──────────────────────────────────────
-.PHONY: all elf split verify clean check-toolchain dirs target base progress progress-json progress-crossref progress-md stats coverage help
+.PHONY: all elf split verify sha1 clean check-toolchain dirs target base progress progress-json progress-crossref progress-md stats coverage help
 
 # default: objdiff workflow (legacy behaviour)
 all: check-toolchain dirs target base
@@ -100,6 +100,22 @@ verify: $(ELF_OUT)
 	@cmp $(ELF_OUT) $(ORIG_ELF) && \
 		echo "✅ byte-perfect match: $(ELF_OUT) == $(ORIG_ELF)" || \
 		(echo "❌ ELF differs from original" && exit 1)
+
+# SHA1 verification (CI-friendly, doesn't need original ELF)
+sha1: $(ELF_OUT)
+	@shasum -a 1 $(ELF_OUT) > build/build.sha1
+	@if [ -f config/build.sha1 ]; then \
+		EXPECTED=$$(awk '{print $$1}' config/build.sha1); \
+		ACTUAL=$$(awk '{print $$1}' build/build.sha1); \
+		if [ "$$EXPECTED" = "$$ACTUAL" ]; then \
+			echo "✅ SHA1 match: $$ACTUAL"; \
+		else \
+			echo "❌ SHA1 mismatch: expected $$EXPECTED, got $$ACTUAL"; \
+			exit 1; \
+		fi; \
+	else \
+		echo "⚠️  No config/build.sha1 — SHA1: $$(cat build/build.sha1)"; \
+	fi
 
 # ── Toolchain check ───────────────────────────────────
 check-toolchain:
@@ -160,6 +176,7 @@ help:
 	@echo "  make split    — Run splat (regenerate asm/ + OSDSYS_A.ld)"
 	@echo "  make elf      — Link full ELF from splat output → build/OSDSYS.elf"
 	@echo "  make verify   — Compare rebuilt ELF against original (byte-perfect)"
+	@echo "  make sha1     — SHA1 verification (CI-friendly, no original ELF needed)"
 	@echo "  make all      — objdiff matching build (target + base .o)"
 	@echo "  make target   — Assemble per-subsystem matching .s → .o"
 	@echo "  make base     — Compile our .c → .o"
@@ -172,6 +189,10 @@ help:
 	@echo "  make progress-crossref — Theseus-style cross-reference"
 	@echo "  make stats           — Subsystem code size breakdown"
 	@echo "  make coverage        — Check .text address coverage"
+	@echo ""
+	@echo "Matching:"
+	@echo "  ./tools/permuter_import.sh <func> <src> — Import function into permuter"
+	@echo "  cd tools/decomp-permuter && python3 ./permuter.py nonmatchings/<func> -j8"
 	@echo ""
 	@echo "Workflow:"
 	@echo "  1. make split          (run once after symbol changes)"
