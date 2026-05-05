@@ -1,18 +1,19 @@
-# CrystalOSD
+OSDSYS  
+[![Build Status]][actions] [![DOL Progress]][Progress] [![REL Progress]][Progress]
+=============
+
+[<img src="https://decomp.dev/JeanxPereira/CrystalOSD.svg?w=512&h=256" width="512" height="256">][Progress]
+
+[Build Status]: https://github.com/JeanxPereira/CrystalOSD/actions/workflows/progress.yml/badge.svg
+[actions]: https://github.com/JeanxPereira/CrystalOSD/actions/workflows/build.yml
+[Progress]: https://decomp.dev/JeanxPereira/CrystalOSD
+[DOL Progress]: https://decomp.dev/JeanxPereira/CrystalOSD.svg?mode=shield&measure=code&category=dol&label=DOL
+[REL Progress]: https://decomp.dev/JeanxPereira/CrystalOSD.svg?mode=shield&measure=code&category=modules&label=REL
+
 
 Clean-room reconstruction of the PlayStation 2 **OSDSYS** — the iconic system menu with its crystalline towers, floating orbs, and memory card browser.
 
 Built by analyzing the binary in [Ghidra](https://ghidra-sre.org/) and cross-referencing against [PS2SDK](https://github.com/ps2dev/ps2sdk) and [PCSX2](https://github.com/PCSX2/pcsx2) source.
-
-## Status
-
-![progress](https://decomp.dev/JeanxPereira/CrystalOSD/HDDOSD_110U.svg?mode=shield&label=progress)
-
-| Metric | Count |
-|--------|-------|
-| Total Functions | 2,008 |
-| Named in Ghidra | 894 (44.5%) |
-| Reconstructed | 0 (0%) |
 
 ## Building
 
