@@ -8,8 +8,12 @@
  * read failure).
  */
 
-#include <stdio.h>
-#include <libmc.h>
+int sceMcGetInfo(int port, int slot, int *type, int *free, int *format);
+int sceMcSync(int mode, int *cmd, int *result);
+int sceMcOpen(int port, int slot, const char *name, int mode);
+int sceMcRead(int fd, void *buf, int size);
+int sceMcClose(int fd);
+int sprintf(char *str, const char *format, ...);
 
 extern char *get_system_folder_name(void);
 
