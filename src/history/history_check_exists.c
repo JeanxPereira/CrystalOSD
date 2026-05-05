@@ -8,6 +8,11 @@
  * read failure).
  */
 
+#include <stdio.h>
+#include <libmc.h>
+
+extern char *get_system_folder_name(void);
+
 extern char path_buf_382B80[];
 
 int history_check_exists(int port)

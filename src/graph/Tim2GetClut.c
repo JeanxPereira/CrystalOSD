@@ -5,6 +5,7 @@
  *      jr $ra; daddu $v0,$zero,$zero;
  * .L:  lw $v1,0x8($a0); addu $v0,$a0,$v0; jr $ra; addu $v0,$v0,$v1
  */
+#include <tamtypes.h>
 
 typedef struct {
     int pad0;
