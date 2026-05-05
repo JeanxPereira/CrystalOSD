@@ -1,0 +1,3 @@
+[submodule "tools/transmuter"]
+	path = tools/transmuter
+	url = https://github.com/macabeus/transmuter.git
