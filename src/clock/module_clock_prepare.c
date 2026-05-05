@@ -17,6 +17,7 @@ extern char D_003E0B10[];
 extern char module_gp_area[];
 
 int module_clock_prepare(void) {
+    int thid;
     ee_thread_t param;
     param.func = module_clock_thread_proc;
     param.stack = D_003E0B10;
@@ -24,7 +25,7 @@ int module_clock_prepare(void) {
     param.gp_reg = module_gp_area;
     param.initial_priority = 6;
     
-    int thid = CreateThread(&param);
+    thid = CreateThread(&param);
     StartThread(thid, 0);
     return thid;
 }
