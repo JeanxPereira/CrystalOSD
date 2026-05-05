@@ -226,3 +226,7 @@ make -j16 elf             # build
 make verify               # MUST say "byte-perfect match"
 ```
 If `make verify` fails, your change broke something. Revert it.
+
+## Transmuter (Automated Matching)
+- Run via: `node tools/transmuter/packages/cli/dist/index.js match src/subsys/file.c --target build/target/subsys/file.o --function function_name`
+- Uses `decomp.yaml` to invoke ee-gcc.

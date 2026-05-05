@@ -51,3 +51,7 @@ __pycache__/
 # Reference repos (cloned externally, not our code)
 reference/osdsys_re/
 reference/ps2-recomp-Agent-SKILL/
+
+# Transmuter Output
+*-*.c
+session-*.json

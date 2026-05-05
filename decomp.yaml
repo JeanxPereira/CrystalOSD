@@ -1,0 +1,5 @@
+tools:
+  transmuter:
+    compiler: |
+      export PATH=/Users/jeanxpereira/ps2dev/ee/bin:/Users/jeanxpereira/ps2dev/iop/bin:/Users/jeanxpereira/ps2dev/dvp/bin:$PATH
+      mips64r5900el-ps2-elf-gcc -O2 -G0 -Wall -D_EE -mabi=eabi -mno-abicalls -fno-common -fno-exceptions -I include -I /Users/jeanxpereira/ps2dev/ps2sdk/ee/include -I /Users/jeanxpereira/ps2dev/ps2sdk/common/include -c "{{inputPath}}" -o "{{outputPath}}"
