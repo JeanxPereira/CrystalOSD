@@ -13,6 +13,7 @@
 extern int  history_check_exists(int slot);
 extern void history_pick_slot(char *name);
 extern int  history_write_mc(int slot);
+extern void *memset(void *, int, unsigned long);
 
 void history_add_entry(char *name)
 {

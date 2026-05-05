@@ -10,6 +10,7 @@
  */
 
 extern int history_check_exists(int slot);
+extern void *memset(void *, int, unsigned long);
 
 void check_or_clear_history(void) {
   if (history_check_exists(0) >= 0)
