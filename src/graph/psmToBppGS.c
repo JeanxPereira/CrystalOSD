@@ -2,6 +2,7 @@
  *
  * 0x0021C170
  */
+#include <tamtypes.h>
 
 int psmToBppGS(u32 psm) {
     int bpp = 0;
