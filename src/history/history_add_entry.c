@@ -1,6 +1,6 @@
-/* CrystalOSD — History subsystem
+/* CrystalOSD — History subsystem */
 /* 0x00208040 - history_add_entry */
- * Records a new title into the play history.
+/* Records a new title into the play history.
  * - Probe both memory cards via history_check_exists; clear in-RAM
  *   buffer if neither has a history file
  * - Pick a slot in the buffer for the new entry (history_pick_slot)
@@ -11,7 +11,7 @@
 extern int  history_check_exists(int slot);
 extern void history_pick_slot(char *name);
 extern int  history_write_mc(int slot);
-extern void *memset(void *, int, unsigned long);
+extern void *memset(void *, int, unsigned int);
 
 void history_add_entry(char *name)
 {
