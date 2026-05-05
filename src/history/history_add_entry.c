@@ -1,7 +1,5 @@
 /* CrystalOSD — History subsystem
- *
- * 0x00208040 - history_add_entry
- *
+/* 0x00208040 - history_add_entry */
  * Records a new title into the play history.
  * - Probe both memory cards via history_check_exists; clear in-RAM
  *   buffer if neither has a history file

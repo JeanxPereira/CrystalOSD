@@ -1,7 +1,13 @@
 /* CrystalOSD — History subsystem
- *
- * 0x002015D0 - history_pick_slot
- */
+/* 0x002015D0 - history_pick_slot */
+
+typedef unsigned long u64;
+typedef unsigned int u32;
+
+extern int strncmp(const char *, const char *, int);
+extern int rand(void);
+extern void *memcpy(void *, const void *, int);
+extern int func_002015A0(void);
 
 void history_pick_slot(char *name)
 {

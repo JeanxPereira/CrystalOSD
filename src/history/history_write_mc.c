@@ -1,7 +1,30 @@
 /* CrystalOSD — History subsystem
- *
- * 0x00207D28 - history_write_mc
- */
+/* 0x00207D28 - history_write_mc */
+
+extern int sceMcGetInfo(int, int, int *, int *, int *);
+extern int sceMcSync(int, int, int *);
+extern int sceMcGetDir(int, int, const char *, int, int, void *);
+extern int sceMcMkdir(int, int, const char *);
+extern int sceMcSetFileInfo(int, int, const char *, const void *, int);
+extern int sceMcDelete(int, int, const char *);
+extern int strcmp(const char *, const char *);
+extern int sprintf(char *, const char *, ...);
+
+extern char *func_0020E3E8(void);
+extern char *get_system_folder_name(void);
+extern int func_00207B80(int, const char *, const void *, int, int);
+extern int get_vidmode_with_fallback(void);
+
+extern char D_00372B40[];
+extern char D_00382B40[];
+extern char D_00382B80[];
+extern char aSS_0[];
+extern char aHistory[];
+extern char aIconSys[];
+extern char aHistoryOld[];
+extern char aPs2d_1[];
+extern char aPs2d_2[];
+extern char aStar_0[];
 
 extern int history_check_exists(int slot);
 
