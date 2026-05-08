@@ -1091,15 +1091,15 @@
     "last_updated": "2026-05-08T15:46:34.065269"
   },
   "sound_handle_queue_cmd_auto": {
-    "best_score": 755,
+    "best_score": 330,
     "max_score": 1500,
-    "match_pct": 49.7,
+    "match_pct": 78.0,
     "best_slug": "EP8Gk",
     "url": "https://decomp.me/scratch/EP8Gk",
     "asm_file": "asm/sound/sound_handle_queue_cmd_auto.s",
     "slug": "EP8Gk",
-    "attempts": 1,
-    "last_updated": "2026-05-08T15:47:38.799796"
+    "attempts": 4,
+    "last_updated": "2026-05-08T16:16:25.628939"
   },
   "ExitThread": {
     "best_score": 0,
@@ -1122,5 +1122,49 @@
     "slug": "hJzCM",
     "attempts": 1,
     "last_updated": "2026-05-08T15:53:14.620942"
+  },
+  "sceGsGetGParam": {
+    "best_score": 0,
+    "max_score": 300,
+    "match_pct": 100.0,
+    "best_slug": "BfxH5",
+    "url": "https://decomp.me/scratch/BfxH5",
+    "asm_file": "asm/core/sceGsGetGParam.s",
+    "slug": "BfxH5",
+    "attempts": 1,
+    "last_updated": "2026-05-08T16:22:20.210681"
+  },
+  "sceDmaDebug": {
+    "best_score": 0,
+    "max_score": 400,
+    "match_pct": 100.0,
+    "best_slug": "Luyls",
+    "url": "https://decomp.me/scratch/Luyls",
+    "asm_file": "asm/core/sceDmaDebug.s",
+    "slug": "Luyls",
+    "attempts": 1,
+    "last_updated": "2026-05-08T16:22:23.676900"
+  },
+  "sceDmaPkInit": {
+    "best_score": 400,
+    "max_score": 400,
+    "match_pct": 0.0,
+    "best_slug": "548pQ",
+    "url": "https://decomp.me/scratch/548pQ",
+    "asm_file": "asm/core/sceDmaPkInit.s",
+    "slug": "548pQ",
+    "attempts": 1,
+    "last_updated": "2026-05-08T16:22:27.411317"
+  },
+  "sceDmaPkReset": {
+    "best_score": 400,
+    "max_score": 400,
+    "match_pct": 0.0,
+    "best_slug": "nLYZ4",
+    "url": "https://decomp.me/scratch/nLYZ4",
+    "asm_file": "asm/core/sceDmaPkReset.s",
+    "slug": "nLYZ4",
+    "attempts": 1,
+    "last_updated": "2026-05-08T16:22:29.730356"
   }
 }
