@@ -459,15 +459,24 @@ def main(argv: list[str] | None = None) -> int:
         groups = edited
 
     # create commits
+    skipped: list[str] = []
     for g in groups:
         # reset whatever was staged before, then stage only this group's files
         reset_index()
         stage_paths(g.files)
+        staged = run(["git", "diff", "--cached", "--name-only"], check=False).strip()
+        if not staged:
+            skipped.append(g.header() + "  (nothing to commit; submodule untracked-content only?)")
+            continue
         ok = create_commit(g, dry_run=args.dry_run, co_author=args.co_author)
         if not ok:
             print(f"\n!! commit failed for: {g.header()}")
             print("   leaving remaining groups unstaged; resolve manually and re-run")
             return 1
+    if skipped:
+        print("\n-- skipped (empty stage) --")
+        for s in skipped:
+            print(f"  {s}")
 
     print("\n== done ==")
     return 0
