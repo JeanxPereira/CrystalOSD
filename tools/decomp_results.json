@@ -1067,5 +1067,16 @@
     "slug": "bTc9G",
     "attempts": 1,
     "last_updated": "2026-05-08T15:33:40.390956"
+  },
+  "sceCdPosToInt": {
+    "best_score": 3200,
+    "max_score": 3200,
+    "match_pct": 0.0,
+    "best_slug": "0Fmdb",
+    "url": "https://decomp.me/scratch/0Fmdb",
+    "asm_file": "asm/core/sceCdPosToInt.s",
+    "slug": "0Fmdb",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:38:03.078603"
   }
 }
