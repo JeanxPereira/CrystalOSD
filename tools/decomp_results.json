@@ -1003,15 +1003,15 @@
     "last_updated": "2026-05-08T15:13:19.037147"
   },
   "_exit": {
-    "best_score": 200,
+    "best_score": 0,
     "max_score": 200,
-    "match_pct": 0.0,
-    "best_slug": "0eXf9",
-    "url": "https://decomp.me/scratch/0eXf9",
+    "match_pct": 100.0,
+    "best_slug": "3RBNw",
+    "url": "https://decomp.me/scratch/3RBNw",
     "asm_file": "asm/core/_exit.s",
-    "slug": "0eXf9",
-    "attempts": 1,
-    "last_updated": "2026-05-08T15:14:08.132113"
+    "slug": "3RBNw",
+    "attempts": 2,
+    "last_updated": "2026-05-08T15:52:07.055861"
   },
   "sceSif_unused1": {
     "best_score": 100,
@@ -1078,5 +1078,49 @@
     "slug": "0Fmdb",
     "attempts": 1,
     "last_updated": "2026-05-08T15:38:03.078603"
+  },
+  "sceSdCallBack": {
+    "best_score": 15,
+    "max_score": 400,
+    "match_pct": 96.2,
+    "best_slug": "7GyPA",
+    "url": "https://decomp.me/scratch/7GyPA",
+    "asm_file": "asm/core/sceSdCallBack.s",
+    "slug": "7GyPA",
+    "attempts": 2,
+    "last_updated": "2026-05-08T15:46:34.065269"
+  },
+  "sound_handle_queue_cmd_auto": {
+    "best_score": 755,
+    "max_score": 1500,
+    "match_pct": 49.7,
+    "best_slug": "EP8Gk",
+    "url": "https://decomp.me/scratch/EP8Gk",
+    "asm_file": "asm/sound/sound_handle_queue_cmd_auto.s",
+    "slug": "EP8Gk",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:47:38.799796"
+  },
+  "ExitThread": {
+    "best_score": 0,
+    "max_score": 200,
+    "match_pct": 100.0,
+    "best_slug": "6EgDJ",
+    "url": "https://decomp.me/scratch/6EgDJ",
+    "asm_file": "asm/core/ExitThread.s",
+    "slug": "6EgDJ",
+    "attempts": 2,
+    "last_updated": "2026-05-08T15:51:32.029644"
+  },
+  "nullsub_4": {
+    "best_score": 0,
+    "max_score": 200,
+    "match_pct": 100.0,
+    "best_slug": "hJzCM",
+    "url": "https://decomp.me/scratch/hJzCM",
+    "asm_file": "asm/core/nullsub_4.s",
+    "slug": "hJzCM",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:53:14.620942"
   }
 }
