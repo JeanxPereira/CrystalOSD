@@ -38,8 +38,8 @@ segments:
       subsegments:
         - [0x1000, asm, core/start]
         - [0x10B4, asm, core/gap_0010B4]  # 4 bytes gap
-        - [0x10B8, asm, core/_exit]
-        - [0x10C0, asm, core/ExitThread]
+        - [0x10B8, c, core/_exit]
+        - [0x10C0, c, core/ExitThread]
         - [0x10C8, asm, sound/sceSpu2DmaWriteEe2Iop]
         - [0x1134, asm, core/gap_001134]  # 4 bytes gap
         - [0x1138, asm, sound/sound_handle_bd]
@@ -101,42 +101,42 @@ segments:
         - [0x3FC0, asm, cdvd/ExecuteHddApp]
         - [0x43E8, asm, cdvd/Game_Boot_ExecuteDisc_p5_tgt]
         - [0x4490, asm, core/gap_004490]  # 1056 bytes gap
-        - [0x48B0, asm, config/do_read_cdvd_config_entry]
+        - [0x48B0, c, config/do_read_cdvd_config_entry]
         - [0x4944, asm, core/gap_004944]  # 220 bytes gap
         - [0x4A20, asm, config/config_set_default_main]
         - [0x4AD4, asm, core/gap_004AD4]  # 4 bytes gap
         - [0x4AD8, asm, config/write_osd_config]
         - [0x4BEC, asm, core/gap_004BEC]  # 4 bytes gap
         - [0x4BF0, asm, config/config_first]
-        - [0x4CF8, asm, config/config_get_spdif_mode]
-        - [0x4D08, asm, config/config_set_spdif_mode]
+        - [0x4CF8, c, config/config_get_spdif_mode]
+        - [0x4D08, c, config/config_set_spdif_mode]
         - [0x4D2C, asm, core/gap_004D2C]  # 4 bytes gap
-        - [0x4D30, asm, config/config_get_aspect_ratio]
+        - [0x4D30, c, config/config_get_aspect_ratio]
         - [0x4D4C, asm, core/gap_004D4C]  # 4 bytes gap
         - [0x4D50, asm, config/config_set_aspect_ratio]
-        - [0x4D98, asm, config/config_get_video_output]
+        - [0x4D98, c, config/config_get_video_output]
         - [0x4DAC, asm, core/gap_004DAC]  # 4 bytes gap
         - [0x4DB0, asm, config/config_set_video_output]
         - [0x4DD4, asm, core/gap_004DD4]  # 4 bytes gap
         - [0x4DD8, asm, config/config_get_osd_language]
         - [0x4E58, asm, config/config_set_jpn_language]
-        - [0x4EE8, asm, config/config_get_timezone_offset]
+        - [0x4EE8, c, config/config_get_timezone_offset]
         - [0x4EFC, asm, core/gap_004EFC]  # 4 bytes gap
         - [0x4F00, asm, config/config_set_timezone_offset]
         - [0x4F30, asm, config/config_get_timezone_city]
         - [0x4F60, asm, config/config_set_timezone_city]
         - [0x4FC4, asm, core/gap_004FC4]  # 4 bytes gap
-        - [0x4FC8, asm, config/config_get_daylight_saving]
+        - [0x4FC8, c, config/config_get_daylight_saving]
         - [0x4FDC, asm, core/gap_004FDC]  # 4 bytes gap
         - [0x4FE0, asm, config/config_set_daylight_saving]
-        - [0x5008, asm, config/config_get_time_format]
+        - [0x5008, c, config/config_get_time_format]
         - [0x501C, asm, core/gap_00501C]  # 4 bytes gap
         - [0x5020, asm, config/config_set_time_format]
-        - [0x5048, asm, config/config_get_date_format]
+        - [0x5048, c, config/config_get_date_format]
         - [0x5060, asm, config/config_set_date_format]
         - [0x50AC, asm, core/gap_0050AC]  # 4 bytes gap
-        - [0x50B0, asm, config/config_set_keyboard_type]
-        - [0x50C0, asm, config/config_get_keyboard_type]
+        - [0x50B0, c, config/config_set_keyboard_type]
+        - [0x50C0, c, config/config_get_keyboard_type]
         - [0x50CC, asm, core/gap_0050CC]  # 4 bytes gap
         - [0x50D0, asm, config/config_set_keyboard_repeatw]
         - [0x50E0, asm, config/config_get_keyboard_repeatw]
@@ -192,7 +192,7 @@ segments:
         - [0x5E58, asm, config/config_get_dvdp_support_clear_progressive]
         - [0x5E6C, asm, core/gap_005E6C]  # 4 bytes gap
         - [0x5E70, asm, config/config_set_dvdp_support_clear_progressive]
-        - [0x5E98, asm, core/nullsub_1]
+        - [0x5E98, c, core/nullsub_1]
         - [0x5EA0, asm, config/config_hdd_open_write_ini]
         - [0x5F38, asm, config/config_hdd_open_read_ini]
         - [0x5FF8, asm, config/config_hdd_close_ini]
@@ -303,7 +303,7 @@ segments:
         - [0xCEFC, asm, core/gap_00CEFC]  # 4 bytes gap
         - [0xCF00, asm, graph/StartFrame]
         - [0xCFA8, asm, opening/OpeningDoWaitNextFrame]
-        - [0xCFD8, asm, graph/graph_swap_frame_thread_proc]
+        - [0xCFD8, c, graph/graph_swap_frame_thread_proc]
         - [0xD010, asm, graph/SwapBuffers]
         - [0xD0B4, asm, core/gap_00D0B4]  # 4 bytes gap
         - [0xD0B8, asm, config/timezone_related_20C0B8]
@@ -319,7 +319,7 @@ segments:
         - [0xD950, asm, core/vblankHandler]
         - [0xDA68, asm, config/set_osd_config_to_eekernel]
         - [0xDBDC, asm, core/gap_00DBDC]  # 4 bytes gap
-        - [0xDBE0, asm, graph/graph_reset_related1]
+        - [0xDBE0, c, graph/graph_reset_related1]
         - [0xDC50, asm, core/pad_handler_hddboot_check_20CC50]
         - [0xDD1C, asm, core/gap_00DD1C]  # 4 bytes gap
         - [0xDD20, asm, core/pad_sound_handler_thread_proc]
@@ -542,7 +542,7 @@ segments:
         - [0x14F88, asm, core/gap_014F88]  # 672 bytes gap
         - [0x15228, asm, graph/Font_Load]
         - [0x15428, asm, core/gap_015428]  # 96 bytes gap
-        - [0x15488, asm, core/nullsub_12]
+        - [0x15488, c, core/nullsub_12]
         - [0x15490, asm, core/gap_015490]  # 192 bytes gap
         - [0x15550, asm, core/do_format_date]
         - [0x15640, asm, core/do_format_time]
@@ -722,7 +722,7 @@ segments:
         - [0x27B10, asm, graph/do_load_font]
         - [0x27B94, asm, core/gap_027B94]  # 4 bytes gap
         - [0x27B98, asm, graph/DrawNonSelectableItem]
-        - [0x27C00, asm, graph/draw_menu_item]
+        - [0x27C00, c, graph/draw_menu_item]
         - [0x27CA0, asm, core/gap_027CA0]  # 1032 bytes gap
         - [0x280A8, asm, clock/clock_str_related]
         - [0x2841C, asm, core/gap_02841C]  # 1908 bytes gap
@@ -741,7 +741,7 @@ segments:
         - [0x29470, asm, clock/clock_config_get_item_str]
         - [0x294F4, asm, core/gap_0294F4]  # 572 bytes gap
         - [0x29730, asm, core/j_config_mark_dirty]
-        - [0x29738, asm, core/nullsub_4]
+        - [0x29738, c, core/nullsub_4]
         - [0x29740, asm, core/nullsub_11]
         - [0x29748, asm, core/gap_029748]  # 2032 bytes gap
         - [0x29F38, asm, core/j_sound_handler_queue_command]
@@ -2341,7 +2341,7 @@ segments:
         - [0x9569C, asm, core/gap_09569C]  # 4 bytes gap
         - [0x956A0, asm, core/sceSdTransToIOP]
         - [0x95724, asm, core/gap_095724]  # 4 bytes gap
-        - [0x95728, asm, core/sceSdCallBack]
+        - [0x95728, c, core/sceSdCallBack]
         - [0x95738, asm, core/sceSdRemote]
         - [0x95928, asm, core/cos]
         - [0x95A30, asm, core/sin]
@@ -2611,7 +2611,7 @@ segments:
         - [0xA5700, asm, core/SetGsCrt]
         - [0xA5710, asm, core/ReferThreadStatus]
         - [0xA5720, asm, graph/GsGetIMR]
-        - [0xA5730, asm, graph/GsPutIMR]
+        - [0xA5730, c, graph/GsPutIMR]
         - [0xA5740, asm, core/__fixdfdi]
         - [0xA579C, asm, core/gap_text_end]
         - [0xA57A0, data, datasect]
