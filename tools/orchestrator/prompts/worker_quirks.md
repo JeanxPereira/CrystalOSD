@@ -1,0 +1,1 @@
+/Users/jeanxpereira/CodingProjects/CrystalOSD/reference/COMPILER_QUIRKS.md
