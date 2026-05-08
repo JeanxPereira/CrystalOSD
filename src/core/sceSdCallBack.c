@@ -1,22 +1,11 @@
-/* CrystalOSD — Core subsystem: sceSdCallBack
- *
- * 0x00294728
- * STUB — Ghidra decompiler output, needs manual cleanup
- */
+/* 0x00294728 - sceSdCallBack */
+#include <tamtypes.h>
 
-#include "ghidra_types.h"
+extern void *D_00347068;
 
-
-
-/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
-
-undefined4 sceSdCallBack(undefined4 param_1)
-
+void *sceSdCallBack(void *cb)
 {
-  undefined4 uVar1;
-  
-  uVar1 = ram0x00347068;
-  ram0x00347068 = param_1;
-  return uVar1;
+    void *old = D_00347068;
+    D_00347068 = cb;
+    return old;
 }
-
