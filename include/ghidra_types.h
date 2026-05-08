@@ -12,8 +12,6 @@
 /* Forward-declare common libc functions instead of including headers
  * to avoid conflicts with the project's own include/string.h */
 typedef unsigned long size_t;
-void *memset(void *, int, size_t);
-void *memcpy(void *, const void *, size_t);
 int printf(const char *, ...);
 int sprintf(char *, const char *, ...);
 
