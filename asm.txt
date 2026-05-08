@@ -1,0 +1,10 @@
+
+build/asm/core/sceGsGetGParam.s.o:     file format elf32-littlemips
+
+
+Disassembly of section .text:
+
+00000000 <sceGsGetGParam>:
+   0:	3c020000 	lui	v0,0x0
+   4:	03e00008 	jr	ra
+   8:	24420000 	addiu	v0,v0,0
