@@ -1,0 +1,1 @@
+extern void Exit(s32 exit_code);
