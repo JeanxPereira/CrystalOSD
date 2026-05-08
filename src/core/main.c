@@ -1,6 +1,9 @@
 // CrystalOSD main function reconstruction
 // 0x0020d4d0 - main
 
+#include <tamtypes.h>
+#include <string.h>
+
 #define NULL ((void*)0)
 
 typedef struct {
@@ -108,7 +111,7 @@ extern u8 osdrp_img_bytes_end[];
 extern u8 usbd_irx_bytes[];
 extern u8 usbd_irx_bytes_end[];
 extern u8 usbkbd_irx_bytes[];
-extern usbkbd_irx_bytes_end[];
+extern u8 usbkbd_irx_bytes_end[];
 extern u8 subfile_irx_bytes[];
 extern u8 subfile_irx_bytes_end[];
 extern u8 dev9_irx_bytes[];
