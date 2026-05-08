@@ -1146,25 +1146,91 @@
     "last_updated": "2026-05-08T16:22:23.676900"
   },
   "sceDmaPkInit": {
-    "best_score": 400,
+    "best_score": 25,
     "max_score": 400,
-    "match_pct": 0.0,
+    "match_pct": 93.8,
     "best_slug": "548pQ",
     "url": "https://decomp.me/scratch/548pQ",
     "asm_file": "asm/core/sceDmaPkInit.s",
     "slug": "548pQ",
-    "attempts": 1,
-    "last_updated": "2026-05-08T16:22:27.411317"
+    "attempts": 2,
+    "last_updated": "2026-05-08T16:23:51.481447"
   },
   "sceDmaPkReset": {
-    "best_score": 400,
+    "best_score": 0,
     "max_score": 400,
-    "match_pct": 0.0,
+    "match_pct": 100.0,
     "best_slug": "nLYZ4",
     "url": "https://decomp.me/scratch/nLYZ4",
     "asm_file": "asm/core/sceDmaPkReset.s",
     "slug": "nLYZ4",
+    "attempts": 2,
+    "last_updated": "2026-05-08T16:23:53.804999"
+  },
+  "Font_SetRatio": {
+    "best_score": 25,
+    "max_score": 600,
+    "match_pct": 95.8,
+    "best_slug": "Gk6qD",
+    "url": "https://decomp.me/scratch/Gk6qD",
+    "asm_file": "asm/graph/Font_SetRatio.s",
+    "slug": "Gk6qD",
+    "attempts": 3,
+    "last_updated": "2026-05-08T16:29:45.197094"
+  },
+  "Font_SetTvFontRatio": {
+    "best_score": 0,
+    "max_score": 900,
+    "match_pct": 100.0,
+    "best_slug": "467T0",
+    "url": "https://decomp.me/scratch/467T0",
+    "asm_file": "asm/graph/Font_SetTvFontRatio.s",
+    "slug": "467T0",
+    "attempts": 2,
+    "last_updated": "2026-05-08T16:29:11.827757"
+  },
+  "Font_SetBGColor": {
+    "best_score": 40,
+    "max_score": 900,
+    "match_pct": 95.6,
+    "best_slug": "WDXkq",
+    "url": "https://decomp.me/scratch/WDXkq",
+    "asm_file": "asm/graph/Font_SetBGColor.s",
+    "slug": "WDXkq",
     "attempts": 1,
-    "last_updated": "2026-05-08T16:22:29.730356"
+    "last_updated": "2026-05-08T16:28:24.025552"
+  },
+  "Font_SetColor": {
+    "best_score": 420,
+    "max_score": 2100,
+    "match_pct": 80.0,
+    "best_slug": "grJET",
+    "url": "https://decomp.me/scratch/grJET",
+    "asm_file": "asm/graph/Font_SetColor.s",
+    "slug": "grJET",
+    "attempts": 3,
+    "last_updated": "2026-05-08T16:31:04.969010"
+  },
+  "Font_SetPitch": {
+    "best_score": 100,
+    "max_score": 1200,
+    "match_pct": 91.7,
+    "best_slug": "XgLB1",
+    "url": "https://decomp.me/scratch/XgLB1",
+    "asm_file": "asm/graph/Font_SetPitch.s",
+    "slug": "XgLB1",
+    "attempts": 2,
+    "last_updated": "2026-05-08T16:29:16.381727"
+  },
+  "Tim2GetLog2": {
+    "best_score": 400,
+    "max_score": 1500,
+    "match_pct": 73.3,
+    "best_slug": "9F1bt",
+    "url": "https://decomp.me/scratch/9F1bt",
+    "asm_file": "asm/graph/Tim2GetLog2.s",
+    "slug": "9F1bt",
+    "attempts": 2,
+    "last_updated": "2026-05-08T16:33:28.772180"
   }
 }
