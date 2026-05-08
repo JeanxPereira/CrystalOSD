@@ -1,18 +1,13 @@
-/* CrystalOSD — Config subsystem: do_read_cdvd_config_entry
- *
- * 0x002038B0
- * STUB — Ghidra decompiler output, needs manual cleanup
- */
+#include "osd_config.h"
 
-#include "ghidra_types.h"
+extern s32 sceCdOpenConfig(s32 a, s32 b, s32 c, u32 *d);
+extern s32 sceCdReadConfig(void *a, u32 *b);
+extern s32 sceCdCloseConfig(u32 *a);
 
-
-
-void do_read_cdvd_config_entry(undefined8 param_1)
-
+void do_read_cdvd_config_entry(void *param_1)
 {
-  long lVar1;
-  uint auStack_30 [4];
+  s32 lVar1;
+  u32 auStack_30 [4];
   
   do {
     do {
@@ -29,6 +24,4 @@ void do_read_cdvd_config_entry(undefined8 param_1)
       lVar1 = sceCdCloseConfig(auStack_30);
     } while ((auStack_30[0] & 0x81) != 0);
   } while (lVar1 == 0);
-  return;
 }
-

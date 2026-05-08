@@ -1,17 +1,6 @@
-/* CrystalOSD — Config subsystem: config_set_keyboard_type
- *
- * 0x002040B0
- * STUB — Ghidra decompiler output, needs manual cleanup
- */
+#include "osd_config.h"
 
-#include "ghidra_types.h"
-
-
-
-void config_set_keyboard_type(undefined4 param_1)
-
+void config_set_keyboard_type(u32 v)
 {
-  var_hddsys_keyboard_type = param_1;
-  return;
+    var_hddsys_keyboard_type = (s32)v;
 }
-

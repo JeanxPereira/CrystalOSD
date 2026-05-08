@@ -1,16 +1,7 @@
-/* CrystalOSD — Config subsystem: config_get_timezone_offset
- *
- * 0x00203EE8
- * STUB — Ghidra decompiler output, needs manual cleanup
- */
+#include "osd_config.h"
 
-#include "ghidra_types.h"
-
-
-
-int config_get_timezone_offset(void)
-
+s32 config_get_timezone_offset(void)
 {
-  return (var_mechacon_config_param_1 << 0xc) >> 0x15;
+    /* sign-extend 11-bit field at bits 19:9: shift left 12, arithmetic right 21 */
+    return ((s32)(var_mechacon_config_param_1 << 12)) >> 21;
 }
-

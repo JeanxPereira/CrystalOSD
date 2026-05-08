@@ -1,17 +1,7 @@
-/* CrystalOSD — Config subsystem: config_set_spdif_mode
- *
- * 0x00203D08
- * STUB — Ghidra decompiler output, needs manual cleanup
- */
+#include "osd_config.h"
 
-#include "ghidra_types.h"
-
-
-
-uint config_set_spdif_mode(uint param_1)
-
+u32 config_set_spdif_mode(u32 v)
 {
-  var_mechacon_config_param_1 = var_mechacon_config_param_1 & 0xfffffffe | param_1 & 1;
-  return param_1 & 1;
+    var_mechacon_config_param_1 = (var_mechacon_config_param_1 & 0xfffffffe) | (v & 1);
+    return v & 1;
 }
-
