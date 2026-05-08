@@ -58,3 +58,13 @@ src/stubs/
 # Transmuter Output
 *-*.c
 session-*.json
+# orchestrator runtime state — keep config.yml committed
+.orchestrator/log.jsonl
+.orchestrator/queue.json
+.orchestrator/ask_human/
+.orchestrator/takeaways.md
+.orchestrator/secrets.env
+.orchestrator/secrets.local.env
+.env
+.env.local
+src/stubs/
