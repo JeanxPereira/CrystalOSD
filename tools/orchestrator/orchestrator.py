@@ -25,6 +25,7 @@ from . import config as cfg_mod
 from . import easy_funcs
 from . import permuter_fallback
 from . import planner as planner_mod
+from . import promoter
 from . import worker as worker_mod
 from .judge import Verdict
 from .llm import build_provider, build_with_fallback
@@ -351,6 +352,107 @@ def cmd_iterate(args) -> int:
     return 0 if "error" not in res else 1
 
 
+def cmd_promote(args) -> int:
+    """Move matched stubs to src/, update splat_config.yml.
+
+    Selection:
+      --func X         single function
+      --all            every promotable stub on disk (score <= threshold)
+      --list           show candidates, do not promote
+    """
+    cfg = cfg_mod.load()
+    threshold = cfg["judge"]["symbol_only_threshold"]
+    candidates: list[promoter.Candidate]
+
+    skipped: list[dict] = []
+    if args.func:
+        stub, sub = promoter.find_stub(args.func)
+        if not stub or not sub:
+            print(json.dumps({"error": f"no stub for {args.func}"}))
+            return 1
+        rec = promoter.load_decomp_score(args.func) or {}
+        score = rec.get("best_score") if "best_score" in rec else rec.get("score")
+        if score is None and not args.force:
+            print(json.dumps({"error": f"no decomp.me score for {args.func}; use --force to skip check"}))
+            return 1
+        if not args.force and not promoter.is_promotable_score(score, threshold):
+            print(json.dumps({"error": f"{args.func} score={score} > threshold={threshold}; use --force to override"}))
+            return 1
+        existing = promoter.already_defined_in_src(args.func)
+        if existing is not None and not args.force:
+            print(json.dumps({"error": f"{args.func} already defined in {existing}; use --force to override"}))
+            return 1
+        candidates = [
+            promoter.Candidate(
+                func_name=args.func,
+                subsystem=sub,
+                stub_path=stub,
+                src_path=cfg_mod.resolve(f"src/{sub}/{args.func}.c"),
+                score=score,
+                max_score=rec.get("max_score"),
+                slug=rec.get("best_slug") or rec.get("slug"),
+                has_ctx=stub.with_suffix(".ctx.h").exists(),
+            )
+        ]
+    else:
+        candidates, skipped = promoter.collect_candidates(threshold=threshold)
+
+    if args.list:
+        print(f"== promotable candidates ({len(candidates)}) ==\n")
+        for c in candidates:
+            print(f"  {c.subsystem:8s}  {c.func_name:35s} score={c.score:>3}/{c.max_score or '?'}  slug={c.slug}")
+        if skipped:
+            print(f"\n== skipped ({len(skipped)}) ==")
+            for s in skipped:
+                print(f"  {s['subsystem']:8s}  {s['func']:35s}  {s['reason']}")
+        return 0
+
+    if not candidates:
+        if skipped:
+            print(f"no promotable stubs ({len(skipped)} skipped — run --list for details)")
+        else:
+            print("no promotable stubs")
+        return 0
+
+    dry_run = not args.apply
+    summary = {"promoted": 0, "skipped": 0, "errors": 0}
+    print(f"== promoting {len(candidates)} stub(s) {'(DRY-RUN)' if dry_run else ''} ==\n")
+    for c in candidates:
+        res = promoter.promote_one(c, dry_run=dry_run)
+        tag = "PLAN" if dry_run else ("OK" if res["ok"] else "ERR")
+        print(f"[{tag}] {res['subsystem']}/{res['func']}  score={res['score']}")
+        for a in res["actions"]:
+            print(f"    {a}")
+        for e in res["errors"]:
+            print(f"    !! {e}")
+        if res["ok"] and not dry_run:
+            summary["promoted"] += 1
+            append_log({"event": "promoted", "func": res["func"],
+                        "subsystem": res["subsystem"], "score": res["score"]})
+        elif not res["ok"]:
+            summary["errors"] += 1
+
+    if not dry_run:
+        removed = promoter.cleanup_empty_subsystem_dirs()
+        if removed:
+            print(f"\n  cleaned empty stub dirs: {removed}")
+
+    print(f"\n== {'plan' if dry_run else 'done'}: {summary} ==")
+    if dry_run:
+        print("rerun with --apply to execute")
+        return 0
+
+    if args.build and summary["promoted"] > 0:
+        print("\n== running make verify ==")
+        ok, log = promoter.run_make_verify()
+        print(log)
+        if not ok:
+            print("\n!! make verify failed; revert with `git checkout -- src/ splat_config.yml` if needed")
+            return 2
+        print("\n  byte-perfect match preserved")
+    return 0 if summary["errors"] == 0 else 2
+
+
 def _append_takeaway(func_name: str, res, status: str) -> None:
     cfg = cfg_mod.load()
     p = cfg_mod.resolve(cfg["paths"]["takeaways"])
@@ -507,6 +609,16 @@ def main(argv: list[str] | None = None) -> int:
     sp.add_argument("source_file")
     sp.add_argument("--context-file")
     sp.set_defaults(_handler=cmd_iterate)
+
+    sp = sub.add_parser("promote", help="move matched stub(s) to src/, flip splat subsegment")
+    grp = sp.add_mutually_exclusive_group()
+    grp.add_argument("--func", help="promote a specific function")
+    grp.add_argument("--all", action="store_true", help="promote every score<=threshold stub on disk")
+    grp.add_argument("--list", action="store_true", help="show candidates without promoting")
+    sp.add_argument("--apply", action="store_true", help="actually move files (default: dry-run)")
+    sp.add_argument("--force", action="store_true", help="skip score-threshold check (--func only)")
+    sp.add_argument("--build", action="store_true", help="run `make verify` after promotion")
+    sp.set_defaults(_handler=cmd_promote)
 
     sp = sub.add_parser("batch", help="run queue for one subsystem serially")
     sp.add_argument("subsystem")
