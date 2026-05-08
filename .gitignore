@@ -62,6 +62,7 @@ session-*.json
 .orchestrator/log.jsonl
 .orchestrator/queue.json
 .orchestrator/ask_human/
+.orchestrator/briefs/
 .orchestrator/takeaways.md
 .orchestrator/secrets.env
 .orchestrator/secrets.local.env
