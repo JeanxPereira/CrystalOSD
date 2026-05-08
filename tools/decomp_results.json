@@ -990,5 +990,82 @@
     "slug": "V7Jjh",
     "attempts": 2,
     "last_updated": "2026-05-05T10:33:25.402515"
+  },
+  "nullsub_1": {
+    "best_score": 0,
+    "max_score": 200,
+    "match_pct": 100.0,
+    "best_slug": "8xRQj",
+    "url": "https://decomp.me/scratch/8xRQj",
+    "asm_file": "asm/core/nullsub_1.s",
+    "slug": "8xRQj",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:13:19.037147"
+  },
+  "_exit": {
+    "best_score": 200,
+    "max_score": 200,
+    "match_pct": 0.0,
+    "best_slug": "0eXf9",
+    "url": "https://decomp.me/scratch/0eXf9",
+    "asm_file": "asm/core/_exit.s",
+    "slug": "0eXf9",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:14:08.132113"
+  },
+  "sceSif_unused1": {
+    "best_score": 100,
+    "max_score": 100,
+    "match_pct": 0.0,
+    "best_slug": "UDa5n",
+    "url": "https://decomp.me/scratch/UDa5n",
+    "asm_file": "asm/core/sceSif_unused1.s",
+    "slug": "UDa5n",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:15:26.360720"
+  },
+  "nullsub_5": {
+    "best_score": 200,
+    "max_score": 200,
+    "match_pct": 0.0,
+    "best_slug": "2Ev7j",
+    "url": "https://decomp.me/scratch/2Ev7j",
+    "asm_file": "asm/core/nullsub_5.s",
+    "slug": "2Ev7j",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:22:13.083990"
+  },
+  "nullsub_12": {
+    "best_score": 0,
+    "max_score": 200,
+    "match_pct": 100.0,
+    "best_slug": "Ye5Uo",
+    "url": "https://decomp.me/scratch/Ye5Uo",
+    "asm_file": "asm/core/nullsub_12.s",
+    "slug": "Ye5Uo",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:24:51.580129"
+  },
+  "sceCdCallback": {
+    "best_score": 267,
+    "max_score": 2200,
+    "match_pct": 87.9,
+    "best_slug": "eLjUH",
+    "url": "https://decomp.me/scratch/eLjUH",
+    "asm_file": "asm/core/sceCdCallback.s",
+    "slug": "eLjUH",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:27:17.476818"
+  },
+  "sceCdDelayThread": {
+    "best_score": 2600,
+    "max_score": 2600,
+    "match_pct": 0.0,
+    "best_slug": "bTc9G",
+    "url": "https://decomp.me/scratch/bTc9G",
+    "asm_file": "asm/core/sceCdDelayThread.s",
+    "slug": "bTc9G",
+    "attempts": 1,
+    "last_updated": "2026-05-08T15:33:40.390956"
   }
 }
