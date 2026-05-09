@@ -1,7 +1,6 @@
 /* 0x0020BFD8 - graph_swap_frame_thread_proc */
 
 #include <kernel.h>
-#include <stdbool.h>
 #include "osdsys_externs.h"
 
 void graph_swap_frame_thread_proc(void)
@@ -10,6 +9,6 @@ void graph_swap_frame_thread_proc(void)
     WaitSema(swapSema);
     SwapBuffers();
     SignalSema(drawStartSema);
-  } while (true);
+  } while (1);
 }
 
