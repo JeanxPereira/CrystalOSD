@@ -1470,7 +1470,7 @@ SECTIONS
         build/asm/core/sceDmaGetChan.s.o(.text);
         build/asm/core/sceDmaReset.s.o(.text);
         build/asm/core/gap_07CC9C.s.o(.text);
-        build/src/core/sceDmaDebug.c.o(.text);
+        build/asm/core/sceDmaDebug.s.o(.text);
         build/asm/core/sceDmaPutEnv.s.o(.text);
         build/asm/core/sceDmaGetEnv.s.o(.text);
         build/asm/core/sceDmaPutStallAddr.s.o(.text);
@@ -1565,7 +1565,7 @@ SECTIONS
         build/asm/core/gap_07E904.s.o(.text);
         build/asm/core/sceDevVif1GetFifo.s.o(.text);
         build/asm/core/sceDmaPkInit.s.o(.text);
-        build/src/core/sceDmaPkReset.c.o(.text);
+        build/asm/core/sceDmaPkReset.s.o(.text);
         build/asm/core/sceDmaPkTerminate.s.o(.text);
         build/asm/core/sceVif1PkCnt.s.o(.text);
         build/asm/core/sceVif1PkEnd.s.o(.text);
@@ -2028,7 +2028,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.text);
         build/asm/core/_InitTLB.s.o(.text);
         build/asm/core/sceGsResetGraph.s.o(.text);
-        build/src/core/sceGsGetGParam.c.o(.text);
+        build/asm/core/sceGsGetGParam.s.o(.text);
         build/asm/core/gap_089BD4.s.o(.text);
         build/asm/core/sceGsResetPath.s.o(.text);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.text);
@@ -4052,7 +4052,7 @@ SECTIONS
         build/asm/core/sceDmaGetChan.s.o(.data);
         build/asm/core/sceDmaReset.s.o(.data);
         build/asm/core/gap_07CC9C.s.o(.data);
-        build/src/core/sceDmaDebug.c.o(.data);
+        build/asm/core/sceDmaDebug.s.o(.data);
         build/asm/core/sceDmaPutEnv.s.o(.data);
         build/asm/core/sceDmaGetEnv.s.o(.data);
         build/asm/core/sceDmaPutStallAddr.s.o(.data);
@@ -4147,7 +4147,7 @@ SECTIONS
         build/asm/core/gap_07E904.s.o(.data);
         build/asm/core/sceDevVif1GetFifo.s.o(.data);
         build/asm/core/sceDmaPkInit.s.o(.data);
-        build/src/core/sceDmaPkReset.c.o(.data);
+        build/asm/core/sceDmaPkReset.s.o(.data);
         build/asm/core/sceDmaPkTerminate.s.o(.data);
         build/asm/core/sceVif1PkCnt.s.o(.data);
         build/asm/core/sceVif1PkEnd.s.o(.data);
@@ -4610,7 +4610,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.data);
         build/asm/core/_InitTLB.s.o(.data);
         build/asm/core/sceGsResetGraph.s.o(.data);
-        build/src/core/sceGsGetGParam.c.o(.data);
+        build/asm/core/sceGsGetGParam.s.o(.data);
         build/asm/core/gap_089BD4.s.o(.data);
         build/asm/core/sceGsResetPath.s.o(.data);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.data);
@@ -6635,7 +6635,7 @@ SECTIONS
         build/asm/core/sceDmaGetChan.s.o(.rodata);
         build/asm/core/sceDmaReset.s.o(.rodata);
         build/asm/core/gap_07CC9C.s.o(.rodata);
-        build/src/core/sceDmaDebug.c.o(.rodata);
+        build/asm/core/sceDmaDebug.s.o(.rodata);
         build/asm/core/sceDmaPutEnv.s.o(.rodata);
         build/asm/core/sceDmaGetEnv.s.o(.rodata);
         build/asm/core/sceDmaPutStallAddr.s.o(.rodata);
@@ -6730,7 +6730,7 @@ SECTIONS
         build/asm/core/gap_07E904.s.o(.rodata);
         build/asm/core/sceDevVif1GetFifo.s.o(.rodata);
         build/asm/core/sceDmaPkInit.s.o(.rodata);
-        build/src/core/sceDmaPkReset.c.o(.rodata);
+        build/asm/core/sceDmaPkReset.s.o(.rodata);
         build/asm/core/sceDmaPkTerminate.s.o(.rodata);
         build/asm/core/sceVif1PkCnt.s.o(.rodata);
         build/asm/core/sceVif1PkEnd.s.o(.rodata);
@@ -7193,7 +7193,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.rodata);
         build/asm/core/_InitTLB.s.o(.rodata);
         build/asm/core/sceGsResetGraph.s.o(.rodata);
-        build/src/core/sceGsGetGParam.c.o(.rodata);
+        build/asm/core/sceGsGetGParam.s.o(.rodata);
         build/asm/core/gap_089BD4.s.o(.rodata);
         build/asm/core/sceGsResetPath.s.o(.rodata);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.rodata);
@@ -9228,7 +9228,7 @@ SECTIONS
         build/asm/core/sceDmaGetChan.s.o(.bss);
         build/asm/core/sceDmaReset.s.o(.bss);
         build/asm/core/gap_07CC9C.s.o(.bss);
-        build/src/core/sceDmaDebug.c.o(.bss);
+        build/asm/core/sceDmaDebug.s.o(.bss);
         build/asm/core/sceDmaPutEnv.s.o(.bss);
         build/asm/core/sceDmaGetEnv.s.o(.bss);
         build/asm/core/sceDmaPutStallAddr.s.o(.bss);
@@ -9323,7 +9323,7 @@ SECTIONS
         build/asm/core/gap_07E904.s.o(.bss);
         build/asm/core/sceDevVif1GetFifo.s.o(.bss);
         build/asm/core/sceDmaPkInit.s.o(.bss);
-        build/src/core/sceDmaPkReset.c.o(.bss);
+        build/asm/core/sceDmaPkReset.s.o(.bss);
         build/asm/core/sceDmaPkTerminate.s.o(.bss);
         build/asm/core/sceVif1PkCnt.s.o(.bss);
         build/asm/core/sceVif1PkEnd.s.o(.bss);
@@ -9786,7 +9786,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.bss);
         build/asm/core/_InitTLB.s.o(.bss);
         build/asm/core/sceGsResetGraph.s.o(.bss);
-        build/src/core/sceGsGetGParam.c.o(.bss);
+        build/asm/core/sceGsGetGParam.s.o(.bss);
         build/asm/core/gap_089BD4.s.o(.bss);
         build/asm/core/sceGsResetPath.s.o(.bss);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.bss);
