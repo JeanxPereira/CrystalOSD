@@ -73,10 +73,10 @@ def cmd_providers_test(args) -> int:
             )
             dt = (time.time() - t0) * 1000
             head = resp.text.strip().splitlines()[0] if resp.text.strip() else "(empty)"
-            print(f"  ✅ {head}  ({resp.input_tokens}→{resp.output_tokens} tok, {dt:.0f}ms)")
+            print(f"  [OK] {head}  ({resp.input_tokens}->{resp.output_tokens} tok, {dt:.0f}ms)")
         except Exception as e:
             failed += 1
-            print(f"  ❌ {e}")
+            print(f"  [FAIL] {e}")
         if cfg[role].get("fallback"):
             fb = cfg[role]["fallback"]
             print(f"[{role}] fallback={fb['provider']}  model={fb.get('model')}")
@@ -88,10 +88,10 @@ def cmd_providers_test(args) -> int:
                     temperature=0,
                 )
                 head = resp.text.strip().splitlines()[0] if resp.text.strip() else "(empty)"
-                print(f"  ✅ {head}  ({resp.input_tokens}→{resp.output_tokens} tok)")
+                print(f"  [OK] {head}  ({resp.input_tokens}->{resp.output_tokens} tok)")
             except Exception as e:
                 failed += 1
-                print(f"  ❌ {e}")
+                print(f"  [FAIL] {e}")
     return 1 if failed else 0
 
 
@@ -104,7 +104,7 @@ def cmd_queue_build(args) -> int:
     if args.limit:
         entries = entries[: args.limit]
     easy_funcs.write_queue(entries, out_path)
-    print(f"wrote {len(entries)} entries → {out_path}")
+    print(f"wrote {len(entries)} entries -> {out_path}")
     return 0
 
 
@@ -175,7 +175,7 @@ def cmd_decomp(args) -> int:
     if args.similar_json and Path(args.similar_json).exists():
         similar = json.loads(Path(args.similar_json).read_text())
 
-    print("  → planner")
+    print("  -> planner")
     try:
         pack = planner_mod.build_pack(
             func_entry=entry,
@@ -189,12 +189,12 @@ def cmd_decomp(args) -> int:
 
     starting_c = pack.starting_c.strip() or f"/* 0x{entry['address']:08X} - {name} */\nvoid {name}(void) {{\n}}\n"
 
-    print("  → worker loop")
+    print("  -> worker loop")
 
     def _on_iter(it):
         v = it.verdict
         s = it.score
-        print(f"     iter {it.iteration}: score={s}  verdict={v}  ({it.tokens_in}→{it.tokens_out} tok, {it.latency_ms}ms)")
+        print(f"     iter {it.iteration}: score={s}  verdict={v}  ({it.tokens_in}->{it.tokens_out} tok, {it.latency_ms}ms)")
         append_log({"event": "iter", "func": name, "iteration": it.iteration,
                     "score": s, "verdict": v, "tokens_in": it.tokens_in,
                     "tokens_out": it.tokens_out, "latency_ms": it.latency_ms})
@@ -220,7 +220,7 @@ def cmd_decomp(args) -> int:
 
     if res.final_verdict in (Verdict.SOLVED, Verdict.SYMBOL_ONLY):
         _append_takeaway(name, res, "matched")
-        print(f"  ✅ stub at src/stubs/{entry['subsystem']}/{name}.c — ready for promote review")
+        print(f"  [DONE] stub at src/stubs/{entry['subsystem']}/{name}.c — ready for promote review")
         return 0
 
     if res.final_verdict == Verdict.STUCK:
@@ -231,13 +231,13 @@ def cmd_decomp(args) -> int:
             asm_file=res.asm_file,
             final_score=res.final_score,
         )
-        print(f"  → permuter imported: {out['permuter_imported']}")
-        print(f"  → human queue: {out['ask_human_path']}")
+        print(f"  -> permuter imported: {out['permuter_imported']}")
+        print(f"  -> human queue: {out['ask_human_path']}")
         append_log({"event": "stuck_handoff", "func": name, **out})
         _append_takeaway(name, res, "stuck")
         return 3
 
-    print("  ⚠️  iteration budget exhausted without match")
+    print("  [WARN]  iteration budget exhausted without match")
     _append_takeaway(name, res, "exhausted")
     return 4
 
@@ -285,10 +285,10 @@ def _decomp_agent_mode(args, entry, cfg) -> int:
     print(f"  target stub:       {stub_path}")
     if entry.get("has_mmi") or entry.get("has_mult1") or entry.get("has_cop2"):
         flags = ",".join(t for t in ("MMI","MULT1","COP2") if entry.get(f"has_{t.lower()}"))
-        print(f"  ⚠️  hard-flags: {flags} — may need inline asm")
+        print(f"  [WARN]  hard-flags: {flags} — may need inline asm")
     print()
     print("# Next steps for the agent:")
-    print(f"# 1. (optional) ghidra decompile → save as <path>; rerun with --ghidra-pseudo <path>")
+    print(f"# 1. (optional) ghidra decompile -> save as <path>; rerun with --ghidra-pseudo <path>")
     print(f"# 2. (optional) decomp.me similar search; pass via --similar-json <path>")
     print(f"# 3. write C to: {stub_path}")
     print(f"# 4. submit:")

@@ -1,12 +1,14 @@
-# DEFAULT: agent mode — Claude Code / Antigravity drives the loop.
-# Switch worker.provider to claude/deepseek/gemini for API-driven mode.
+# Planner + Worker: local LM Studio — Qwen2.5-Coder-14B on port 1234
 planner:
-  provider: agent
-  model: external
+  provider: local
+  base_url: http://localhost:1234/v1
+  model: qwen/qwen2.5-coder-14b
 
 worker:
-  provider: agent
-  model: external
+  provider: local
+  base_url: http://localhost:1234/v1
+  model: qwen/qwen2.5-coder-14b
+  fallback:
   max_iterations: 8
   stuck_threshold: 3
 
