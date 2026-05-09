@@ -2028,7 +2028,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.text);
         build/asm/core/_InitTLB.s.o(.text);
         build/asm/core/sceGsResetGraph.s.o(.text);
-        build/asm/core/sceGsGetGParam.s.o(.text);
+        build/src/core/sceGsGetGParam.c.o(.text);
         build/asm/core/gap_089BD4.s.o(.text);
         build/asm/core/sceGsResetPath.s.o(.text);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.text);
@@ -4610,7 +4610,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.data);
         build/asm/core/_InitTLB.s.o(.data);
         build/asm/core/sceGsResetGraph.s.o(.data);
-        build/asm/core/sceGsGetGParam.s.o(.data);
+        build/src/core/sceGsGetGParam.c.o(.data);
         build/asm/core/gap_089BD4.s.o(.data);
         build/asm/core/sceGsResetPath.s.o(.data);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.data);
@@ -7193,7 +7193,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.rodata);
         build/asm/core/_InitTLB.s.o(.rodata);
         build/asm/core/sceGsResetGraph.s.o(.rodata);
-        build/asm/core/sceGsGetGParam.s.o(.rodata);
+        build/src/core/sceGsGetGParam.c.o(.rodata);
         build/asm/core/gap_089BD4.s.o(.rodata);
         build/asm/core/sceGsResetPath.s.o(.rodata);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.rodata);
@@ -9786,7 +9786,7 @@ SECTIONS
         build/asm/core/GetMemorySize.s.o(.bss);
         build/asm/core/_InitTLB.s.o(.bss);
         build/asm/core/sceGsResetGraph.s.o(.bss);
-        build/asm/core/sceGsGetGParam.s.o(.bss);
+        build/src/core/sceGsGetGParam.c.o(.bss);
         build/asm/core/gap_089BD4.s.o(.bss);
         build/asm/core/sceGsResetPath.s.o(.bss);
         build/asm/core/sceGsSetDefDrawEnv.s.o(.bss);
