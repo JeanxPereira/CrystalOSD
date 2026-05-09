@@ -1484,7 +1484,7 @@ segments:
         - [0x7CB98, asm, core/sceDmaGetChan]
         - [0x7CBC0, asm, core/sceDmaReset]
         - [0x7CC9C, asm, core/gap_07CC9C]  # 4 bytes gap
-        - [0x7CCA0, c, core/sceDmaDebug]
+        - [0x7CCA0, asm, core/sceDmaDebug]
         - [0x7CCB0, asm, core/sceDmaPutEnv]
         - [0x7CE88, asm, core/sceDmaGetEnv]
         - [0x7CEC0, asm, core/sceDmaPutStallAddr]
@@ -1579,7 +1579,7 @@ segments:
         - [0x7E904, asm, core/gap_07E904]  # 4 bytes gap
         - [0x7E908, asm, core/sceDevVif1GetFifo]
         - [0x7E968, asm, core/sceDmaPkInit]
-        - [0x7E978, c, core/sceDmaPkReset]
+        - [0x7E978, asm, core/sceDmaPkReset]
         - [0x7E988, asm, core/sceDmaPkTerminate]
         - [0x7E9E0, asm, core/sceVif1PkCnt]
         - [0x7EA38, asm, core/sceVif1PkEnd]
@@ -2042,7 +2042,7 @@ segments:
         - [0x89950, asm, core/GetMemorySize]
         - [0x89960, asm, core/_InitTLB]
         - [0x89970, asm, core/sceGsResetGraph]
-        - [0x89BC8, c, core/sceGsGetGParam]
+        - [0x89BC8, asm, core/sceGsGetGParam]
         - [0x89BD4, asm, core/gap_089BD4]  # 4 bytes gap
         - [0x89BD8, asm, core/sceGsResetPath]
         - [0x89C40, asm, core/sceGsSetDefDrawEnv]
