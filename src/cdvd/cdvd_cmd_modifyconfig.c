@@ -1,3 +1,6 @@
+#include <kernel.h>
+#include "osdsys_externs.h"
+
 struct cdvd_ctx {
     int sema0;
     int sema1;
@@ -13,7 +16,6 @@ struct cdvd_ctx {
 };
 
 extern struct cdvd_ctx unksema_392900;
-void WaitSema(int);
 int sceCdWriteConfig(int, unsigned int*);
 
 void cdvd_cmd_modifyconfig(int param_1) {
