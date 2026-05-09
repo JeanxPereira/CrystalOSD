@@ -2042,7 +2042,7 @@ segments:
         - [0x89950, asm, core/GetMemorySize]
         - [0x89960, asm, core/_InitTLB]
         - [0x89970, asm, core/sceGsResetGraph]
-        - [0x89BC8, asm, core/sceGsGetGParam]
+        - [0x89BC8, c, core/sceGsGetGParam]
         - [0x89BD4, asm, core/gap_089BD4]  # 4 bytes gap
         - [0x89BD8, asm, core/sceGsResetPath]
         - [0x89C40, asm, core/sceGsSetDefDrawEnv]
