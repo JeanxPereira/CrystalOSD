@@ -1,20 +1,15 @@
-/* CrystalOSD — Graph subsystem: graph_swap_frame_thread_proc
- *
- * 0x0020BFD8
- * STUB — Ghidra decompiler output, needs manual cleanup
- */
+/* 0x0020BFD8 - graph_swap_frame_thread_proc */
 
-#include "ghidra_types.h"
-
-
+#include <kernel.h>
+#include <stdbool.h>
+#include "osdsys_externs.h"
 
 void graph_swap_frame_thread_proc(void)
-
 {
   do {
     WaitSema(swapSema);
     SwapBuffers();
     SignalSema(drawStartSema);
-  } while( true );
+  } while (true);
 }
 
