@@ -1,20 +1,17 @@
 # CrystalOSD
 
-[![Build Status]][actions] [![DOL Progress]][Progress] [![REL Progress]][Progress]
+[![Build Status]][actions] [![ELF Progress]][Progress]
 
 [<img src="https://decomp.dev/JeanxPereira/CrystalOSD.svg?w=512&h=256" width="512" height="256">][Progress]
 
 [Build Status]: https://github.com/JeanxPereira/CrystalOSD/actions/workflows/progress.yml/badge.svg
 [actions]: https://github.com/JeanxPereira/CrystalOSD/actions/workflows/build.yml
 [Progress]: https://decomp.dev/JeanxPereira/CrystalOSD
-[DOL Progress]: https://decomp.dev/JeanxPereira/CrystalOSD.svg?mode=shield&measure=code&category=dol&label=DOL
-[REL Progress]: https://decomp.dev/JeanxPereira/CrystalOSD.svg?mode=shield&measure=code&category=modules&label=REL
+[ELF Progress]: https://decomp.dev/JeanxPereira/CrystalOSD.svg?mode=shield&measure=code&label=ELF
 
 Clean-room reconstruction of the PlayStation 2 **OSDSYS**! the iconic system menu with its crystalline towers, floating orbs, and memory card browser.
 
 Built by analyzing the binary in [Ghidra](https://ghidra-sre.org/) and cross-referencing against [PS2SDK](https://github.com/ps2dev/ps2sdk) and [PCSX2](https://github.com/PCSX2/pcsx2) source. The goal: a fully buildable, byte-identical ELF that can serve as a foundation for PS2 homebrew, custom system menus, and preservation efforts.
-
-Inspired by [Theseus](https://github.com/MrMilenko/Theseus), which did the same for the original Xbox Dashboard.
 
 ---
 
@@ -54,12 +51,23 @@ make all      # compiles src/*.c and asm/<subsys>/*.s for diff
 objdiff -p .  # GUI for diffing target vs base objects
 ```
 
-### Desktop (planned)
+## How It Works
 
-```bash
-# SDL2 + OpenGL port — not yet available
-make desktop
+The project uses [splat](https://github.com/ethteck/splat) to split the original
+binary into per-function assembly files. Community symbols from
+[ps2re/osdsys_re](https://github.com/ps2re/osdsys_re) provide 6,372 named
+addresses via `symbol_addrs.txt`.
+
 ```
+splat_config.yml → configure.py → asm/*.s + OSDSYS_A.ld → make elf → byte-perfect ELF
+```
+
+As functions are reverse-engineered, assembly stubs in `asm/` are replaced by
+C reconstructions in `src/`, verified to produce identical machine code via
+[decomp.me](https://decomp.me/) and objdiff.
+
+> **Note**: Many functions in the OSDSYS binary come from Sony's SDK (linked statically).
+> Matching these has multiplier value for the broader PS2 decomp community.
 
 ## Architecture
 
@@ -79,18 +87,22 @@ The OSDSYS is organized into subsystems, each mapping to a directory under `src/
 
 ## Contributing
 
-Contributions are welcome — whether it's matching functions on [decomp.dev](https://decomp.dev/JeanxPereira/CrystalOSD), improving documentation, or helping with the future desktop port.
+Contributions are welcome — whether it's matching functions on [decomp.dev](https://decomp.dev/JeanxPereira/CrystalOSD) or improving documentation.
 
 If you're new to PS2 decompilation, the tooling is EE (MIPS R5900) + ps2dev + objdiff. The `CLAUDE.md` has environment setup details. Feel free to open an issue or reach out on Discord.
 
 ## References
 
-- [Theseus](https://github.com/MrMilenko/Theseus) — Xbox dashboard reconstruction (direct inspiration)
+- [decomp.me](https://decomp.me/) — Collaborative decompilation matching platform
 - [ps2re/osdsys_re](https://github.com/ps2re/osdsys_re) — OSDSYS reverse engineering notes
 - [OSDSYS-Unpack](https://github.com/JaCzekanski/osdsys-unpack) — Extracts and decompresses OSDSYS modules from BIOS
 - [PS2SDK](https://github.com/ps2dev/ps2sdk) — Open-source PS2 SDK, used as reference
 - [PCSX2](https://github.com/PCSX2/pcsx2) — PS2 emulator, used as reference for hardware behavior
 - [FreeMcBoot](https://github.com/AKuHAK/FreeMcBoot-Installer) — PS2 homebrew exploit (hooks into OSDSYS)
+
+## Special Thanks
+
+- **Ethanol** (decomp.dev Discord) — for valuable feedback regarding compiler mismatch and project scope.
 
 ## License
 

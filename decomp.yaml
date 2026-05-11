@@ -1,5 +1,10 @@
 tools:
   transmuter:
+    # NOTE: This uses modern ps2dev GCC 15.2 — NOT the matching compiler (ee-gcc2.9-991111).
+    # Transmuter results will NOT match the original binary for C code.
+    # The matching compiler is available at:
+    #   https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz
     compiler: |
       export PATH=/Users/jeanxpereira/ps2dev/ee/bin:/Users/jeanxpereira/ps2dev/iop/bin:/Users/jeanxpereira/ps2dev/dvp/bin:$PATH
       mips64r5900el-ps2-elf-gcc -O2 -G0 -Wall -Wno-implicit-function-declaration -Wno-int-to-pointer-cast -Wno-int-conversion -D_EE -mabi=eabi -mno-abicalls -fno-common -fno-exceptions -I include -I /Users/jeanxpereira/ps2dev/ps2sdk/ee/include -I /Users/jeanxpereira/ps2dev/ps2sdk/common/include -c "{{inputPath}}" -o "{{outputPath}}"
+

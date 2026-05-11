@@ -7,7 +7,6 @@
 - **Toolchain**: ps2dev binutils 2.45 + gcc 15.2 (extracted to `~/ps2dev/`)
 - **Build**: splat split → asm assemble → ld link → byte-perfect ELF
 - **Output**: Native PS2 ELF, testable on PCSX2
-- **Future**: Desktop port via SDL2+OpenGL (shared source tree)
 
 ## Binary Stats
 - Binary: `OSDSYS_A_XLF_decrypted_unpacked.elf` (3.7 MB, base `0x200000`, single LOAD seg)
@@ -84,6 +83,27 @@ make all      # objdiff matching workflow (target/base .o for diffs)
 - gcc 15.2.0, binutils 2.45.1, prefix `mips64r5900el-ps2-elf-`
 - ps2sdk NOT yet built — fetch artifact `ps2sdk-*` separately when needed for C with PS2SDK headers
 - Hackintosh (x86_64 macOS 26.4): brew/Docker/source-build all failed; pre-built CI artifact is the working path
+
+### Compiler Mismatch (IMPORTANT)
+The Makefile uses **modern ps2dev GCC 15.2** (`mips64r5900el-ps2-elf-gcc`) for assembly and linking. This works for the byte-perfect rebuild because everything is still assembly.
+
+**However**, the original OSDSYS was compiled with **ee-gcc 2.9-991111** (`-O2 -G0`). As C files replace assembly in the link pipeline, GCC 15 will NOT produce matching output — the matching compiler must be used.
+
+| Context | Compiler | Version |
+|---------|----------|---------|
+| **decomp.me** (matching) | `ee-gcc2.9-991111` | Sony EE GCC 2.9 |
+| **Makefile** (build) | `mips64r5900el-ps2-elf-gcc` | ps2dev GCC 15.2.0 |
+
+**To get ee-gcc2.9-991111 locally:**
+```bash
+# Download from decompme/compilers (Linux ELF binary — needs Linux or QEMU)
+curl -LO https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz
+tar xf ee-gcc2.9-991111.tar.xz
+# Set MATCH_CC in Makefile or environment
+export MATCH_CC=/path/to/ee-gcc2.9-991111/bin/ee-gcc
+```
+
+> ⚠️ The ee-gcc binary is a Linux ELF — on macOS it requires QEMU user-mode or a Docker container. Until resolved, C matching is done exclusively on decomp.me.
 
 ## Code Rules
 - Use PS2SDK types (`u32`, `s16`, `u8`) not stdint

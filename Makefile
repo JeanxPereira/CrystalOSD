@@ -20,6 +20,11 @@
 # ── Toolchain ──────────────────────────────────────────
 PREFIX  ?= mips64r5900el-ps2-elf-
 CC      := $(PREFIX)gcc
+# Matching compiler (ee-gcc 2.9-991111) — for C files that must match original binary.
+# The modern GCC 15 (CC) works for assembly/linking but will NOT produce matching
+# output for C code. Install ee-gcc2.9-991111 from decompme/compilers and set
+# MATCH_CC to point to it. Until then, C matching is done on decomp.me.
+MATCH_CC ?= $(CC)
 AS      := $(PREFIX)as
 LD      := $(PREFIX)ld
 OBJCOPY := $(PREFIX)objcopy
