@@ -18,7 +18,7 @@ def main():
     asm_dir = Path("asm")
     src_dir = Path("src")
     
-    subsystems = ["core", "browser", "cdvd", "clock", "config", "graph", "history", "module", "opening", "sound"]
+    subsystems = ["core", "browser", "cdvd", "clock", "config", "graph", "history", "module", "opening", "sound", "data"]
 
     progress_categories = []
     for subsys in subsystems:
