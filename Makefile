@@ -55,7 +55,7 @@ ALL_SPLIT_ASM := $(shell find $(ASM_DIR) -name '*.s' -not -path '*/nonmatchings/
 ELF_OBJS := $(patsubst $(ASM_DIR)/%.s,$(ASM_BUILD)/%.s.o,$(ALL_SPLIT_ASM))
 
 # ── objdiff match inputs ───────────────────────────────
-SUBSYSTEMS     := core browser cdvd clock config graph history module opening sound
+SUBSYSTEMS     := core browser cdvd clock config graph history module opening sound data
 ASM_SRCS       := $(shell find $(ASM_DIR) -mindepth 2 -name '*.s' -type f 2>/dev/null)
 C_SRCS         := $(shell find $(SRC_DIR) -name '*.c' -type f 2>/dev/null)
 
