@@ -63,7 +63,11 @@ segments:
         - [0x1F20, asm, core/ExpandGetSize]
         - [0x1F44, asm, core/align_001F44]  # 4 bytes gap
         - [0x1F48, asm, core/unused_200F48]
-        - [0x1F74, asm, core/align_001F74]  # 332 bytes gap
+        - [0x1F74, asm, core/D_00200F74]
+        - [0x1F78, asm, core/func_00200F78]
+        - [0x1F84, asm, core/align_001F84]  # 4 bytes padding
+        - [0x1F88, asm, core/func_00200F88]
+        - [0x1FC0, asm, core/func_00200FC0]
         - [0x20C0, asm, core/rm2_state_init_2010C0]
         - [0x2110, asm, core/get_rm2_struct_201110]
         - [0x215C, asm, core/align_00215C]  # 4 bytes gap
@@ -82,7 +86,11 @@ segments:
         - [0x29B0, asm, core/deinit_2019B0]
         - [0x2A00, asm, core/return_to_browser]
         - [0x2A50, asm, core/unused_201A50]
-        - [0x2A9C, asm, core/align_002A9C]  # 404 bytes gap
+        - [0x2A9C, asm, core/D_00201A9C]
+        - [0x2AA0, asm, core/func_00201AA0]
+        - [0x2AEC, asm, core/align_002AEC]  # 4 bytes padding
+        - [0x2AF0, asm, core/func_00201AF0]
+        - [0x2B88, asm, core/func_00201B88]
         - [0x2C30, asm, cdvd/cdvd_handle_disc_key_inner]
         - [0x2F08, asm, core/align_002F08]  # 120 bytes gap
         - [0x2F80, asm, cdvd/ExecutePs2GameDisc]
@@ -100,9 +108,14 @@ segments:
         - [0x3FBC, asm, core/align_003FBC]  # 4 bytes gap
         - [0x3FC0, asm, cdvd/ExecuteHddApp]
         - [0x43E8, asm, cdvd/Game_Boot_ExecuteDisc_p5_tgt]
-        - [0x4490, asm, core/align_004490]  # 1056 bytes gap
+        - [0x4490, asm, cdvd/func_00203490]
+        - [0x4714, asm, core/align_004714]  # 4 bytes padding
+        - [0x4718, asm, cdvd/func_00203718]
+        - [0x4850, asm, cdvd/func_00203850]
+        - [0x4880, asm, cdvd/func_00203880]
         - [0x48B0, asm, config/do_read_cdvd_config_entry]
-        - [0x4944, asm, core/align_004944]  # 220 bytes gap
+        - [0x4944, asm, config/D_00203944]
+        - [0x4948, asm, config/func_00203948]
         - [0x4A20, asm, config/config_set_default_main]
         - [0x4AD4, asm, core/align_004AD4]  # 4 bytes gap
         - [0x4AD8, asm, config/write_osd_config]
@@ -175,7 +188,13 @@ segments:
         - [0x5928, asm, config/config_hdd_write_keys]
         - [0x5B6C, asm, core/align_005B6C]  # 4 bytes gap
         - [0x5B70, asm, config/config_mechacon_prepare]
-        - [0x5BD4, asm, core/align_005BD4]  # 388 bytes gap
+        - [0x5BD4, asm, config/D_00204BD4]
+        - [0x5BD8, asm, config/func_00204BD8]
+        - [0x5C48, asm, config/D_00204C48]
+        - [0x5C90, asm, config/D_00204C90]
+        - [0x5CCC, asm, core/align_005CCC]  # 4 bytes padding
+        - [0x5CD0, asm, config/D_00204CD0]
+        - [0x5D18, asm, config/D_00204D18]
         - [0x5D58, asm, config/config_get_unused_204D58]
         - [0x5D6C, asm, core/align_005D6C]  # 4 bytes gap
         - [0x5D70, asm, config/config_set_unused_204D70]
@@ -196,15 +215,102 @@ segments:
         - [0x5EA0, asm, config/config_hdd_open_write_ini]
         - [0x5F38, asm, config/config_hdd_open_read_ini]
         - [0x5FF8, asm, config/config_hdd_close_ini]
-        - [0x60A4, asm, core/align_0060A4]  # 3116 bytes gap
+        - [0x60A4, asm, config/D_002050A4]
+        - [0x60A8, asm, config/func_002050A8]
+        - [0x60B4, asm, core/align_0060B4]  # 4 bytes padding
+        - [0x60B8, asm, config/D_002050B8]
+        - [0x60C4, asm, core/align_0060C4]  # 4 bytes padding
+        - [0x60C8, asm, config/D_002050C8]
+        - [0x6148, asm, config/D_00205148]
+        - [0x61D0, asm, config/D_002051D0]
+        - [0x6250, asm, config/func_00205250]
+        - [0x62CC, asm, core/align_0062CC]  # 4 bytes padding
+        - [0x62D0, asm, config/D_002052D0]
+        - [0x6338, asm, config/D_00205338]
+        - [0x6478, asm, config/D_00205478]
+        - [0x6510, asm, config/func_00205510]
+        - [0x6538, asm, config/func_00205538]
+        - [0x656C, asm, core/align_00656C]  # 4 bytes padding
+        - [0x6570, asm, config/func_00205570]
+        - [0x65F8, asm, config/func_002055F8]
+        - [0x6640, asm, config/func_00205640]
+        - [0x668C, asm, core/align_00668C]  # 4 bytes padding
+        - [0x6690, asm, config/D_00205690]
+        - [0x6704, asm, core/align_006704]  # 4 bytes padding
+        - [0x6708, asm, config/func_00205708]
+        - [0x6720, asm, config/func_00205720]
+        - [0x6794, asm, core/align_006794]  # 4 bytes padding
+        - [0x6798, asm, config/func_00205798]
+        - [0x67C0, asm, config/func_002057C0]
+        - [0x6804, asm, core/align_006804]  # 4 bytes padding
+        - [0x6808, asm, config/func_00205808]
+        - [0x6854, asm, core/align_006854]  # 4 bytes padding
+        - [0x6858, asm, config/func_00205858]
+        - [0x68A4, asm, core/align_0068A4]  # 4 bytes padding
+        - [0x68A8, asm, config/func_002058A8]
+        - [0x68F0, asm, config/func_002058F0]
+        - [0x6938, asm, config/func_00205938]
+        - [0x69C0, asm, config/func_002059C0]
+        - [0x6AA0, asm, config/func_00205AA0]
+        - [0x6B18, asm, config/func_00205B18]
+        - [0x6BA8, asm, config/func_00205BA8]
+        - [0x6BC0, asm, config/func_00205BC0]
+        - [0x6BEC, asm, core/align_006BEC]  # 4 bytes padding
+        - [0x6BF0, asm, config/func_00205BF0]
+        - [0x6BFC, asm, core/align_006BFC]  # 4 bytes padding
+        - [0x6C00, asm, config/func_00205C00]
+        - [0x6C0C, asm, core/align_006C0C]  # 4 bytes padding
+        - [0x6C10, asm, config/func_00205C10]
+        - [0x6C3C, asm, core/align_006C3C]  # 4 bytes padding
+        - [0x6C40, asm, config/func_00205C40]
+        - [0x6C7C, asm, core/align_006C7C]  # 4 bytes padding
+        - [0x6C80, asm, config/func_00205C80]
+        - [0x6CA4, asm, core/align_006CA4]  # 4 bytes padding
+        - [0x6CA8, asm, config/func_00205CA8]
         - [0x6CD0, asm, config/special_character_check]
-        - [0x6D58, asm, core/align_006D58]  # 2264 bytes gap
+        - [0x6D58, asm, config/func_00205D58]
+        - [0x6DB4, asm, core/align_006DB4]  # 4 bytes padding
+        - [0x6DB8, asm, config/func_00205DB8]
+        - [0x6DE8, asm, config/D_00205DE8]
+        - [0x6DF4, asm, core/align_006DF4]  # 4 bytes padding
+        - [0x6DF8, asm, config/func_00205DF8]
+        - [0x6E5C, asm, core/align_006E5C]  # 4 bytes padding
+        - [0x6E60, asm, config/func_00205E60]
+        - [0x6E88, asm, config/func_00205E88]
+        - [0x6F38, asm, config/func_00205F38]
+        - [0x7010, asm, config/func_00206010]
+        - [0x7080, asm, config/func_00206080]
+        - [0x72A4, asm, core/align_0072A4]  # 4 bytes padding
+        - [0x72A8, asm, config/func_002062A8]
+        - [0x74A0, asm, config/func_002064A0]
+        - [0x7518, asm, config/func_00206518]
+        - [0x7578, asm, config/func_00206578]
+        - [0x759C, asm, core/align_00759C]  # 4 bytes padding
+        - [0x75A0, asm, config/D_002065A0]
         - [0x7630, asm, config/config_hdd_do_get_key]
-        - [0x793C, asm, core/align_00793C]  # 676 bytes gap
+        - [0x793C, asm, config/D_0020693C]
+        - [0x7940, asm, config/func_00206940]
+        - [0x7A2C, asm, core/align_007A2C]  # 4 bytes padding
+        - [0x7A30, asm, config/D_00206A30]
         - [0x7BE0, asm, config/config_hdd_write_single_key]
-        - [0x7CEC, asm, core/align_007CEC]  # 276 bytes gap
+        - [0x7CEC, asm, config/D_00206CEC]
+        - [0x7CF0, asm, config/D_00206CF0]
         - [0x7E00, asm, core/unused_do_print_hex]
-        - [0x7F90, asm, core/align_007F90]  # 2240 bytes gap
+        - [0x7F90, asm, core/D_00206F90]
+        - [0x8004, asm, core/align_008004]  # 4 bytes padding
+        - [0x8008, asm, core/D_00207008]
+        - [0x8064, asm, core/align_008064]  # 4 bytes padding
+        - [0x8068, asm, core/D_00207068]
+        - [0x80D8, asm, core/D_002070D8]
+        - [0x8174, asm, core/align_008174]  # 4 bytes padding
+        - [0x8178, asm, core/func_00207178]
+        - [0x83B0, asm, core/func_002073B0]
+        - [0x860C, asm, core/align_00860C]  # 4 bytes padding
+        - [0x8610, asm, core/func_00207610]
+        - [0x8680, asm, core/func_00207680]
+        - [0x86B8, asm, core/func_002076B8]
+        - [0x86EC, asm, core/align_0086EC]  # 4 bytes padding
+        - [0x86F0, asm, core/func_002076F0]
         - [0x8850, asm, core/GetDefaultIconPath]
         - [0x89D0, asm, history/history_check_exists]
         - [0x8B38, asm, history/check_or_clear_history]
@@ -213,7 +319,9 @@ segments:
         - [0x9040, asm, history/history_add_entry]
         - [0x90CC, asm, core/align_0090CC]  # 4 bytes gap
         - [0x90D0, asm, core/thunk_config_get_osd_language]
-        - [0x90EC, asm, core/align_0090EC]  # 132 bytes gap
+        - [0x90EC, asm, core/D_002080EC]
+        - [0x90F0, asm, core/D_002080F0]
+        - [0x9130, asm, core/D_00208130]
         - [0x9170, asm, config/config_set_langtbl]
         - [0x91B4, asm, core/align_0091B4]  # 4 bytes gap
         - [0x91B8, asm, core/get_lang_string_GetOSDString_hkdosd_p2_tgt]
@@ -235,7 +343,25 @@ segments:
         - [0x93C8, asm, core/get_hdd_boot_ready_ptr]
         - [0x93D4, asm, core/align_0093D4]  # 4 bytes gap
         - [0x93D8, asm, core/get_hddboot_exec_ptr_2083D8]
-        - [0x93E4, asm, core/align_0093E4]  # 796 bytes gap
+        - [0x93E4, asm, core/D_002083E4]
+        - [0x93E8, asm, core/D_002083E8]
+        - [0x93F0, asm, core/D_002083F0]
+        - [0x93F8, asm, core/D_002083F8]
+        - [0x9400, asm, core/D_00208400]
+        - [0x9408, asm, core/func_00208408]
+        - [0x944C, asm, core/align_00944C]  # 4 bytes padding
+        - [0x9450, asm, core/func_00208450]
+        - [0x952C, asm, core/align_00952C]  # 4 bytes padding
+        - [0x9530, asm, core/func_00208530]
+        - [0x9558, asm, core/func_00208558]
+        - [0x9574, asm, core/align_009574]  # 4 bytes padding
+        - [0x9578, asm, core/D_00208578]
+        - [0x9614, asm, core/align_009614]  # 4 bytes padding
+        - [0x9618, asm, core/func_00208618]
+        - [0x965C, asm, core/align_00965C]  # 4 bytes padding
+        - [0x9660, asm, core/func_00208660]
+        - [0x96A4, asm, core/align_0096A4]  # 4 bytes padding
+        - [0x96A8, asm, core/func_002086A8]
         - [0x9700, asm, core/get_boot_path]
         - [0x9748, asm, core/align_009748]  # 56 bytes gap
         - [0x9780, asm, core/decryption_forconfigfile]
@@ -294,7 +420,8 @@ segments:
         - [0xB934, asm, core/align_00B934]  # 4 bytes gap
         - [0xB938, asm, module/module_smap_setup]
         - [0xB988, asm, core/handle_version_info]
-        - [0xBAD4, asm, core/align_00BAD4]  # 196 bytes gap
+        - [0xBAD4, asm, core/D_0020AAD4]
+        - [0xBAD8, asm, core/D_0020AAD8]
         - [0xBB98, asm, core/do_load_resources]
         - [0xCD28, asm, core/GetResourceData]
         - [0xCD40, asm, core/get_resource_size]
@@ -307,9 +434,24 @@ segments:
         - [0xD010, asm, graph/SwapBuffers]
         - [0xD0B4, asm, core/align_00D0B4]  # 4 bytes gap
         - [0xD0B8, asm, config/timezone_related_20C0B8]
-        - [0xD2E8, asm, core/align_00D2E8]  # 1248 bytes gap
+        - [0xD2E8, asm, config/func_0020C2E8]
+        - [0xD3A8, asm, config/func_0020C3A8]
+        - [0xD4E0, asm, config/func_0020C4E0]
+        - [0xD758, asm, config/func_0020C758]
+        - [0xD764, asm, core/align_00D764]  # 4 bytes padding
+        - [0xD768, asm, config/func_0020C768]
+        - [0xD784, asm, core/align_00D784]  # 4 bytes padding
+        - [0xD788, asm, config/func_0020C788]
+        - [0xD7A4, asm, core/align_00D7A4]  # 4 bytes padding
+        - [0xD7A8, asm, config/func_0020C7A8]
         - [0xD7C8, asm, config/get_timezone_name_index]
-        - [0xD7E4, asm, core/align_00D7E4]  # 148 bytes gap
+        - [0xD7E4, asm, config/D_0020C7E4]
+        - [0xD7E8, asm, config/func_0020C7E8]
+        - [0xD804, asm, core/align_00D804]  # 4 bytes padding
+        - [0xD808, asm, config/func_0020C808]
+        - [0xD824, asm, core/align_00D824]  # 4 bytes padding
+        - [0xD828, asm, config/func_0020C828]
+        - [0xD850, asm, config/func_0020C850]
         - [0xD878, asm, config/get_timezone_info_struct]
         - [0xD8BC, asm, core/align_00D8BC]  # 36 bytes gap
         - [0xD8E0, asm, config/config_check_timezone_city]
@@ -465,14 +607,16 @@ segments:
         - [0x11344, asm, core/align_011344]  # 4 bytes gap
         - [0x11348, asm, core/fileops_cmd_devctl_5032_pfs]
         - [0x11378, asm, core/fileops_cmd_devctl_5033_pfs]
-        - [0x113A8, asm, core/align_0113A8]  # 136 bytes gap
+        - [0x113A8, asm, core/func_002103A8]
+        - [0x11408, asm, core/func_00210408]
         - [0x11430, asm, core/fileops_cmd_handle_error]
         - [0x11450, asm, core/fileops_send_cmd]
         - [0x114BC, asm, core/align_0114BC]  # 4 bytes gap
         - [0x114C0, asm, core/fileops_cmd_reset]
         - [0x114E4, asm, core/align_0114E4]  # 4 bytes gap
         - [0x114E8, asm, core/fileops_handle_cmd_path]
-        - [0x118F8, asm, core/align_0118F8]  # 368 bytes gap
+        - [0x118F8, asm, core/func_002108F8]
+        - [0x119B0, asm, core/func_002109B0]
         - [0x11A68, asm, core/fileops_get_cmd_result]
         - [0x11B38, asm, core/fileops_thread_proc]
         - [0x12434, asm, core/align_012434]  # 4 bytes gap
@@ -480,12 +624,20 @@ segments:
         - [0x12508, asm, core/fileops_get_pfs_attribute_area]
         - [0x12694, asm, core/align_012694]  # 52 bytes gap
         - [0x126C8, asm, cdvd/cdvd_handler_prepare]
-        - [0x127FC, asm, core/align_0127FC]  # 100 bytes gap
+        - [0x127FC, asm, cdvd/D_002117FC]
+        - [0x12800, asm, cdvd/D_00211800]
         - [0x12860, asm, core/pad_handler_211860]
         - [0x128A8, asm, core/sema_related_2118A8]
         - [0x128DC, asm, core/align_0128DC]  # 68 bytes gap
         - [0x12920, asm, cdvd/override_illegal_disc_type]
-        - [0x1293C, asm, core/align_01293C]  # 236 bytes gap
+        - [0x1293C, asm, cdvd/D_0021193C]
+        - [0x12940, asm, cdvd/func_00211940]
+        - [0x12974, asm, core/align_012974]  # 4 bytes padding
+        - [0x12978, asm, cdvd/D_00211978]
+        - [0x1298C, asm, core/align_01298C]  # 4 bytes padding
+        - [0x12990, asm, cdvd/func_00211990]
+        - [0x129D4, asm, core/align_0129D4]  # 4 bytes padding
+        - [0x129D8, asm, cdvd/func_002119D8]
         - [0x12A28, asm, core/poweroff_callback_211A28]
         - [0x12A54, asm, core/align_012A54]  # 4 bytes gap
         - [0x12A58, asm, cdvd/cdvd_handler_thread_proc]
@@ -498,17 +650,34 @@ segments:
         - [0x13194, asm, core/align_013194]  # 4 bytes gap
         - [0x13198, asm, cdvd/cdvd_cmd_rcbypassctl]
         - [0x13208, asm, core/callback_queue_prepare]
-        - [0x132C4, asm, core/align_0132C4]  # 108 bytes gap
+        - [0x132C4, asm, core/D_002122C4]
+        - [0x132C8, asm, core/D_002122C8]
+        - [0x1331C, asm, core/align_01331C]  # 4 bytes padding
+        - [0x13320, asm, core/func_00212320]
         - [0x13330, asm, core/callback_queue_submit]
         - [0x133BC, asm, core/align_0133BC]  # 4 bytes gap
         - [0x133C0, asm, core/callback_queue_submit_inner]
-        - [0x13420, asm, core/align_013420]  # 184 bytes gap
+        - [0x13420, asm, core/func_00212420]
+        - [0x13444, asm, core/align_013444]  # 4 bytes padding
+        - [0x13448, asm, core/func_00212448]
         - [0x134D8, asm, core/callback_queue_thread_proc]
         - [0x13554, asm, core/align_013554]  # 4 bytes gap
         - [0x13558, asm, core/do_memcpy128]
-        - [0x1360C, asm, core/align_01360C]  # 132 bytes gap
+        - [0x1360C, asm, core/D_0021260C]
+        - [0x13610, asm, core/func_00212610]
+        - [0x13634, asm, core/align_013634]  # 4 bytes padding
+        - [0x13638, asm, core/D_00212638]
+        - [0x13668, asm, core/func_00212668]
         - [0x13690, asm, graph/Font_SetLocate]
-        - [0x136B4, asm, core/align_0136B4]  # 196 bytes gap
+        - [0x136B4, asm, graph/D_002126B4]
+        - [0x136B8, asm, graph/D_002126B8]
+        - [0x136E4, asm, core/align_0136E4]  # 4 bytes padding
+        - [0x136E8, asm, graph/D_002126E8]
+        - [0x13708, asm, graph/D_00212708]
+        - [0x1371C, asm, core/align_01371C]  # 4 bytes padding
+        - [0x13720, asm, graph/func_00212720]
+        - [0x13754, asm, core/align_013754]  # 4 bytes padding
+        - [0x13758, asm, graph/D_00212758]
         - [0x13778, asm, graph/Font_SetPitch]
         - [0x137A8, asm, graph/Font_SetProp]
         - [0x137B4, asm, core/align_0137B4]  # 4 bytes gap
@@ -516,9 +685,18 @@ segments:
         - [0x137D0, asm, graph/Font_SetRetHeight]
         - [0x137DC, asm, core/align_0137DC]  # 4 bytes gap
         - [0x137E0, asm, graph/Font_SetTvFontRatio]
-        - [0x13804, asm, core/align_013804]  # 108 bytes gap
+        - [0x13804, asm, graph/D_00212804]
+        - [0x13808, asm, graph/func_00212808]
+        - [0x13818, asm, graph/func_00212818]
+        - [0x13824, asm, core/align_013824]  # 4 bytes padding
+        - [0x13828, asm, graph/D_00212828]
         - [0x13870, asm, graph/Font_SetColor]
-        - [0x138C4, asm, core/align_0138C4]  # 204 bytes gap
+        - [0x138C4, asm, graph/D_002128C4]
+        - [0x138C8, asm, graph/func_002128C8]
+        - [0x138F8, asm, graph/D_002128F8]
+        - [0x1391C, asm, core/align_01391C]  # 4 bytes padding
+        - [0x13920, asm, graph/D_00212920]
+        - [0x13940, asm, graph/D_00212940]
         - [0x13990, asm, graph/Font_SetULColor]
         - [0x139AC, asm, core/align_0139AC]  # 4 bytes gap
         - [0x139B0, asm, graph/Font_SetBGColor]
@@ -529,7 +707,12 @@ segments:
         - [0x142F8, asm, graph/updateScreenMatrix]
         - [0x1437C, asm, core/align_01437C]  # 4 bytes gap
         - [0x14380, asm, graph/updateTransMatrix]
-        - [0x14414, asm, core/align_014414]  # 1620 bytes gap
+        - [0x14414, asm, graph/D_00213414]
+        - [0x14418, asm, graph/func_00213418]
+        - [0x14444, asm, core/align_014444]  # 4 bytes padding
+        - [0x14448, asm, graph/func_00213448]
+        - [0x146F8, asm, graph/func_002136F8]
+        - [0x14878, asm, graph/func_00213878]
         - [0x14A68, asm, graph/Font_PutsPacket]
         - [0x14BA8, asm, graph/Font_PutsPackets]
         - [0x14D34, asm, core/align_014D34]  # 4 bytes gap
@@ -537,25 +720,56 @@ segments:
         - [0x14E3C, asm, core/align_014E3C]  # 4 bytes gap
         - [0x14E40, asm, graph/j_Font_PutsPackets]
         - [0x14E48, asm, graph/j_Font_PutsPackets_0]
-        - [0x14E50, asm, core/align_014E50]  # 304 bytes gap
+        - [0x14E50, asm, graph/func_00213E50]
+        - [0x14E90, asm, graph/func_00213E90]
+        - [0x14EE8, asm, graph/func_00213EE8]
+        - [0x14F54, asm, core/align_014F54]  # 4 bytes padding
+        - [0x14F58, asm, graph/func_00213F58]
         - [0x14F80, asm, graph/j_calcDrawArea]
-        - [0x14F88, asm, core/align_014F88]  # 672 bytes gap
+        - [0x14F88, asm, graph/func_00213F88]
+        - [0x14FC0, asm, graph/func_00213FC0]
+        - [0x14FF8, asm, graph/func_00213FF8]
+        - [0x15050, asm, graph/func_00214050]
+        - [0x150A8, asm, graph/func_002140A8]
+        - [0x15100, asm, graph/func_00214100]
+        - [0x15180, asm, graph/func_00214180]
+        - [0x15200, asm, graph/func_00214200]
+        - [0x15218, asm, graph/func_00214218]
         - [0x15228, asm, graph/Font_Load]
         - [0x15428, asm, core/align_015428]  # 96 bytes gap
         - [0x15488, asm, core/nullsub_12]
-        - [0x15490, asm, core/align_015490]  # 192 bytes gap
+        - [0x15490, asm, core/func_00214490]
+        - [0x15524, asm, core/align_015524]  # 4 bytes padding
+        - [0x15528, asm, core/func_00214528]
         - [0x15550, asm, core/do_format_date]
         - [0x15640, asm, core/do_format_time]
-        - [0x15728, asm, core/align_015728]  # 1144 bytes gap
+        - [0x15728, asm, core/func_00214728]
+        - [0x15788, asm, core/func_00214788]
+        - [0x157E4, asm, core/align_0157E4]  # 4 bytes padding
+        - [0x157E8, asm, core/func_002147E8]
+        - [0x158B4, asm, core/align_0158B4]  # 4 bytes padding
+        - [0x158B8, asm, core/func_002148B8]
+        - [0x15984, asm, core/align_015984]  # 4 bytes padding
+        - [0x15988, asm, core/func_00214988]
+        - [0x159D4, asm, core/align_0159D4]  # 4 bytes padding
+        - [0x159D8, asm, core/func_002149D8]
+        - [0x15B34, asm, core/align_015B34]  # 4 bytes padding
+        - [0x15B38, asm, core/D_00214B38]
         - [0x15BA0, asm, core/some_sort_of_lut_calc]
-        - [0x15E6C, asm, core/align_015E6C]  # 172 bytes gap
+        - [0x15E6C, asm, core/D_00214E6C]
+        - [0x15E70, asm, core/D_00214E70]
+        - [0x15ED0, asm, core/func_00214ED0]
         - [0x15F18, asm, sound/sound_thread_prepare]
-        - [0x1601C, asm, core/align_01601C]  # 180 bytes gap
+        - [0x1601C, asm, sound/D_0021501C]
+        - [0x16020, asm, sound/D_00215020]
         - [0x160D0, asm, sound/sound_handler_2150D0]
         - [0x16240, asm, sound/prepare_sound_for_cdda]
-        - [0x162D8, asm, core/align_0162D8]  # 376 bytes gap
+        - [0x162D8, asm, sound/func_002152D8]
+        - [0x1640C, asm, core/align_01640C]  # 4 bytes padding
+        - [0x16410, asm, sound/D_00215410]
         - [0x16450, asm, sound/sound_handler_215450]
-        - [0x16628, asm, core/align_016628]  # 240 bytes gap
+        - [0x16628, asm, sound/D_00215628]
+        - [0x166C0, asm, sound/func_002156C0]
         - [0x16718, asm, sound/sound_handler_215718]
         - [0x16770, asm, core/align_016770]  # 160 bytes gap
         - [0x16810, asm, sound/sound_handler_215810]
@@ -581,9 +795,75 @@ segments:
         - [0x16D98, asm, cdvd/thunk_sceCdTrayReq]
         - [0x16DB4, asm, core/align_016DB4]  # 4 bytes gap
         - [0x16DB8, asm, cdvd/thunk_sceCddaStream]
-        - [0x16DF4, asm, core/align_016DF4]  # 9692 bytes gap
+        - [0x16DF4, asm, cdvd/D_00215DF4]
+        - [0x16DF8, asm, cdvd/func_00215DF8]
+        - [0x170DC, asm, core/align_0170DC]  # 4 bytes padding
+        - [0x170E0, asm, cdvd/func_002160E0]
+        - [0x17208, asm, cdvd/func_00216208]
+        - [0x17260, asm, cdvd/D_00216260]
+        - [0x17394, asm, core/align_017394]  # 4 bytes padding
+        - [0x17398, asm, cdvd/func_00216398]
+        - [0x1785C, asm, core/align_01785C]  # 4 bytes padding
+        - [0x17860, asm, cdvd/func_00216860]
+        - [0x178DC, asm, core/align_0178DC]  # 4 bytes padding
+        - [0x178E0, asm, cdvd/func_002168E0]
+        - [0x17E6C, asm, core/align_017E6C]  # 4 bytes padding
+        - [0x17E70, asm, cdvd/func_00216E70]
+        - [0x1802C, asm, core/align_01802C]  # 4 bytes padding
+        - [0x18030, asm, cdvd/func_00217030]
+        - [0x18098, asm, cdvd/D_00217098]
+        - [0x180D4, asm, core/align_0180D4]  # 4 bytes padding
+        - [0x180D8, asm, cdvd/func_002170D8]
+        - [0x18118, asm, cdvd/func_00217118]
+        - [0x18380, asm, cdvd/func_00217380]
+        - [0x18420, asm, cdvd/func_00217420]
+        - [0x18580, asm, cdvd/func_00217580]
+        - [0x186D0, asm, cdvd/func_002176D0]
+        - [0x1887C, asm, core/align_01887C]  # 4 bytes padding
+        - [0x18880, asm, cdvd/func_00217880]
+        - [0x18970, asm, cdvd/func_00217970]
+        - [0x18FEC, asm, core/align_018FEC]  # 4 bytes padding
+        - [0x18FF0, asm, cdvd/func_00217FF0]
+        - [0x1910C, asm, core/align_01910C]  # 4 bytes padding
+        - [0x19110, asm, cdvd/D_00218110]
+        - [0x19170, asm, cdvd/func_00218170]
+        - [0x191CC, asm, core/align_0191CC]  # 4 bytes padding
+        - [0x191D0, asm, cdvd/func_002181D0]
+        - [0x19290, asm, cdvd/func_00218290]
+        - [0x19318, asm, cdvd/func_00218318]
         - [0x193D0, asm, sound/sound_thread_proc]
-        - [0x19BA8, asm, core/align_019BA8]  # 7936 bytes gap
+        - [0x19BA8, asm, sound/func_00218BA8]
+        - [0x19C4C, asm, core/align_019C4C]  # 4 bytes padding
+        - [0x19C50, asm, sound/func_00218C50]
+        - [0x19CAC, asm, core/align_019CAC]  # 4 bytes padding
+        - [0x19CB0, asm, sound/func_00218CB0]
+        - [0x19D44, asm, core/align_019D44]  # 4 bytes padding
+        - [0x19D48, asm, sound/func_00218D48]
+        - [0x19E0C, asm, core/align_019E0C]  # 4 bytes padding
+        - [0x19E10, asm, sound/func_00218E10]
+        - [0x1A8A8, asm, sound/func_002198A8]
+        - [0x1A924, asm, core/align_01A924]  # 4 bytes padding
+        - [0x1A928, asm, sound/func_00219928]
+        - [0x1A984, asm, core/align_01A984]  # 4 bytes padding
+        - [0x1A988, asm, sound/func_00219988]
+        - [0x1AE5C, asm, core/align_01AE5C]  # 4 bytes padding
+        - [0x1AE60, asm, sound/func_00219E60]
+        - [0x1AED8, asm, sound/func_00219ED8]
+        - [0x1B4AC, asm, core/align_01B4AC]  # 4 bytes padding
+        - [0x1B4B0, asm, sound/D_0021A4B0]
+        - [0x1B52C, asm, core/align_01B52C]  # 4 bytes padding
+        - [0x1B530, asm, sound/func_0021A530]
+        - [0x1B658, asm, sound/func_0021A658]
+        - [0x1B6E0, asm, sound/func_0021A6E0]
+        - [0x1B800, asm, sound/func_0021A800]
+        - [0x1B880, asm, sound/func_0021A880]
+        - [0x1B8D0, asm, sound/func_0021A8D0]
+        - [0x1B918, asm, sound/func_0021A918]
+        - [0x1B960, asm, sound/D_0021A960]
+        - [0x1B9A8, asm, sound/D_0021A9A8]
+        - [0x1BA08, asm, sound/D_0021AA08]
+        - [0x1BA9C, asm, core/align_01BA9C]  # 4 bytes padding
+        - [0x1BAA0, asm, sound/D_0021AAA0]
         - [0x1BAA8, asm, opening/module_opening_getdesc]
         - [0x1BAB4, asm, core/align_01BAB4]  # 4 bytes gap
         - [0x1BAB8, asm, opening/module_opening_getversion]
@@ -603,7 +883,8 @@ segments:
         - [0x1BE30, asm, core/opening_thread_set_vars]
         - [0x1BE78, asm, core/opening_thread_set_vars_2]
         - [0x1BEE0, asm, core/opening_transition_to_clock]
-        - [0x1C090, asm, core/align_01C090]  # 152 bytes gap
+        - [0x1C090, asm, core/func_0021B090]
+        - [0x1C108, asm, core/func_0021B108]
         - [0x1C128, asm, opening/OpeningInitRender]
         - [0x1C1A8, asm, graph/gsAllocExtraBuffers]
         - [0x1C208, asm, opening/OpeningInitTextures]
@@ -667,32 +948,92 @@ segments:
         - [0x1DDF0, asm, graph/vif1SetZTest]
         - [0x1DE38, asm, graph/vif1SetZWrite]
         - [0x1DED8, asm, graph/vif1SetXYOffset]
-        - [0x1DF34, asm, core/align_01DF34]  # 3924 bytes gap
+        - [0x1DF34, asm, graph/D_0021CF34]
+        - [0x1DF38, asm, graph/func_0021CF38]
+        - [0x1E140, asm, graph/func_0021D140]
+        - [0x1E3D0, asm, graph/func_0021D3D0]
+        - [0x1E6BC, asm, core/align_01E6BC]  # 4 bytes padding
+        - [0x1E6C0, asm, graph/func_0021D6C0]
+        - [0x1E844, asm, core/align_01E844]  # 4 bytes padding
+        - [0x1E848, asm, graph/func_0021D848]
+        - [0x1E990, asm, graph/func_0021D990]
+        - [0x1EB4C, asm, core/align_01EB4C]  # 4 bytes padding
+        - [0x1EB50, asm, graph/func_0021DB50]
+        - [0x1EBE0, asm, graph/func_0021DBE0]
+        - [0x1ED90, asm, graph/func_0021DD90]
+        - [0x1EE4C, asm, core/align_01EE4C]  # 4 bytes padding
+        - [0x1EE50, asm, graph/func_0021DE50]
         - [0x1EE88, asm, opening/OpeningDoText]
-        - [0x1EEA4, asm, core/align_01EEA4]  # 708 bytes gap
+        - [0x1EEA4, asm, opening/D_0021DEA4]
+        - [0x1EEA8, asm, opening/func_0021DEA8]
         - [0x1F168, asm, opening/OpeningDrawFog]
-        - [0x1F6C4, asm, core/align_01F6C4]  # 1924 bytes gap
+        - [0x1F6C4, asm, opening/D_0021E6C4]
+        - [0x1F6C8, asm, opening/func_0021E6C8]
+        - [0x1F94C, asm, core/align_01F94C]  # 4 bytes padding
+        - [0x1F950, asm, opening/func_0021E950]
         - [0x1FE48, asm, opening/OpeningInitAnimation]
         - [0x1FE98, asm, core/align_01FE98]  # 104 bytes gap
         - [0x1FF00, asm, opening/OpeningProcessInner]
         - [0x205F4, asm, core/align_0205F4]  # 4 bytes gap
         - [0x205F8, asm, opening/OpeningDrawLights]
-        - [0x20EB8, asm, core/align_020EB8]  # 2856 bytes gap
+        - [0x20EB8, asm, opening/D_0021FEB8]
+        - [0x2144C, asm, core/align_02144C]  # 4 bytes padding
+        - [0x21450, asm, opening/func_00220450]
         - [0x219E0, asm, opening/InitLightsCubes]
         - [0x21CE8, asm, opening/OpeningDrawLightsAndCubes]
-        - [0x21D60, asm, core/align_021D60]  # 3672 bytes gap
+        - [0x21D60, asm, opening/func_00220D60]
+        - [0x220B0, asm, opening/func_002210B0]
+        - [0x22140, asm, opening/func_00221140]
+        - [0x221B8, asm, opening/func_002211B8]
+        - [0x22248, asm, opening/func_00221248]
+        - [0x223FC, asm, core/align_0223FC]  # 4 bytes padding
+        - [0x22400, asm, opening/func_00221400]
+        - [0x224F4, asm, core/align_0224F4]  # 4 bytes padding
+        - [0x224F8, asm, opening/func_002214F8]
+        - [0x22A50, asm, opening/func_00221A50]
+        - [0x22AFC, asm, core/align_022AFC]  # 4 bytes padding
+        - [0x22B00, asm, opening/func_00221B00]
         - [0x22BB8, asm, opening/OpeningInitOpeningScene]
         - [0x22CAC, asm, core/align_022CAC]  # 4 bytes gap
         - [0x22CB0, asm, opening/OpeningDrawOpeningScene]
         - [0x22D2C, asm, core/align_022D2C]  # 4 bytes gap
         - [0x22D30, asm, opening/OpeningInitTowersFog]
         - [0x23180, asm, opening/OpeningDoOpening]
-        - [0x231F0, asm, core/align_0231F0]  # 3200 bytes gap
+        - [0x231F0, asm, opening/D_002221F0]
+        - [0x23674, asm, core/align_023674]  # 4 bytes padding
+        - [0x23678, asm, opening/func_00222678]
+        - [0x23BE8, asm, opening/func_00222BE8]
+        - [0x23DD4, asm, core/align_023DD4]  # 4 bytes padding
+        - [0x23DD8, asm, opening/func_00222DD8]
+        - [0x23E38, asm, opening/func_00222E38]
         - [0x23E70, asm, opening/OpeningDoIllegalDisc]
-        - [0x23EE0, asm, core/align_023EE0]  # 5568 bytes gap
+        - [0x23EE0, asm, opening/func_00222EE0]
+        - [0x2422C, asm, core/align_02422C]  # 4 bytes padding
+        - [0x24230, asm, opening/func_00223230]
+        - [0x24368, asm, opening/func_00223368]
+        - [0x24608, asm, opening/func_00223608]
+        - [0x2497C, asm, core/align_02497C]  # 4 bytes padding
+        - [0x24980, asm, opening/func_00223980]
+        - [0x24E48, asm, opening/func_00223E48]
+        - [0x252C4, asm, core/align_0252C4]  # 4 bytes padding
+        - [0x252C8, asm, opening/func_002242C8]
+        - [0x253F8, asm, opening/func_002243F8]
         - [0x254A0, asm, opening/OpeningInitIllegalScene]
         - [0x25578, asm, opening/OpeningDrawIllegalScene]
-        - [0x255C0, asm, core/align_0255C0]  # 4456 bytes gap
+        - [0x255C0, asm, opening/func_002245C0]
+        - [0x256C4, asm, core/align_0256C4]  # 4 bytes padding
+        - [0x256C8, asm, opening/func_002246C8]
+        - [0x25934, asm, core/align_025934]  # 4 bytes padding
+        - [0x25938, asm, opening/func_00224938]
+        - [0x25B10, asm, opening/func_00224B10]
+        - [0x25BBC, asm, core/align_025BBC]  # 4 bytes padding
+        - [0x25BC0, asm, opening/func_00224BC0]
+        - [0x25EB4, asm, core/align_025EB4]  # 4 bytes padding
+        - [0x25EB8, asm, opening/func_00224EB8]
+        - [0x26268, asm, opening/func_00225268]
+        - [0x26380, asm, opening/func_00225380]
+        - [0x264DC, asm, core/align_0264DC]  # 4 bytes padding
+        - [0x264E0, asm, opening/func_002254E0]
         - [0x26728, asm, opening/module_opening_225728]
         - [0x2686C, asm, core/align_02686C]  # 4 bytes gap
         - [0x26870, asm, clock/module_clock_getdesc]
@@ -714,40 +1055,96 @@ segments:
         - [0x26F2C, asm, core/align_026F2C]  # 12 bytes gap
         - [0x26F38, asm, clock/module_clock_225F38]
         - [0x27000, asm, clock/module_clock_226000]
-        - [0x27154, asm, core/align_027154]  # 948 bytes gap
+        - [0x27154, asm, clock/D_00226154]
+        - [0x27158, asm, clock/func_00226158]
+        - [0x272C8, asm, clock/func_002262C8]
+        - [0x27300, asm, clock/func_00226300]
         - [0x27508, asm, graph/DrawIcon]
-        - [0x276B4, asm, core/align_0276B4]  # 188 bytes gap
+        - [0x276B4, asm, graph/D_002266B4]
+        - [0x276B8, asm, graph/func_002266B8]
+        - [0x276C0, asm, graph/func_002266C0]
+        - [0x276C8, asm, graph/func_002266C8]
+        - [0x276D0, asm, graph/func_002266D0]
+        - [0x276DC, asm, core/align_0276DC]  # 4 bytes padding
+        - [0x276E0, asm, graph/func_002266E0]
         - [0x27770, asm, graph/draw_button_panel_hkdosd_p4_tgt]
-        - [0x27958, asm, core/align_027958]  # 440 bytes gap
+        - [0x27958, asm, graph/func_00226958]
+        - [0x279E0, asm, graph/func_002269E0]
+        - [0x27A88, asm, graph/func_00226A88]
         - [0x27B10, asm, graph/do_load_font]
         - [0x27B94, asm, core/align_027B94]  # 4 bytes gap
         - [0x27B98, asm, graph/DrawNonSelectableItem]
         - [0x27C00, asm, graph/draw_menu_item]
-        - [0x27CA0, asm, core/align_027CA0]  # 1032 bytes gap
+        - [0x27CA0, asm, graph/func_00226CA0]
+        - [0x27DCC, asm, core/align_027DCC]  # 4 bytes padding
+        - [0x27DD0, asm, graph/func_00226DD0]
+        - [0x27E64, asm, core/align_027E64]  # 4 bytes padding
+        - [0x27E68, asm, graph/func_00226E68]
+        - [0x27FD0, asm, graph/D_00226FD0]
         - [0x280A8, asm, clock/clock_str_related]
-        - [0x2841C, asm, core/align_02841C]  # 1908 bytes gap
+        - [0x2841C, asm, clock/D_0022741C]
+        - [0x28420, asm, clock/D_00227420]
+        - [0x2847C, asm, core/align_02847C]  # 4 bytes padding
+        - [0x28480, asm, clock/func_00227480]
+        - [0x28488, asm, clock/func_00227488]
+        - [0x2893C, asm, core/align_02893C]  # 4 bytes padding
+        - [0x28940, asm, clock/func_00227940]
+        - [0x28ACC, asm, core/align_028ACC]  # 4 bytes padding
+        - [0x28AD0, asm, clock/D_00227AD0]
         - [0x28B90, asm, clock/clock_config_change_cb_clock]
-        - [0x28BE4, asm, core/align_028BE4]  # 124 bytes gap
+        - [0x28BE4, asm, clock/D_00227BE4]
+        - [0x28BE8, asm, clock/D_00227BE8]
+        - [0x28C3C, asm, core/align_028C3C]  # 4 bytes padding
+        - [0x28C40, asm, clock/D_00227C40]
         - [0x28C60, asm, core/j_clock_config_get_item_str]
         - [0x28C68, asm, clock/clock_config_change_cb_hddini]
-        - [0x28CA4, asm, core/align_028CA4]  # 140 bytes gap
+        - [0x28CA4, asm, clock/D_00227CA4]
+        - [0x28CA8, asm, clock/D_00227CA8]
+        - [0x28CE4, asm, core/align_028CE4]  # 4 bytes padding
+        - [0x28CE8, asm, clock/D_00227CE8]
         - [0x28D30, asm, clock/clock_config_change_cb_aspect_ratio]
         - [0x28D70, asm, clock/clock_config_change_cb_spdif_mode]
         - [0x28E00, asm, clock/clock_config_change_cb_video_output]
         - [0x28E40, asm, clock/clock_config_change_cb_rc_gameplay]
         - [0x28EC8, asm, clock/clock_config_change_cb_osd_language]
-        - [0x28F08, asm, core/align_028F08]  # 1344 bytes gap
+        - [0x28F08, asm, clock/func_00227F08]
+        - [0x29220, asm, clock/func_00228220]
+        - [0x29228, asm, clock/func_00228228]
+        - [0x292EC, asm, core/align_0292EC]  # 4 bytes padding
+        - [0x292F0, asm, clock/func_002282F0]
+        - [0x293BC, asm, core/align_0293BC]  # 4 bytes padding
+        - [0x293C0, asm, clock/func_002283C0]
         - [0x29448, asm, clock/clock_config_get_initial_value]
         - [0x29470, asm, clock/clock_config_get_item_str]
-        - [0x294F4, asm, core/align_0294F4]  # 572 bytes gap
+        - [0x294F4, asm, clock/D_002284F4]
+        - [0x294F8, asm, clock/func_002284F8]
+        - [0x2965C, asm, core/align_02965C]  # 4 bytes padding
+        - [0x29660, asm, clock/D_00228660]
         - [0x29730, asm, core/j_config_mark_dirty]
         - [0x29738, asm, core/nullsub_4]
         - [0x29740, asm, core/nullsub_11]
-        - [0x29748, asm, core/align_029748]  # 2032 bytes gap
+        - [0x29748, asm, core/D_00228748]
+        - [0x29978, asm, core/func_00228978]
         - [0x29F38, asm, core/j_sound_handler_queue_command]
-        - [0x29F40, asm, core/align_029F40]  # 2280 bytes gap
+        - [0x29F40, asm, core/func_00228F40]
+        - [0x29F64, asm, core/align_029F64]  # 4 bytes padding
+        - [0x29F68, asm, core/func_00228F68]
+        - [0x29FD8, asm, core/func_00228FD8]
+        - [0x2A024, asm, core/align_02A024]  # 4 bytes padding
+        - [0x2A028, asm, core/func_00229028]
+        - [0x2A07C, asm, core/align_02A07C]  # 4 bytes padding
+        - [0x2A080, asm, core/func_00229080]
+        - [0x2A51C, asm, core/align_02A51C]  # 4 bytes padding
+        - [0x2A520, asm, core/func_00229520]
+        - [0x2A6D0, asm, core/func_002296D0]
+        - [0x2A7CC, asm, core/align_02A7CC]  # 4 bytes padding
+        - [0x2A7D0, asm, core/func_002297D0]
         - [0x2A828, asm, clock/module_clock_229828]
-        - [0x2A858, asm, core/align_02A858]  # 840 bytes gap
+        - [0x2A858, asm, clock/func_00229858]
+        - [0x2A978, asm, clock/D_00229978]
+        - [0x2AA18, asm, clock/D_00229A18]
+        - [0x2AA8C, asm, core/align_02AA8C]  # 4 bytes padding
+        - [0x2AA90, asm, clock/D_00229A90]
         - [0x2ABA0, asm, clock/module_clock_config_ps1drv_get_value]
         - [0x2ABF0, asm, clock/clock_config_change_cb_ps1drv]
         - [0x2AC4C, asm, core/align_02AC4C]  # 4 bytes gap
@@ -756,15 +1153,86 @@ segments:
         - [0x2ACD8, asm, clock/clock_config_change_cb_dvdp_reset_progressive]
         - [0x2AD00, asm, core/nullsub_13]
         - [0x2AD08, asm, clock/do_show_version_info]
-        - [0x2B1D4, asm, core/align_02B1D4]  # 1980 bytes gap
+        - [0x2B1D4, asm, clock/D_0022A1D4]
+        - [0x2B1D8, asm, clock/func_0022A1D8]
+        - [0x2B238, asm, clock/func_0022A238]
+        - [0x2B298, asm, clock/func_0022A298]
+        - [0x2B304, asm, core/align_02B304]  # 4 bytes padding
+        - [0x2B308, asm, clock/func_0022A308]
+        - [0x2B360, asm, clock/func_0022A360]
+        - [0x2B410, asm, clock/func_0022A410]
+        - [0x2B7A4, asm, core/align_02B7A4]  # 4 bytes padding
+        - [0x2B7A8, asm, clock/func_0022A7A8]
         - [0x2B990, asm, clock/module_clock_22A990]
         - [0x2B9C0, asm, core/align_02B9C0]  # 296 bytes gap
         - [0x2BAE8, asm, core/j_sound_handler_queue_command_0]
-        - [0x2BAF0, asm, core/align_02BAF0]  # 7728 bytes gap
+        - [0x2BAF0, asm, core/func_0022AAF0]
+        - [0x2BAF8, asm, core/D_0022AAF8]
+        - [0x2BB04, asm, core/align_02BB04]  # 4 bytes padding
+        - [0x2BB08, asm, core/func_0022AB08]
+        - [0x2BBB4, asm, core/align_02BBB4]  # 4 bytes padding
+        - [0x2BBB8, asm, core/func_0022ABB8]
+        - [0x2BBC4, asm, core/align_02BBC4]  # 4 bytes padding
+        - [0x2BBC8, asm, core/func_0022ABC8]
+        - [0x2BD50, asm, core/func_0022AD50]
+        - [0x2BD58, asm, core/func_0022AD58]
+        - [0x2BDBC, asm, core/align_02BDBC]  # 4 bytes padding
+        - [0x2BDC0, asm, core/func_0022ADC0]
+        - [0x2BE20, asm, core/func_0022AE20]
+        - [0x2BE7C, asm, core/align_02BE7C]  # 4 bytes padding
+        - [0x2BE80, asm, core/func_0022AE80]
+        - [0x2BEB8, asm, core/func_0022AEB8]
+        - [0x2BF28, asm, core/func_0022AF28]
+        - [0x2BF60, asm, core/func_0022AF60]
+        - [0x2C3A4, asm, core/align_02C3A4]  # 4 bytes padding
+        - [0x2C3A8, asm, core/func_0022B3A8]
+        - [0x2C5F8, asm, core/func_0022B5F8]
+        - [0x2C790, asm, core/func_0022B790]
+        - [0x2C8E8, asm, core/func_0022B8E8]
+        - [0x2C9C8, asm, core/func_0022B9C8]
+        - [0x2CA0C, asm, core/align_02CA0C]  # 4 bytes padding
+        - [0x2CA10, asm, core/func_0022BA10]
+        - [0x2CA74, asm, core/align_02CA74]  # 4 bytes padding
+        - [0x2CA78, asm, core/func_0022BA78]
+        - [0x2CAE0, asm, core/func_0022BAE0]
+        - [0x2CB20, asm, core/func_0022BB20]
+        - [0x2CB50, asm, core/func_0022BB50]
+        - [0x2CBD8, asm, core/func_0022BBD8]
+        - [0x2CC80, asm, core/func_0022BC80]
+        - [0x2CD5C, asm, core/align_02CD5C]  # 4 bytes padding
+        - [0x2CD60, asm, core/func_0022BD60]
+        - [0x2CE28, asm, core/func_0022BE28]
+        - [0x2CE58, asm, core/func_0022BE58]
+        - [0x2CECC, asm, core/align_02CECC]  # 4 bytes padding
+        - [0x2CED0, asm, core/func_0022BED0]
+        - [0x2CF00, asm, core/func_0022BF00]
+        - [0x2D038, asm, core/func_0022C038]
+        - [0x2D130, asm, core/func_0022C130]
+        - [0x2D210, asm, core/func_0022C210]
+        - [0x2D268, asm, core/func_0022C268]
+        - [0x2D44C, asm, core/align_02D44C]  # 4 bytes padding
+        - [0x2D450, asm, core/func_0022C450]
+        - [0x2D894, asm, core/align_02D894]  # 4 bytes padding
+        - [0x2D898, asm, core/func_0022C898]
         - [0x2D920, asm, core/j_sound_handler_queue_command_1]
-        - [0x2D928, asm, core/align_02D928]  # 800 bytes gap
+        - [0x2D928, asm, core/func_0022C928]
+        - [0x2D934, asm, core/align_02D934]  # 4 bytes padding
+        - [0x2D938, asm, core/D_0022C938]
+        - [0x2D95C, asm, core/align_02D95C]  # 4 bytes padding
+        - [0x2D960, asm, core/func_0022C960]
+        - [0x2D994, asm, core/align_02D994]  # 4 bytes padding
+        - [0x2D998, asm, core/D_0022C998]
+        - [0x2DA6C, asm, core/align_02DA6C]  # 4 bytes padding
+        - [0x2DA70, asm, core/D_0022CA70]
+        - [0x2DA7C, asm, core/align_02DA7C]  # 4 bytes padding
+        - [0x2DA80, asm, core/func_0022CA80]
+        - [0x2DB50, asm, core/func_0022CB50]
         - [0x2DC48, asm, core/nullsub_14]
-        - [0x2DC50, asm, core/align_02DC50]  # 488 bytes gap
+        - [0x2DC50, asm, core/D_0022CC50]
+        - [0x2DC58, asm, core/D_0022CC58]
+        - [0x2DCBC, asm, core/align_02DCBC]  # 4 bytes padding
+        - [0x2DCC0, asm, core/D_0022CCC0]
+        - [0x2DDB0, asm, core/D_0022CDB0]
         - [0x2DE38, asm, clock/do_show_timezone_info]
         - [0x2DF9C, asm, core/align_02DF9C]  # 4 bytes gap
         - [0x2DFA0, asm, clock/clock_timezone_str_related]
@@ -772,14 +1240,54 @@ segments:
         - [0x2E3E0, asm, clock/get_summer_time_str]
         - [0x2E480, asm, clock/get_summer_time_str2]
         - [0x2E520, asm, core/j_sound_handler_queue_cmd]
-        - [0x2E528, asm, core/align_02E528]  # 400 bytes gap
+        - [0x2E528, asm, core/func_0022D528]
+        - [0x2E534, asm, core/align_02E534]  # 4 bytes padding
+        - [0x2E538, asm, core/func_0022D538]
+        - [0x2E544, asm, core/align_02E544]  # 4 bytes padding
+        - [0x2E548, asm, core/func_0022D548]
+        - [0x2E554, asm, core/align_02E554]  # 4 bytes padding
+        - [0x2E558, asm, core/func_0022D558]
+        - [0x2E5A0, asm, core/func_0022D5A0]
+        - [0x2E5D4, asm, core/align_02E5D4]  # 4 bytes padding
+        - [0x2E5D8, asm, core/func_0022D5D8]
+        - [0x2E6A4, asm, core/align_02E6A4]  # 4 bytes padding
+        - [0x2E6A8, asm, core/func_0022D6A8]
         - [0x2E6B8, asm, core/j_sound_handler_queue_cmd_0]
-        - [0x2E6C0, asm, core/align_02E6C0]  # 1288 bytes gap
+        - [0x2E6C0, asm, core/func_0022D6C0]
+        - [0x2E75C, asm, core/align_02E75C]  # 4 bytes padding
+        - [0x2E760, asm, core/func_0022D760]
+        - [0x2E824, asm, core/align_02E824]  # 4 bytes padding
+        - [0x2E828, asm, core/func_0022D828]
         - [0x2EBC8, asm, clock/oobe_handler]
-        - [0x2F2FC, asm, core/align_02F2FC]  # 732 bytes gap
+        - [0x2F2FC, asm, clock/D_0022E2FC]
+        - [0x2F300, asm, clock/func_0022E300]
+        - [0x2F30C, asm, core/align_02F30C]  # 4 bytes padding
+        - [0x2F310, asm, clock/D_0022E310]
+        - [0x2F3B8, asm, clock/D_0022E3B8]
+        - [0x2F3F4, asm, core/align_02F3F4]  # 4 bytes padding
+        - [0x2F3F8, asm, clock/D_0022E3F8]
+        - [0x2F424, asm, core/align_02F424]  # 4 bytes padding
+        - [0x2F428, asm, clock/D_0022E428]
+        - [0x2F598, asm, clock/D_0022E598]
         - [0x2F5D8, asm, clock/oobe_load_image]
         - [0x2F8B8, asm, core/j_sound_handler_queue_command_2]
-        - [0x2F8C0, asm, core/align_02F8C0]  # 2520 bytes gap
+        - [0x2F8C0, asm, core/func_0022E8C0]
+        - [0x2F9C8, asm, core/func_0022E9C8]
+        - [0x2FACC, asm, core/align_02FACC]  # 4 bytes padding
+        - [0x2FAD0, asm, core/func_0022EAD0]
+        - [0x2FB4C, asm, core/align_02FB4C]  # 4 bytes padding
+        - [0x2FB50, asm, core/func_0022EB50]
+        - [0x2FBCC, asm, core/align_02FBCC]  # 4 bytes padding
+        - [0x2FBD0, asm, core/func_0022EBD0]
+        - [0x2FE20, asm, core/func_0022EE20]
+        - [0x2FF20, asm, core/func_0022EF20]
+        - [0x2FF3C, asm, core/align_02FF3C]  # 4 bytes padding
+        - [0x2FF40, asm, core/func_0022EF40]
+        - [0x30078, asm, core/func_0022F078]
+        - [0x3010C, asm, core/align_03010C]  # 4 bytes padding
+        - [0x30110, asm, core/func_0022F110]
+        - [0x3019C, asm, core/align_03019C]  # 4 bytes padding
+        - [0x301A0, asm, core/func_0022F1A0]
         - [0x30298, asm, clock/module_clock_22F298]
         - [0x302C0, asm, clock/module_clock_22F2C0]
         - [0x302E8, asm, clock/module_clock_22F2E8]
@@ -799,7 +1307,21 @@ segments:
         - [0x30D90, asm, clock/module_clock_22FD90]
         - [0x30E98, asm, clock/module_clock_22FE98]
         - [0x30EF0, asm, clock/module_clock_22FEF0]
-        - [0x30EF8, asm, core/align_030EF8]  # 1624 bytes gap
+        - [0x30EF8, asm, clock/func_0022FEF8]
+        - [0x30F24, asm, core/align_030F24]  # 4 bytes padding
+        - [0x30F28, asm, clock/func_0022FF28]
+        - [0x30F98, asm, clock/func_0022FF98]
+        - [0x30FEC, asm, core/align_030FEC]  # 4 bytes padding
+        - [0x30FF0, asm, clock/func_0022FFF0]
+        - [0x31004, asm, core/align_031004]  # 4 bytes padding
+        - [0x31008, asm, clock/func_00230008]
+        - [0x310CC, asm, core/align_0310CC]  # 4 bytes padding
+        - [0x310D0, asm, clock/func_002300D0]
+        - [0x31380, asm, clock/func_00230380]
+        - [0x313C4, asm, core/align_0313C4]  # 4 bytes padding
+        - [0x313C8, asm, clock/func_002303C8]
+        - [0x3140C, asm, core/align_03140C]  # 4 bytes padding
+        - [0x31410, asm, clock/D_00230410]
         - [0x31550, asm, clock/module_clock_230550]
         - [0x315FC, asm, core/align_0315FC]  # 4 bytes gap
         - [0x31600, asm, clock/module_clock_230600]
@@ -808,32 +1330,132 @@ segments:
         - [0x318F0, asm, clock/module_clock_2308F0]
         - [0x31BFC, asm, core/align_031BFC]  # 4 bytes gap
         - [0x31C00, asm, clock/module_clock_230C00]
-        - [0x31C28, asm, core/align_031C28]  # 456 bytes gap
+        - [0x31C28, asm, clock/func_00230C28]
+        - [0x31C80, asm, clock/func_00230C80]
+        - [0x31CE8, asm, clock/func_00230CE8]
+        - [0x31D58, asm, clock/func_00230D58]
         - [0x31DF0, asm, clock/module_clock_230DF0]
         - [0x31E10, asm, core/align_031E10]  # 176 bytes gap
         - [0x31EC0, asm, clock/StartSysConfig]
-        - [0x31F48, asm, core/align_031F48]  # 1088 bytes gap
+        - [0x31F48, asm, clock/func_00230F48]
+        - [0x31F80, asm, clock/func_00230F80]
+        - [0x31FD8, asm, clock/func_00230FD8]
+        - [0x321E4, asm, core/align_0321E4]  # 4 bytes padding
+        - [0x321E8, asm, clock/func_002311E8]
         - [0x32388, asm, browser/browser_str_related]
-        - [0x326B8, asm, core/align_0326B8]  # 1936 bytes gap
+        - [0x326B8, asm, browser/func_002316B8]
+        - [0x32B34, asm, core/align_032B34]  # 4 bytes padding
+        - [0x32B38, asm, browser/func_00231B38]
+        - [0x32C50, asm, browser/func_00231C50]
         - [0x32E48, asm, clock/module_clock_231E48]
-        - [0x32E78, asm, core/align_032E78]  # 760 bytes gap
+        - [0x32E78, asm, clock/func_00231E78]
+        - [0x32F68, asm, clock/func_00231F68]
+        - [0x32FAC, asm, core/align_032FAC]  # 4 bytes padding
+        - [0x32FB0, asm, clock/func_00231FB0]
+        - [0x3301C, asm, core/align_03301C]  # 4 bytes padding
+        - [0x33020, asm, clock/func_00232020]
+        - [0x330AC, asm, core/align_0330AC]  # 4 bytes padding
+        - [0x330B0, asm, clock/func_002320B0]
         - [0x33170, asm, graph/draw_clock_menu_items_hkdosd_p4_tgt]
         - [0x332DC, asm, core/align_0332DC]  # 4 bytes gap
         - [0x332E0, asm, graph/menupos_p3_p8_tgt]
         - [0x33404, asm, core/align_033404]  # 52 bytes gap
         - [0x33438, asm, clock/module_clock_232438]
         - [0x33458, asm, clock/module_clock_232458]
-        - [0x334C4, asm, core/align_0334C4]  # 724 bytes gap
+        - [0x334C4, asm, clock/D_002324C4]
+        - [0x334C8, asm, clock/func_002324C8]
+        - [0x3363C, asm, core/align_03363C]  # 4 bytes padding
+        - [0x33640, asm, clock/func_00232640]
+        - [0x336EC, asm, core/align_0336EC]  # 4 bytes padding
+        - [0x336F0, asm, clock/func_002326F0]
         - [0x33798, asm, browser/browser_str_related2]
         - [0x3384C, asm, core/align_03384C]  # 4 bytes gap
         - [0x33850, asm, core/j_sound_handler_queue_command_3]
-        - [0x33858, asm, core/align_033858]  # 2784 bytes gap
+        - [0x33858, asm, core/func_00232858]
+        - [0x33878, asm, core/func_00232878]
+        - [0x33888, asm, core/func_00232888]
+        - [0x338D8, asm, core/func_002328D8]
+        - [0x33938, asm, core/func_00232938]
+        - [0x3395C, asm, core/align_03395C]  # 4 bytes padding
+        - [0x33960, asm, core/func_00232960]
+        - [0x33EB8, asm, core/func_00232EB8]
+        - [0x3410C, asm, core/align_03410C]  # 4 bytes padding
+        - [0x34110, asm, core/func_00233110]
+        - [0x341C8, asm, core/func_002331C8]
+        - [0x3420C, asm, core/align_03420C]  # 4 bytes padding
+        - [0x34210, asm, core/func_00233210]
+        - [0x34254, asm, core/align_034254]  # 4 bytes padding
+        - [0x34258, asm, core/func_00233258]
+        - [0x342AC, asm, core/align_0342AC]  # 4 bytes padding
+        - [0x342B0, asm, core/func_002332B0]
         - [0x34338, asm, clock/module_clock_233338]
-        - [0x343C0, asm, core/align_0343C0]  # 232 bytes gap
+        - [0x343C0, asm, clock/func_002333C0]
+        - [0x343D8, asm, clock/func_002333D8]
+        - [0x343E0, asm, clock/func_002333E0]
+        - [0x34434, asm, core/align_034434]  # 4 bytes padding
+        - [0x34438, asm, clock/func_00233438]
         - [0x344A8, asm, clock/clock_load_texture]
-        - [0x34560, asm, core/align_034560]  # 5656 bytes gap
+        - [0x34560, asm, clock/func_00233560]
+        - [0x345B0, asm, clock/func_002335B0]
+        - [0x345C8, asm, clock/func_002335C8]
+        - [0x345E0, asm, clock/func_002335E0]
+        - [0x345F8, asm, clock/func_002335F8]
+        - [0x34698, asm, clock/func_00233698]
+        - [0x3476C, asm, core/align_03476C]  # 4 bytes padding
+        - [0x34770, asm, clock/func_00233770]
+        - [0x347C0, asm, clock/func_002337C0]
+        - [0x347EC, asm, core/align_0347EC]  # 4 bytes padding
+        - [0x347F0, asm, clock/func_002337F0]
+        - [0x34814, asm, core/align_034814]  # 4 bytes padding
+        - [0x34818, asm, clock/func_00233818]
+        - [0x3484C, asm, core/align_03484C]  # 4 bytes padding
+        - [0x34850, asm, clock/func_00233850]
+        - [0x348DC, asm, core/align_0348DC]  # 4 bytes padding
+        - [0x348E0, asm, clock/func_002338E0]
+        - [0x3496C, asm, core/align_03496C]  # 4 bytes padding
+        - [0x34970, asm, clock/func_00233970]
+        - [0x349D4, asm, core/align_0349D4]  # 4 bytes padding
+        - [0x349D8, asm, clock/func_002339D8]
+        - [0x34A3C, asm, core/align_034A3C]  # 4 bytes padding
+        - [0x34A40, asm, clock/func_00233A40]
+        - [0x34CFC, asm, core/align_034CFC]  # 4 bytes padding
+        - [0x34D00, asm, clock/func_00233D00]
+        - [0x34D90, asm, clock/func_00233D90]
+        - [0x34DD4, asm, core/align_034DD4]  # 4 bytes padding
+        - [0x34DD8, asm, clock/func_00233DD8]
+        - [0x34E70, asm, clock/func_00233E70]
+        - [0x34F48, asm, clock/func_00233F48]
+        - [0x35070, asm, clock/func_00234070]
+        - [0x351C8, asm, clock/func_002341C8]
+        - [0x352F0, asm, clock/func_002342F0]
+        - [0x354F4, asm, core/align_0354F4]  # 4 bytes padding
+        - [0x354F8, asm, clock/func_002344F8]
+        - [0x357D8, asm, clock/func_002347D8]
+        - [0x358A8, asm, clock/func_002348A8]
+        - [0x359E0, asm, clock/func_002349E0]
+        - [0x35A5C, asm, core/align_035A5C]  # 4 bytes padding
+        - [0x35A60, asm, clock/func_00234A60]
+        - [0x35A68, asm, clock/func_00234A68]
+        - [0x35A70, asm, clock/func_00234A70]
+        - [0x35A94, asm, core/align_035A94]  # 4 bytes padding
+        - [0x35A98, asm, clock/func_00234A98]
+        - [0x35AA8, asm, clock/func_00234AA8]
+        - [0x35AB0, asm, clock/func_00234AB0]
+        - [0x35AC0, asm, clock/func_00234AC0]
+        - [0x35AE0, asm, clock/func_00234AE0]
+        - [0x35B10, asm, clock/func_00234B10]
         - [0x35B78, asm, core/get_clock_should_render_orbs]
-        - [0x35B80, asm, core/align_035B80]  # 752 bytes gap
+        - [0x35B80, asm, core/func_00234B80]
+        - [0x35B88, asm, core/func_00234B88]
+        - [0x35C24, asm, core/align_035C24]  # 4 bytes padding
+        - [0x35C28, asm, core/func_00234C28]
+        - [0x35CD0, asm, core/func_00234CD0]
+        - [0x35D14, asm, core/align_035D14]  # 4 bytes padding
+        - [0x35D18, asm, core/func_00234D18]
+        - [0x35D5C, asm, core/align_035D5C]  # 4 bytes padding
+        - [0x35D60, asm, core/func_00234D60]
+        - [0x35E04, asm, core/align_035E04]  # 4 bytes padding
+        - [0x35E08, asm, core/func_00234E08]
         - [0x35E70, asm, clock/module_clock_234E70]
         - [0x35EA8, asm, core/align_035EA8]  # 144 bytes gap
         - [0x35F38, asm, clock/module_clock_get_config_item]
@@ -847,17 +1469,68 @@ segments:
         - [0x362D0, asm, config/config_save_clock_osd]
         - [0x36434, asm, core/align_036434]  # 4 bytes gap
         - [0x36438, asm, config/set_ps1drv_config_dirty]
-        - [0x36444, asm, core/align_036444]  # 164 bytes gap
+        - [0x36444, asm, config/D_00235444]
+        - [0x36448, asm, config/func_00235448]
         - [0x364E8, asm, config/is_config_dirty]
-        - [0x36514, asm, core/align_036514]  # 228 bytes gap
+        - [0x36514, asm, config/D_00235514]
+        - [0x36518, asm, config/func_00235518]
+        - [0x3656C, asm, core/align_03656C]  # 4 bytes padding
+        - [0x36570, asm, config/func_00235570]
+        - [0x3659C, asm, core/align_03659C]  # 4 bytes padding
+        - [0x365A0, asm, config/func_002355A0]
         - [0x365F8, asm, clock/module_clock_2355F8]
         - [0x36650, asm, core/align_036650]  # 112 bytes gap
         - [0x366C0, asm, clock/module_clock_2356C0]
-        - [0x3672C, asm, core/align_03672C]  # 828 bytes gap
+        - [0x3672C, asm, clock/D_0023572C]
+        - [0x36730, asm, clock/func_00235730]
+        - [0x3679C, asm, core/align_03679C]  # 4 bytes padding
+        - [0x367A0, asm, clock/func_002357A0]
+        - [0x367AC, asm, core/align_0367AC]  # 4 bytes padding
+        - [0x367B0, asm, clock/func_002357B0]
+        - [0x367BC, asm, core/align_0367BC]  # 4 bytes padding
+        - [0x367C0, asm, clock/func_002357C0]
+        - [0x367CC, asm, core/align_0367CC]  # 4 bytes padding
+        - [0x367D0, asm, clock/func_002357D0]
+        - [0x36848, asm, clock/func_00235848]
+        - [0x368F4, asm, core/align_0368F4]  # 4 bytes padding
+        - [0x368F8, asm, clock/func_002358F8]
+        - [0x36928, asm, clock/func_00235928]
+        - [0x36934, asm, core/align_036934]  # 4 bytes padding
+        - [0x36938, asm, clock/func_00235938]
+        - [0x36940, asm, clock/func_00235940]
         - [0x36A68, asm, clock/module_clock_set_anim_offset]
-        - [0x36B08, asm, core/align_036B08]  # 1232 bytes gap
+        - [0x36B08, asm, clock/func_00235B08]
+        - [0x36B10, asm, clock/func_00235B10]
+        - [0x36E94, asm, core/align_036E94]  # 4 bytes padding
+        - [0x36E98, asm, clock/func_00235E98]
+        - [0x36EAC, asm, core/align_036EAC]  # 4 bytes padding
+        - [0x36EB0, asm, clock/func_00235EB0]
         - [0x36FD8, asm, core/pad_handler_235FD8]
-        - [0x36FE0, asm, core/align_036FE0]  # 4896 bytes gap
+        - [0x36FE0, asm, core/func_00235FE0]
+        - [0x37054, asm, core/align_037054]  # 4 bytes padding
+        - [0x37058, asm, core/func_00236058]
+        - [0x370A8, asm, core/func_002360A8]
+        - [0x37110, asm, core/func_00236110]
+        - [0x37194, asm, core/align_037194]  # 4 bytes padding
+        - [0x37198, asm, core/func_00236198]
+        - [0x37230, asm, core/func_00236230]
+        - [0x372C4, asm, core/align_0372C4]  # 4 bytes padding
+        - [0x372C8, asm, core/D_002362C8]
+        - [0x3734C, asm, core/align_03734C]  # 4 bytes padding
+        - [0x37350, asm, core/func_00236350]
+        - [0x37490, asm, core/func_00236490]
+        - [0x375D0, asm, core/func_002365D0]
+        - [0x37984, asm, core/align_037984]  # 4 bytes padding
+        - [0x37988, asm, core/func_00236988]
+        - [0x37A20, asm, core/func_00236A20]
+        - [0x37B30, asm, core/func_00236B30]
+        - [0x37BC4, asm, core/align_037BC4]  # 4 bytes padding
+        - [0x37BC8, asm, core/func_00236BC8]
+        - [0x37C70, asm, core/func_00236C70]
+        - [0x37D90, asm, core/func_00236D90]
+        - [0x37E1C, asm, core/align_037E1C]  # 4 bytes padding
+        - [0x37E20, asm, core/func_00236E20]
+        - [0x38010, asm, core/func_00237010]
         - [0x38300, asm, clock/module_clock_237300]
         - [0x38350, asm, clock/module_clock_237350]
         - [0x3885C, asm, core/align_03885C]  # 4 bytes gap
@@ -865,13 +1538,24 @@ segments:
         - [0x38A28, asm, clock/module_clock_237A28]
         - [0x394C4, asm, core/align_0394C4]  # 4 bytes gap
         - [0x394C8, asm, clock/module_clock_2384C8]
-        - [0x39D00, asm, core/align_039D00]  # 192 bytes gap
+        - [0x39D00, asm, clock/func_00238D00]
+        - [0x39DB0, asm, clock/func_00238DB0]
         - [0x39DC0, asm, clock/module_clock_238DC0]
-        - [0x39EA0, asm, core/align_039EA0]  # 472 bytes gap
+        - [0x39EA0, asm, clock/func_00238EA0]
+        - [0x39F10, asm, clock/func_00238F10]
+        - [0x39F1C, asm, core/align_039F1C]  # 4 bytes padding
+        - [0x39F20, asm, clock/func_00238F20]
+        - [0x39FB8, asm, clock/func_00238FB8]
+        - [0x3A014, asm, core/align_03A014]  # 4 bytes padding
+        - [0x3A018, asm, clock/func_00239018]
         - [0x3A078, asm, clock/module_clock_239078]
         - [0x3AE5C, asm, core/align_03AE5C]  # 60 bytes gap
         - [0x3AE98, asm, clock/module_clock_239E98]
-        - [0x3AF44, asm, core/align_03AF44]  # 292 bytes gap
+        - [0x3AF44, asm, clock/D_00239F44]
+        - [0x3AF48, asm, clock/func_00239F48]
+        - [0x3AFF0, asm, clock/func_00239FF0]
+        - [0x3B03C, asm, core/align_03B03C]  # 4 bytes padding
+        - [0x3B040, asm, clock/func_0023A040]
         - [0x3B068, asm, clock/module_clock_23A068]
         - [0x3B08C, asm, core/align_03B08C]  # 4 bytes gap
         - [0x3B090, asm, core/MatrixDrive_PushMatrix]
@@ -886,13 +1570,32 @@ segments:
         - [0x3B418, asm, clock/module_clock_23A418]
         - [0x3B44C, asm, core/align_03B44C]  # 4 bytes gap
         - [0x3B450, asm, browser/module_browser_23A450]
-        - [0x3B474, asm, core/align_03B474]  # 1252 bytes gap
+        - [0x3B474, asm, browser/D_0023A474]
+        - [0x3B478, asm, browser/func_0023A478]
+        - [0x3B57C, asm, core/align_03B57C]  # 4 bytes padding
+        - [0x3B580, asm, browser/func_0023A580]
+        - [0x3B704, asm, core/align_03B704]  # 4 bytes padding
+        - [0x3B708, asm, browser/func_0023A708]
+        - [0x3B7F4, asm, core/align_03B7F4]  # 4 bytes padding
+        - [0x3B7F8, asm, browser/func_0023A7F8]
+        - [0x3B894, asm, core/align_03B894]  # 4 bytes padding
+        - [0x3B898, asm, browser/func_0023A898]
         - [0x3B958, asm, browser/module_browser_23A958]
-        - [0x3BA08, asm, core/align_03BA08]  # 1472 bytes gap
+        - [0x3BA08, asm, browser/func_0023AA08]
+        - [0x3BC04, asm, core/align_03BC04]  # 4 bytes padding
+        - [0x3BC08, asm, browser/D_0023AC08]
+        - [0x3BC4C, asm, core/align_03BC4C]  # 4 bytes padding
+        - [0x3BC50, asm, browser/D_0023AC50]
+        - [0x3BC84, asm, core/align_03BC84]  # 4 bytes padding
+        - [0x3BC88, asm, browser/D_0023AC88]
+        - [0x3BCBC, asm, core/align_03BCBC]  # 4 bytes padding
+        - [0x3BCC0, asm, browser/func_0023ACC0]
+        - [0x3BEB8, asm, browser/func_0023AEB8]
         - [0x3BFC8, asm, browser/module_browser_23AFC8]
         - [0x3C0C0, asm, core/align_03C0C0]  # 112 bytes gap
         - [0x3C130, asm, browser/module_browser_23B130]
-        - [0x3CDC4, asm, core/align_03CDC4]  # 276 bytes gap
+        - [0x3CDC4, asm, browser/D_0023BDC4]
+        - [0x3CDC8, asm, browser/func_0023BDC8]
         - [0x3CED8, asm, browser/module_browser_23BED8]
         - [0x3CFA8, asm, core/align_03CFA8]  # 72 bytes gap
         - [0x3CFF0, asm, browser/browser_copyentry_0_open]
@@ -901,40 +1604,102 @@ segments:
         - [0x3D0C0, asm, browser/browser_copyentry_1_read]
         - [0x3D0F8, asm, browser/browser_copyentry_2_write]
         - [0x3D130, asm, browser/browser_copyentry_5_setfileinfo]
-        - [0x3D198, asm, core/align_03D198]  # 288 bytes gap
+        - [0x3D198, asm, browser/func_0023C198]
+        - [0x3D1F8, asm, browser/func_0023C1F8]
+        - [0x3D254, asm, core/align_03D254]  # 4 bytes padding
+        - [0x3D258, asm, browser/func_0023C258]
         - [0x3D2B8, asm, browser/browser_mc_info_23C2B8]
-        - [0x3D36C, asm, core/align_03D36C]  # 252 bytes gap
+        - [0x3D36C, asm, browser/D_0023C36C]
+        - [0x3D370, asm, browser/func_0023C370]
+        - [0x3D3AC, asm, core/align_03D3AC]  # 4 bytes padding
+        - [0x3D3B0, asm, browser/func_0023C3B0]
+        - [0x3D410, asm, browser/func_0023C410]
+        - [0x3D430, asm, browser/func_0023C430]
         - [0x3D468, asm, browser/browser_mc_mtap_23C468]
-        - [0x3D504, asm, core/align_03D504]  # 380 bytes gap
+        - [0x3D504, asm, browser/D_0023C504]
+        - [0x3D508, asm, browser/func_0023C508]
         - [0x3D680, asm, browser/browser_general_2_getdir]
-        - [0x3D718, asm, core/align_03D718]  # 904 bytes gap
+        - [0x3D718, asm, browser/func_0023C718]
+        - [0x3D880, asm, browser/func_0023C880]
+        - [0x3D8BC, asm, core/align_03D8BC]  # 4 bytes padding
+        - [0x3D8C0, asm, browser/func_0023C8C0]
+        - [0x3DA00, asm, browser/func_0023CA00]
         - [0x3DAA0, asm, browser/browser_copyentry_switchcase]
         - [0x3DCD0, asm, core/align_03DCD0]  # 584 bytes gap
         - [0x3DF18, asm, browser/browser_handle_ps2_icon]
         - [0x3E240, asm, browser/browser_handle_ps1_icon]
-        - [0x3E3F4, asm, core/align_03E3F4]  # 148 bytes gap
+        - [0x3E3F4, asm, browser/D_0023D3F4]
+        - [0x3E3F8, asm, browser/func_0023D3F8]
         - [0x3E488, asm, browser/browser_handle_ps2_icon_2]
         - [0x3E5A4, asm, core/align_03E5A4]  # 60 bytes gap
         - [0x3E5E0, asm, browser/browser_possibly_searchdir]
-        - [0x3E804, asm, core/align_03E804]  # 3444 bytes gap
+        - [0x3E804, asm, browser/D_0023D804]
+        - [0x3E808, asm, browser/func_0023D808]
+        - [0x3E850, asm, browser/func_0023D850]
+        - [0x3E90C, asm, core/align_03E90C]  # 4 bytes padding
+        - [0x3E910, asm, browser/func_0023D910]
+        - [0x3E988, asm, browser/func_0023D988]
+        - [0x3EA14, asm, core/align_03EA14]  # 4 bytes padding
+        - [0x3EA18, asm, browser/func_0023DA18]
+        - [0x3EB34, asm, core/align_03EB34]  # 4 bytes padding
+        - [0x3EB38, asm, browser/func_0023DB38]
+        - [0x3EB80, asm, browser/func_0023DB80]
+        - [0x3EBD4, asm, core/align_03EBD4]  # 4 bytes padding
+        - [0x3EBD8, asm, browser/func_0023DBD8]
+        - [0x3EDB8, asm, browser/func_0023DDB8]
+        - [0x3EDF4, asm, core/align_03EDF4]  # 4 bytes padding
+        - [0x3EDF8, asm, browser/func_0023DDF8]
+        - [0x3EEB4, asm, core/align_03EEB4]  # 4 bytes padding
+        - [0x3EEB8, asm, browser/D_0023DEB8]
+        - [0x3EF64, asm, core/align_03EF64]  # 4 bytes padding
+        - [0x3EF68, asm, browser/func_0023DF68]
+        - [0x3F080, asm, browser/func_0023E080]
+        - [0x3F368, asm, browser/func_0023E368]
+        - [0x3F484, asm, core/align_03F484]  # 4 bytes padding
+        - [0x3F488, asm, browser/func_0023E488]
         - [0x3F578, asm, browser/module_browser_23E578]
         - [0x3F604, asm, core/align_03F604]  # 4 bytes gap
         - [0x3F608, asm, browser/browser_handle_system_data]
         - [0x3F73C, asm, core/align_03F73C]  # 44 bytes gap
         - [0x3F768, asm, browser/browser_handle_icon_sys_binary]
-        - [0x3F978, asm, core/align_03F978]  # 1208 bytes gap
+        - [0x3F978, asm, browser/func_0023E978]
+        - [0x3FAD4, asm, core/align_03FAD4]  # 4 bytes padding
+        - [0x3FAD8, asm, browser/func_0023EAD8]
         - [0x3FE30, asm, browser/browser_handle_icon_sys_text]
-        - [0x40044, asm, core/align_040044]  # 740 bytes gap
+        - [0x40044, asm, browser/D_0023F044]
+        - [0x40048, asm, browser/func_0023F048]
         - [0x40328, asm, browser/browser_handle_ps2file]
         - [0x404B8, asm, core/align_0404B8]  # 136 bytes gap
         - [0x40540, asm, browser/browser_icon_sys_related_ps1]
-        - [0x405EC, asm, core/align_0405EC]  # 596 bytes gap
+        - [0x405EC, asm, browser/D_0023F5EC]
+        - [0x405F0, asm, browser/func_0023F5F0]
+        - [0x406F4, asm, core/align_0406F4]  # 4 bytes padding
+        - [0x406F8, asm, browser/func_0023F6F8]
         - [0x40840, asm, browser/module_browser_23F840]
         - [0x40970, asm, browser/browser_osdpic_icon_related]
-        - [0x40A70, asm, core/align_040A70]  # 1184 bytes gap
+        - [0x40A70, asm, browser/func_0023FA70]
+        - [0x40A78, asm, browser/func_0023FA78]
+        - [0x40AAC, asm, core/align_040AAC]  # 4 bytes padding
+        - [0x40AB0, asm, browser/func_0023FAB0]
+        - [0x40BE4, asm, core/align_040BE4]  # 4 bytes padding
+        - [0x40BE8, asm, browser/func_0023FBE8]
+        - [0x40D3C, asm, core/align_040D3C]  # 4 bytes padding
+        - [0x40D40, asm, browser/func_0023FD40]
+        - [0x40DB4, asm, core/align_040DB4]  # 4 bytes padding
+        - [0x40DB8, asm, browser/func_0023FDB8]
+        - [0x40E28, asm, browser/func_0023FE28]
         - [0x40F10, asm, browser/browser_item_entry_menu_handler]
         - [0x41088, asm, browser/browser_device_entry_menu_handler]
-        - [0x411C4, asm, core/align_0411C4]  # 548 bytes gap
+        - [0x411C4, asm, browser/D_002401C4]
+        - [0x411C8, asm, browser/func_002401C8]
+        - [0x411D4, asm, core/align_0411D4]  # 4 bytes padding
+        - [0x411D8, asm, browser/func_002401D8]
+        - [0x412BC, asm, core/align_0412BC]  # 4 bytes padding
+        - [0x412C0, asm, browser/func_002402C0]
+        - [0x412CC, asm, core/align_0412CC]  # 4 bytes padding
+        - [0x412D0, asm, browser/func_002402D0]
+        - [0x412DC, asm, core/align_0412DC]  # 4 bytes padding
+        - [0x412E0, asm, browser/func_002402E0]
         - [0x413E8, asm, browser/browser_human_readable_size_str]
         - [0x41558, asm, browser/browser_get_item_type_str_index]
         - [0x415EC, asm, core/align_0415EC]  # 4 bytes gap
@@ -943,13 +1708,51 @@ segments:
         - [0x417F8, asm, browser/browser_get_hdd_item_info]
         - [0x419A4, asm, core/align_0419A4]  # 4 bytes gap
         - [0x419A8, asm, browser/browser_get_hdd2_item_info]
-        - [0x41B98, asm, core/align_041B98]  # 440 bytes gap
+        - [0x41B98, asm, browser/func_00240B98]
+        - [0x41C2C, asm, core/align_041C2C]  # 4 bytes padding
+        - [0x41C30, asm, browser/func_00240C30]
         - [0x41D50, asm, browser/browser_get_device_info]
         - [0x41F28, asm, core/align_041F28]  # 64 bytes gap
         - [0x41F68, asm, browser/browser_entry_handler]
-        - [0x42044, asm, core/align_042044]  # 8844 bytes gap
+        - [0x42044, asm, browser/D_00241044]
+        - [0x42048, asm, browser/func_00241048]
+        - [0x420E4, asm, core/align_0420E4]  # 4 bytes padding
+        - [0x420E8, asm, browser/func_002410E8]
+        - [0x421A4, asm, core/align_0421A4]  # 4 bytes padding
+        - [0x421A8, asm, browser/func_002411A8]
+        - [0x4230C, asm, core/align_04230C]  # 4 bytes padding
+        - [0x42310, asm, browser/func_00241310]
+        - [0x424B0, asm, browser/func_002414B0]
+        - [0x424F8, asm, browser/func_002414F8]
+        - [0x42708, asm, browser/func_00241708]
+        - [0x42B2C, asm, core/align_042B2C]  # 4 bytes padding
+        - [0x42B30, asm, browser/func_00241B30]
+        - [0x42F60, asm, browser/func_00241F60]
+        - [0x42FF4, asm, core/align_042FF4]  # 4 bytes padding
+        - [0x42FF8, asm, browser/func_00241FF8]
+        - [0x43224, asm, core/align_043224]  # 4 bytes padding
+        - [0x43228, asm, browser/func_00242228]
+        - [0x433EC, asm, core/align_0433EC]  # 4 bytes padding
+        - [0x433F0, asm, browser/func_002423F0]
+        - [0x434AC, asm, core/align_0434AC]  # 4 bytes padding
+        - [0x434B0, asm, browser/func_002424B0]
+        - [0x434DC, asm, core/align_0434DC]  # 4 bytes padding
+        - [0x434E0, asm, browser/func_002424E0]
+        - [0x43540, asm, browser/func_00242540]
+        - [0x43558, asm, browser/func_00242558]
+        - [0x43560, asm, browser/func_00242560]
+        - [0x435E4, asm, core/align_0435E4]  # 4 bytes padding
+        - [0x435E8, asm, browser/func_002425E8]
+        - [0x43C2C, asm, core/align_043C2C]  # 4 bytes padding
+        - [0x43C30, asm, browser/func_00242C30]
+        - [0x43C80, asm, browser/func_00242C80]
+        - [0x43D34, asm, core/align_043D34]  # 4 bytes padding
+        - [0x43D38, asm, browser/func_00242D38]
+        - [0x43F34, asm, core/align_043F34]  # 4 bytes padding
+        - [0x43F38, asm, browser/func_00242F38]
         - [0x442D0, asm, browser/browser_confirmation_menu]
-        - [0x443C8, asm, core/align_0443C8]  # 400 bytes gap
+        - [0x443C8, asm, browser/func_002433C8]
+        - [0x44530, asm, browser/func_00243530]
         - [0x44558, asm, browser/browser_device_icon_render]
         - [0x44700, asm, browser/osd_icon_related_243700]
         - [0x449D8, asm, core/align_0449D8]  # 248 bytes gap
@@ -958,50 +1761,294 @@ segments:
         - [0x44C28, asm, browser/browser_copy_menu]
         - [0x44D58, asm, browser/browser_rename_menu]
         - [0x44DA8, asm, browser/browser_delete_menu]
-        - [0x44E60, asm, core/align_044E60]  # 1264 bytes gap
+        - [0x44E60, asm, browser/func_00243E60]
+        - [0x44E68, asm, browser/func_00243E68]
+        - [0x44E70, asm, browser/func_00243E70]
+        - [0x4501C, asm, core/align_04501C]  # 4 bytes padding
+        - [0x45020, asm, browser/func_00244020]
+        - [0x4508C, asm, core/align_04508C]  # 4 bytes padding
+        - [0x45090, asm, browser/func_00244090]
+        - [0x4511C, asm, core/align_04511C]  # 4 bytes padding
+        - [0x45120, asm, browser/func_00244120]
+        - [0x45160, asm, browser/func_00244160]
+        - [0x45230, asm, browser/func_00244230]
+        - [0x452C8, asm, browser/func_002442C8]
         - [0x45350, asm, browser/browser_get_delete_message]
         - [0x45400, asm, core/align_045400]  # 112 bytes gap
         - [0x45470, asm, browser/browser_generate_folder_name]
-        - [0x455BC, asm, core/align_0455BC]  # 660 bytes gap
+        - [0x455BC, asm, browser/D_002445BC]
+        - [0x455C0, asm, browser/func_002445C0]
+        - [0x455E4, asm, core/align_0455E4]  # 4 bytes padding
+        - [0x455E8, asm, browser/func_002445E8]
+        - [0x455F0, asm, browser/func_002445F0]
+        - [0x455F8, asm, browser/func_002445F8]
+        - [0x45600, asm, browser/D_00244600]
+        - [0x4564C, asm, core/align_04564C]  # 4 bytes padding
+        - [0x45650, asm, browser/func_00244650]
+        - [0x456E8, asm, browser/func_002446E8]
+        - [0x4574C, asm, core/align_04574C]  # 4 bytes padding
+        - [0x45750, asm, browser/D_00244750]
         - [0x45850, asm, browser/browser_menu_related]
-        - [0x45F20, asm, core/align_045F20]  # 536 bytes gap
+        - [0x45F20, asm, browser/func_00244F20]
+        - [0x45F58, asm, browser/func_00244F58]
+        - [0x45FDC, asm, core/align_045FDC]  # 4 bytes padding
+        - [0x45FE0, asm, browser/D_00244FE0]
+        - [0x46038, asm, browser/D_00245038]
         - [0x46138, asm, browser/browser_menu_related_245138]
-        - [0x464C8, asm, core/align_0464C8]  # 5232 bytes gap
+        - [0x464C8, asm, browser/func_002454C8]
+        - [0x4652C, asm, core/align_04652C]  # 4 bytes padding
+        - [0x46530, asm, browser/func_00245530]
+        - [0x465EC, asm, core/align_0465EC]  # 4 bytes padding
+        - [0x465F0, asm, browser/func_002455F0]
+        - [0x46A98, asm, browser/func_00245A98]
+        - [0x46B1C, asm, core/align_046B1C]  # 4 bytes padding
+        - [0x46B20, asm, browser/func_00245B20]
+        - [0x46B30, asm, browser/func_00245B30]
+        - [0x46B38, asm, browser/func_00245B38]
+        - [0x46B40, asm, browser/func_00245B40]
+        - [0x47724, asm, core/align_047724]  # 4 bytes padding
+        - [0x47728, asm, browser/func_00246728]
+        - [0x478BC, asm, core/align_0478BC]  # 4 bytes padding
+        - [0x478C0, asm, browser/func_002468C0]
         - [0x47938, asm, browser/browser_cdplayer_related]
-        - [0x47AF8, asm, core/align_047AF8]  # 4656 bytes gap
+        - [0x47AF8, asm, browser/func_00246AF8]
+        - [0x47B60, asm, browser/func_00246B60]
+        - [0x47BC0, asm, browser/func_00246BC0]
+        - [0x47F34, asm, core/align_047F34]  # 4 bytes padding
+        - [0x47F38, asm, browser/func_00246F38]
+        - [0x47F58, asm, browser/func_00246F58]
+        - [0x47F64, asm, core/align_047F64]  # 4 bytes padding
+        - [0x47F68, asm, browser/func_00246F68]
+        - [0x47FA0, asm, browser/func_00246FA0]
+        - [0x48054, asm, core/align_048054]  # 4 bytes padding
+        - [0x48058, asm, browser/func_00247058]
+        - [0x480EC, asm, core/align_0480EC]  # 4 bytes padding
+        - [0x480F0, asm, browser/func_002470F0]
+        - [0x48160, asm, browser/func_00247160]
+        - [0x481BC, asm, core/align_0481BC]  # 4 bytes padding
+        - [0x481C0, asm, browser/func_002471C0]
+        - [0x482A0, asm, browser/func_002472A0]
+        - [0x4839C, asm, core/align_04839C]  # 4 bytes padding
+        - [0x483A0, asm, browser/func_002473A0]
+        - [0x48580, asm, browser/func_00247580]
+        - [0x487B0, asm, browser/func_002477B0]
+        - [0x48C20, asm, browser/func_00247C20]
         - [0x48D28, asm, browser/browser_cdplayer_related2]
         - [0x494B4, asm, core/align_0494B4]  # 4 bytes gap
         - [0x494B8, asm, browser/module_browser_2484B8]
-        - [0x494D8, asm, core/align_0494D8]  # 1736 bytes gap
+        - [0x494D8, asm, browser/func_002484D8]
+        - [0x49540, asm, browser/func_00248540]
+        - [0x49560, asm, browser/func_00248560]
+        - [0x49604, asm, core/align_049604]  # 4 bytes padding
+        - [0x49608, asm, browser/func_00248608]
+        - [0x496B4, asm, core/align_0496B4]  # 4 bytes padding
+        - [0x496B8, asm, browser/func_002486B8]
+        - [0x4975C, asm, core/align_04975C]  # 4 bytes padding
+        - [0x49760, asm, browser/func_00248760]
+        - [0x4980C, asm, core/align_04980C]  # 4 bytes padding
+        - [0x49810, asm, browser/func_00248810]
+        - [0x498BC, asm, core/align_0498BC]  # 4 bytes padding
+        - [0x498C0, asm, browser/func_002488C0]
+        - [0x49910, asm, browser/func_00248910]
+        - [0x49A8C, asm, core/align_049A8C]  # 4 bytes padding
+        - [0x49A90, asm, browser/func_00248A90]
+        - [0x49B1C, asm, core/align_049B1C]  # 4 bytes padding
+        - [0x49B20, asm, browser/func_00248B20]
         - [0x49BA0, asm, browser/module_browser_248BA0]
         - [0x49CE4, asm, core/align_049CE4]  # 4 bytes gap
         - [0x49CE8, asm, browser/module_browser_248CE8]
         - [0x49CF0, asm, browser/module_browser_248CF0]
-        - [0x49D48, asm, core/align_049D48]  # 1632 bytes gap
+        - [0x49D48, asm, browser/func_00248D48]
+        - [0x4A15C, asm, core/align_04A15C]  # 4 bytes padding
+        - [0x4A160, asm, browser/func_00249160]
         - [0x4A3A8, asm, browser/browser_mc_isfirstslot_2493A8]
-        - [0x4A3E0, asm, core/align_04A3E0]  # 6568 bytes gap
+        - [0x4A3E0, asm, browser/func_002493E0]
+        - [0x4A494, asm, core/align_04A494]  # 4 bytes padding
+        - [0x4A498, asm, browser/func_00249498]
+        - [0x4A660, asm, browser/func_00249660]
+        - [0x4A67C, asm, core/align_04A67C]  # 4 bytes padding
+        - [0x4A680, asm, browser/func_00249680]
+        - [0x4A6C4, asm, core/align_04A6C4]  # 4 bytes padding
+        - [0x4A6C8, asm, browser/func_002496C8]
+        - [0x4A6E8, asm, browser/func_002496E8]
+        - [0x4A6F0, asm, browser/func_002496F0]
+        - [0x4A728, asm, browser/func_00249728]
+        - [0x4A780, asm, browser/func_00249780]
+        - [0x4A7B8, asm, browser/func_002497B8]
+        - [0x4A848, asm, browser/func_00249848]
+        - [0x4A888, asm, browser/func_00249888]
+        - [0x4A8A4, asm, core/align_04A8A4]  # 4 bytes padding
+        - [0x4A8A8, asm, browser/func_002498A8]
+        - [0x4A8D0, asm, browser/func_002498D0]
+        - [0x4A924, asm, core/align_04A924]  # 4 bytes padding
+        - [0x4A928, asm, browser/func_00249928]
+        - [0x4A988, asm, browser/func_00249988]
+        - [0x4A9B0, asm, browser/func_002499B0]
+        - [0x4A9CC, asm, core/align_04A9CC]  # 4 bytes padding
+        - [0x4A9D0, asm, browser/func_002499D0]
+        - [0x4A9E4, asm, core/align_04A9E4]  # 4 bytes padding
+        - [0x4A9E8, asm, browser/func_002499E8]
+        - [0x4AAB4, asm, core/align_04AAB4]  # 4 bytes padding
+        - [0x4AAB8, asm, browser/func_00249AB8]
+        - [0x4AD0C, asm, core/align_04AD0C]  # 4 bytes padding
+        - [0x4AD10, asm, browser/func_00249D10]
+        - [0x4AD70, asm, browser/func_00249D70]
+        - [0x4AEA4, asm, core/align_04AEA4]  # 4 bytes padding
+        - [0x4AEA8, asm, browser/func_00249EA8]
+        - [0x4B08C, asm, core/align_04B08C]  # 4 bytes padding
+        - [0x4B090, asm, browser/func_0024A090]
+        - [0x4B0BC, asm, core/align_04B0BC]  # 4 bytes padding
+        - [0x4B0C0, asm, browser/func_0024A0C0]
+        - [0x4B2C0, asm, browser/func_0024A2C0]
+        - [0x4B2D8, asm, browser/func_0024A2D8]
+        - [0x4B4CC, asm, core/align_04B4CC]  # 4 bytes padding
+        - [0x4B4D0, asm, browser/func_0024A4D0]
+        - [0x4B5D0, asm, browser/func_0024A5D0]
+        - [0x4B5F0, asm, browser/func_0024A5F0]
+        - [0x4B704, asm, core/align_04B704]  # 4 bytes padding
+        - [0x4B708, asm, browser/func_0024A708]
+        - [0x4B860, asm, browser/func_0024A860]
+        - [0x4B95C, asm, core/align_04B95C]  # 4 bytes padding
+        - [0x4B960, asm, browser/func_0024A960]
+        - [0x4BA80, asm, browser/func_0024AA80]
+        - [0x4BBE8, asm, browser/func_0024ABE8]
+        - [0x4BC9C, asm, core/align_04BC9C]  # 4 bytes padding
+        - [0x4BCA0, asm, browser/func_0024ACA0]
+        - [0x4BD18, asm, browser/func_0024AD18]
+        - [0x4BD20, asm, browser/func_0024AD20]
         - [0x4BD88, asm, browser/browser_icon_handler]
         - [0x4BFF4, asm, core/align_04BFF4]  # 4 bytes gap
         - [0x4BFF8, asm, browser/browser_related_24AFF8]
-        - [0x4C364, asm, core/align_04C364]  # 1500 bytes gap
+        - [0x4C364, asm, browser/D_0024B364]
+        - [0x4C368, asm, browser/func_0024B368]
+        - [0x4C388, asm, browser/func_0024B388]
         - [0x4C940, asm, browser/module_browser_24B940]
-        - [0x4CC20, asm, core/align_04CC20]  # 1048 bytes gap
+        - [0x4CC20, asm, browser/func_0024BC20]
+        - [0x4CC2C, asm, core/align_04CC2C]  # 4 bytes padding
+        - [0x4CC30, asm, browser/func_0024BC30]
+        - [0x4CC3C, asm, core/align_04CC3C]  # 4 bytes padding
+        - [0x4CC40, asm, browser/func_0024BC40]
+        - [0x4CC90, asm, browser/func_0024BC90]
         - [0x4D038, asm, browser/browser_disc_type_get_fn_24C038]
-        - [0x4D048, asm, core/align_04D048]  # 3488 bytes gap
+        - [0x4D048, asm, browser/func_0024C048]
+        - [0x4D1FC, asm, core/align_04D1FC]  # 4 bytes padding
+        - [0x4D200, asm, browser/func_0024C200]
+        - [0x4D2EC, asm, core/align_04D2EC]  # 4 bytes padding
+        - [0x4D2F0, asm, browser/func_0024C2F0]
+        - [0x4D3D4, asm, core/align_04D3D4]  # 4 bytes padding
+        - [0x4D3D8, asm, browser/func_0024C3D8]
+        - [0x4D408, asm, browser/func_0024C408]
+        - [0x4D50C, asm, core/align_04D50C]  # 4 bytes padding
+        - [0x4D510, asm, browser/func_0024C510]
+        - [0x4D634, asm, core/align_04D634]  # 4 bytes padding
+        - [0x4D638, asm, browser/func_0024C638]
+        - [0x4D6D4, asm, core/align_04D6D4]  # 4 bytes padding
+        - [0x4D6D8, asm, browser/func_0024C6D8]
+        - [0x4D7D4, asm, core/align_04D7D4]  # 4 bytes padding
+        - [0x4D7D8, asm, browser/func_0024C7D8]
+        - [0x4D870, asm, browser/func_0024C870]
+        - [0x4D928, asm, browser/func_0024C928]
+        - [0x4DA08, asm, browser/func_0024CA08]
+        - [0x4DB28, asm, browser/func_0024CB28]
         - [0x4DDE8, asm, browser/module_browser_24CDE8]
         - [0x4DE14, asm, core/align_04DE14]  # 76 bytes gap
         - [0x4DE60, asm, browser/module_browser_24CE60]
-        - [0x4DE84, asm, core/align_04DE84]  # 572 bytes gap
+        - [0x4DE84, asm, browser/D_0024CE84]
+        - [0x4DE88, asm, browser/func_0024CE88]
+        - [0x4DEAC, asm, core/align_04DEAC]  # 4 bytes padding
+        - [0x4DEB0, asm, browser/func_0024CEB0]
+        - [0x4E09C, asm, core/align_04E09C]  # 4 bytes padding
+        - [0x4E0A0, asm, browser/func_0024D0A0]
         - [0x4E0C0, asm, browser/module_browser_24D0C0]
-        - [0x4E0C8, asm, core/align_04E0C8]  # 4040 bytes gap
+        - [0x4E0C8, asm, browser/func_0024D0C8]
+        - [0x4E2DC, asm, core/align_04E2DC]  # 4 bytes padding
+        - [0x4E2E0, asm, browser/func_0024D2E0]
+        - [0x4E374, asm, core/align_04E374]  # 4 bytes padding
+        - [0x4E378, asm, browser/func_0024D378]
+        - [0x4E38C, asm, core/align_04E38C]  # 4 bytes padding
+        - [0x4E390, asm, browser/func_0024D390]
+        - [0x4E39C, asm, core/align_04E39C]  # 4 bytes padding
+        - [0x4E3A0, asm, browser/func_0024D3A0]
+        - [0x4E3C0, asm, browser/func_0024D3C0]
+        - [0x4E3E0, asm, browser/func_0024D3E0]
+        - [0x4E468, asm, browser/func_0024D468]
+        - [0x4E510, asm, browser/func_0024D510]
+        - [0x4E550, asm, browser/func_0024D550]
+        - [0x4E5BC, asm, core/align_04E5BC]  # 4 bytes padding
+        - [0x4E5C0, asm, browser/func_0024D5C0]
+        - [0x4E62C, asm, core/align_04E62C]  # 4 bytes padding
+        - [0x4E630, asm, browser/func_0024D630]
+        - [0x4E66C, asm, core/align_04E66C]  # 4 bytes padding
+        - [0x4E670, asm, browser/func_0024D670]
+        - [0x4E6D4, asm, core/align_04E6D4]  # 4 bytes padding
+        - [0x4E6D8, asm, browser/func_0024D6D8]
+        - [0x4E73C, asm, core/align_04E73C]  # 4 bytes padding
+        - [0x4E740, asm, browser/func_0024D740]
+        - [0x4E7A4, asm, core/align_04E7A4]  # 4 bytes padding
+        - [0x4E7A8, asm, browser/func_0024D7A8]
+        - [0x4E80C, asm, core/align_04E80C]  # 4 bytes padding
+        - [0x4E810, asm, browser/func_0024D810]
+        - [0x4E83C, asm, core/align_04E83C]  # 4 bytes padding
+        - [0x4E840, asm, browser/func_0024D840]
+        - [0x4E86C, asm, core/align_04E86C]  # 4 bytes padding
+        - [0x4E870, asm, browser/func_0024D870]
+        - [0x4E89C, asm, core/align_04E89C]  # 4 bytes padding
+        - [0x4E8A0, asm, browser/func_0024D8A0]
+        - [0x4E8CC, asm, core/align_04E8CC]  # 4 bytes padding
+        - [0x4E8D0, asm, browser/D_0024D8D0]
+        - [0x4E8FC, asm, core/align_04E8FC]  # 4 bytes padding
+        - [0x4E900, asm, browser/func_0024D900]
+        - [0x4E92C, asm, core/align_04E92C]  # 4 bytes padding
+        - [0x4E930, asm, browser/func_0024D930]
+        - [0x4E95C, asm, core/align_04E95C]  # 4 bytes padding
+        - [0x4E960, asm, browser/func_0024D960]
+        - [0x4E98C, asm, core/align_04E98C]  # 4 bytes padding
+        - [0x4E990, asm, browser/func_0024D990]
+        - [0x4E9BC, asm, core/align_04E9BC]  # 4 bytes padding
+        - [0x4E9C0, asm, browser/func_0024D9C0]
+        - [0x4E9C8, asm, browser/func_0024D9C8]
+        - [0x4E9D4, asm, core/align_04E9D4]  # 4 bytes padding
+        - [0x4E9D8, asm, browser/func_0024D9D8]
+        - [0x4EA3C, asm, core/align_04EA3C]  # 4 bytes padding
+        - [0x4EA40, asm, browser/func_0024DA40]
+        - [0x4EA7C, asm, core/align_04EA7C]  # 4 bytes padding
+        - [0x4EA80, asm, browser/func_0024DA80]
+        - [0x4EAE4, asm, core/align_04EAE4]  # 4 bytes padding
+        - [0x4EAE8, asm, browser/D_0024DAE8]
+        - [0x4EB5C, asm, core/align_04EB5C]  # 4 bytes padding
+        - [0x4EB60, asm, browser/func_0024DB60]
+        - [0x4EBD4, asm, core/align_04EBD4]  # 4 bytes padding
+        - [0x4EBD8, asm, browser/func_0024DBD8]
+        - [0x4EC00, asm, browser/func_0024DC00]
+        - [0x4EC84, asm, core/align_04EC84]  # 4 bytes padding
+        - [0x4EC88, asm, browser/func_0024DC88]
+        - [0x4ECE0, asm, browser/func_0024DCE0]
+        - [0x4ED30, asm, browser/func_0024DD30]
+        - [0x4ED64, asm, core/align_04ED64]  # 4 bytes padding
+        - [0x4ED68, asm, browser/func_0024DD68]
+        - [0x4EDDC, asm, core/align_04EDDC]  # 4 bytes padding
+        - [0x4EDE0, asm, browser/func_0024DDE0]
+        - [0x4EEE8, asm, browser/func_0024DEE8]
+        - [0x4EF1C, asm, core/align_04EF1C]  # 4 bytes padding
+        - [0x4EF20, asm, browser/func_0024DF20]
+        - [0x4EF70, asm, browser/D_0024DF70]
+        - [0x4EFA4, asm, core/align_04EFA4]  # 4 bytes padding
+        - [0x4EFA8, asm, browser/func_0024DFA8]
+        - [0x4EFC8, asm, browser/func_0024DFC8]
+        - [0x4F068, asm, browser/func_0024E068]
         - [0x4F090, asm, sound/sound_handle_queue_cmd_auto]
-        - [0x4F0CC, asm, core/align_04F0CC]  # 564 bytes gap
+        - [0x4F0CC, asm, sound/D_0024E0CC]
+        - [0x4F0D0, asm, sound/func_0024E0D0]
+        - [0x4F15C, asm, core/align_04F15C]  # 4 bytes padding
+        - [0x4F160, asm, sound/func_0024E160]
         - [0x4F300, asm, browser/browser_icon_sys_num_one_parse]
         - [0x4F3F4, asm, core/align_04F3F4]  # 4 bytes gap
         - [0x4F3F8, asm, browser/browser_icon_sys_int_array_parse]
         - [0x4F4BC, asm, core/align_04F4BC]  # 4 bytes gap
         - [0x4F4C0, asm, browser/browser_icon_sys_float_array_parse]
-        - [0x4F58C, asm, core/align_04F58C]  # 436 bytes gap
+        - [0x4F58C, asm, browser/D_0024E58C]
+        - [0x4F590, asm, browser/func_0024E590]
+        - [0x4F640, asm, browser/func_0024E640]
         - [0x4F740, asm, browser/browser_get_texture_bytes]
         - [0x4F76C, asm, core/align_04F76C]  # 4 bytes gap
         - [0x4F770, asm, browser/browser_get_icon_bytes]
@@ -1024,65 +2071,241 @@ segments:
         - [0x4FBF0, asm, browser/browser_transition_to_other_module]
         - [0x4FC50, asm, browser/browser_transition_start_execute_app]
         - [0x4FD20, asm, browser/browser_exit_previous_module]
-        - [0x4FD74, asm, core/align_04FD74]  # 268 bytes gap
+        - [0x4FD74, asm, browser/D_0024ED74]
+        - [0x4FD78, asm, browser/func_0024ED78]
+        - [0x4FD80, asm, browser/func_0024ED80]
+        - [0x4FDA8, asm, browser/func_0024EDA8]
         - [0x4FE80, asm, browser/module_browser_24EE80]
         - [0x4FFE0, asm, graph/vVif1Finish]
         - [0x50004, asm, core/align_050004]  # 4 bytes gap
         - [0x50008, asm, browser/module_browser_thread_proc]
         - [0x50100, asm, browser/module_browser_24F100]
-        - [0x5010C, asm, core/align_05010C]  # 5404 bytes gap
+        - [0x5010C, asm, browser/D_0024F10C]
+        - [0x50110, asm, browser/func_0024F110]
+        - [0x5017C, asm, core/align_05017C]  # 4 bytes padding
+        - [0x50180, asm, browser/func_0024F180]
+        - [0x50208, asm, browser/func_0024F208]
+        - [0x50368, asm, browser/D_0024F368]
+        - [0x504EC, asm, core/align_0504EC]  # 4 bytes padding
+        - [0x504F0, asm, browser/func_0024F4F0]
+        - [0x506E8, asm, browser/func_0024F6E8]
+        - [0x50890, asm, browser/func_0024F890]
+        - [0x50BAC, asm, core/align_050BAC]  # 4 bytes padding
+        - [0x50BB0, asm, browser/D_0024FBB0]
+        - [0x50DA0, asm, browser/func_0024FDA0]
+        - [0x50EB0, asm, browser/func_0024FEB0]
+        - [0x511B8, asm, browser/func_002501B8]
+        - [0x515A0, asm, browser/func_002505A0]
         - [0x51628, asm, browser/module_browser_250628]
-        - [0x516E8, asm, core/align_0516E8]  # 1720 bytes gap
+        - [0x516E8, asm, browser/func_002506E8]
+        - [0x51768, asm, browser/func_00250768]
+        - [0x5197C, asm, core/align_05197C]  # 4 bytes padding
+        - [0x51980, asm, browser/func_00250980]
+        - [0x51A3C, asm, core/align_051A3C]  # 4 bytes padding
+        - [0x51A40, asm, browser/func_00250A40]
+        - [0x51AFC, asm, core/align_051AFC]  # 4 bytes padding
+        - [0x51B00, asm, browser/func_00250B00]
         - [0x51DA0, asm, browser/browser_cdplayer_player]
         - [0x526EC, asm, core/align_0526EC]  # 4 bytes gap
         - [0x526F0, asm, browser/browser_device_grid_menu]
         - [0x52A28, asm, browser/browser_disc_menu]
         - [0x52B70, asm, browser/module_browser_options]
-        - [0x52C10, asm, core/align_052C10]  # 2240 bytes gap
+        - [0x52C10, asm, browser/func_00251C10]
+        - [0x52C3C, asm, core/align_052C3C]  # 4 bytes padding
+        - [0x52C40, asm, browser/func_00251C40]
+        - [0x52C74, asm, core/align_052C74]  # 4 bytes padding
+        - [0x52C78, asm, browser/func_00251C78]
+        - [0x52CA4, asm, core/align_052CA4]  # 4 bytes padding
+        - [0x52CA8, asm, browser/func_00251CA8]
+        - [0x52CD0, asm, browser/func_00251CD0]
+        - [0x52CF8, asm, browser/func_00251CF8]
+        - [0x52D60, asm, browser/func_00251D60]
+        - [0x52DA0, asm, browser/func_00251DA0]
+        - [0x53394, asm, core/align_053394]  # 4 bytes padding
+        - [0x53398, asm, browser/func_00252398]
         - [0x534D0, asm, browser/browser_button_guide_render]
-        - [0x537A8, asm, core/align_0537A8]  # 2200 bytes gap
+        - [0x537A8, asm, browser/func_002527A8]
+        - [0x538D8, asm, browser/func_002528D8]
+        - [0x539B4, asm, core/align_0539B4]  # 4 bytes padding
+        - [0x539B8, asm, browser/func_002529B8]
+        - [0x53A78, asm, browser/func_00252A78]
+        - [0x53A80, asm, browser/func_00252A80]
+        - [0x53B5C, asm, core/align_053B5C]  # 4 bytes padding
+        - [0x53B60, asm, browser/func_00252B60]
+        - [0x53B68, asm, browser/func_00252B68]
+        - [0x53C48, asm, browser/func_00252C48]
+        - [0x53DD4, asm, core/align_053DD4]  # 4 bytes padding
+        - [0x53DD8, asm, browser/func_00252DD8]
+        - [0x53E4C, asm, core/align_053E4C]  # 4 bytes padding
+        - [0x53E50, asm, browser/func_00252E50]
+        - [0x53EE8, asm, browser/func_00252EE8]
+        - [0x53F10, asm, browser/func_00252F10]
+        - [0x53F80, asm, browser/func_00252F80]
+        - [0x54014, asm, core/align_054014]  # 4 bytes padding
+        - [0x54018, asm, browser/func_00253018]
         - [0x54040, asm, browser/dvd_player_err_fn_253040]
         - [0x541F8, asm, browser/browser_render_disk_error]
-        - [0x543EC, asm, core/align_0543EC]  # 900 bytes gap
+        - [0x543EC, asm, browser/D_002533EC]
+        - [0x543F0, asm, browser/func_002533F0]
+        - [0x54488, asm, browser/func_00253488]
         - [0x54770, asm, browser/module_browser_253770]
         - [0x54860, asm, core/align_054860]  # 328 bytes gap
         - [0x549A8, asm, browser/module_browser_2539A8]
         - [0x54A04, asm, core/align_054A04]  # 4 bytes gap
         - [0x54A08, asm, core/pad_handler_253A08]
-        - [0x54A14, asm, core/align_054A14]  # 804 bytes gap
+        - [0x54A14, asm, core/D_00253A14]
+        - [0x54A18, asm, core/func_00253A18]
+        - [0x54B54, asm, core/align_054B54]  # 4 bytes padding
+        - [0x54B58, asm, core/func_00253B58]
+        - [0x54D28, asm, core/func_00253D28]
         - [0x54D38, asm, browser/browser_get_device_name_string]
         - [0x54F8C, asm, core/align_054F8C]  # 20 bytes gap
         - [0x54FA0, asm, browser/browser_get_device_free_string]
-        - [0x550C0, asm, core/align_0550C0]  # 4200 bytes gap
+        - [0x550C0, asm, browser/func_002540C0]
+        - [0x550D4, asm, core/align_0550D4]  # 4 bytes padding
+        - [0x550D8, asm, browser/func_002540D8]
+        - [0x551E0, asm, browser/func_002541E0]
+        - [0x554A8, asm, browser/func_002544A8]
+        - [0x554D8, asm, browser/func_002544D8]
+        - [0x554F4, asm, core/align_0554F4]  # 4 bytes padding
+        - [0x554F8, asm, browser/func_002544F8]
+        - [0x55574, asm, core/align_055574]  # 4 bytes padding
+        - [0x55578, asm, browser/func_00254578]
+        - [0x5567C, asm, core/align_05567C]  # 4 bytes padding
+        - [0x55680, asm, browser/func_00254680]
+        - [0x5568C, asm, core/align_05568C]  # 4 bytes padding
+        - [0x55690, asm, browser/func_00254690]
+        - [0x556D4, asm, core/align_0556D4]  # 4 bytes padding
+        - [0x556D8, asm, browser/func_002546D8]
+        - [0x55728, asm, browser/func_00254728]
+        - [0x55774, asm, core/align_055774]  # 4 bytes padding
+        - [0x55778, asm, browser/func_00254778]
+        - [0x557BC, asm, core/align_0557BC]  # 4 bytes padding
+        - [0x557C0, asm, browser/func_002547C0]
+        - [0x55824, asm, core/align_055824]  # 4 bytes padding
+        - [0x55828, asm, browser/func_00254828]
+        - [0x5583C, asm, core/align_05583C]  # 4 bytes padding
+        - [0x55840, asm, browser/func_00254840]
         - [0x56128, asm, browser/module_browser_255128]
-        - [0x5614C, asm, core/align_05614C]  # 1820 bytes gap
+        - [0x5614C, asm, browser/D_0025514C]
+        - [0x56150, asm, browser/func_00255150]
+        - [0x561AC, asm, core/align_0561AC]  # 4 bytes padding
+        - [0x561B0, asm, browser/func_002551B0]
+        - [0x562E8, asm, browser/func_002552E8]
+        - [0x56354, asm, core/align_056354]  # 4 bytes padding
+        - [0x56358, asm, browser/func_00255358]
+        - [0x563BC, asm, core/align_0563BC]  # 4 bytes padding
+        - [0x563C0, asm, browser/func_002553C0]
+        - [0x563EC, asm, core/align_0563EC]  # 4 bytes padding
+        - [0x563F0, asm, browser/func_002553F0]
+        - [0x56478, asm, browser/func_00255478]
+        - [0x564B8, asm, browser/func_002554B8]
+        - [0x565F4, asm, core/align_0565F4]  # 4 bytes padding
+        - [0x565F8, asm, browser/func_002555F8]
+        - [0x566AC, asm, core/align_0566AC]  # 4 bytes padding
+        - [0x566B0, asm, browser/func_002556B0]
+        - [0x56828, asm, browser/func_00255828]
+        - [0x56838, asm, browser/func_00255838]
+        - [0x5684C, asm, core/align_05684C]  # 4 bytes padding
+        - [0x56850, asm, browser/func_00255850]
         - [0x56868, asm, browser/browser_format_memcard_menu]
         - [0x569FC, asm, core/align_0569FC]  # 4 bytes gap
         - [0x56A00, asm, browser/browser_launch_attempt_msg]
-        - [0x56BE4, asm, core/align_056BE4]  # 620 bytes gap
+        - [0x56BE4, asm, browser/D_00255BE4]
+        - [0x56BE8, asm, browser/func_00255BE8]
+        - [0x56C18, asm, browser/func_00255C18]
         - [0x56E50, asm, browser/do_generate_hdd_path]
         - [0x56EF0, asm, core/align_056EF0]  # 736 bytes gap
         - [0x571D0, asm, browser/do_check_boot_type]
         - [0x57264, asm, core/align_057264]  # 4 bytes gap
         - [0x57268, asm, browser/module_browser_256268]
-        - [0x572F8, asm, core/align_0572F8]  # 1072 bytes gap
+        - [0x572F8, asm, browser/D_002562F8]
+        - [0x5744C, asm, core/align_05744C]  # 4 bytes padding
+        - [0x57450, asm, browser/func_00256450]
+        - [0x57520, asm, browser/func_00256520]
+        - [0x575D4, asm, core/align_0575D4]  # 4 bytes padding
+        - [0x575D8, asm, browser/func_002565D8]
         - [0x57728, asm, browser/module_browser_256728]
-        - [0x5776C, asm, core/align_05776C]  # 596 bytes gap
+        - [0x5776C, asm, browser/D_0025676C]
+        - [0x57770, asm, browser/func_00256770]
+        - [0x57788, asm, browser/func_00256788]
+        - [0x577D0, asm, browser/func_002567D0]
         - [0x579C0, asm, browser/module_browser_2569C0]
-        - [0x579D4, asm, core/align_0579D4]  # 364 bytes gap
+        - [0x579D4, asm, browser/D_002569D4]
+        - [0x579D8, asm, browser/func_002569D8]
         - [0x57B40, asm, browser/module_browser_256B40]
         - [0x57D20, asm, browser/module_browser_256D20]
-        - [0x57DDC, asm, core/align_057DDC]  # 652 bytes gap
+        - [0x57DDC, asm, browser/D_00256DDC]
+        - [0x57DE0, asm, browser/func_00256DE0]
+        - [0x57F28, asm, browser/D_00256F28]
         - [0x58068, asm, browser/module_browser_257068]
         - [0x58100, asm, browser/module_browser_257100]
         - [0x58154, asm, core/align_058154]  # 4 bytes gap
         - [0x58158, asm, browser/module_browser_257158]
-        - [0x581D8, asm, core/align_0581D8]  # 11736 bytes gap
+        - [0x581D8, asm, browser/func_002571D8]
+        - [0x5836C, asm, core/align_05836C]  # 4 bytes padding
+        - [0x58370, asm, browser/func_00257370]
+        - [0x58624, asm, core/align_058624]  # 4 bytes padding
+        - [0x58628, asm, browser/func_00257628]
+        - [0x586AC, asm, core/align_0586AC]  # 4 bytes padding
+        - [0x586B0, asm, browser/func_002576B0]
+        - [0x586E0, asm, browser/func_002576E0]
+        - [0x58788, asm, browser/func_00257788]
+        - [0x587A8, asm, browser/func_002577A8]
+        - [0x58860, asm, browser/func_00257860]
+        - [0x58FD0, asm, browser/func_00257FD0]
+        - [0x59338, asm, browser/func_00258338]
+        - [0x59674, asm, core/align_059674]  # 4 bytes padding
+        - [0x59678, asm, browser/func_00258678]
+        - [0x596E4, asm, core/align_0596E4]  # 4 bytes padding
+        - [0x596E8, asm, browser/func_002586E8]
+        - [0x59A0C, asm, core/align_059A0C]  # 4 bytes padding
+        - [0x59A10, asm, browser/func_00258A10]
+        - [0x59F38, asm, browser/func_00258F38]
+        - [0x5A240, asm, browser/func_00259240]
+        - [0x5A420, asm, browser/func_00259420]
+        - [0x5A540, asm, browser/func_00259540]
+        - [0x5A76C, asm, core/align_05A76C]  # 4 bytes padding
+        - [0x5A770, asm, browser/func_00259770]
+        - [0x5A81C, asm, core/align_05A81C]  # 4 bytes padding
+        - [0x5A820, asm, browser/func_00259820]
+        - [0x5A9C8, asm, browser/func_002599C8]
         - [0x5AFB0, asm, browser/module_browser_259FB0]
-        - [0x5B070, asm, core/align_05B070]  # 3448 bytes gap
+        - [0x5B070, asm, browser/func_0025A070]
+        - [0x5B11C, asm, core/align_05B11C]  # 4 bytes padding
+        - [0x5B120, asm, browser/func_0025A120]
+        - [0x5B1A4, asm, core/align_05B1A4]  # 4 bytes padding
+        - [0x5B1A8, asm, browser/func_0025A1A8]
+        - [0x5B458, asm, browser/func_0025A458]
+        - [0x5B4F0, asm, browser/func_0025A4F0]
+        - [0x5B594, asm, core/align_05B594]  # 4 bytes padding
+        - [0x5B598, asm, browser/func_0025A598]
+        - [0x5B810, asm, browser/func_0025A810]
+        - [0x5B8E4, asm, core/align_05B8E4]  # 4 bytes padding
+        - [0x5B8E8, asm, browser/func_0025A8E8]
+        - [0x5B9AC, asm, core/align_05B9AC]  # 4 bytes padding
+        - [0x5B9B0, asm, browser/func_0025A9B0]
+        - [0x5BAD8, asm, browser/func_0025AAD8]
+        - [0x5BB30, asm, browser/func_0025AB30]
+        - [0x5BB54, asm, core/align_05BB54]  # 4 bytes padding
+        - [0x5BB58, asm, browser/func_0025AB58]
+        - [0x5BB88, asm, browser/func_0025AB88]
+        - [0x5BBB8, asm, browser/func_0025ABB8]
+        - [0x5BC18, asm, browser/func_0025AC18]
+        - [0x5BC6C, asm, core/align_05BC6C]  # 4 bytes padding
+        - [0x5BC70, asm, browser/func_0025AC70]
+        - [0x5BCC4, asm, core/align_05BCC4]  # 4 bytes padding
+        - [0x5BCC8, asm, browser/func_0025ACC8]
+        - [0x5BD30, asm, browser/func_0025AD30]
         - [0x5BDE8, asm, core/generate_mc_path]
         - [0x5BED8, asm, core/generate_mc_path_2]
-        - [0x5BFE4, asm, core/align_05BFE4]  # 172 bytes gap
+        - [0x5BFE4, asm, core/D_0025AFE4]
+        - [0x5BFE8, asm, core/func_0025AFE8]
+        - [0x5C02C, asm, core/align_05C02C]  # 4 bytes padding
+        - [0x5C030, asm, core/func_0025B030]
+        - [0x5C050, asm, core/func_0025B050]
+        - [0x5C06C, asm, core/align_05C06C]  # 4 bytes padding
+        - [0x5C070, asm, core/func_0025B070]
         - [0x5C090, asm, core/generate_mc_path_3]
         - [0x5C108, asm, core/align_05C108]  # 96 bytes gap
         - [0x5C168, asm, browser/browser_do_entry_into_hdd]
@@ -1098,17 +2321,43 @@ segments:
         - [0x5C470, asm, browser/do_hdd_checkpfs]
         - [0x5C518, asm, core/align_05C518]  # 152 bytes gap
         - [0x5C5B0, asm, browser/browser_check_hdd_root]
-        - [0x5C624, asm, core/align_05C624]  # 308 bytes gap
+        - [0x5C624, asm, browser/D_0025B624]
+        - [0x5C628, asm, browser/func_0025B628]
+        - [0x5C648, asm, browser/func_0025B648]
+        - [0x5C670, asm, browser/func_0025B670]
+        - [0x5C6BC, asm, core/align_05C6BC]  # 4 bytes padding
+        - [0x5C6C0, asm, browser/D_0025B6C0]
+        - [0x5C6E4, asm, core/align_05C6E4]  # 4 bytes padding
+        - [0x5C6E8, asm, browser/func_0025B6E8]
         - [0x5C758, asm, browser/browser_icon_handler2]
-        - [0x5C884, asm, core/align_05C884]  # 708 bytes gap
+        - [0x5C884, asm, browser/D_0025B884]
+        - [0x5C888, asm, browser/func_0025B888]
+        - [0x5C950, asm, browser/func_0025B950]
+        - [0x5C960, asm, browser/func_0025B960]
+        - [0x5C978, asm, browser/func_0025B978]
+        - [0x5C99C, asm, core/align_05C99C]  # 4 bytes padding
+        - [0x5C9A0, asm, browser/func_0025B9A0]
+        - [0x5CA50, asm, browser/func_0025BA50]
+        - [0x5CAD4, asm, core/align_05CAD4]  # 4 bytes padding
+        - [0x5CAD8, asm, browser/func_0025BAD8]
+        - [0x5CAE8, asm, browser/D_0025BAE8]
+        - [0x5CB08, asm, browser/func_0025BB08]
+        - [0x5CB28, asm, browser/func_0025BB28]
         - [0x5CB48, asm, core/nullsub_5]
-        - [0x5CB50, asm, core/align_05CB50]  # 184 bytes gap
+        - [0x5CB50, asm, core/func_0025BB50]
+        - [0x5CBAC, asm, core/align_05CBAC]  # 4 bytes padding
+        - [0x5CBB0, asm, core/func_0025BBB0]
         - [0x5CC08, asm, browser/browser_format_copy_dest_name]
         - [0x5CD14, asm, core/align_05CD14]  # 4 bytes gap
         - [0x5CD18, asm, browser/browser_hdd_error_render]
-        - [0x5D128, asm, core/align_05D128]  # 624 bytes gap
+        - [0x5D128, asm, browser/func_0025C128]
+        - [0x5D154, asm, core/align_05D154]  # 4 bytes padding
+        - [0x5D158, asm, browser/func_0025C158]
+        - [0x5D254, asm, core/align_05D254]  # 4 bytes padding
+        - [0x5D258, asm, browser/func_0025C258]
         - [0x5D398, asm, browser/browser_filestuff1_switchcase]
-        - [0x5D52C, asm, core/align_05D52C]  # 244 bytes gap
+        - [0x5D52C, asm, browser/D_0025C52C]
+        - [0x5D530, asm, browser/func_0025C530]
         - [0x5D620, asm, browser/browser_get_icon_name]
         - [0x5D794, asm, core/align_05D794]  # 4 bytes gap
         - [0x5D798, asm, browser/browser_format_copy_dest_name_case]
@@ -1121,15 +2370,44 @@ segments:
         - [0x5DAE0, asm, browser/browser_hddpfs_read_dir]
         - [0x5DB44, asm, core/align_05DB44]  # 4 bytes gap
         - [0x5DB48, asm, browser/browser_filestuff1_0]
-        - [0x5DB80, asm, core/align_05DB80]  # 2936 bytes gap
+        - [0x5DB80, asm, browser/func_0025CB80]
+        - [0x5DE40, asm, browser/func_0025CE40]
+        - [0x5E354, asm, core/align_05E354]  # 4 bytes padding
+        - [0x5E358, asm, browser/func_0025D358]
+        - [0x5E3D8, asm, browser/func_0025D3D8]
+        - [0x5E47C, asm, core/align_05E47C]  # 4 bytes padding
+        - [0x5E480, asm, browser/func_0025D480]
+        - [0x5E538, asm, browser/func_0025D538]
+        - [0x5E590, asm, browser/func_0025D590]
+        - [0x5E5C0, asm, browser/func_0025D5C0]
+        - [0x5E604, asm, core/align_05E604]  # 4 bytes padding
+        - [0x5E608, asm, browser/func_0025D608]
+        - [0x5E6B4, asm, core/align_05E6B4]  # 4 bytes padding
+        - [0x5E6B8, asm, browser/func_0025D6B8]
         - [0x5E6F8, asm, browser/browser_filestuff1_1]
-        - [0x5E714, asm, core/align_05E714]  # 540 bytes gap
+        - [0x5E714, asm, browser/D_0025D714]
+        - [0x5E718, asm, browser/func_0025D718]
+        - [0x5E774, asm, core/align_05E774]  # 4 bytes padding
+        - [0x5E778, asm, browser/func_0025D778]
+        - [0x5E7A0, asm, browser/func_0025D7A0]
+        - [0x5E7C4, asm, core/align_05E7C4]  # 4 bytes padding
+        - [0x5E7C8, asm, browser/func_0025D7C8]
+        - [0x5E7EC, asm, core/align_05E7EC]  # 4 bytes padding
+        - [0x5E7F0, asm, browser/func_0025D7F0]
+        - [0x5E814, asm, core/align_05E814]  # 4 bytes padding
+        - [0x5E818, asm, browser/func_0025D818]
         - [0x5E930, asm, browser/browser_sync_pfs2]
         - [0x5E9AC, asm, core/align_05E9AC]  # 4 bytes gap
         - [0x5E9B0, asm, browser/browser_filestuff1_7]
-        - [0x5EB74, asm, core/align_05EB74]  # 196 bytes gap
+        - [0x5EB74, asm, browser/D_0025DB74]
+        - [0x5EB78, asm, browser/func_0025DB78]
+        - [0x5EBCC, asm, core/align_05EBCC]  # 4 bytes padding
+        - [0x5EBD0, asm, browser/func_0025DBD0]
         - [0x5EC38, asm, browser/browser_filestuff1_9]
-        - [0x5EDF4, asm, core/align_05EDF4]  # 212 bytes gap
+        - [0x5EDF4, asm, browser/D_0025DDF4]
+        - [0x5EDF8, asm, browser/func_0025DDF8]
+        - [0x5EE4C, asm, core/align_05EE4C]  # 4 bytes padding
+        - [0x5EE50, asm, browser/func_0025DE50]
         - [0x5EEC8, asm, browser/browser_filestuff1_11]
         - [0x5EFFC, asm, core/align_05EFFC]  # 52 bytes gap
         - [0x5F030, asm, browser/browser_hdd_instsec]
@@ -1143,19 +2421,59 @@ segments:
         - [0x5F380, asm, browser/browser_filestuff1_13]
         - [0x5F480, asm, core/align_05F480]  # 64 bytes gap
         - [0x5F4C0, asm, browser/browser_filestuff1_14_hdd_recreate]
-        - [0x5F63C, asm, core/align_05F63C]  # 164 bytes gap
+        - [0x5F63C, asm, browser/D_0025E63C]
+        - [0x5F640, asm, browser/func_0025E640]
+        - [0x5F69C, asm, core/align_05F69C]  # 4 bytes padding
+        - [0x5F6A0, asm, browser/func_0025E6A0]
         - [0x5F6E0, asm, browser/browser_filestuff1_18]
-        - [0x5F72C, asm, core/align_05F72C]  # 1476 bytes gap
+        - [0x5F72C, asm, browser/D_0025E72C]
+        - [0x5F730, asm, browser/D_0025E730]
+        - [0x5F760, asm, browser/func_0025E760]
+        - [0x5F820, asm, browser/func_0025E820]
+        - [0x5FC74, asm, core/align_05FC74]  # 4 bytes padding
+        - [0x5FC78, asm, browser/func_0025EC78]
         - [0x5FCF0, asm, browser/browser_filestuff1_19]
-        - [0x5FD3C, asm, core/align_05FD3C]  # 2860 bytes gap
+        - [0x5FD3C, asm, browser/D_0025ED3C]
+        - [0x5FD40, asm, browser/D_0025ED40]
+        - [0x5FD70, asm, browser/func_0025ED70]
+        - [0x60800, asm, browser/func_0025F800]
         - [0x60868, asm, browser/browser_filestuff1_20]
         - [0x609F8, asm, core/align_0609F8]  # 48 bytes gap
         - [0x60A28, asm, browser/browser_hdd_sendtask]
         - [0x60BD4, asm, core/align_060BD4]  # 4 bytes gap
         - [0x60BD8, asm, browser/browser_hdd_sendtask2]
-        - [0x60E78, asm, core/align_060E78]  # 2024 bytes gap
+        - [0x60E78, asm, browser/D_0025FE78]
+        - [0x610A4, asm, core/align_0610A4]  # 4 bytes padding
+        - [0x610A8, asm, browser/func_002600A8]
+        - [0x61578, asm, browser/func_00260578]
         - [0x61660, asm, browser/browser_hdd_genpath]
-        - [0x616D8, asm, core/align_0616D8]  # 3280 bytes gap
+        - [0x616D8, asm, browser/func_002606D8]
+        - [0x61744, asm, core/align_061744]  # 4 bytes padding
+        - [0x61748, asm, browser/func_00260748]
+        - [0x617D0, asm, browser/func_002607D0]
+        - [0x617F8, asm, browser/func_002607F8]
+        - [0x6180C, asm, core/align_06180C]  # 4 bytes padding
+        - [0x61810, asm, browser/func_00260810]
+        - [0x618D8, asm, browser/func_002608D8]
+        - [0x6193C, asm, core/align_06193C]  # 4 bytes padding
+        - [0x61940, asm, browser/func_00260940]
+        - [0x619C4, asm, core/align_0619C4]  # 4 bytes padding
+        - [0x619C8, asm, browser/func_002609C8]
+        - [0x619D4, asm, core/align_0619D4]  # 4 bytes padding
+        - [0x619D8, asm, browser/func_002609D8]
+        - [0x61BD8, asm, browser/func_00260BD8]
+        - [0x61C20, asm, browser/func_00260C20]
+        - [0x61C34, asm, core/align_061C34]  # 4 bytes padding
+        - [0x61C38, asm, browser/func_00260C38]
+        - [0x61DF0, asm, browser/func_00260DF0]
+        - [0x61E04, asm, core/align_061E04]  # 4 bytes padding
+        - [0x61E08, asm, browser/func_00260E08]
+        - [0x6208C, asm, core/align_06208C]  # 4 bytes padding
+        - [0x62090, asm, browser/func_00261090]
+        - [0x62294, asm, core/align_062294]  # 4 bytes padding
+        - [0x62298, asm, browser/func_00261298]
+        - [0x62304, asm, core/align_062304]  # 4 bytes padding
+        - [0x62308, asm, browser/func_00261308]
         - [0x623A8, asm, browser/browser_cdplayer_related4]
         - [0x6299C, asm, core/align_06299C]  # 4 bytes gap
         - [0x629A0, asm, browser/browser_cdplayer_related5]
@@ -1163,34 +2481,118 @@ segments:
         - [0x62F70, asm, browser/browser_cdplayer_related6]
         - [0x6319C, asm, core/align_06319C]  # 4 bytes gap
         - [0x631A0, asm, browser/browser_cdplayer_playoptions]
-        - [0x63260, asm, core/align_063260]  # 1472 bytes gap
+        - [0x63260, asm, browser/func_00262260]
+        - [0x632B8, asm, browser/func_002622B8]
         - [0x63820, asm, browser/browser_cdplayer_related3]
         - [0x63E58, asm, core/nullsub_10]
         - [0x63E60, asm, browser/browser_cdplayer_related7]
         - [0x64060, asm, browser/module_browser_263060]
         - [0x64068, asm, core/j_j_sceUsbKbEnd]
-        - [0x64070, asm, core/align_064070]  # 2160 bytes gap
+        - [0x64070, asm, core/func_00263070]
+        - [0x64804, asm, core/align_064804]  # 4 bytes padding
+        - [0x64808, asm, core/func_00263808]
+        - [0x6486C, asm, core/align_06486C]  # 4 bytes padding
+        - [0x64870, asm, core/D_00263870]
+        - [0x648B4, asm, core/align_0648B4]  # 4 bytes padding
+        - [0x648B8, asm, core/D_002638B8]
         - [0x648E0, asm, core/nullsub_15]
-        - [0x648E8, asm, core/align_0648E8]  # 2840 bytes gap
+        - [0x648E8, asm, core/D_002638E8]
+        - [0x64A74, asm, core/align_064A74]  # 4 bytes padding
+        - [0x64A78, asm, core/func_00263A78]
+        - [0x64A8C, asm, core/align_064A8C]  # 4 bytes padding
+        - [0x64A90, asm, core/func_00263A90]
+        - [0x64ABC, asm, core/align_064ABC]  # 4 bytes padding
+        - [0x64AC0, asm, core/D_00263AC0]
+        - [0x64B14, asm, core/align_064B14]  # 4 bytes padding
+        - [0x64B18, asm, core/func_00263B18]
+        - [0x64B48, asm, core/func_00263B48]
+        - [0x64B5C, asm, core/align_064B5C]  # 4 bytes padding
+        - [0x64B60, asm, core/func_00263B60]
+        - [0x64EC8, asm, core/func_00263EC8]
+        - [0x64F6C, asm, core/align_064F6C]  # 4 bytes padding
+        - [0x64F70, asm, core/func_00263F70]
+        - [0x64FF0, asm, core/D_00263FF0]
+        - [0x65124, asm, core/align_065124]  # 4 bytes padding
+        - [0x65128, asm, core/D_00264128]
+        - [0x652C0, asm, core/D_002642C0]
+        - [0x653EC, asm, core/align_0653EC]  # 4 bytes padding
+        - [0x653F0, asm, core/D_002643F0]
         - [0x65400, asm, core/nullsub_9]
-        - [0x65408, asm, core/align_065408]  # 1240 bytes gap
+        - [0x65408, asm, core/func_00264408]
+        - [0x65458, asm, core/func_00264458]
+        - [0x65498, asm, core/func_00264498]
+        - [0x654E8, asm, core/func_002644E8]
+        - [0x65538, asm, core/func_00264538]
+        - [0x6557C, asm, core/align_06557C]  # 4 bytes padding
+        - [0x65580, asm, core/func_00264580]
+        - [0x65588, asm, core/D_00264588]
+        - [0x65594, asm, core/align_065594]  # 4 bytes padding
+        - [0x65598, asm, core/func_00264598]
+        - [0x65778, asm, core/func_00264778]
+        - [0x657D4, asm, core/align_0657D4]  # 4 bytes padding
+        - [0x657D8, asm, core/func_002647D8]
+        - [0x65820, asm, core/func_00264820]
+        - [0x6582C, asm, core/align_06582C]  # 4 bytes padding
+        - [0x65830, asm, core/func_00264830]
+        - [0x65850, asm, core/func_00264850]
         - [0x658E0, asm, core/nullsub_6]
-        - [0x658E8, asm, core/align_0658E8]  # 472 bytes gap
+        - [0x658E8, asm, core/func_002648E8]
+        - [0x658F4, asm, core/align_0658F4]  # 4 bytes padding
+        - [0x658F8, asm, core/D_002648F8]
+        - [0x65904, asm, core/align_065904]  # 4 bytes padding
+        - [0x65908, asm, core/func_00264908]
+        - [0x65914, asm, core/align_065914]  # 4 bytes padding
+        - [0x65918, asm, core/func_00264918]
+        - [0x65934, asm, core/align_065934]  # 4 bytes padding
+        - [0x65938, asm, core/func_00264938]
+        - [0x659F4, asm, core/align_0659F4]  # 4 bytes padding
+        - [0x659F8, asm, core/D_002649F8]
+        - [0x65AB0, asm, core/D_00264AB0]
         - [0x65AC0, asm, browser/interruptFromKey]
-        - [0x65B98, asm, core/align_065B98]  # 192 bytes gap
+        - [0x65B98, asm, browser/D_00264B98]
+        - [0x65BBC, asm, core/align_065BBC]  # 4 bytes padding
+        - [0x65BC0, asm, browser/D_00264BC0]
+        - [0x65BFC, asm, core/align_065BFC]  # 4 bytes padding
+        - [0x65C00, asm, browser/D_00264C00]
         - [0x65C58, asm, browser/prepare_skb_resources]
-        - [0x65E80, asm, core/align_065E80]  # 608 bytes gap
+        - [0x65E80, asm, browser/func_00264E80]
+        - [0x65E8C, asm, core/align_065E8C]  # 4 bytes padding
+        - [0x65E90, asm, browser/func_00264E90]
+        - [0x65EB0, asm, browser/func_00264EB0]
+        - [0x66098, asm, browser/func_00265098]
         - [0x660E0, asm, browser/Fep_SetInputMode]
-        - [0x66254, asm, core/align_066254]  # 916 bytes gap
+        - [0x66254, asm, browser/D_00265254]
+        - [0x66258, asm, browser/func_00265258]
+        - [0x66478, asm, browser/func_00265478]
+        - [0x664A0, asm, browser/func_002654A0]
+        - [0x664F0, asm, browser/D_002654F0]
+        - [0x66540, asm, browser/func_00265540]
+        - [0x66584, asm, core/align_066584]  # 4 bytes padding
+        - [0x66588, asm, browser/func_00265588]
+        - [0x665B4, asm, core/align_0665B4]  # 4 bytes padding
+        - [0x665B8, asm, browser/func_002655B8]
+        - [0x665D4, asm, core/align_0665D4]  # 4 bytes padding
+        - [0x665D8, asm, browser/func_002655D8]
         - [0x665E8, asm, browser/check_atok_erx_exists]
         - [0x66650, asm, browser/Fep_IsAtokEnabled]
         - [0x6665C, asm, core/align_06665C]  # 4 bytes gap
         - [0x66660, asm, graph/load_tim2_texture_resource]
         - [0x66694, asm, core/align_066694]  # 4 bytes gap
         - [0x66698, asm, graph/do_load_tim2_texture]
-        - [0x66798, asm, core/align_066798]  # 1256 bytes gap
+        - [0x66798, asm, graph/func_00265798]
+        - [0x668E8, asm, graph/func_002658E8]
         - [0x66C80, asm, graph/Tim2_DrawSprite]
-        - [0x67118, asm, core/align_067118]  # 1880 bytes gap
+        - [0x67118, asm, graph/func_00266118]
+        - [0x67154, asm, core/align_067154]  # 4 bytes padding
+        - [0x67158, asm, graph/func_00266158]
+        - [0x67210, asm, graph/func_00266210]
+        - [0x67244, asm, core/align_067244]  # 4 bytes padding
+        - [0x67248, asm, graph/D_00266248]
+        - [0x673D4, asm, core/align_0673D4]  # 4 bytes padding
+        - [0x673D8, asm, graph/func_002663D8]
+        - [0x67438, asm, graph/func_00266438]
+        - [0x6777C, asm, core/align_06777C]  # 4 bytes padding
+        - [0x67780, asm, graph/func_00266780]
         - [0x67870, asm, core/nullsub_7]
         - [0x67878, asm, graph/Tim2CheckFileHeaer]
         - [0x6794C, asm, core/align_06794C]  # 4 bytes gap
@@ -1231,13 +2633,111 @@ segments:
         - [0x69238, asm, core/nullsub_16]
         - [0x69240, asm, core/nullsub_17]
         - [0x69248, asm, core/nullsub_18]
-        - [0x69250, asm, core/align_069250]  # 8488 bytes gap
+        - [0x69250, asm, core/func_00268250]
+        - [0x69278, asm, core/func_00268278]
+        - [0x6928C, asm, core/align_06928C]  # 4 bytes padding
+        - [0x69290, asm, core/func_00268290]
+        - [0x692E8, asm, core/D_002682E8]
+        - [0x692F4, asm, core/align_0692F4]  # 4 bytes padding
+        - [0x692F8, asm, core/func_002682F8]
+        - [0x69310, asm, core/func_00268310]
+        - [0x6939C, asm, core/align_06939C]  # 4 bytes padding
+        - [0x693A0, asm, core/func_002683A0]
+        - [0x6940C, asm, core/align_06940C]  # 4 bytes padding
+        - [0x69410, asm, core/func_00268410]
+        - [0x694F8, asm, core/func_002684F8]
+        - [0x6959C, asm, core/align_06959C]  # 4 bytes padding
+        - [0x695A0, asm, core/func_002685A0]
+        - [0x695D0, asm, core/func_002685D0]
+        - [0x697A8, asm, core/func_002687A8]
+        - [0x697D0, asm, core/func_002687D0]
+        - [0x698E0, asm, core/func_002688E0]
+        - [0x699D4, asm, core/align_0699D4]  # 4 bytes padding
+        - [0x699D8, asm, core/func_002689D8]
+        - [0x69AC4, asm, core/align_069AC4]  # 4 bytes padding
+        - [0x69AC8, asm, core/func_00268AC8]
+        - [0x69E80, asm, core/func_00268E80]
+        - [0x69F90, asm, core/func_00268F90]
+        - [0x6A020, asm, core/func_00269020]
+        - [0x6A088, asm, core/D_00269088]
+        - [0x6A09C, asm, core/align_06A09C]  # 4 bytes padding
+        - [0x6A0A0, asm, core/func_002690A0]
+        - [0x6A1E4, asm, core/align_06A1E4]  # 4 bytes padding
+        - [0x6A1E8, asm, core/func_002691E8]
+        - [0x6A21C, asm, core/align_06A21C]  # 4 bytes padding
+        - [0x6A220, asm, core/func_00269220]
+        - [0x6A588, asm, core/func_00269588]
+        - [0x6A880, asm, core/func_00269880]
+        - [0x6AAFC, asm, core/align_06AAFC]  # 4 bytes padding
+        - [0x6AB00, asm, core/func_00269B00]
+        - [0x6AB80, asm, core/func_00269B80]
+        - [0x6AC08, asm, core/func_00269C08]
+        - [0x6ACD4, asm, core/align_06ACD4]  # 4 bytes padding
+        - [0x6ACD8, asm, core/func_00269CD8]
+        - [0x6AD9C, asm, core/align_06AD9C]  # 4 bytes padding
+        - [0x6ADA0, asm, core/func_00269DA0]
+        - [0x6ADE4, asm, core/align_06ADE4]  # 4 bytes padding
+        - [0x6ADE8, asm, core/func_00269DE8]
+        - [0x6AE64, asm, core/align_06AE64]  # 4 bytes padding
+        - [0x6AE68, asm, core/func_00269E68]
+        - [0x6AF14, asm, core/align_06AF14]  # 4 bytes padding
+        - [0x6AF18, asm, core/func_00269F18]
+        - [0x6AF48, asm, core/func_00269F48]
+        - [0x6AFC8, asm, core/func_00269FC8]
+        - [0x6AFE4, asm, core/align_06AFE4]  # 4 bytes padding
+        - [0x6AFE8, asm, core/func_00269FE8]
+        - [0x6B040, asm, core/func_0026A040]
+        - [0x6B1A4, asm, core/align_06B1A4]  # 4 bytes padding
+        - [0x6B1A8, asm, core/func_0026A1A8]
+        - [0x6B208, asm, core/func_0026A208]
+        - [0x6B268, asm, core/func_0026A268]
+        - [0x6B2B0, asm, core/func_0026A2B0]
+        - [0x6B2D4, asm, core/align_06B2D4]  # 4 bytes padding
+        - [0x6B2D8, asm, core/func_0026A2D8]
+        - [0x6B328, asm, core/func_0026A328]
         - [0x6B378, asm, graph/Font_SetBGColorArray]
-        - [0x6B420, asm, core/align_06B420]  # 5816 bytes gap
+        - [0x6B420, asm, graph/func_0026A420]
+        - [0x6B464, asm, core/align_06B464]  # 4 bytes padding
+        - [0x6B468, asm, graph/func_0026A468]
+        - [0x6B4AC, asm, core/align_06B4AC]  # 4 bytes padding
+        - [0x6B4B0, asm, graph/func_0026A4B0]
+        - [0x6B52C, asm, core/align_06B52C]  # 4 bytes padding
+        - [0x6B530, asm, graph/func_0026A530]
+        - [0x6B538, asm, graph/func_0026A538]
+        - [0x6B658, asm, graph/func_0026A658]
+        - [0x6B664, asm, core/align_06B664]  # 4 bytes padding
+        - [0x6B668, asm, graph/func_0026A668]
+        - [0x6B674, asm, core/align_06B674]  # 4 bytes padding
+        - [0x6B678, asm, graph/func_0026A678]
+        - [0x6B860, asm, graph/func_0026A860]
+        - [0x6B934, asm, core/align_06B934]  # 4 bytes padding
+        - [0x6B938, asm, graph/func_0026A938]
+        - [0x6B9D0, asm, graph/func_0026A9D0]
+        - [0x6BA58, asm, graph/func_0026AA58]
+        - [0x6BAB8, asm, graph/func_0026AAB8]
+        - [0x6BAD4, asm, core/align_06BAD4]  # 4 bytes padding
+        - [0x6BAD8, asm, graph/func_0026AAD8]
+        - [0x6BB84, asm, core/align_06BB84]  # 4 bytes padding
+        - [0x6BB88, asm, graph/func_0026AB88]
+        - [0x6BC40, asm, graph/func_0026AC40]
+        - [0x6C1B8, asm, graph/func_0026B1B8]
+        - [0x6C1D8, asm, graph/func_0026B1D8]
+        - [0x6C2F8, asm, graph/func_0026B2F8]
+        - [0x6C334, asm, core/align_06C334]  # 4 bytes padding
+        - [0x6C338, asm, graph/func_0026B338]
+        - [0x6C448, asm, graph/func_0026B448]
+        - [0x6C454, asm, core/align_06C454]  # 4 bytes padding
+        - [0x6C458, asm, graph/func_0026B458]
         - [0x6CAD8, asm, browser/Fep_Init]
         - [0x6CCEC, asm, core/align_06CCEC]  # 4 bytes gap
         - [0x6CCF0, asm, browser/Fep_Exit]
-        - [0x6CD70, asm, core/align_06CD70]  # 464 bytes gap
+        - [0x6CD70, asm, browser/func_0026BD70]
+        - [0x6CE24, asm, core/align_06CE24]  # 4 bytes padding
+        - [0x6CE28, asm, browser/func_0026BE28]
+        - [0x6CE78, asm, browser/func_0026BE78]
+        - [0x6CED0, asm, browser/func_0026BED0]
+        - [0x6CF0C, asm, core/align_06CF0C]  # 4 bytes padding
+        - [0x6CF10, asm, browser/func_0026BF10]
         - [0x6CF40, asm, browser/getContext]
         - [0x6D168, asm, core/align_06D168]  # 104 bytes gap
         - [0x6D1D0, asm, browser/Fep_SetData2Fifo]
@@ -1246,7 +2746,38 @@ segments:
         - [0x6D468, asm, browser/Fep_Cmd]
         - [0x6DF8C, asm, core/align_06DF8C]  # 4 bytes gap
         - [0x6DF90, asm, browser/FepSetConfig]
-        - [0x6E08C, asm, core/align_06E08C]  # 2428 bytes gap
+        - [0x6E08C, asm, browser/D_0026D08C]
+        - [0x6E090, asm, browser/func_0026D090]
+        - [0x6E0D4, asm, core/align_06E0D4]  # 4 bytes padding
+        - [0x6E0D8, asm, browser/func_0026D0D8]
+        - [0x6E114, asm, core/align_06E114]  # 4 bytes padding
+        - [0x6E118, asm, browser/func_0026D118]
+        - [0x6E190, asm, browser/func_0026D190]
+        - [0x6E2B4, asm, core/align_06E2B4]  # 4 bytes padding
+        - [0x6E2B8, asm, browser/func_0026D2B8]
+        - [0x6E2D8, asm, browser/func_0026D2D8]
+        - [0x6E2E4, asm, core/align_06E2E4]  # 4 bytes padding
+        - [0x6E2E8, asm, browser/D_0026D2E8]
+        - [0x6E2F4, asm, core/align_06E2F4]  # 4 bytes padding
+        - [0x6E2F8, asm, browser/func_0026D2F8]
+        - [0x6E35C, asm, core/align_06E35C]  # 4 bytes padding
+        - [0x6E360, asm, browser/func_0026D360]
+        - [0x6E8FC, asm, core/align_06E8FC]  # 4 bytes padding
+        - [0x6E900, asm, browser/func_0026D900]
+        - [0x6E90C, asm, core/align_06E90C]  # 4 bytes padding
+        - [0x6E910, asm, browser/func_0026D910]
+        - [0x6E91C, asm, core/align_06E91C]  # 4 bytes padding
+        - [0x6E920, asm, browser/func_0026D920]
+        - [0x6E940, asm, browser/func_0026D940]
+        - [0x6E94C, asm, core/align_06E94C]  # 4 bytes padding
+        - [0x6E950, asm, browser/func_0026D950]
+        - [0x6E95C, asm, core/align_06E95C]  # 4 bytes padding
+        - [0x6E960, asm, browser/func_0026D960]
+        - [0x6E96C, asm, core/align_06E96C]  # 4 bytes padding
+        - [0x6E970, asm, browser/D_0026D970]
+        - [0x6E978, asm, browser/func_0026D978]
+        - [0x6E9D8, asm, browser/func_0026D9D8]
+        - [0x6E9F8, asm, browser/func_0026D9F8]
         - [0x6EA08, asm, browser/ascii2UCS4]
         - [0x6EA74, asm, core/align_06EA74]  # 4 bytes gap
         - [0x6EA78, asm, browser/FepTreatSkb]
@@ -1254,34 +2785,190 @@ segments:
         - [0x6ED50, asm, browser/FepTreatKeyDirectSkb]
         - [0x6F15C, asm, core/align_06F15C]  # 4 bytes gap
         - [0x6F160, asm, browser/FepTreatSkbAtok]
-        - [0x6F490, asm, core/align_06F490]  # 3144 bytes gap
+        - [0x6F490, asm, browser/func_0026E490]
+        - [0x6F4A0, asm, browser/func_0026E4A0]
+        - [0x6F57C, asm, core/align_06F57C]  # 4 bytes padding
+        - [0x6F580, asm, browser/func_0026E580]
+        - [0x6FD68, asm, browser/func_0026ED68]
+        - [0x6FEC0, asm, browser/func_0026EEC0]
+        - [0x6FFA0, asm, browser/func_0026EFA0]
+        - [0x6FFAC, asm, core/align_06FFAC]  # 4 bytes padding
+        - [0x6FFB0, asm, browser/func_0026EFB0]
+        - [0x700C0, asm, browser/func_0026F0C0]
         - [0x700D8, asm, core/nullsub_19]
-        - [0x700E0, asm, core/align_0700E0]  # 3960 bytes gap
+        - [0x700E0, asm, core/func_0026F0E0]
+        - [0x70264, asm, core/align_070264]  # 4 bytes padding
+        - [0x70268, asm, core/func_0026F268]
+        - [0x70324, asm, core/align_070324]  # 4 bytes padding
+        - [0x70328, asm, core/func_0026F328]
+        - [0x703EC, asm, core/align_0703EC]  # 4 bytes padding
+        - [0x703F0, asm, core/D_0026F3F0]
+        - [0x70408, asm, core/func_0026F408]
+        - [0x70420, asm, core/func_0026F420]
+        - [0x7042C, asm, core/align_07042C]  # 4 bytes padding
+        - [0x70430, asm, core/D_0026F430]
+        - [0x70440, asm, core/func_0026F440]
+        - [0x704F4, asm, core/align_0704F4]  # 4 bytes padding
+        - [0x704F8, asm, core/func_0026F4F8]
+        - [0x706EC, asm, core/align_0706EC]  # 4 bytes padding
+        - [0x706F0, asm, core/func_0026F6F0]
+        - [0x70720, asm, core/func_0026F720]
+        - [0x707C4, asm, core/align_0707C4]  # 4 bytes padding
+        - [0x707C8, asm, core/func_0026F7C8]
+        - [0x708F4, asm, core/align_0708F4]  # 4 bytes padding
+        - [0x708F8, asm, core/func_0026F8F8]
+        - [0x709C0, asm, core/func_0026F9C0]
+        - [0x70FFC, asm, core/align_070FFC]  # 4 bytes padding
+        - [0x71000, asm, core/func_00270000]
         - [0x71058, asm, core/nullsub_8]
-        - [0x71060, asm, core/align_071060]  # 2376 bytes gap
+        - [0x71060, asm, core/func_00270060]
+        - [0x712EC, asm, core/align_0712EC]  # 4 bytes padding
+        - [0x712F0, asm, core/D_002702F0]
+        - [0x7138C, asm, core/align_07138C]  # 4 bytes padding
+        - [0x71390, asm, core/func_00270390]
+        - [0x713B0, asm, core/D_002703B0]
+        - [0x71464, asm, core/align_071464]  # 4 bytes padding
+        - [0x71468, asm, core/D_00270468]
+        - [0x714CC, asm, core/align_0714CC]  # 4 bytes padding
+        - [0x714D0, asm, core/func_002704D0]
+        - [0x71808, asm, core/func_00270808]
+        - [0x71960, asm, core/func_00270960]
+        - [0x7198C, asm, core/align_07198C]  # 4 bytes padding
+        - [0x71990, asm, core/D_00270990]
+        - [0x7199C, asm, core/align_07199C]  # 4 bytes padding
+        - [0x719A0, asm, core/func_002709A0]
         - [0x719A8, asm, core/nullsub_20]
-        - [0x719B0, asm, core/align_0719B0]  # 680 bytes gap
+        - [0x719B0, asm, core/func_002709B0]
+        - [0x719FC, asm, core/align_0719FC]  # 4 bytes padding
+        - [0x71A00, asm, core/func_00270A00]
+        - [0x71A90, asm, core/func_00270A90]
+        - [0x71B1C, asm, core/align_071B1C]  # 4 bytes padding
+        - [0x71B20, asm, core/func_00270B20]
+        - [0x71C50, asm, core/D_00270C50]
         - [0x71C58, asm, browser/module_browser_270C58]
         - [0x71CC8, asm, core/j_sceUsbKbEnd]
-        - [0x71CD0, asm, core/align_071CD0]  # 1416 bytes gap
+        - [0x71CD0, asm, core/func_00270CD0]
+        - [0x7210C, asm, core/align_07210C]  # 4 bytes padding
+        - [0x72110, asm, core/func_00271110]
+        - [0x72120, asm, core/func_00271120]
+        - [0x72148, asm, core/func_00271148]
+        - [0x72248, asm, core/func_00271248]
         - [0x72258, asm, browser/do_makesema]
         - [0x722B0, asm, browser/FifoDelete]
-        - [0x722B8, asm, core/align_0722B8]  # 584 bytes gap
+        - [0x722B8, asm, browser/D_002712B8]
+        - [0x72300, asm, browser/func_00271300]
+        - [0x7230C, asm, core/align_07230C]  # 4 bytes padding
+        - [0x72310, asm, browser/func_00271310]
+        - [0x723E0, asm, browser/func_002713E0]
         - [0x72500, asm, browser/FifoSendData]
         - [0x725F8, asm, core/align_0725F8]  # 272 bytes gap
         - [0x72708, asm, core/nullsub_21]
-        - [0x72710, asm, core/align_072710]  # 2408 bytes gap
+        - [0x72710, asm, core/func_00271710]
+        - [0x72780, asm, core/func_00271780]
+        - [0x727E8, asm, core/func_002717E8]
+        - [0x72830, asm, core/func_00271830]
+        - [0x72890, asm, core/func_00271890]
+        - [0x72AF4, asm, core/align_072AF4]  # 4 bytes padding
+        - [0x72AF8, asm, core/func_00271AF8]
+        - [0x72B08, asm, core/func_00271B08]
+        - [0x72B64, asm, core/align_072B64]  # 4 bytes padding
+        - [0x72B68, asm, core/func_00271B68]
+        - [0x72BA4, asm, core/align_072BA4]  # 4 bytes padding
+        - [0x72BA8, asm, core/func_00271BA8]
+        - [0x72C34, asm, core/align_072C34]  # 4 bytes padding
+        - [0x72C38, asm, core/func_00271C38]
+        - [0x72C50, asm, core/func_00271C50]
         - [0x73078, asm, core/nullsub_22]
-        - [0x73080, asm, core/align_073080]  # 14152 bytes gap
+        - [0x73080, asm, core/D_00272080]
+        - [0x730E0, asm, core/func_002720E0]
+        - [0x732D0, asm, core/func_002722D0]
+        - [0x7334C, asm, core/align_07334C]  # 4 bytes padding
+        - [0x73350, asm, core/func_00272350]
+        - [0x733CC, asm, core/align_0733CC]  # 4 bytes padding
+        - [0x733D0, asm, core/func_002723D0]
+        - [0x7345C, asm, core/align_07345C]  # 4 bytes padding
+        - [0x73460, asm, core/func_00272460]
+        - [0x73518, asm, core/func_00272518]
+        - [0x7357C, asm, core/align_07357C]  # 4 bytes padding
+        - [0x73580, asm, core/D_00272580]
+        - [0x73610, asm, core/func_00272610]
+        - [0x736D0, asm, core/func_002726D0]
+        - [0x73780, asm, core/func_00272780]
+        - [0x737B8, asm, core/func_002727B8]
+        - [0x73B64, asm, core/align_073B64]  # 4 bytes padding
+        - [0x73B68, asm, core/func_00272B68]
+        - [0x73E14, asm, core/align_073E14]  # 4 bytes padding
+        - [0x73E18, asm, core/func_00272E18]
+        - [0x73EC0, asm, core/func_00272EC0]
+        - [0x73F9C, asm, core/align_073F9C]  # 4 bytes padding
+        - [0x73FA0, asm, core/func_00272FA0]
+        - [0x74380, asm, core/func_00273380]
+        - [0x74528, asm, core/func_00273528]
+        - [0x748E8, asm, core/func_002738E8]
+        - [0x748F8, asm, core/func_002738F8]
+        - [0x74908, asm, core/func_00273908]
+        - [0x7499C, asm, core/align_07499C]  # 4 bytes padding
+        - [0x749A0, asm, core/func_002739A0]
+        - [0x74B18, asm, core/func_00273B18]
+        - [0x74BD0, asm, core/func_00273BD0]
+        - [0x74C5C, asm, core/align_074C5C]  # 4 bytes padding
+        - [0x74C60, asm, core/func_00273C60]
+        - [0x74CF4, asm, core/align_074CF4]  # 4 bytes padding
+        - [0x74CF8, asm, core/D_00273CF8]
+        - [0x74D7C, asm, core/align_074D7C]  # 4 bytes padding
+        - [0x74D80, asm, core/func_00273D80]
+        - [0x74E0C, asm, core/align_074E0C]  # 4 bytes padding
+        - [0x74E10, asm, core/func_00273E10]
+        - [0x7511C, asm, core/align_07511C]  # 4 bytes padding
+        - [0x75120, asm, core/func_00274120]
+        - [0x753D4, asm, core/align_0753D4]  # 4 bytes padding
+        - [0x753D8, asm, core/func_002743D8]
+        - [0x75674, asm, core/align_075674]  # 4 bytes padding
+        - [0x75678, asm, core/func_00274678]
+        - [0x758D0, asm, core/func_002748D0]
+        - [0x75AC8, asm, core/func_00274AC8]
+        - [0x75D60, asm, core/func_00274D60]
+        - [0x76028, asm, core/func_00275028]
+        - [0x76274, asm, core/align_076274]  # 4 bytes padding
+        - [0x76278, asm, core/func_00275278]
+        - [0x763A4, asm, core/align_0763A4]  # 4 bytes padding
+        - [0x763A8, asm, core/func_002753A8]
+        - [0x76508, asm, core/func_00275508]
+        - [0x76668, asm, core/func_00275668]
         - [0x767C8, asm, browser/sendKeyAtok]
-        - [0x76944, asm, core/align_076944]  # 428 bytes gap
+        - [0x76944, asm, browser/D_00275944]
+        - [0x76948, asm, browser/func_00275948]
         - [0x76AF0, asm, browser/CharHanToZen]
         - [0x76B60, asm, browser/CharZenToHan]
         - [0x76C84, asm, core/align_076C84]  # 4 bytes gap
         - [0x76C88, asm, browser/StrHanToZen]
         - [0x76CFC, asm, core/align_076CFC]  # 4 bytes gap
         - [0x76D00, asm, browser/StrZenToHan]
-        - [0x76D6C, asm, core/align_076D6C]  # 5132 bytes gap
+        - [0x76D6C, asm, browser/D_00275D6C]
+        - [0x76D70, asm, browser/func_00275D70]
+        - [0x76DF4, asm, core/align_076DF4]  # 4 bytes padding
+        - [0x76DF8, asm, browser/D_00275DF8]
+        - [0x76E04, asm, core/align_076E04]  # 4 bytes padding
+        - [0x76E08, asm, browser/func_00275E08]
+        - [0x76EA0, asm, browser/D_00275EA0]
+        - [0x77134, asm, core/align_077134]  # 4 bytes padding
+        - [0x77138, asm, browser/func_00276138]
+        - [0x7739C, asm, core/align_07739C]  # 4 bytes padding
+        - [0x773A0, asm, browser/func_002763A0]
+        - [0x77534, asm, core/align_077534]  # 4 bytes padding
+        - [0x77538, asm, browser/D_00276538]
+        - [0x776D0, asm, browser/D_002766D0]
+        - [0x77824, asm, core/align_077824]  # 4 bytes padding
+        - [0x77828, asm, browser/func_00276828]
+        - [0x778A0, asm, browser/func_002768A0]
+        - [0x778BC, asm, core/align_0778BC]  # 4 bytes padding
+        - [0x778C0, asm, browser/func_002768C0]
+        - [0x77CD0, asm, browser/func_00276CD0]
+        - [0x7809C, asm, core/align_07809C]  # 4 bytes padding
+        - [0x780A0, asm, browser/D_002770A0]
+        - [0x78104, asm, core/align_078104]  # 4 bytes padding
+        - [0x78108, asm, browser/D_00277108]
+        - [0x78138, asm, browser/D_00277138]
         - [0x78178, asm, browser/sceAtok_INITFIXME1]
         - [0x78238, asm, browser/sceAtok_INITFIXME2]
         - [0x7826C, asm, core/align_07826C]  # 4 bytes gap
