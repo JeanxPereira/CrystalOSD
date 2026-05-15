@@ -37,592 +37,592 @@ segments:
       bss_size: 0x199de0
       subsegments:
         - [0x1000, asm, core/start]
-        - [0x10B4, asm, core/gap_0010B4]  # 4 bytes gap
+        - [0x10B4, asm, core/align_0010B4]  # 4 bytes gap
         - [0x10B8, asm, core/_exit]
         - [0x10C0, asm, core/ExitThread]
         - [0x10C8, asm, sound/sceSpu2DmaWriteEe2Iop]
-        - [0x1134, asm, core/gap_001134]  # 4 bytes gap
+        - [0x1134, asm, core/align_001134]  # 4 bytes gap
         - [0x1138, asm, sound/sound_handle_bd]
         - [0x1258, asm, sound/load_sound_resources]
-        - [0x14BC, asm, core/gap_0014BC]  # 4 bytes gap
+        - [0x14BC, asm, core/align_0014BC]  # 4 bytes gap
         - [0x14C0, asm, sound/sound_init]
         - [0x17F0, asm, sound/sound_deinit]
-        - [0x19DC, asm, core/gap_0019DC]  # 4 bytes gap
+        - [0x19DC, asm, core/align_0019DC]  # 4 bytes gap
         - [0x19E0, asm, sound/sound_handler_2009E0]
         - [0x1A80, asm, sound/sound_handler_exec_queue_cmd]
-        - [0x1BFC, asm, core/gap_001BFC]  # 4 bytes gap
+        - [0x1BFC, asm, core/align_001BFC]  # 4 bytes gap
         - [0x1C00, asm, sound/sound_handler_queue_cmd]
-        - [0x1D0C, asm, core/gap_001D0C]  # 4 bytes gap
+        - [0x1D0C, asm, core/align_001D0C]  # 4 bytes gap
         - [0x1D10, asm, core/ExpandInit]
-        - [0x1D2C, asm, core/gap_001D2C]  # 4 bytes gap
+        - [0x1D2C, asm, core/align_001D2C]  # 4 bytes gap
         - [0x1D30, asm, core/ExpandSetBlock]
         - [0x1DB8, asm, core/ExpandMain]
-        - [0x1EE4, asm, core/gap_001EE4]  # 4 bytes gap
+        - [0x1EE4, asm, core/align_001EE4]  # 4 bytes gap
         - [0x1EE8, asm, core/Expand]
-        - [0x1F1C, asm, core/gap_001F1C]  # 4 bytes gap
+        - [0x1F1C, asm, core/align_001F1C]  # 4 bytes gap
         - [0x1F20, asm, core/ExpandGetSize]
-        - [0x1F44, asm, core/gap_001F44]  # 4 bytes gap
+        - [0x1F44, asm, core/align_001F44]  # 4 bytes gap
         - [0x1F48, asm, core/unused_200F48]
-        - [0x1F74, asm, core/gap_001F74]  # 332 bytes gap
+        - [0x1F74, asm, core/align_001F74]  # 332 bytes gap
         - [0x20C0, asm, core/rm2_state_init_2010C0]
         - [0x2110, asm, core/get_rm2_struct_201110]
-        - [0x215C, asm, core/gap_00215C]  # 4 bytes gap
+        - [0x215C, asm, core/align_00215C]  # 4 bytes gap
         - [0x2160, asm, core/rm2_related_201160]
         - [0x24A8, asm, core/rm2_related_2014A8]
-        - [0x24BC, asm, core/gap_0024BC]  # 4 bytes gap
+        - [0x24BC, asm, core/align_0024BC]  # 4 bytes gap
         - [0x24C0, asm, core/unused_2014C0]
-        - [0x24E4, asm, core/gap_0024E4]  # 4 bytes gap
+        - [0x24E4, asm, core/align_0024E4]  # 4 bytes gap
         - [0x24E8, asm, core/unused_2014E8]
-        - [0x2584, asm, core/gap_002584]  # 4 bytes gap
+        - [0x2584, asm, core/align_002584]  # 4 bytes gap
         - [0x2588, asm, core/pad_rm2_handler_201588]
-        - [0x259C, asm, core/gap_00259C]  # 52 bytes gap
+        - [0x259C, asm, core/align_00259C]  # 52 bytes gap
         - [0x25D0, asm, history/history_pick_slot]
         - [0x2920, asm, browser/do_hdd_idle_poweroff]
-        - [0x29AC, asm, core/gap_0029AC]  # 4 bytes gap
+        - [0x29AC, asm, core/align_0029AC]  # 4 bytes gap
         - [0x29B0, asm, core/deinit_2019B0]
         - [0x2A00, asm, core/return_to_browser]
         - [0x2A50, asm, core/unused_201A50]
-        - [0x2A9C, asm, core/gap_002A9C]  # 404 bytes gap
+        - [0x2A9C, asm, core/align_002A9C]  # 404 bytes gap
         - [0x2C30, asm, cdvd/cdvd_handle_disc_key_inner]
-        - [0x2F08, asm, core/gap_002F08]  # 120 bytes gap
+        - [0x2F08, asm, core/align_002F08]  # 120 bytes gap
         - [0x2F80, asm, cdvd/ExecutePs2GameDisc]
-        - [0x331C, asm, core/gap_00331C]  # 4 bytes gap
+        - [0x331C, asm, core/align_00331C]  # 4 bytes gap
         - [0x3320, asm, cdvd/ExecutePS1GameDisc]
         - [0x3528, asm, cdvd/delaythread_alarm_cb]
         - [0x3538, asm, cdvd/delaythread_with_alarm]
-        - [0x35BC, asm, core/gap_0035BC]  # 4 bytes gap
+        - [0x35BC, asm, core/align_0035BC]  # 4 bytes gap
         - [0x35C0, asm, cdvd/ExecuteDVDPlayer]
         - [0x3948, asm, cdvd/get_config_key]
-        - [0x3B3C, asm, core/gap_003B3C]  # 4 bytes gap
+        - [0x3B3C, asm, core/align_003B3C]  # 4 bytes gap
         - [0x3B40, asm, cdvd/is_ps1_game_disc]
-        - [0x3E7C, asm, core/gap_003E7C]  # 4 bytes gap
+        - [0x3E7C, asm, core/align_003E7C]  # 4 bytes gap
         - [0x3E80, asm, cdvd/ExecuteHDDBOOT]
-        - [0x3FBC, asm, core/gap_003FBC]  # 4 bytes gap
+        - [0x3FBC, asm, core/align_003FBC]  # 4 bytes gap
         - [0x3FC0, asm, cdvd/ExecuteHddApp]
         - [0x43E8, asm, cdvd/Game_Boot_ExecuteDisc_p5_tgt]
-        - [0x4490, asm, core/gap_004490]  # 1056 bytes gap
+        - [0x4490, asm, core/align_004490]  # 1056 bytes gap
         - [0x48B0, asm, config/do_read_cdvd_config_entry]
-        - [0x4944, asm, core/gap_004944]  # 220 bytes gap
+        - [0x4944, asm, core/align_004944]  # 220 bytes gap
         - [0x4A20, asm, config/config_set_default_main]
-        - [0x4AD4, asm, core/gap_004AD4]  # 4 bytes gap
+        - [0x4AD4, asm, core/align_004AD4]  # 4 bytes gap
         - [0x4AD8, asm, config/write_osd_config]
-        - [0x4BEC, asm, core/gap_004BEC]  # 4 bytes gap
+        - [0x4BEC, asm, core/align_004BEC]  # 4 bytes gap
         - [0x4BF0, asm, config/config_first]
         - [0x4CF8, asm, config/config_get_spdif_mode]
         - [0x4D08, asm, config/config_set_spdif_mode]
-        - [0x4D2C, asm, core/gap_004D2C]  # 4 bytes gap
+        - [0x4D2C, asm, core/align_004D2C]  # 4 bytes gap
         - [0x4D30, asm, config/config_get_aspect_ratio]
-        - [0x4D4C, asm, core/gap_004D4C]  # 4 bytes gap
+        - [0x4D4C, asm, core/align_004D4C]  # 4 bytes gap
         - [0x4D50, asm, config/config_set_aspect_ratio]
         - [0x4D98, asm, config/config_get_video_output]
-        - [0x4DAC, asm, core/gap_004DAC]  # 4 bytes gap
+        - [0x4DAC, asm, core/align_004DAC]  # 4 bytes gap
         - [0x4DB0, asm, config/config_set_video_output]
-        - [0x4DD4, asm, core/gap_004DD4]  # 4 bytes gap
+        - [0x4DD4, asm, core/align_004DD4]  # 4 bytes gap
         - [0x4DD8, asm, config/config_get_osd_language]
         - [0x4E58, asm, config/config_set_jpn_language]
         - [0x4EE8, asm, config/config_get_timezone_offset]
-        - [0x4EFC, asm, core/gap_004EFC]  # 4 bytes gap
+        - [0x4EFC, asm, core/align_004EFC]  # 4 bytes gap
         - [0x4F00, asm, config/config_set_timezone_offset]
         - [0x4F30, asm, config/config_get_timezone_city]
         - [0x4F60, asm, config/config_set_timezone_city]
-        - [0x4FC4, asm, core/gap_004FC4]  # 4 bytes gap
+        - [0x4FC4, asm, core/align_004FC4]  # 4 bytes gap
         - [0x4FC8, asm, config/config_get_daylight_saving]
-        - [0x4FDC, asm, core/gap_004FDC]  # 4 bytes gap
+        - [0x4FDC, asm, core/align_004FDC]  # 4 bytes gap
         - [0x4FE0, asm, config/config_set_daylight_saving]
         - [0x5008, asm, config/config_get_time_format]
-        - [0x501C, asm, core/gap_00501C]  # 4 bytes gap
+        - [0x501C, asm, core/align_00501C]  # 4 bytes gap
         - [0x5020, asm, config/config_set_time_format]
         - [0x5048, asm, config/config_get_date_format]
         - [0x5060, asm, config/config_set_date_format]
-        - [0x50AC, asm, core/gap_0050AC]  # 4 bytes gap
+        - [0x50AC, asm, core/align_0050AC]  # 4 bytes gap
         - [0x50B0, asm, config/config_set_keyboard_type]
         - [0x50C0, asm, config/config_get_keyboard_type]
-        - [0x50CC, asm, core/gap_0050CC]  # 4 bytes gap
+        - [0x50CC, asm, core/align_0050CC]  # 4 bytes gap
         - [0x50D0, asm, config/config_set_keyboard_repeatw]
         - [0x50E0, asm, config/config_get_keyboard_repeatw]
-        - [0x50EC, asm, core/gap_0050EC]  # 4 bytes gap
+        - [0x50EC, asm, core/align_0050EC]  # 4 bytes gap
         - [0x50F0, asm, config/config_set_keyboard_repeats]
         - [0x5100, asm, config/config_get_keyboard_repeats]
-        - [0x510C, asm, core/gap_00510C]  # 4 bytes gap
+        - [0x510C, asm, core/align_00510C]  # 4 bytes gap
         - [0x5110, asm, config/config_set_mouse_speed]
         - [0x5120, asm, config/config_get_mouse_speed]
-        - [0x512C, asm, core/gap_00512C]  # 4 bytes gap
+        - [0x512C, asm, core/align_00512C]  # 4 bytes gap
         - [0x5130, asm, config/config_set_mouse_dblclk]
         - [0x5140, asm, config/config_get_mouse_dblclk]
-        - [0x514C, asm, core/gap_00514C]  # 4 bytes gap
+        - [0x514C, asm, core/align_00514C]  # 4 bytes gap
         - [0x5150, asm, config/config_set_mouse_lr]
         - [0x5160, asm, config/config_get_mouse_lr]
-        - [0x516C, asm, core/gap_00516C]  # 4 bytes gap
+        - [0x516C, asm, core/align_00516C]  # 4 bytes gap
         - [0x5170, asm, config/config_set_atok_mode]
         - [0x5180, asm, config/config_get_atok_mode]
-        - [0x518C, asm, core/gap_00518C]  # 4 bytes gap
+        - [0x518C, asm, core/align_00518C]  # 4 bytes gap
         - [0x5190, asm, config/config_set_atok_bind]
         - [0x51A0, asm, config/config_get_atok_bind]
-        - [0x51AC, asm, core/gap_0051AC]  # 4 bytes gap
+        - [0x51AC, asm, core/align_0051AC]  # 4 bytes gap
         - [0x51B0, asm, config/config_set_softkb_onoff]
         - [0x51C0, asm, config/config_get_softkb_onoff]
-        - [0x51CC, asm, core/gap_0051CC]  # 4 bytes gap
+        - [0x51CC, asm, core/align_0051CC]  # 4 bytes gap
         - [0x51D0, asm, config/config_set_softkb_qwert]
         - [0x51E0, asm, config/config_get_softkb_qwert]
-        - [0x51EC, asm, core/gap_0051EC]  # 4 bytes gap
+        - [0x51EC, asm, core/align_0051EC]  # 4 bytes gap
         - [0x51F0, asm, config/config_hdd_set_uninit]
-        - [0x522C, asm, core/gap_00522C]  # 4 bytes gap
+        - [0x522C, asm, core/align_00522C]  # 4 bytes gap
         - [0x5230, asm, config/config_get_keyboard_type_with_fallback]
         - [0x5418, asm, config/config_hdd_set_default]
         - [0x5598, asm, config/config_hdd_prepare]
-        - [0x57C4, asm, core/gap_0057C4]  # 4 bytes gap
+        - [0x57C4, asm, core/align_0057C4]  # 4 bytes gap
         - [0x57C8, asm, config/flush_hdd_osd_config]
         - [0x5928, asm, config/config_hdd_write_keys]
-        - [0x5B6C, asm, core/gap_005B6C]  # 4 bytes gap
+        - [0x5B6C, asm, core/align_005B6C]  # 4 bytes gap
         - [0x5B70, asm, config/config_mechacon_prepare]
-        - [0x5BD4, asm, core/gap_005BD4]  # 388 bytes gap
+        - [0x5BD4, asm, core/align_005BD4]  # 388 bytes gap
         - [0x5D58, asm, config/config_get_unused_204D58]
-        - [0x5D6C, asm, core/gap_005D6C]  # 4 bytes gap
+        - [0x5D6C, asm, core/align_005D6C]  # 4 bytes gap
         - [0x5D70, asm, config/config_set_unused_204D70]
-        - [0x5D94, asm, core/gap_005D94]  # 4 bytes gap
+        - [0x5D94, asm, core/align_005D94]  # 4 bytes gap
         - [0x5D98, asm, config/config_get_rc_gameplay]
-        - [0x5DAC, asm, core/gap_005DAC]  # 4 bytes gap
+        - [0x5DAC, asm, core/align_005DAC]  # 4 bytes gap
         - [0x5DB0, asm, config/config_set_rc_gameplay]
         - [0x5DD8, asm, config/config_get_204DD8]
-        - [0x5DEC, asm, core/gap_005DEC]  # 4 bytes gap
+        - [0x5DEC, asm, core/align_005DEC]  # 4 bytes gap
         - [0x5DF0, asm, config/config_set_204DF0]
         - [0x5E18, asm, config/config_get_dvdp_remote_control]
-        - [0x5E2C, asm, core/gap_005E2C]  # 4 bytes gap
+        - [0x5E2C, asm, core/align_005E2C]  # 4 bytes gap
         - [0x5E30, asm, config/config_set_dvdp_remote_control]
         - [0x5E58, asm, config/config_get_dvdp_support_clear_progressive]
-        - [0x5E6C, asm, core/gap_005E6C]  # 4 bytes gap
+        - [0x5E6C, asm, core/align_005E6C]  # 4 bytes gap
         - [0x5E70, asm, config/config_set_dvdp_support_clear_progressive]
         - [0x5E98, asm, core/nullsub_1]
         - [0x5EA0, asm, config/config_hdd_open_write_ini]
         - [0x5F38, asm, config/config_hdd_open_read_ini]
         - [0x5FF8, asm, config/config_hdd_close_ini]
-        - [0x60A4, asm, core/gap_0060A4]  # 3116 bytes gap
+        - [0x60A4, asm, core/align_0060A4]  # 3116 bytes gap
         - [0x6CD0, asm, config/special_character_check]
-        - [0x6D58, asm, core/gap_006D58]  # 2264 bytes gap
+        - [0x6D58, asm, core/align_006D58]  # 2264 bytes gap
         - [0x7630, asm, config/config_hdd_do_get_key]
-        - [0x793C, asm, core/gap_00793C]  # 676 bytes gap
+        - [0x793C, asm, core/align_00793C]  # 676 bytes gap
         - [0x7BE0, asm, config/config_hdd_write_single_key]
-        - [0x7CEC, asm, core/gap_007CEC]  # 276 bytes gap
+        - [0x7CEC, asm, core/align_007CEC]  # 276 bytes gap
         - [0x7E00, asm, core/unused_do_print_hex]
-        - [0x7F90, asm, core/gap_007F90]  # 2240 bytes gap
+        - [0x7F90, asm, core/align_007F90]  # 2240 bytes gap
         - [0x8850, asm, core/GetDefaultIconPath]
         - [0x89D0, asm, history/history_check_exists]
         - [0x8B38, asm, history/check_or_clear_history]
-        - [0x8B80, asm, core/gap_008B80]  # 424 bytes gap
+        - [0x8B80, asm, core/align_008B80]  # 424 bytes gap
         - [0x8D28, asm, history/history_write_mc]
         - [0x9040, asm, history/history_add_entry]
-        - [0x90CC, asm, core/gap_0090CC]  # 4 bytes gap
+        - [0x90CC, asm, core/align_0090CC]  # 4 bytes gap
         - [0x90D0, asm, core/thunk_config_get_osd_language]
-        - [0x90EC, asm, core/gap_0090EC]  # 132 bytes gap
+        - [0x90EC, asm, core/align_0090EC]  # 132 bytes gap
         - [0x9170, asm, config/config_set_langtbl]
-        - [0x91B4, asm, core/gap_0091B4]  # 4 bytes gap
+        - [0x91B4, asm, core/align_0091B4]  # 4 bytes gap
         - [0x91B8, asm, core/get_lang_string_GetOSDString_hkdosd_p2_tgt]
-        - [0x9234, asm, core/gap_009234]  # 4 bytes gap
+        - [0x9234, asm, core/align_009234]  # 4 bytes gap
         - [0x9238, asm, core/handle_get_vidmode]
-        - [0x9314, asm, core/gap_009314]  # 4 bytes gap
+        - [0x9314, asm, core/align_009314]  # 4 bytes gap
         - [0x9318, asm, core/get_vidmode_with_fallback]
         - [0x9340, asm, core/get_curlang]
-        - [0x934C, asm, core/gap_00934C]  # 4 bytes gap
+        - [0x934C, asm, core/align_00934C]  # 4 bytes gap
         - [0x9350, asm, core/is_pal_vmode_p9_tgt]
-        - [0x9374, asm, core/gap_009374]  # 4 bytes gap
+        - [0x9374, asm, core/align_009374]  # 4 bytes gap
         - [0x9378, asm, core/enter_clock_module_208378]
         - [0x9388, asm, core/disable_enter_clock_module_208388]
         - [0x9398, asm, core/enable_enter_clock_module_208398]
-        - [0x93A4, asm, core/gap_0093A4]  # 4 bytes gap
+        - [0x93A4, asm, core/align_0093A4]  # 4 bytes gap
         - [0x93A8, asm, core/is_hdd_boot_ready]
         - [0x93B8, asm, core/get_hddboot_exec_2083B8]
-        - [0x93C4, asm, core/gap_0093C4]  # 4 bytes gap
+        - [0x93C4, asm, core/align_0093C4]  # 4 bytes gap
         - [0x93C8, asm, core/get_hdd_boot_ready_ptr]
-        - [0x93D4, asm, core/gap_0093D4]  # 4 bytes gap
+        - [0x93D4, asm, core/align_0093D4]  # 4 bytes gap
         - [0x93D8, asm, core/get_hddboot_exec_ptr_2083D8]
-        - [0x93E4, asm, core/gap_0093E4]  # 796 bytes gap
+        - [0x93E4, asm, core/align_0093E4]  # 796 bytes gap
         - [0x9700, asm, core/get_boot_path]
-        - [0x9748, asm, core/gap_009748]  # 56 bytes gap
+        - [0x9748, asm, core/align_009748]  # 56 bytes gap
         - [0x9780, asm, core/decryption_forconfigfile]
         - [0x98E8, asm, core/parse_path_conf]
-        - [0x9C9C, asm, core/gap_009C9C]  # 4 bytes gap
+        - [0x9C9C, asm, core/align_009C9C]  # 4 bytes gap
         - [0x9CA0, asm, module/module_update_parse_option_desc_str]
         - [0x9E78, asm, core/get_pathconf_key]
         - [0xA0F0, asm, core/get_module_update_config]
         - [0xA200, asm, module/module_machine_prepare]
-        - [0xA39C, asm, core/gap_00A39C]  # 4 bytes gap
+        - [0xA39C, asm, core/align_00A39C]  # 4 bytes gap
         - [0xA3A0, asm, module/module_machine_getdesc]
-        - [0xA3BC, asm, core/gap_00A3BC]  # 4 bytes gap
+        - [0xA3BC, asm, core/align_00A3BC]  # 4 bytes gap
         - [0xA3C0, asm, module/module_machine_getversion]
-        - [0xA3CC, asm, core/gap_00A3CC]  # 4 bytes gap
+        - [0xA3CC, asm, core/align_00A3CC]  # 4 bytes gap
         - [0xA3D0, asm, module/module_machine_option_str]
-        - [0xA434, asm, core/gap_00A434]  # 4 bytes gap
+        - [0xA434, asm, core/align_00A434]  # 4 bytes gap
         - [0xA438, asm, module/module_machine_setup]
         - [0xA490, asm, module/module_cdplayer_prepare]
         - [0xA600, asm, module/module_cdplayer_getdesc]
-        - [0xA61C, asm, core/gap_00A61C]  # 4 bytes gap
+        - [0xA61C, asm, core/align_00A61C]  # 4 bytes gap
         - [0xA620, asm, module/module_cdplayer_getversion]
-        - [0xA62C, asm, core/gap_00A62C]  # 4 bytes gap
+        - [0xA62C, asm, core/align_00A62C]  # 4 bytes gap
         - [0xA630, asm, module/module_cdplayer_option_str]
-        - [0xA67C, asm, core/gap_00A67C]  # 4 bytes gap
+        - [0xA67C, asm, core/align_00A67C]  # 4 bytes gap
         - [0xA680, asm, module/module_cdplayer_pathrelated]
-        - [0xA78C, asm, core/gap_00A78C]  # 4 bytes gap
+        - [0xA78C, asm, core/align_00A78C]  # 4 bytes gap
         - [0xA790, asm, module/module_cdplayer_setup]
         - [0xA7F0, asm, module/module_ps1drv_prepare]
         - [0xAC10, asm, module/module_ps1drv_getname]
-        - [0xAC2C, asm, core/gap_00AC2C]  # 4 bytes gap
+        - [0xAC2C, asm, core/align_00AC2C]  # 4 bytes gap
         - [0xAC30, asm, module/module_ps1drv_getversion]
-        - [0xAC3C, asm, core/gap_00AC3C]  # 4 bytes gap
+        - [0xAC3C, asm, core/align_00AC3C]  # 4 bytes gap
         - [0xAC40, asm, module/module_ps1drv_option_str]
-        - [0xACCC, asm, core/gap_00ACCC]  # 4 bytes gap
+        - [0xACCC, asm, core/align_00ACCC]  # 4 bytes gap
         - [0xACD0, asm, module/module_ps1drv_pathrelated]
-        - [0xADDC, asm, core/gap_00ADDC]  # 4 bytes gap
+        - [0xADDC, asm, core/align_00ADDC]  # 4 bytes gap
         - [0xADE0, asm, module/module_ps1drv_setup]
         - [0xAE40, asm, module/module_dvdplayer_prepare]
         - [0xB100, asm, module/module_dvdplayer_getdesc]
-        - [0xB11C, asm, core/gap_00B11C]  # 4 bytes gap
+        - [0xB11C, asm, core/align_00B11C]  # 4 bytes gap
         - [0xB120, asm, module/module_dvdplayer_getver]
-        - [0xB1BC, asm, core/gap_00B1BC]  # 4 bytes gap
+        - [0xB1BC, asm, core/align_00B1BC]  # 4 bytes gap
         - [0xB1C0, asm, module/module_dvdplayer_pathrelated]
-        - [0xB314, asm, core/gap_00B314]  # 4 bytes gap
+        - [0xB314, asm, core/align_00B314]  # 4 bytes gap
         - [0xB318, asm, module/module_dvdplayer_getver_memorycard]
         - [0xB5F8, asm, module/module_dvdplayer_unused_20a5f8]
-        - [0xB674, asm, core/gap_00B674]  # 4 bytes gap
+        - [0xB674, asm, core/align_00B674]  # 4 bytes gap
         - [0xB678, asm, module/module_dvdplayer_unused_20A678]
-        - [0xB70C, asm, core/gap_00B70C]  # 4 bytes gap
+        - [0xB70C, asm, core/align_00B70C]  # 4 bytes gap
         - [0xB710, asm, module/module_dvdplayer_option_str]
         - [0xB780, asm, module/module_dvdplayer_setup]
         - [0xB7E0, asm, module/module_smap_prepare]
         - [0xB860, asm, module/module_smap_getdesc]
-        - [0xB87C, asm, core/gap_00B87C]  # 4 bytes gap
+        - [0xB87C, asm, core/align_00B87C]  # 4 bytes gap
         - [0xB880, asm, module/module_smap_getver]
-        - [0xB934, asm, core/gap_00B934]  # 4 bytes gap
+        - [0xB934, asm, core/align_00B934]  # 4 bytes gap
         - [0xB938, asm, module/module_smap_setup]
         - [0xB988, asm, core/handle_version_info]
-        - [0xBAD4, asm, core/gap_00BAD4]  # 196 bytes gap
+        - [0xBAD4, asm, core/align_00BAD4]  # 196 bytes gap
         - [0xBB98, asm, core/do_load_resources]
         - [0xCD28, asm, core/GetResourceData]
         - [0xCD40, asm, core/get_resource_size]
         - [0xCD58, asm, graph/InitDraw]
         - [0xCE38, asm, graph/graph_reset_related3]
-        - [0xCEFC, asm, core/gap_00CEFC]  # 4 bytes gap
+        - [0xCEFC, asm, core/align_00CEFC]  # 4 bytes gap
         - [0xCF00, asm, graph/StartFrame]
         - [0xCFA8, asm, opening/OpeningDoWaitNextFrame]
         - [0xCFD8, asm, graph/graph_swap_frame_thread_proc]
         - [0xD010, asm, graph/SwapBuffers]
-        - [0xD0B4, asm, core/gap_00D0B4]  # 4 bytes gap
+        - [0xD0B4, asm, core/align_00D0B4]  # 4 bytes gap
         - [0xD0B8, asm, config/timezone_related_20C0B8]
-        - [0xD2E8, asm, core/gap_00D2E8]  # 1248 bytes gap
+        - [0xD2E8, asm, core/align_00D2E8]  # 1248 bytes gap
         - [0xD7C8, asm, config/get_timezone_name_index]
-        - [0xD7E4, asm, core/gap_00D7E4]  # 148 bytes gap
+        - [0xD7E4, asm, core/align_00D7E4]  # 148 bytes gap
         - [0xD878, asm, config/get_timezone_info_struct]
-        - [0xD8BC, asm, core/gap_00D8BC]  # 36 bytes gap
+        - [0xD8BC, asm, core/align_00D8BC]  # 36 bytes gap
         - [0xD8E0, asm, config/config_check_timezone_city]
-        - [0xD93C, asm, core/gap_00D93C]  # 4 bytes gap
+        - [0xD93C, asm, core/align_00D93C]  # 4 bytes gap
         - [0xD940, asm, core/get_vblank_count_20C940]
-        - [0xD94C, asm, core/gap_00D94C]  # 4 bytes gap
+        - [0xD94C, asm, core/align_00D94C]  # 4 bytes gap
         - [0xD950, asm, core/vblankHandler]
         - [0xDA68, asm, config/set_osd_config_to_eekernel]
-        - [0xDBDC, asm, core/gap_00DBDC]  # 4 bytes gap
+        - [0xDBDC, asm, core/align_00DBDC]  # 4 bytes gap
         - [0xDBE0, asm, graph/graph_reset_related1]
         - [0xDC50, asm, core/pad_handler_hddboot_check_20CC50]
-        - [0xDD1C, asm, core/gap_00DD1C]  # 4 bytes gap
+        - [0xDD1C, asm, core/align_00DD1C]  # 4 bytes gap
         - [0xDD20, asm, core/pad_sound_handler_thread_proc]
         - [0xE1A0, asm, module/do_load_hosdsys_110]
-        - [0xE224, asm, core/gap_00E224]  # 4 bytes gap
+        - [0xE224, asm, core/align_00E224]  # 4 bytes gap
         - [0xE228, asm, module/init_modules_20D228]
-        - [0xE29C, asm, core/gap_00E29C]  # 4 bytes gap
+        - [0xE29C, asm, core/align_00E29C]  # 4 bytes gap
         - [0xE2A0, asm, module/check_device_name]
         - [0xE310, asm, module/do_exec_stockosd_blob]
         - [0xE398, asm, module/do_load_module]
-        - [0xE464, asm, core/gap_00E464]  # 4 bytes gap
+        - [0xE464, asm, core/align_00E464]  # 4 bytes gap
         - [0xE468, asm, module/do_get_mechacon_version]
         - [0xE4D0, asm, core/main]
         - [0xF338, asm, core/prepare_system_folder_name]
-        - [0xF3D4, asm, core/gap_00F3D4]  # 4 bytes gap
+        - [0xF3D4, asm, core/align_00F3D4]  # 4 bytes gap
         - [0xF3D8, asm, core/get_system_folder_name]
-        - [0xF3E4, asm, core/gap_00F3E4]  # 20 bytes gap
+        - [0xF3E4, asm, core/align_00F3E4]  # 20 bytes gap
         - [0xF3F8, asm, core/get_update_folder_path]
-        - [0xF404, asm, core/gap_00F404]  # 4 bytes gap
+        - [0xF404, asm, core/align_00F404]  # 4 bytes gap
         - [0xF408, asm, core/get_dvdplayer_name]
-        - [0xF414, asm, core/gap_00F414]  # 4 bytes gap
+        - [0xF414, asm, core/align_00F414]  # 4 bytes gap
         - [0xF418, asm, core/romdir_get_offset]
-        - [0xF4AC, asm, core/gap_00F4AC]  # 4 bytes gap
+        - [0xF4AC, asm, core/align_00F4AC]  # 4 bytes gap
         - [0xF4B0, asm, core/romdir_search_entry]
-        - [0xF5BC, asm, core/gap_00F5BC]  # 4 bytes gap
+        - [0xF5BC, asm, core/align_00F5BC]  # 4 bytes gap
         - [0xF5C0, asm, core/unused_20E5C0]
-        - [0xF61C, asm, core/gap_00F61C]  # 4 bytes gap
+        - [0xF61C, asm, core/align_00F61C]  # 4 bytes gap
         - [0xF620, asm, core/do_mc_info]
-        - [0xF66C, asm, core/gap_00F66C]  # 4 bytes gap
+        - [0xF66C, asm, core/align_00F66C]  # 4 bytes gap
         - [0xF670, asm, core/do_mc_open]
-        - [0xF72C, asm, core/gap_00F72C]  # 4 bytes gap
+        - [0xF72C, asm, core/align_00F72C]  # 4 bytes gap
         - [0xF730, asm, core/do_mc_close]
-        - [0xF77C, asm, core/gap_00F77C]  # 4 bytes gap
+        - [0xF77C, asm, core/align_00F77C]  # 4 bytes gap
         - [0xF780, asm, core/do_mc_read]
-        - [0xF7CC, asm, core/gap_00F7CC]  # 4 bytes gap
+        - [0xF7CC, asm, core/align_00F7CC]  # 4 bytes gap
         - [0xF7D0, asm, core/do_mc_fileexists]
         - [0xF808, asm, core/do_mc_readfile]
-        - [0xF8CC, asm, core/gap_00F8CC]  # 4 bytes gap
+        - [0xF8CC, asm, core/align_00F8CC]  # 4 bytes gap
         - [0xF8D0, asm, core/fileops_prepare]
-        - [0xFA34, asm, core/gap_00FA34]  # 4 bytes gap
+        - [0xFA34, asm, core/align_00FA34]  # 4 bytes gap
         - [0xFA38, asm, core/fileops_cleanup]
-        - [0xFA8C, asm, core/gap_00FA8C]  # 4 bytes gap
+        - [0xFA8C, asm, core/align_00FA8C]  # 4 bytes gap
         - [0xFA90, asm, core/fileops_cmd_open]
-        - [0xFB1C, asm, core/gap_00FB1C]  # 4 bytes gap
+        - [0xFB1C, asm, core/align_00FB1C]  # 4 bytes gap
         - [0xFB20, asm, core/fileops_cmd_close]
-        - [0xFB64, asm, core/gap_00FB64]  # 4 bytes gap
+        - [0xFB64, asm, core/align_00FB64]  # 4 bytes gap
         - [0xFB68, asm, core/fileops_cmd_read]
         - [0xFBD0, asm, core/fileops_cmd_write]
         - [0xFC38, asm, core/fileops_cmd_lseek]
         - [0xFCA0, asm, core/fileops_cmd_lseek64]
         - [0xFD08, asm, core/fileops_cmd_chstat]
-        - [0xFE14, asm, core/gap_00FE14]  # 4 bytes gap
+        - [0xFE14, asm, core/align_00FE14]  # 4 bytes gap
         - [0xFE18, asm, core/fileops_cmd_getstat]
         - [0xFE90, asm, core/fileops_cmd_rename]
-        - [0xFFFC, asm, core/gap_00FFFC]  # 4 bytes gap
+        - [0xFFFC, asm, core/align_00FFFC]  # 4 bytes gap
         - [0x10000, asm, core/fileops_cmd_remove]
-        - [0x10064, asm, core/gap_010064]  # 4 bytes gap
+        - [0x10064, asm, core/align_010064]  # 4 bytes gap
         - [0x10068, asm, core/fileops_cmd_readlink]
         - [0x100F0, asm, core/fileops_cmd_symlink]
-        - [0x1025C, asm, core/gap_01025C]  # 4 bytes gap
+        - [0x1025C, asm, core/align_01025C]  # 4 bytes gap
         - [0x10260, asm, core/fileops_cmd_chdir]
-        - [0x102AC, asm, core/gap_0102AC]  # 4 bytes gap
+        - [0x102AC, asm, core/align_0102AC]  # 4 bytes gap
         - [0x102B0, asm, core/fileops_cmd_mkdir]
         - [0x10318, asm, core/fileops_cmd_rmdir]
-        - [0x10364, asm, core/gap_010364]  # 4 bytes gap
+        - [0x10364, asm, core/align_010364]  # 4 bytes gap
         - [0x10368, asm, core/fileops_cmd_dopen]
-        - [0x103CC, asm, core/gap_0103CC]  # 4 bytes gap
+        - [0x103CC, asm, core/align_0103CC]  # 4 bytes gap
         - [0x103D0, asm, core/fileops_cmd_dclose]
-        - [0x10414, asm, core/gap_010414]  # 4 bytes gap
+        - [0x10414, asm, core/align_010414]  # 4 bytes gap
         - [0x10418, asm, core/fileops_cmd_dread]
         - [0x10470, asm, core/fileops_cmd_sync]
         - [0x104D8, asm, core/fileops_cmd_format]
         - [0x105B0, asm, core/fileops_cmd_mount]
         - [0x10698, asm, core/fileops_cmd_umount]
-        - [0x106E4, asm, core/gap_0106E4]  # 4 bytes gap
+        - [0x106E4, asm, core/align_0106E4]  # 4 bytes gap
         - [0x106E8, asm, core/fileops_cmd_devctl]
-        - [0x107BC, asm, core/gap_0107BC]  # 4 bytes gap
+        - [0x107BC, asm, core/align_0107BC]  # 4 bytes gap
         - [0x107C0, asm, core/fileops_cmd_ioctl]
-        - [0x1086C, asm, core/gap_01086C]  # 4 bytes gap
+        - [0x1086C, asm, core/align_01086C]  # 4 bytes gap
         - [0x10870, asm, core/fileops_cmd_ioctl2]
-        - [0x1093C, asm, core/gap_01093C]  # 4 bytes gap
+        - [0x1093C, asm, core/align_01093C]  # 4 bytes gap
         - [0x10940, asm, core/fileops_cmd_read_directory26]
         - [0x109C0, asm, core/fileops_cmd_read_directory26_f000]
-        - [0x10A5C, asm, core/gap_010A5C]  # 4 bytes gap
+        - [0x10A5C, asm, core/align_010A5C]  # 4 bytes gap
         - [0x10A60, asm, core/fileops_cmd_read_directory27]
         - [0x10AC0, asm, core/fileops_cmd_lseek28]
         - [0x10B48, asm, core/fileops_cmd_lseek29]
         - [0x10BD0, asm, core/fileops_unused20FBD0]
-        - [0x10BDC, asm, core/gap_010BDC]  # 4 bytes gap
+        - [0x10BDC, asm, core/align_010BDC]  # 4 bytes gap
         - [0x10BE0, asm, core/fileops_unused20FBE0]
-        - [0x10CC4, asm, core/gap_010CC4]  # 4 bytes gap
+        - [0x10CC4, asm, core/align_010CC4]  # 4 bytes gap
         - [0x10CC8, asm, core/fileops_cmd_umount_all]
-        - [0x10CFC, asm, core/gap_010CFC]  # 4 bytes gap
+        - [0x10CFC, asm, core/align_010CFC]  # 4 bytes gap
         - [0x10D00, asm, core/fileops_unused20FD00]
         - [0x10E18, asm, core/fileops_cmd_close_all]
-        - [0x10E4C, asm, core/gap_010E4C]  # 4 bytes gap
+        - [0x10E4C, asm, core/align_010E4C]  # 4 bytes gap
         - [0x10E50, asm, core/fileops_unused20FE50]
         - [0x10E70, asm, core/fileops_cmd_add_subpartition]
         - [0x10EC0, asm, core/fileops_cmd_del_subpartition]
-        - [0x10EEC, asm, core/gap_010EEC]  # 4 bytes gap
+        - [0x10EEC, asm, core/align_010EEC]  # 4 bytes gap
         - [0x10EF0, asm, core/fileops_cmd_num_subpartition]
-        - [0x10F1C, asm, core/gap_010F1C]  # 4 bytes gap
+        - [0x10F1C, asm, core/align_010F1C]  # 4 bytes gap
         - [0x10F20, asm, core/fileops_cmd_flush_partition]
-        - [0x10F4C, asm, core/gap_010F4C]  # 4 bytes gap
+        - [0x10F4C, asm, core/align_010F4C]  # 4 bytes gap
         - [0x10F50, asm, core/fileops_cmd_max_sector]
-        - [0x10F7C, asm, core/gap_010F7C]  # 4 bytes gap
+        - [0x10F7C, asm, core/align_010F7C]  # 4 bytes gap
         - [0x10F80, asm, core/fileops_cmd_total_sector]
-        - [0x10FAC, asm, core/gap_010FAC]  # 4 bytes gap
+        - [0x10FAC, asm, core/align_010FAC]  # 4 bytes gap
         - [0x10FB0, asm, core/fileops_cmd_idle_hdd]
         - [0x10FE0, asm, core/fileops_cmd_flush_hdd]
-        - [0x1100C, asm, core/gap_01100C]  # 4 bytes gap
+        - [0x1100C, asm, core/align_01100C]  # 4 bytes gap
         - [0x11010, asm, core/fileops_cmd_swap_tmp]
-        - [0x1103C, asm, core/gap_01103C]  # 4 bytes gap
+        - [0x1103C, asm, core/align_01103C]  # 4 bytes gap
         - [0x11040, asm, core/fileops_cmd_dev9_off]
-        - [0x1106C, asm, core/gap_01106C]  # 4 bytes gap
+        - [0x1106C, asm, core/align_01106C]  # 4 bytes gap
         - [0x11070, asm, core/fileops_cmd_status_hdd]
-        - [0x1109C, asm, core/gap_01109C]  # 4 bytes gap
+        - [0x1109C, asm, core/align_01109C]  # 4 bytes gap
         - [0x110A0, asm, core/fileops_cmd_format_ver]
-        - [0x110CC, asm, core/gap_0110CC]  # 4 bytes gap
+        - [0x110CC, asm, core/align_0110CC]  # 4 bytes gap
         - [0x110D0, asm, core/fileops_cmd_smart_stat]
-        - [0x110FC, asm, core/gap_0110FC]  # 4 bytes gap
+        - [0x110FC, asm, core/align_0110FC]  # 4 bytes gap
         - [0x11100, asm, core/fileops_cmd_set_osd_mbr]
-        - [0x11134, asm, core/gap_011134]  # 4 bytes gap
+        - [0x11134, asm, core/align_011134]  # 4 bytes gap
         - [0x11138, asm, core/fileops_cmd_get_sector_error]
-        - [0x11164, asm, core/gap_011164]  # 4 bytes gap
+        - [0x11164, asm, core/align_011164]  # 4 bytes gap
         - [0x11168, asm, core/fileops_cmd_get_error_part_name]
-        - [0x11194, asm, core/gap_011194]  # 4 bytes gap
+        - [0x11194, asm, core/align_011194]  # 4 bytes gap
         - [0x11198, asm, core/fileops_cmd_read_sector]
-        - [0x111C4, asm, core/gap_0111C4]  # 4 bytes gap
+        - [0x111C4, asm, core/align_0111C4]  # 4 bytes gap
         - [0x111C8, asm, core/fileops_cmd_write_sector]
-        - [0x111F4, asm, core/gap_0111F4]  # 4 bytes gap
+        - [0x111F4, asm, core/align_0111F4]  # 4 bytes gap
         - [0x111F8, asm, core/fileops_cmd_sce_identify]
-        - [0x11224, asm, core/gap_011224]  # 4 bytes gap
+        - [0x11224, asm, core/align_011224]  # 4 bytes gap
         - [0x11228, asm, core/fileops_cmd_instsec]
-        - [0x11254, asm, core/gap_011254]  # 4 bytes gap
+        - [0x11254, asm, core/align_011254]  # 4 bytes gap
         - [0x11258, asm, core/fileops_cmd_alloc_pfs]
         - [0x11288, asm, core/fileops_cmd_free_pfs]
         - [0x112B8, asm, core/fileops_cmd_zonesz_pfs]
-        - [0x112E4, asm, core/gap_0112E4]  # 4 bytes gap
+        - [0x112E4, asm, core/align_0112E4]  # 4 bytes gap
         - [0x112E8, asm, core/fileops_cmd_zonefree_pfs]
-        - [0x11314, asm, core/gap_011314]  # 4 bytes gap
+        - [0x11314, asm, core/align_011314]  # 4 bytes gap
         - [0x11318, asm, core/fileops_cmd_closeall_pfs]
-        - [0x11344, asm, core/gap_011344]  # 4 bytes gap
+        - [0x11344, asm, core/align_011344]  # 4 bytes gap
         - [0x11348, asm, core/fileops_cmd_devctl_5032_pfs]
         - [0x11378, asm, core/fileops_cmd_devctl_5033_pfs]
-        - [0x113A8, asm, core/gap_0113A8]  # 136 bytes gap
+        - [0x113A8, asm, core/align_0113A8]  # 136 bytes gap
         - [0x11430, asm, core/fileops_cmd_handle_error]
         - [0x11450, asm, core/fileops_send_cmd]
-        - [0x114BC, asm, core/gap_0114BC]  # 4 bytes gap
+        - [0x114BC, asm, core/align_0114BC]  # 4 bytes gap
         - [0x114C0, asm, core/fileops_cmd_reset]
-        - [0x114E4, asm, core/gap_0114E4]  # 4 bytes gap
+        - [0x114E4, asm, core/align_0114E4]  # 4 bytes gap
         - [0x114E8, asm, core/fileops_handle_cmd_path]
-        - [0x118F8, asm, core/gap_0118F8]  # 368 bytes gap
+        - [0x118F8, asm, core/align_0118F8]  # 368 bytes gap
         - [0x11A68, asm, core/fileops_get_cmd_result]
         - [0x11B38, asm, core/fileops_thread_proc]
-        - [0x12434, asm, core/gap_012434]  # 4 bytes gap
+        - [0x12434, asm, core/align_012434]  # 4 bytes gap
         - [0x12438, asm, core/fileops_remount]
         - [0x12508, asm, core/fileops_get_pfs_attribute_area]
-        - [0x12694, asm, core/gap_012694]  # 52 bytes gap
+        - [0x12694, asm, core/align_012694]  # 52 bytes gap
         - [0x126C8, asm, cdvd/cdvd_handler_prepare]
-        - [0x127FC, asm, core/gap_0127FC]  # 100 bytes gap
+        - [0x127FC, asm, core/align_0127FC]  # 100 bytes gap
         - [0x12860, asm, core/pad_handler_211860]
         - [0x128A8, asm, core/sema_related_2118A8]
-        - [0x128DC, asm, core/gap_0128DC]  # 68 bytes gap
+        - [0x128DC, asm, core/align_0128DC]  # 68 bytes gap
         - [0x12920, asm, cdvd/override_illegal_disc_type]
-        - [0x1293C, asm, core/gap_01293C]  # 236 bytes gap
+        - [0x1293C, asm, core/align_01293C]  # 236 bytes gap
         - [0x12A28, asm, core/poweroff_callback_211A28]
-        - [0x12A54, asm, core/gap_012A54]  # 4 bytes gap
+        - [0x12A54, asm, core/align_012A54]  # 4 bytes gap
         - [0x12A58, asm, cdvd/cdvd_handler_thread_proc]
-        - [0x12D74, asm, core/gap_012D74]  # 4 bytes gap
+        - [0x12D74, asm, core/align_012D74]  # 4 bytes gap
         - [0x12D78, asm, cdvd/cdvd_handler_proc_prechk]
         - [0x12FF8, asm, cdvd/cdvd_cmd_disc_key]
         - [0x13038, asm, cdvd/cdvd_cmd_modifyconfig]
-        - [0x13114, asm, core/gap_013114]  # 4 bytes gap
+        - [0x13114, asm, core/align_013114]  # 4 bytes gap
         - [0x13118, asm, cdvd/cdvd_cmd_aadjustctrl]
-        - [0x13194, asm, core/gap_013194]  # 4 bytes gap
+        - [0x13194, asm, core/align_013194]  # 4 bytes gap
         - [0x13198, asm, cdvd/cdvd_cmd_rcbypassctl]
         - [0x13208, asm, core/callback_queue_prepare]
-        - [0x132C4, asm, core/gap_0132C4]  # 108 bytes gap
+        - [0x132C4, asm, core/align_0132C4]  # 108 bytes gap
         - [0x13330, asm, core/callback_queue_submit]
-        - [0x133BC, asm, core/gap_0133BC]  # 4 bytes gap
+        - [0x133BC, asm, core/align_0133BC]  # 4 bytes gap
         - [0x133C0, asm, core/callback_queue_submit_inner]
-        - [0x13420, asm, core/gap_013420]  # 184 bytes gap
+        - [0x13420, asm, core/align_013420]  # 184 bytes gap
         - [0x134D8, asm, core/callback_queue_thread_proc]
-        - [0x13554, asm, core/gap_013554]  # 4 bytes gap
+        - [0x13554, asm, core/align_013554]  # 4 bytes gap
         - [0x13558, asm, core/do_memcpy128]
-        - [0x1360C, asm, core/gap_01360C]  # 132 bytes gap
+        - [0x1360C, asm, core/align_01360C]  # 132 bytes gap
         - [0x13690, asm, graph/Font_SetLocate]
-        - [0x136B4, asm, core/gap_0136B4]  # 196 bytes gap
+        - [0x136B4, asm, core/align_0136B4]  # 196 bytes gap
         - [0x13778, asm, graph/Font_SetPitch]
         - [0x137A8, asm, graph/Font_SetProp]
-        - [0x137B4, asm, core/gap_0137B4]  # 4 bytes gap
+        - [0x137B4, asm, core/align_0137B4]  # 4 bytes gap
         - [0x137B8, asm, graph/Font_SetRatio]
         - [0x137D0, asm, graph/Font_SetRetHeight]
-        - [0x137DC, asm, core/gap_0137DC]  # 4 bytes gap
+        - [0x137DC, asm, core/align_0137DC]  # 4 bytes gap
         - [0x137E0, asm, graph/Font_SetTvFontRatio]
-        - [0x13804, asm, core/gap_013804]  # 108 bytes gap
+        - [0x13804, asm, core/align_013804]  # 108 bytes gap
         - [0x13870, asm, graph/Font_SetColor]
-        - [0x138C4, asm, core/gap_0138C4]  # 204 bytes gap
+        - [0x138C4, asm, core/align_0138C4]  # 204 bytes gap
         - [0x13990, asm, graph/Font_SetULColor]
-        - [0x139AC, asm, core/gap_0139AC]  # 4 bytes gap
+        - [0x139AC, asm, core/align_0139AC]  # 4 bytes gap
         - [0x139B0, asm, graph/Font_SetBGColor]
-        - [0x139D4, asm, core/gap_0139D4]  # 76 bytes gap
+        - [0x139D4, asm, core/align_0139D4]  # 76 bytes gap
         - [0x13A20, asm, graph/fontFilterPutc]
         - [0x13D78, asm, graph/fontFilter]
-        - [0x142B4, asm, core/gap_0142B4]  # 68 bytes gap
+        - [0x142B4, asm, core/align_0142B4]  # 68 bytes gap
         - [0x142F8, asm, graph/updateScreenMatrix]
-        - [0x1437C, asm, core/gap_01437C]  # 4 bytes gap
+        - [0x1437C, asm, core/align_01437C]  # 4 bytes gap
         - [0x14380, asm, graph/updateTransMatrix]
-        - [0x14414, asm, core/gap_014414]  # 1620 bytes gap
+        - [0x14414, asm, core/align_014414]  # 1620 bytes gap
         - [0x14A68, asm, graph/Font_PutsPacket]
         - [0x14BA8, asm, graph/Font_PutsPackets]
-        - [0x14D34, asm, core/gap_014D34]  # 4 bytes gap
+        - [0x14D34, asm, core/align_014D34]  # 4 bytes gap
         - [0x14D38, asm, graph/calcDrawArea]
-        - [0x14E3C, asm, core/gap_014E3C]  # 4 bytes gap
+        - [0x14E3C, asm, core/align_014E3C]  # 4 bytes gap
         - [0x14E40, asm, graph/j_Font_PutsPackets]
         - [0x14E48, asm, graph/j_Font_PutsPackets_0]
-        - [0x14E50, asm, core/gap_014E50]  # 304 bytes gap
+        - [0x14E50, asm, core/align_014E50]  # 304 bytes gap
         - [0x14F80, asm, graph/j_calcDrawArea]
-        - [0x14F88, asm, core/gap_014F88]  # 672 bytes gap
+        - [0x14F88, asm, core/align_014F88]  # 672 bytes gap
         - [0x15228, asm, graph/Font_Load]
-        - [0x15428, asm, core/gap_015428]  # 96 bytes gap
+        - [0x15428, asm, core/align_015428]  # 96 bytes gap
         - [0x15488, asm, core/nullsub_12]
-        - [0x15490, asm, core/gap_015490]  # 192 bytes gap
+        - [0x15490, asm, core/align_015490]  # 192 bytes gap
         - [0x15550, asm, core/do_format_date]
         - [0x15640, asm, core/do_format_time]
-        - [0x15728, asm, core/gap_015728]  # 1144 bytes gap
+        - [0x15728, asm, core/align_015728]  # 1144 bytes gap
         - [0x15BA0, asm, core/some_sort_of_lut_calc]
-        - [0x15E6C, asm, core/gap_015E6C]  # 172 bytes gap
+        - [0x15E6C, asm, core/align_015E6C]  # 172 bytes gap
         - [0x15F18, asm, sound/sound_thread_prepare]
-        - [0x1601C, asm, core/gap_01601C]  # 180 bytes gap
+        - [0x1601C, asm, core/align_01601C]  # 180 bytes gap
         - [0x160D0, asm, sound/sound_handler_2150D0]
         - [0x16240, asm, sound/prepare_sound_for_cdda]
-        - [0x162D8, asm, core/gap_0162D8]  # 376 bytes gap
+        - [0x162D8, asm, core/align_0162D8]  # 376 bytes gap
         - [0x16450, asm, sound/sound_handler_215450]
-        - [0x16628, asm, core/gap_016628]  # 240 bytes gap
+        - [0x16628, asm, core/align_016628]  # 240 bytes gap
         - [0x16718, asm, sound/sound_handler_215718]
-        - [0x16770, asm, core/gap_016770]  # 160 bytes gap
+        - [0x16770, asm, core/align_016770]  # 160 bytes gap
         - [0x16810, asm, sound/sound_handler_215810]
-        - [0x16BEC, asm, core/gap_016BEC]  # 4 bytes gap
+        - [0x16BEC, asm, core/align_016BEC]  # 4 bytes gap
         - [0x16BF0, asm, cdvd/thunk_sceCdDiskReady]
-        - [0x16C0C, asm, core/gap_016C0C]  # 4 bytes gap
+        - [0x16C0C, asm, core/align_016C0C]  # 4 bytes gap
         - [0x16C10, asm, cdvd/thunk_sceCdGetDiskType]
-        - [0x16C2C, asm, core/gap_016C2C]  # 4 bytes gap
+        - [0x16C2C, asm, core/align_016C2C]  # 4 bytes gap
         - [0x16C30, asm, cdvd/thunk_sceCdGetError]
-        - [0x16C4C, asm, core/gap_016C4C]  # 60 bytes gap
+        - [0x16C4C, asm, core/align_016C4C]  # 60 bytes gap
         - [0x16C88, asm, cdvd/thunk_sceCdInit]
-        - [0x16CA4, asm, core/gap_016CA4]  # 4 bytes gap
+        - [0x16CA4, asm, core/align_016CA4]  # 4 bytes gap
         - [0x16CA8, asm, cdvd/thunk_sceCdIntToPos]
-        - [0x16CEC, asm, core/gap_016CEC]  # 4 bytes gap
+        - [0x16CEC, asm, core/align_016CEC]  # 4 bytes gap
         - [0x16CF0, asm, cdvd/thunk_sceCdPosToInit]
-        - [0x16D20, asm, core/gap_016D20]  # 8 bytes gap
+        - [0x16D20, asm, core/align_016D20]  # 8 bytes gap
         - [0x16D28, asm, cdvd/thunk_sceCdSync]
-        - [0x16D44, asm, core/gap_016D44]  # 20 bytes gap
+        - [0x16D44, asm, core/align_016D44]  # 20 bytes gap
         - [0x16D58, asm, cdvd/thunk_sceCdStandby]
-        - [0x16D74, asm, core/gap_016D74]  # 4 bytes gap
+        - [0x16D74, asm, core/align_016D74]  # 4 bytes gap
         - [0x16D78, asm, cdvd/thunk_sceCdStop]
-        - [0x16D94, asm, core/gap_016D94]  # 4 bytes gap
+        - [0x16D94, asm, core/align_016D94]  # 4 bytes gap
         - [0x16D98, asm, cdvd/thunk_sceCdTrayReq]
-        - [0x16DB4, asm, core/gap_016DB4]  # 4 bytes gap
+        - [0x16DB4, asm, core/align_016DB4]  # 4 bytes gap
         - [0x16DB8, asm, cdvd/thunk_sceCddaStream]
-        - [0x16DF4, asm, core/gap_016DF4]  # 9692 bytes gap
+        - [0x16DF4, asm, core/align_016DF4]  # 9692 bytes gap
         - [0x193D0, asm, sound/sound_thread_proc]
-        - [0x19BA8, asm, core/gap_019BA8]  # 7936 bytes gap
+        - [0x19BA8, asm, core/align_019BA8]  # 7936 bytes gap
         - [0x1BAA8, asm, opening/module_opening_getdesc]
-        - [0x1BAB4, asm, core/gap_01BAB4]  # 4 bytes gap
+        - [0x1BAB4, asm, core/align_01BAB4]  # 4 bytes gap
         - [0x1BAB8, asm, opening/module_opening_getversion]
-        - [0x1BAC4, asm, core/gap_01BAC4]  # 4 bytes gap
+        - [0x1BAC4, asm, core/align_01BAC4]  # 4 bytes gap
         - [0x1BAC8, asm, opening/module_opening_prepare]
-        - [0x1BB34, asm, core/gap_01BB34]  # 4 bytes gap
+        - [0x1BB34, asm, core/align_01BB34]  # 4 bytes gap
         - [0x1BB38, asm, opening/module_opening_setup]
         - [0x1BB88, asm, module/module_dummy_setup]
         - [0x1BBD0, asm, opening/module_opening_thread_proc]
         - [0x1BC50, asm, opening/OpeningInit]
-        - [0x1BCD4, asm, core/gap_01BCD4]  # 4 bytes gap
+        - [0x1BCD4, asm, core/align_01BCD4]  # 4 bytes gap
         - [0x1BCD8, asm, opening/OpeningProcess]
         - [0x1BD58, asm, opening/OpeningDrawEnd]
-        - [0x1BD9C, asm, core/gap_01BD9C]  # 4 bytes gap
+        - [0x1BD9C, asm, core/align_01BD9C]  # 4 bytes gap
         - [0x1BDA0, asm, opening/OpeningDoOpeningIllegal]
-        - [0x1BE2C, asm, core/gap_01BE2C]  # 4 bytes gap
+        - [0x1BE2C, asm, core/align_01BE2C]  # 4 bytes gap
         - [0x1BE30, asm, core/opening_thread_set_vars]
         - [0x1BE78, asm, core/opening_thread_set_vars_2]
         - [0x1BEE0, asm, core/opening_transition_to_clock]
-        - [0x1C090, asm, core/gap_01C090]  # 152 bytes gap
+        - [0x1C090, asm, core/align_01C090]  # 152 bytes gap
         - [0x1C128, asm, opening/OpeningInitRender]
         - [0x1C1A8, asm, graph/gsAllocExtraBuffers]
         - [0x1C208, asm, opening/OpeningInitTextures]
         - [0x1C2F8, asm, opening/InitDMA]
-        - [0x1C35C, asm, core/gap_01C35C]  # 4 bytes gap
+        - [0x1C35C, asm, core/align_01C35C]  # 4 bytes gap
         - [0x1C360, asm, graph/pktSetFlatRect]
-        - [0x1C4C4, asm, core/gap_01C4C4]  # 4 bytes gap
+        - [0x1C4C4, asm, core/align_01C4C4]  # 4 bytes gap
         - [0x1C4C8, asm, graph/pktSetSCISSOR_1]
         - [0x1C528, asm, graph/pktSetCLAMP_1]
-        - [0x1C56C, asm, core/gap_01C56C]  # 4 bytes gap
+        - [0x1C56C, asm, core/align_01C56C]  # 4 bytes gap
         - [0x1C570, asm, opening/InitDoubleBuffer]
         - [0x1C5D8, asm, graph/vif1Pad]
-        - [0x1C674, asm, core/gap_01C674]  # 4 bytes gap
+        - [0x1C674, asm, core/align_01C674]  # 4 bytes gap
         - [0x1C678, asm, graph/vif1Begin]
-        - [0x1C6EC, asm, core/gap_01C6EC]  # 4 bytes gap
+        - [0x1C6EC, asm, core/align_01C6EC]  # 4 bytes gap
         - [0x1C6F0, asm, graph/vif1End]
-        - [0x1C764, asm, core/gap_01C764]  # 4 bytes gap
+        - [0x1C764, asm, core/align_01C764]  # 4 bytes gap
         - [0x1C768, asm, graph/pktSetAD]
-        - [0x1C79C, asm, core/gap_01C79C]  # 4 bytes gap
+        - [0x1C79C, asm, core/align_01C79C]  # 4 bytes gap
         - [0x1C7A0, asm, graph/pktSetTexRect]
         - [0x1C970, asm, graph/pktSetTEST_1]
         - [0x1C9C8, asm, graph/pktSetAlphaBlend]
@@ -634,693 +634,693 @@ segments:
         - [0x1CC40, asm, graph/vif1SetTexRect]
         - [0x1CCB0, asm, graph/vif1SetFlatRect]
         - [0x1CD10, asm, graph/vif1SetFramebuffer]
-        - [0x1CE44, asm, core/gap_01CE44]  # 4 bytes gap
+        - [0x1CE44, asm, core/align_01CE44]  # 4 bytes gap
         - [0x1CE48, asm, graph/sprAlloc]
-        - [0x1CECC, asm, core/gap_01CECC]  # 4 bytes gap
+        - [0x1CECC, asm, core/align_01CECC]  # 4 bytes gap
         - [0x1CED0, asm, graph/sprGetFreeSize]
-        - [0x1CEE4, asm, core/gap_01CEE4]  # 4 bytes gap
+        - [0x1CEE4, asm, core/align_01CEE4]  # 4 bytes gap
         - [0x1CEE8, asm, graph/sprInitAlloc]
-        - [0x1CF2C, asm, core/gap_01CF2C]  # 4 bytes gap
+        - [0x1CF2C, asm, core/align_01CF2C]  # 4 bytes gap
         - [0x1CF30, asm, graph/sprAllocChains]
         - [0x1CFA8, asm, graph/sprGetChainBuffer]
         - [0x1CFD0, asm, graph/sprInitChains]
         - [0x1CFE0, asm, graph/sprSetBasePtr]
         - [0x1CFF0, asm, graph/sprInit]
         - [0x1D010, asm, opening/InitSPR]
-        - [0x1D064, asm, core/gap_01D064]  # 4 bytes gap
+        - [0x1D064, asm, core/align_01D064]  # 4 bytes gap
         - [0x1D068, asm, graph/sprTransformVertex]
-        - [0x1D104, asm, core/gap_01D104]  # 4 bytes gap
+        - [0x1D104, asm, core/align_01D104]  # 4 bytes gap
         - [0x1D108, asm, graph/psmToBppEE]
-        - [0x1D15C, asm, core/gap_01D15C]  # 4 bytes gap
+        - [0x1D15C, asm, core/align_01D15C]  # 4 bytes gap
         - [0x1D160, asm, graph/psmToBppGS]
-        - [0x1D1AC, asm, core/gap_01D1AC]  # 4 bytes gap
+        - [0x1D1AC, asm, core/align_01D1AC]  # 4 bytes gap
         - [0x1D1B0, asm, opening/OpeningUploadImage]
-        - [0x1D35C, asm, core/gap_01D35C]  # 4 bytes gap
+        - [0x1D35C, asm, core/align_01D35C]  # 4 bytes gap
         - [0x1D360, asm, graph/GetTexExponent]
-        - [0x1D3A4, asm, core/gap_01D3A4]  # 4 bytes gap
+        - [0x1D3A4, asm, core/align_01D3A4]  # 4 bytes gap
         - [0x1D3A8, asm, graph/gsAllocBuffer]
         - [0x1D440, asm, opening/OpeningInitTexture]
-        - [0x1DB64, asm, core/gap_01DB64]  # 4 bytes gap
+        - [0x1DB64, asm, core/align_01DB64]  # 4 bytes gap
         - [0x1DB68, asm, graph/vif1SetTextureMIP]
         - [0x1DDA8, asm, graph/vif1SetTexture]
         - [0x1DDB8, asm, graph/gsInitAlloc]
         - [0x1DDF0, asm, graph/vif1SetZTest]
         - [0x1DE38, asm, graph/vif1SetZWrite]
         - [0x1DED8, asm, graph/vif1SetXYOffset]
-        - [0x1DF34, asm, core/gap_01DF34]  # 3924 bytes gap
+        - [0x1DF34, asm, core/align_01DF34]  # 3924 bytes gap
         - [0x1EE88, asm, opening/OpeningDoText]
-        - [0x1EEA4, asm, core/gap_01EEA4]  # 708 bytes gap
+        - [0x1EEA4, asm, core/align_01EEA4]  # 708 bytes gap
         - [0x1F168, asm, opening/OpeningDrawFog]
-        - [0x1F6C4, asm, core/gap_01F6C4]  # 1924 bytes gap
+        - [0x1F6C4, asm, core/align_01F6C4]  # 1924 bytes gap
         - [0x1FE48, asm, opening/OpeningInitAnimation]
-        - [0x1FE98, asm, core/gap_01FE98]  # 104 bytes gap
+        - [0x1FE98, asm, core/align_01FE98]  # 104 bytes gap
         - [0x1FF00, asm, opening/OpeningProcessInner]
-        - [0x205F4, asm, core/gap_0205F4]  # 4 bytes gap
+        - [0x205F4, asm, core/align_0205F4]  # 4 bytes gap
         - [0x205F8, asm, opening/OpeningDrawLights]
-        - [0x20EB8, asm, core/gap_020EB8]  # 2856 bytes gap
+        - [0x20EB8, asm, core/align_020EB8]  # 2856 bytes gap
         - [0x219E0, asm, opening/InitLightsCubes]
         - [0x21CE8, asm, opening/OpeningDrawLightsAndCubes]
-        - [0x21D60, asm, core/gap_021D60]  # 3672 bytes gap
+        - [0x21D60, asm, core/align_021D60]  # 3672 bytes gap
         - [0x22BB8, asm, opening/OpeningInitOpeningScene]
-        - [0x22CAC, asm, core/gap_022CAC]  # 4 bytes gap
+        - [0x22CAC, asm, core/align_022CAC]  # 4 bytes gap
         - [0x22CB0, asm, opening/OpeningDrawOpeningScene]
-        - [0x22D2C, asm, core/gap_022D2C]  # 4 bytes gap
+        - [0x22D2C, asm, core/align_022D2C]  # 4 bytes gap
         - [0x22D30, asm, opening/OpeningInitTowersFog]
         - [0x23180, asm, opening/OpeningDoOpening]
-        - [0x231F0, asm, core/gap_0231F0]  # 3200 bytes gap
+        - [0x231F0, asm, core/align_0231F0]  # 3200 bytes gap
         - [0x23E70, asm, opening/OpeningDoIllegalDisc]
-        - [0x23EE0, asm, core/gap_023EE0]  # 5568 bytes gap
+        - [0x23EE0, asm, core/align_023EE0]  # 5568 bytes gap
         - [0x254A0, asm, opening/OpeningInitIllegalScene]
         - [0x25578, asm, opening/OpeningDrawIllegalScene]
-        - [0x255C0, asm, core/gap_0255C0]  # 4456 bytes gap
+        - [0x255C0, asm, core/align_0255C0]  # 4456 bytes gap
         - [0x26728, asm, opening/module_opening_225728]
-        - [0x2686C, asm, core/gap_02686C]  # 4 bytes gap
+        - [0x2686C, asm, core/align_02686C]  # 4 bytes gap
         - [0x26870, asm, clock/module_clock_getdesc]
-        - [0x2687C, asm, core/gap_02687C]  # 4 bytes gap
+        - [0x2687C, asm, core/align_02687C]  # 4 bytes gap
         - [0x26880, asm, clock/module_clock_getversion]
-        - [0x2688C, asm, core/gap_02688C]  # 4 bytes gap
+        - [0x2688C, asm, core/align_02688C]  # 4 bytes gap
         - [0x26890, asm, clock/module_clock_prepare]
-        - [0x268FC, asm, core/gap_0268FC]  # 4 bytes gap
+        - [0x268FC, asm, core/align_0268FC]  # 4 bytes gap
         - [0x26900, asm, clock/module_clock_setup]
         - [0x26950, asm, clock/clock_stuff1]
-        - [0x269B4, asm, core/gap_0269B4]  # 4 bytes gap
+        - [0x269B4, asm, core/align_0269B4]  # 4 bytes gap
         - [0x269B8, asm, clock/clock_input_check_handler_p6_p7_tgt]
-        - [0x26D2C, asm, core/gap_026D2C]  # 4 bytes gap
+        - [0x26D2C, asm, core/align_026D2C]  # 4 bytes gap
         - [0x26D30, asm, clock/module_clock_thread_proc]
         - [0x26D98, asm, clock/module_clock_225D98]
-        - [0x26DAC, asm, core/gap_026DAC]  # 4 bytes gap
+        - [0x26DAC, asm, core/align_026DAC]  # 4 bytes gap
         - [0x26DB0, asm, clock/module_clock_init_resources]
         - [0x26E80, asm, clock/clock_orb_rendering_func]
-        - [0x26F2C, asm, core/gap_026F2C]  # 12 bytes gap
+        - [0x26F2C, asm, core/align_026F2C]  # 12 bytes gap
         - [0x26F38, asm, clock/module_clock_225F38]
         - [0x27000, asm, clock/module_clock_226000]
-        - [0x27154, asm, core/gap_027154]  # 948 bytes gap
+        - [0x27154, asm, core/align_027154]  # 948 bytes gap
         - [0x27508, asm, graph/DrawIcon]
-        - [0x276B4, asm, core/gap_0276B4]  # 188 bytes gap
+        - [0x276B4, asm, core/align_0276B4]  # 188 bytes gap
         - [0x27770, asm, graph/draw_button_panel_hkdosd_p4_tgt]
-        - [0x27958, asm, core/gap_027958]  # 440 bytes gap
+        - [0x27958, asm, core/align_027958]  # 440 bytes gap
         - [0x27B10, asm, graph/do_load_font]
-        - [0x27B94, asm, core/gap_027B94]  # 4 bytes gap
+        - [0x27B94, asm, core/align_027B94]  # 4 bytes gap
         - [0x27B98, asm, graph/DrawNonSelectableItem]
         - [0x27C00, asm, graph/draw_menu_item]
-        - [0x27CA0, asm, core/gap_027CA0]  # 1032 bytes gap
+        - [0x27CA0, asm, core/align_027CA0]  # 1032 bytes gap
         - [0x280A8, asm, clock/clock_str_related]
-        - [0x2841C, asm, core/gap_02841C]  # 1908 bytes gap
+        - [0x2841C, asm, core/align_02841C]  # 1908 bytes gap
         - [0x28B90, asm, clock/clock_config_change_cb_clock]
-        - [0x28BE4, asm, core/gap_028BE4]  # 124 bytes gap
+        - [0x28BE4, asm, core/align_028BE4]  # 124 bytes gap
         - [0x28C60, asm, core/j_clock_config_get_item_str]
         - [0x28C68, asm, clock/clock_config_change_cb_hddini]
-        - [0x28CA4, asm, core/gap_028CA4]  # 140 bytes gap
+        - [0x28CA4, asm, core/align_028CA4]  # 140 bytes gap
         - [0x28D30, asm, clock/clock_config_change_cb_aspect_ratio]
         - [0x28D70, asm, clock/clock_config_change_cb_spdif_mode]
         - [0x28E00, asm, clock/clock_config_change_cb_video_output]
         - [0x28E40, asm, clock/clock_config_change_cb_rc_gameplay]
         - [0x28EC8, asm, clock/clock_config_change_cb_osd_language]
-        - [0x28F08, asm, core/gap_028F08]  # 1344 bytes gap
+        - [0x28F08, asm, core/align_028F08]  # 1344 bytes gap
         - [0x29448, asm, clock/clock_config_get_initial_value]
         - [0x29470, asm, clock/clock_config_get_item_str]
-        - [0x294F4, asm, core/gap_0294F4]  # 572 bytes gap
+        - [0x294F4, asm, core/align_0294F4]  # 572 bytes gap
         - [0x29730, asm, core/j_config_mark_dirty]
         - [0x29738, asm, core/nullsub_4]
         - [0x29740, asm, core/nullsub_11]
-        - [0x29748, asm, core/gap_029748]  # 2032 bytes gap
+        - [0x29748, asm, core/align_029748]  # 2032 bytes gap
         - [0x29F38, asm, core/j_sound_handler_queue_command]
-        - [0x29F40, asm, core/gap_029F40]  # 2280 bytes gap
+        - [0x29F40, asm, core/align_029F40]  # 2280 bytes gap
         - [0x2A828, asm, clock/module_clock_229828]
-        - [0x2A858, asm, core/gap_02A858]  # 840 bytes gap
+        - [0x2A858, asm, core/align_02A858]  # 840 bytes gap
         - [0x2ABA0, asm, clock/module_clock_config_ps1drv_get_value]
         - [0x2ABF0, asm, clock/clock_config_change_cb_ps1drv]
-        - [0x2AC4C, asm, core/gap_02AC4C]  # 4 bytes gap
+        - [0x2AC4C, asm, core/align_02AC4C]  # 4 bytes gap
         - [0x2AC50, asm, clock/clock_config_change_cb_diagnosis]
-        - [0x2ACD4, asm, core/gap_02ACD4]  # 4 bytes gap
+        - [0x2ACD4, asm, core/align_02ACD4]  # 4 bytes gap
         - [0x2ACD8, asm, clock/clock_config_change_cb_dvdp_reset_progressive]
         - [0x2AD00, asm, core/nullsub_13]
         - [0x2AD08, asm, clock/do_show_version_info]
-        - [0x2B1D4, asm, core/gap_02B1D4]  # 1980 bytes gap
+        - [0x2B1D4, asm, core/align_02B1D4]  # 1980 bytes gap
         - [0x2B990, asm, clock/module_clock_22A990]
-        - [0x2B9C0, asm, core/gap_02B9C0]  # 296 bytes gap
+        - [0x2B9C0, asm, core/align_02B9C0]  # 296 bytes gap
         - [0x2BAE8, asm, core/j_sound_handler_queue_command_0]
-        - [0x2BAF0, asm, core/gap_02BAF0]  # 7728 bytes gap
+        - [0x2BAF0, asm, core/align_02BAF0]  # 7728 bytes gap
         - [0x2D920, asm, core/j_sound_handler_queue_command_1]
-        - [0x2D928, asm, core/gap_02D928]  # 800 bytes gap
+        - [0x2D928, asm, core/align_02D928]  # 800 bytes gap
         - [0x2DC48, asm, core/nullsub_14]
-        - [0x2DC50, asm, core/gap_02DC50]  # 488 bytes gap
+        - [0x2DC50, asm, core/align_02DC50]  # 488 bytes gap
         - [0x2DE38, asm, clock/do_show_timezone_info]
-        - [0x2DF9C, asm, core/gap_02DF9C]  # 4 bytes gap
+        - [0x2DF9C, asm, core/align_02DF9C]  # 4 bytes gap
         - [0x2DFA0, asm, clock/clock_timezone_str_related]
-        - [0x2E3DC, asm, core/gap_02E3DC]  # 4 bytes gap
+        - [0x2E3DC, asm, core/align_02E3DC]  # 4 bytes gap
         - [0x2E3E0, asm, clock/get_summer_time_str]
         - [0x2E480, asm, clock/get_summer_time_str2]
         - [0x2E520, asm, core/j_sound_handler_queue_cmd]
-        - [0x2E528, asm, core/gap_02E528]  # 400 bytes gap
+        - [0x2E528, asm, core/align_02E528]  # 400 bytes gap
         - [0x2E6B8, asm, core/j_sound_handler_queue_cmd_0]
-        - [0x2E6C0, asm, core/gap_02E6C0]  # 1288 bytes gap
+        - [0x2E6C0, asm, core/align_02E6C0]  # 1288 bytes gap
         - [0x2EBC8, asm, clock/oobe_handler]
-        - [0x2F2FC, asm, core/gap_02F2FC]  # 732 bytes gap
+        - [0x2F2FC, asm, core/align_02F2FC]  # 732 bytes gap
         - [0x2F5D8, asm, clock/oobe_load_image]
         - [0x2F8B8, asm, core/j_sound_handler_queue_command_2]
-        - [0x2F8C0, asm, core/gap_02F8C0]  # 2520 bytes gap
+        - [0x2F8C0, asm, core/align_02F8C0]  # 2520 bytes gap
         - [0x30298, asm, clock/module_clock_22F298]
         - [0x302C0, asm, clock/module_clock_22F2C0]
         - [0x302E8, asm, clock/module_clock_22F2E8]
         - [0x30380, asm, clock/module_clock_22F380]
-        - [0x30474, asm, core/gap_030474]  # 4 bytes gap
+        - [0x30474, asm, core/align_030474]  # 4 bytes gap
         - [0x30478, asm, clock/module_clock_22F478]
         - [0x30528, asm, clock/module_clock_22F528]
         - [0x305D0, asm, clock/module_clock_22F5D0]
-        - [0x3075C, asm, core/gap_03075C]  # 4 bytes gap
+        - [0x3075C, asm, core/align_03075C]  # 4 bytes gap
         - [0x30760, asm, clock/module_clock_22F760]
         - [0x30908, asm, clock/module_clock_22F908]
         - [0x30C88, asm, clock/module_clock_22FC88]
-        - [0x30CA4, asm, core/gap_030CA4]  # 4 bytes gap
+        - [0x30CA4, asm, core/align_030CA4]  # 4 bytes gap
         - [0x30CA8, asm, clock/module_clock_22FCA8]
         - [0x30D10, asm, clock/module_clock_22FD10]
-        - [0x30D8C, asm, core/gap_030D8C]  # 4 bytes gap
+        - [0x30D8C, asm, core/align_030D8C]  # 4 bytes gap
         - [0x30D90, asm, clock/module_clock_22FD90]
         - [0x30E98, asm, clock/module_clock_22FE98]
         - [0x30EF0, asm, clock/module_clock_22FEF0]
-        - [0x30EF8, asm, core/gap_030EF8]  # 1624 bytes gap
+        - [0x30EF8, asm, core/align_030EF8]  # 1624 bytes gap
         - [0x31550, asm, clock/module_clock_230550]
-        - [0x315FC, asm, core/gap_0315FC]  # 4 bytes gap
+        - [0x315FC, asm, core/align_0315FC]  # 4 bytes gap
         - [0x31600, asm, clock/module_clock_230600]
         - [0x316B0, asm, clock/module_clock_2306B0]
-        - [0x31860, asm, core/gap_031860]  # 144 bytes gap
+        - [0x31860, asm, core/align_031860]  # 144 bytes gap
         - [0x318F0, asm, clock/module_clock_2308F0]
-        - [0x31BFC, asm, core/gap_031BFC]  # 4 bytes gap
+        - [0x31BFC, asm, core/align_031BFC]  # 4 bytes gap
         - [0x31C00, asm, clock/module_clock_230C00]
-        - [0x31C28, asm, core/gap_031C28]  # 456 bytes gap
+        - [0x31C28, asm, core/align_031C28]  # 456 bytes gap
         - [0x31DF0, asm, clock/module_clock_230DF0]
-        - [0x31E10, asm, core/gap_031E10]  # 176 bytes gap
+        - [0x31E10, asm, core/align_031E10]  # 176 bytes gap
         - [0x31EC0, asm, clock/StartSysConfig]
-        - [0x31F48, asm, core/gap_031F48]  # 1088 bytes gap
+        - [0x31F48, asm, core/align_031F48]  # 1088 bytes gap
         - [0x32388, asm, browser/browser_str_related]
-        - [0x326B8, asm, core/gap_0326B8]  # 1936 bytes gap
+        - [0x326B8, asm, core/align_0326B8]  # 1936 bytes gap
         - [0x32E48, asm, clock/module_clock_231E48]
-        - [0x32E78, asm, core/gap_032E78]  # 760 bytes gap
+        - [0x32E78, asm, core/align_032E78]  # 760 bytes gap
         - [0x33170, asm, graph/draw_clock_menu_items_hkdosd_p4_tgt]
-        - [0x332DC, asm, core/gap_0332DC]  # 4 bytes gap
+        - [0x332DC, asm, core/align_0332DC]  # 4 bytes gap
         - [0x332E0, asm, graph/menupos_p3_p8_tgt]
-        - [0x33404, asm, core/gap_033404]  # 52 bytes gap
+        - [0x33404, asm, core/align_033404]  # 52 bytes gap
         - [0x33438, asm, clock/module_clock_232438]
         - [0x33458, asm, clock/module_clock_232458]
-        - [0x334C4, asm, core/gap_0334C4]  # 724 bytes gap
+        - [0x334C4, asm, core/align_0334C4]  # 724 bytes gap
         - [0x33798, asm, browser/browser_str_related2]
-        - [0x3384C, asm, core/gap_03384C]  # 4 bytes gap
+        - [0x3384C, asm, core/align_03384C]  # 4 bytes gap
         - [0x33850, asm, core/j_sound_handler_queue_command_3]
-        - [0x33858, asm, core/gap_033858]  # 2784 bytes gap
+        - [0x33858, asm, core/align_033858]  # 2784 bytes gap
         - [0x34338, asm, clock/module_clock_233338]
-        - [0x343C0, asm, core/gap_0343C0]  # 232 bytes gap
+        - [0x343C0, asm, core/align_0343C0]  # 232 bytes gap
         - [0x344A8, asm, clock/clock_load_texture]
-        - [0x34560, asm, core/gap_034560]  # 5656 bytes gap
+        - [0x34560, asm, core/align_034560]  # 5656 bytes gap
         - [0x35B78, asm, core/get_clock_should_render_orbs]
-        - [0x35B80, asm, core/gap_035B80]  # 752 bytes gap
+        - [0x35B80, asm, core/align_035B80]  # 752 bytes gap
         - [0x35E70, asm, clock/module_clock_234E70]
-        - [0x35EA8, asm, core/gap_035EA8]  # 144 bytes gap
+        - [0x35EA8, asm, core/align_035EA8]  # 144 bytes gap
         - [0x35F38, asm, clock/module_clock_get_config_item]
-        - [0x35F4C, asm, core/gap_035F4C]  # 60 bytes gap
+        - [0x35F4C, asm, core/align_035F4C]  # 60 bytes gap
         - [0x35F88, asm, config/config_load_clock_osd]
-        - [0x36138, asm, core/gap_036138]  # 56 bytes gap
+        - [0x36138, asm, core/align_036138]  # 56 bytes gap
         - [0x36170, asm, config/config_item_change_cb_clock_write_mechacon]
-        - [0x362BC, asm, core/gap_0362BC]  # 4 bytes gap
+        - [0x362BC, asm, core/align_0362BC]  # 4 bytes gap
         - [0x362C0, asm, config/config_mark_dirty]
-        - [0x362CC, asm, core/gap_0362CC]  # 4 bytes gap
+        - [0x362CC, asm, core/align_0362CC]  # 4 bytes gap
         - [0x362D0, asm, config/config_save_clock_osd]
-        - [0x36434, asm, core/gap_036434]  # 4 bytes gap
+        - [0x36434, asm, core/align_036434]  # 4 bytes gap
         - [0x36438, asm, config/set_ps1drv_config_dirty]
-        - [0x36444, asm, core/gap_036444]  # 164 bytes gap
+        - [0x36444, asm, core/align_036444]  # 164 bytes gap
         - [0x364E8, asm, config/is_config_dirty]
-        - [0x36514, asm, core/gap_036514]  # 228 bytes gap
+        - [0x36514, asm, core/align_036514]  # 228 bytes gap
         - [0x365F8, asm, clock/module_clock_2355F8]
-        - [0x36650, asm, core/gap_036650]  # 112 bytes gap
+        - [0x36650, asm, core/align_036650]  # 112 bytes gap
         - [0x366C0, asm, clock/module_clock_2356C0]
-        - [0x3672C, asm, core/gap_03672C]  # 828 bytes gap
+        - [0x3672C, asm, core/align_03672C]  # 828 bytes gap
         - [0x36A68, asm, clock/module_clock_set_anim_offset]
-        - [0x36B08, asm, core/gap_036B08]  # 1232 bytes gap
+        - [0x36B08, asm, core/align_036B08]  # 1232 bytes gap
         - [0x36FD8, asm, core/pad_handler_235FD8]
-        - [0x36FE0, asm, core/gap_036FE0]  # 4896 bytes gap
+        - [0x36FE0, asm, core/align_036FE0]  # 4896 bytes gap
         - [0x38300, asm, clock/module_clock_237300]
         - [0x38350, asm, clock/module_clock_237350]
-        - [0x3885C, asm, core/gap_03885C]  # 4 bytes gap
+        - [0x3885C, asm, core/align_03885C]  # 4 bytes gap
         - [0x38860, asm, clock/module_clock_237860]
         - [0x38A28, asm, clock/module_clock_237A28]
-        - [0x394C4, asm, core/gap_0394C4]  # 4 bytes gap
+        - [0x394C4, asm, core/align_0394C4]  # 4 bytes gap
         - [0x394C8, asm, clock/module_clock_2384C8]
-        - [0x39D00, asm, core/gap_039D00]  # 192 bytes gap
+        - [0x39D00, asm, core/align_039D00]  # 192 bytes gap
         - [0x39DC0, asm, clock/module_clock_238DC0]
-        - [0x39EA0, asm, core/gap_039EA0]  # 472 bytes gap
+        - [0x39EA0, asm, core/align_039EA0]  # 472 bytes gap
         - [0x3A078, asm, clock/module_clock_239078]
-        - [0x3AE5C, asm, core/gap_03AE5C]  # 60 bytes gap
+        - [0x3AE5C, asm, core/align_03AE5C]  # 60 bytes gap
         - [0x3AE98, asm, clock/module_clock_239E98]
-        - [0x3AF44, asm, core/gap_03AF44]  # 292 bytes gap
+        - [0x3AF44, asm, core/align_03AF44]  # 292 bytes gap
         - [0x3B068, asm, clock/module_clock_23A068]
-        - [0x3B08C, asm, core/gap_03B08C]  # 4 bytes gap
+        - [0x3B08C, asm, core/align_03B08C]  # 4 bytes gap
         - [0x3B090, asm, core/MatrixDrive_PushMatrix]
         - [0x3B110, asm, core/MatrixDrive_PopMatrix]
-        - [0x3B154, asm, core/gap_03B154]  # 28 bytes gap
+        - [0x3B154, asm, core/align_03B154]  # 28 bytes gap
         - [0x3B170, asm, clock/module_clock_23A170]
         - [0x3B238, asm, clock/module_clock_23A238]
         - [0x3B300, asm, clock/module_clock_23A300]
-        - [0x3B3BC, asm, core/gap_03B3BC]  # 4 bytes gap
+        - [0x3B3BC, asm, core/align_03B3BC]  # 4 bytes gap
         - [0x3B3C0, asm, clock/module_clock_23A3C0]
-        - [0x3B414, asm, core/gap_03B414]  # 4 bytes gap
+        - [0x3B414, asm, core/align_03B414]  # 4 bytes gap
         - [0x3B418, asm, clock/module_clock_23A418]
-        - [0x3B44C, asm, core/gap_03B44C]  # 4 bytes gap
+        - [0x3B44C, asm, core/align_03B44C]  # 4 bytes gap
         - [0x3B450, asm, browser/module_browser_23A450]
-        - [0x3B474, asm, core/gap_03B474]  # 1252 bytes gap
+        - [0x3B474, asm, core/align_03B474]  # 1252 bytes gap
         - [0x3B958, asm, browser/module_browser_23A958]
-        - [0x3BA08, asm, core/gap_03BA08]  # 1472 bytes gap
+        - [0x3BA08, asm, core/align_03BA08]  # 1472 bytes gap
         - [0x3BFC8, asm, browser/module_browser_23AFC8]
-        - [0x3C0C0, asm, core/gap_03C0C0]  # 112 bytes gap
+        - [0x3C0C0, asm, core/align_03C0C0]  # 112 bytes gap
         - [0x3C130, asm, browser/module_browser_23B130]
-        - [0x3CDC4, asm, core/gap_03CDC4]  # 276 bytes gap
+        - [0x3CDC4, asm, core/align_03CDC4]  # 276 bytes gap
         - [0x3CED8, asm, browser/module_browser_23BED8]
-        - [0x3CFA8, asm, core/gap_03CFA8]  # 72 bytes gap
+        - [0x3CFA8, asm, core/align_03CFA8]  # 72 bytes gap
         - [0x3CFF0, asm, browser/browser_copyentry_0_open]
         - [0x3D050, asm, browser/browser_copyentry_3_close]
-        - [0x3D088, asm, core/gap_03D088]  # 56 bytes gap
+        - [0x3D088, asm, core/align_03D088]  # 56 bytes gap
         - [0x3D0C0, asm, browser/browser_copyentry_1_read]
         - [0x3D0F8, asm, browser/browser_copyentry_2_write]
         - [0x3D130, asm, browser/browser_copyentry_5_setfileinfo]
-        - [0x3D198, asm, core/gap_03D198]  # 288 bytes gap
+        - [0x3D198, asm, core/align_03D198]  # 288 bytes gap
         - [0x3D2B8, asm, browser/browser_mc_info_23C2B8]
-        - [0x3D36C, asm, core/gap_03D36C]  # 252 bytes gap
+        - [0x3D36C, asm, core/align_03D36C]  # 252 bytes gap
         - [0x3D468, asm, browser/browser_mc_mtap_23C468]
-        - [0x3D504, asm, core/gap_03D504]  # 380 bytes gap
+        - [0x3D504, asm, core/align_03D504]  # 380 bytes gap
         - [0x3D680, asm, browser/browser_general_2_getdir]
-        - [0x3D718, asm, core/gap_03D718]  # 904 bytes gap
+        - [0x3D718, asm, core/align_03D718]  # 904 bytes gap
         - [0x3DAA0, asm, browser/browser_copyentry_switchcase]
-        - [0x3DCD0, asm, core/gap_03DCD0]  # 584 bytes gap
+        - [0x3DCD0, asm, core/align_03DCD0]  # 584 bytes gap
         - [0x3DF18, asm, browser/browser_handle_ps2_icon]
         - [0x3E240, asm, browser/browser_handle_ps1_icon]
-        - [0x3E3F4, asm, core/gap_03E3F4]  # 148 bytes gap
+        - [0x3E3F4, asm, core/align_03E3F4]  # 148 bytes gap
         - [0x3E488, asm, browser/browser_handle_ps2_icon_2]
-        - [0x3E5A4, asm, core/gap_03E5A4]  # 60 bytes gap
+        - [0x3E5A4, asm, core/align_03E5A4]  # 60 bytes gap
         - [0x3E5E0, asm, browser/browser_possibly_searchdir]
-        - [0x3E804, asm, core/gap_03E804]  # 3444 bytes gap
+        - [0x3E804, asm, core/align_03E804]  # 3444 bytes gap
         - [0x3F578, asm, browser/module_browser_23E578]
-        - [0x3F604, asm, core/gap_03F604]  # 4 bytes gap
+        - [0x3F604, asm, core/align_03F604]  # 4 bytes gap
         - [0x3F608, asm, browser/browser_handle_system_data]
-        - [0x3F73C, asm, core/gap_03F73C]  # 44 bytes gap
+        - [0x3F73C, asm, core/align_03F73C]  # 44 bytes gap
         - [0x3F768, asm, browser/browser_handle_icon_sys_binary]
-        - [0x3F978, asm, core/gap_03F978]  # 1208 bytes gap
+        - [0x3F978, asm, core/align_03F978]  # 1208 bytes gap
         - [0x3FE30, asm, browser/browser_handle_icon_sys_text]
-        - [0x40044, asm, core/gap_040044]  # 740 bytes gap
+        - [0x40044, asm, core/align_040044]  # 740 bytes gap
         - [0x40328, asm, browser/browser_handle_ps2file]
-        - [0x404B8, asm, core/gap_0404B8]  # 136 bytes gap
+        - [0x404B8, asm, core/align_0404B8]  # 136 bytes gap
         - [0x40540, asm, browser/browser_icon_sys_related_ps1]
-        - [0x405EC, asm, core/gap_0405EC]  # 596 bytes gap
+        - [0x405EC, asm, core/align_0405EC]  # 596 bytes gap
         - [0x40840, asm, browser/module_browser_23F840]
         - [0x40970, asm, browser/browser_osdpic_icon_related]
-        - [0x40A70, asm, core/gap_040A70]  # 1184 bytes gap
+        - [0x40A70, asm, core/align_040A70]  # 1184 bytes gap
         - [0x40F10, asm, browser/browser_item_entry_menu_handler]
         - [0x41088, asm, browser/browser_device_entry_menu_handler]
-        - [0x411C4, asm, core/gap_0411C4]  # 548 bytes gap
+        - [0x411C4, asm, core/align_0411C4]  # 548 bytes gap
         - [0x413E8, asm, browser/browser_human_readable_size_str]
         - [0x41558, asm, browser/browser_get_item_type_str_index]
-        - [0x415EC, asm, core/gap_0415EC]  # 4 bytes gap
+        - [0x415EC, asm, core/align_0415EC]  # 4 bytes gap
         - [0x415F0, asm, browser/browser_get_item_info]
-        - [0x417F4, asm, core/gap_0417F4]  # 4 bytes gap
+        - [0x417F4, asm, core/align_0417F4]  # 4 bytes gap
         - [0x417F8, asm, browser/browser_get_hdd_item_info]
-        - [0x419A4, asm, core/gap_0419A4]  # 4 bytes gap
+        - [0x419A4, asm, core/align_0419A4]  # 4 bytes gap
         - [0x419A8, asm, browser/browser_get_hdd2_item_info]
-        - [0x41B98, asm, core/gap_041B98]  # 440 bytes gap
+        - [0x41B98, asm, core/align_041B98]  # 440 bytes gap
         - [0x41D50, asm, browser/browser_get_device_info]
-        - [0x41F28, asm, core/gap_041F28]  # 64 bytes gap
+        - [0x41F28, asm, core/align_041F28]  # 64 bytes gap
         - [0x41F68, asm, browser/browser_entry_handler]
-        - [0x42044, asm, core/gap_042044]  # 8844 bytes gap
+        - [0x42044, asm, core/align_042044]  # 8844 bytes gap
         - [0x442D0, asm, browser/browser_confirmation_menu]
-        - [0x443C8, asm, core/gap_0443C8]  # 400 bytes gap
+        - [0x443C8, asm, core/align_0443C8]  # 400 bytes gap
         - [0x44558, asm, browser/browser_device_icon_render]
         - [0x44700, asm, browser/osd_icon_related_243700]
-        - [0x449D8, asm, core/gap_0449D8]  # 248 bytes gap
+        - [0x449D8, asm, core/align_0449D8]  # 248 bytes gap
         - [0x44AD0, asm, browser/osd_icon_related_243AD0]
-        - [0x44C18, asm, core/gap_044C18]  # 16 bytes gap
+        - [0x44C18, asm, core/align_044C18]  # 16 bytes gap
         - [0x44C28, asm, browser/browser_copy_menu]
         - [0x44D58, asm, browser/browser_rename_menu]
         - [0x44DA8, asm, browser/browser_delete_menu]
-        - [0x44E60, asm, core/gap_044E60]  # 1264 bytes gap
+        - [0x44E60, asm, core/align_044E60]  # 1264 bytes gap
         - [0x45350, asm, browser/browser_get_delete_message]
-        - [0x45400, asm, core/gap_045400]  # 112 bytes gap
+        - [0x45400, asm, core/align_045400]  # 112 bytes gap
         - [0x45470, asm, browser/browser_generate_folder_name]
-        - [0x455BC, asm, core/gap_0455BC]  # 660 bytes gap
+        - [0x455BC, asm, core/align_0455BC]  # 660 bytes gap
         - [0x45850, asm, browser/browser_menu_related]
-        - [0x45F20, asm, core/gap_045F20]  # 536 bytes gap
+        - [0x45F20, asm, core/align_045F20]  # 536 bytes gap
         - [0x46138, asm, browser/browser_menu_related_245138]
-        - [0x464C8, asm, core/gap_0464C8]  # 5232 bytes gap
+        - [0x464C8, asm, core/align_0464C8]  # 5232 bytes gap
         - [0x47938, asm, browser/browser_cdplayer_related]
-        - [0x47AF8, asm, core/gap_047AF8]  # 4656 bytes gap
+        - [0x47AF8, asm, core/align_047AF8]  # 4656 bytes gap
         - [0x48D28, asm, browser/browser_cdplayer_related2]
-        - [0x494B4, asm, core/gap_0494B4]  # 4 bytes gap
+        - [0x494B4, asm, core/align_0494B4]  # 4 bytes gap
         - [0x494B8, asm, browser/module_browser_2484B8]
-        - [0x494D8, asm, core/gap_0494D8]  # 1736 bytes gap
+        - [0x494D8, asm, core/align_0494D8]  # 1736 bytes gap
         - [0x49BA0, asm, browser/module_browser_248BA0]
-        - [0x49CE4, asm, core/gap_049CE4]  # 4 bytes gap
+        - [0x49CE4, asm, core/align_049CE4]  # 4 bytes gap
         - [0x49CE8, asm, browser/module_browser_248CE8]
         - [0x49CF0, asm, browser/module_browser_248CF0]
-        - [0x49D48, asm, core/gap_049D48]  # 1632 bytes gap
+        - [0x49D48, asm, core/align_049D48]  # 1632 bytes gap
         - [0x4A3A8, asm, browser/browser_mc_isfirstslot_2493A8]
-        - [0x4A3E0, asm, core/gap_04A3E0]  # 6568 bytes gap
+        - [0x4A3E0, asm, core/align_04A3E0]  # 6568 bytes gap
         - [0x4BD88, asm, browser/browser_icon_handler]
-        - [0x4BFF4, asm, core/gap_04BFF4]  # 4 bytes gap
+        - [0x4BFF4, asm, core/align_04BFF4]  # 4 bytes gap
         - [0x4BFF8, asm, browser/browser_related_24AFF8]
-        - [0x4C364, asm, core/gap_04C364]  # 1500 bytes gap
+        - [0x4C364, asm, core/align_04C364]  # 1500 bytes gap
         - [0x4C940, asm, browser/module_browser_24B940]
-        - [0x4CC20, asm, core/gap_04CC20]  # 1048 bytes gap
+        - [0x4CC20, asm, core/align_04CC20]  # 1048 bytes gap
         - [0x4D038, asm, browser/browser_disc_type_get_fn_24C038]
-        - [0x4D048, asm, core/gap_04D048]  # 3488 bytes gap
+        - [0x4D048, asm, core/align_04D048]  # 3488 bytes gap
         - [0x4DDE8, asm, browser/module_browser_24CDE8]
-        - [0x4DE14, asm, core/gap_04DE14]  # 76 bytes gap
+        - [0x4DE14, asm, core/align_04DE14]  # 76 bytes gap
         - [0x4DE60, asm, browser/module_browser_24CE60]
-        - [0x4DE84, asm, core/gap_04DE84]  # 572 bytes gap
+        - [0x4DE84, asm, core/align_04DE84]  # 572 bytes gap
         - [0x4E0C0, asm, browser/module_browser_24D0C0]
-        - [0x4E0C8, asm, core/gap_04E0C8]  # 4040 bytes gap
+        - [0x4E0C8, asm, core/align_04E0C8]  # 4040 bytes gap
         - [0x4F090, asm, sound/sound_handle_queue_cmd_auto]
-        - [0x4F0CC, asm, core/gap_04F0CC]  # 564 bytes gap
+        - [0x4F0CC, asm, core/align_04F0CC]  # 564 bytes gap
         - [0x4F300, asm, browser/browser_icon_sys_num_one_parse]
-        - [0x4F3F4, asm, core/gap_04F3F4]  # 4 bytes gap
+        - [0x4F3F4, asm, core/align_04F3F4]  # 4 bytes gap
         - [0x4F3F8, asm, browser/browser_icon_sys_int_array_parse]
-        - [0x4F4BC, asm, core/gap_04F4BC]  # 4 bytes gap
+        - [0x4F4BC, asm, core/align_04F4BC]  # 4 bytes gap
         - [0x4F4C0, asm, browser/browser_icon_sys_float_array_parse]
-        - [0x4F58C, asm, core/gap_04F58C]  # 436 bytes gap
+        - [0x4F58C, asm, core/align_04F58C]  # 436 bytes gap
         - [0x4F740, asm, browser/browser_get_texture_bytes]
-        - [0x4F76C, asm, core/gap_04F76C]  # 4 bytes gap
+        - [0x4F76C, asm, core/align_04F76C]  # 4 bytes gap
         - [0x4F770, asm, browser/browser_get_icon_bytes]
-        - [0x4F79C, asm, core/gap_04F79C]  # 4 bytes gap
+        - [0x4F79C, asm, core/align_04F79C]  # 4 bytes gap
         - [0x4F7A0, asm, browser/module_browser_getdesc]
-        - [0x4F7BC, asm, core/gap_04F7BC]  # 4 bytes gap
+        - [0x4F7BC, asm, core/align_04F7BC]  # 4 bytes gap
         - [0x4F7C0, asm, browser/module_browser_getversion]
-        - [0x4F7CC, asm, core/gap_04F7CC]  # 4 bytes gap
+        - [0x4F7CC, asm, core/align_04F7CC]  # 4 bytes gap
         - [0x4F7D0, asm, browser/module_browser_prepare]
-        - [0x4F83C, asm, core/gap_04F83C]  # 4 bytes gap
+        - [0x4F83C, asm, core/align_04F83C]  # 4 bytes gap
         - [0x4F840, asm, browser/module_browser_setup]
         - [0x4F890, asm, browser/module_browser_24E890]
         - [0x4F9A8, asm, browser/browser_init_prepare_resources]
-        - [0x4FA7C, asm, core/gap_04FA7C]  # 4 bytes gap
+        - [0x4FA7C, asm, core/align_04FA7C]  # 4 bytes gap
         - [0x4FA80, asm, browser/module_browser_24EA80]
         - [0x4FB38, asm, browser/module_browser_24EB38]
-        - [0x4FB8C, asm, core/gap_04FB8C]  # 4 bytes gap
+        - [0x4FB8C, asm, core/align_04FB8C]  # 4 bytes gap
         - [0x4FB90, asm, browser/module_browser_24EB90]
-        - [0x4FBEC, asm, core/gap_04FBEC]  # 4 bytes gap
+        - [0x4FBEC, asm, core/align_04FBEC]  # 4 bytes gap
         - [0x4FBF0, asm, browser/browser_transition_to_other_module]
         - [0x4FC50, asm, browser/browser_transition_start_execute_app]
         - [0x4FD20, asm, browser/browser_exit_previous_module]
-        - [0x4FD74, asm, core/gap_04FD74]  # 268 bytes gap
+        - [0x4FD74, asm, core/align_04FD74]  # 268 bytes gap
         - [0x4FE80, asm, browser/module_browser_24EE80]
         - [0x4FFE0, asm, graph/vVif1Finish]
-        - [0x50004, asm, core/gap_050004]  # 4 bytes gap
+        - [0x50004, asm, core/align_050004]  # 4 bytes gap
         - [0x50008, asm, browser/module_browser_thread_proc]
         - [0x50100, asm, browser/module_browser_24F100]
-        - [0x5010C, asm, core/gap_05010C]  # 5404 bytes gap
+        - [0x5010C, asm, core/align_05010C]  # 5404 bytes gap
         - [0x51628, asm, browser/module_browser_250628]
-        - [0x516E8, asm, core/gap_0516E8]  # 1720 bytes gap
+        - [0x516E8, asm, core/align_0516E8]  # 1720 bytes gap
         - [0x51DA0, asm, browser/browser_cdplayer_player]
-        - [0x526EC, asm, core/gap_0526EC]  # 4 bytes gap
+        - [0x526EC, asm, core/align_0526EC]  # 4 bytes gap
         - [0x526F0, asm, browser/browser_device_grid_menu]
         - [0x52A28, asm, browser/browser_disc_menu]
         - [0x52B70, asm, browser/module_browser_options]
-        - [0x52C10, asm, core/gap_052C10]  # 2240 bytes gap
+        - [0x52C10, asm, core/align_052C10]  # 2240 bytes gap
         - [0x534D0, asm, browser/browser_button_guide_render]
-        - [0x537A8, asm, core/gap_0537A8]  # 2200 bytes gap
+        - [0x537A8, asm, core/align_0537A8]  # 2200 bytes gap
         - [0x54040, asm, browser/dvd_player_err_fn_253040]
         - [0x541F8, asm, browser/browser_render_disk_error]
-        - [0x543EC, asm, core/gap_0543EC]  # 900 bytes gap
+        - [0x543EC, asm, core/align_0543EC]  # 900 bytes gap
         - [0x54770, asm, browser/module_browser_253770]
-        - [0x54860, asm, core/gap_054860]  # 328 bytes gap
+        - [0x54860, asm, core/align_054860]  # 328 bytes gap
         - [0x549A8, asm, browser/module_browser_2539A8]
-        - [0x54A04, asm, core/gap_054A04]  # 4 bytes gap
+        - [0x54A04, asm, core/align_054A04]  # 4 bytes gap
         - [0x54A08, asm, core/pad_handler_253A08]
-        - [0x54A14, asm, core/gap_054A14]  # 804 bytes gap
+        - [0x54A14, asm, core/align_054A14]  # 804 bytes gap
         - [0x54D38, asm, browser/browser_get_device_name_string]
-        - [0x54F8C, asm, core/gap_054F8C]  # 20 bytes gap
+        - [0x54F8C, asm, core/align_054F8C]  # 20 bytes gap
         - [0x54FA0, asm, browser/browser_get_device_free_string]
-        - [0x550C0, asm, core/gap_0550C0]  # 4200 bytes gap
+        - [0x550C0, asm, core/align_0550C0]  # 4200 bytes gap
         - [0x56128, asm, browser/module_browser_255128]
-        - [0x5614C, asm, core/gap_05614C]  # 1820 bytes gap
+        - [0x5614C, asm, core/align_05614C]  # 1820 bytes gap
         - [0x56868, asm, browser/browser_format_memcard_menu]
-        - [0x569FC, asm, core/gap_0569FC]  # 4 bytes gap
+        - [0x569FC, asm, core/align_0569FC]  # 4 bytes gap
         - [0x56A00, asm, browser/browser_launch_attempt_msg]
-        - [0x56BE4, asm, core/gap_056BE4]  # 620 bytes gap
+        - [0x56BE4, asm, core/align_056BE4]  # 620 bytes gap
         - [0x56E50, asm, browser/do_generate_hdd_path]
-        - [0x56EF0, asm, core/gap_056EF0]  # 736 bytes gap
+        - [0x56EF0, asm, core/align_056EF0]  # 736 bytes gap
         - [0x571D0, asm, browser/do_check_boot_type]
-        - [0x57264, asm, core/gap_057264]  # 4 bytes gap
+        - [0x57264, asm, core/align_057264]  # 4 bytes gap
         - [0x57268, asm, browser/module_browser_256268]
-        - [0x572F8, asm, core/gap_0572F8]  # 1072 bytes gap
+        - [0x572F8, asm, core/align_0572F8]  # 1072 bytes gap
         - [0x57728, asm, browser/module_browser_256728]
-        - [0x5776C, asm, core/gap_05776C]  # 596 bytes gap
+        - [0x5776C, asm, core/align_05776C]  # 596 bytes gap
         - [0x579C0, asm, browser/module_browser_2569C0]
-        - [0x579D4, asm, core/gap_0579D4]  # 364 bytes gap
+        - [0x579D4, asm, core/align_0579D4]  # 364 bytes gap
         - [0x57B40, asm, browser/module_browser_256B40]
         - [0x57D20, asm, browser/module_browser_256D20]
-        - [0x57DDC, asm, core/gap_057DDC]  # 652 bytes gap
+        - [0x57DDC, asm, core/align_057DDC]  # 652 bytes gap
         - [0x58068, asm, browser/module_browser_257068]
         - [0x58100, asm, browser/module_browser_257100]
-        - [0x58154, asm, core/gap_058154]  # 4 bytes gap
+        - [0x58154, asm, core/align_058154]  # 4 bytes gap
         - [0x58158, asm, browser/module_browser_257158]
-        - [0x581D8, asm, core/gap_0581D8]  # 11736 bytes gap
+        - [0x581D8, asm, core/align_0581D8]  # 11736 bytes gap
         - [0x5AFB0, asm, browser/module_browser_259FB0]
-        - [0x5B070, asm, core/gap_05B070]  # 3448 bytes gap
+        - [0x5B070, asm, core/align_05B070]  # 3448 bytes gap
         - [0x5BDE8, asm, core/generate_mc_path]
         - [0x5BED8, asm, core/generate_mc_path_2]
-        - [0x5BFE4, asm, core/gap_05BFE4]  # 172 bytes gap
+        - [0x5BFE4, asm, core/align_05BFE4]  # 172 bytes gap
         - [0x5C090, asm, core/generate_mc_path_3]
-        - [0x5C108, asm, core/gap_05C108]  # 96 bytes gap
+        - [0x5C108, asm, core/align_05C108]  # 96 bytes gap
         - [0x5C168, asm, browser/browser_do_entry_into_hdd]
         - [0x5C218, asm, browser/do_check_hdd]
-        - [0x5C284, asm, core/gap_05C284]  # 4 bytes gap
+        - [0x5C284, asm, core/align_05C284]  # 4 bytes gap
         - [0x5C288, asm, browser/do_check_hdd_freespace]
-        - [0x5C304, asm, core/gap_05C304]  # 4 bytes gap
+        - [0x5C304, asm, core/align_05C304]  # 4 bytes gap
         - [0x5C308, asm, browser/do_hdd_instsec2]
-        - [0x5C348, asm, core/gap_05C348]  # 72 bytes gap
+        - [0x5C348, asm, core/align_05C348]  # 72 bytes gap
         - [0x5C390, asm, browser/do_hdd_mount_common]
         - [0x5C410, asm, browser/do_hdd_instsec]
-        - [0x5C46C, asm, core/gap_05C46C]  # 4 bytes gap
+        - [0x5C46C, asm, core/align_05C46C]  # 4 bytes gap
         - [0x5C470, asm, browser/do_hdd_checkpfs]
-        - [0x5C518, asm, core/gap_05C518]  # 152 bytes gap
+        - [0x5C518, asm, core/align_05C518]  # 152 bytes gap
         - [0x5C5B0, asm, browser/browser_check_hdd_root]
-        - [0x5C624, asm, core/gap_05C624]  # 308 bytes gap
+        - [0x5C624, asm, core/align_05C624]  # 308 bytes gap
         - [0x5C758, asm, browser/browser_icon_handler2]
-        - [0x5C884, asm, core/gap_05C884]  # 708 bytes gap
+        - [0x5C884, asm, core/align_05C884]  # 708 bytes gap
         - [0x5CB48, asm, core/nullsub_5]
-        - [0x5CB50, asm, core/gap_05CB50]  # 184 bytes gap
+        - [0x5CB50, asm, core/align_05CB50]  # 184 bytes gap
         - [0x5CC08, asm, browser/browser_format_copy_dest_name]
-        - [0x5CD14, asm, core/gap_05CD14]  # 4 bytes gap
+        - [0x5CD14, asm, core/align_05CD14]  # 4 bytes gap
         - [0x5CD18, asm, browser/browser_hdd_error_render]
-        - [0x5D128, asm, core/gap_05D128]  # 624 bytes gap
+        - [0x5D128, asm, core/align_05D128]  # 624 bytes gap
         - [0x5D398, asm, browser/browser_filestuff1_switchcase]
-        - [0x5D52C, asm, core/gap_05D52C]  # 244 bytes gap
+        - [0x5D52C, asm, core/align_05D52C]  # 244 bytes gap
         - [0x5D620, asm, browser/browser_get_icon_name]
-        - [0x5D794, asm, core/gap_05D794]  # 4 bytes gap
+        - [0x5D794, asm, core/align_05D794]  # 4 bytes gap
         - [0x5D798, asm, browser/browser_format_copy_dest_name_case]
-        - [0x5D7DC, asm, core/gap_05D7DC]  # 4 bytes gap
+        - [0x5D7DC, asm, core/align_05D7DC]  # 4 bytes gap
         - [0x5D7E0, asm, browser/browser_copy_handler]
         - [0x5D9B8, asm, browser/browser_filestuff1_3_6_8_10_sync_pfs]
-        - [0x5DA5C, asm, core/gap_05DA5C]  # 4 bytes gap
+        - [0x5DA5C, asm, core/align_05DA5C]  # 4 bytes gap
         - [0x5DA60, asm, browser/browser_read_hdd_pos]
         - [0x5DAA8, asm, browser/browser_hdd_read_partitions]
         - [0x5DAE0, asm, browser/browser_hddpfs_read_dir]
-        - [0x5DB44, asm, core/gap_05DB44]  # 4 bytes gap
+        - [0x5DB44, asm, core/align_05DB44]  # 4 bytes gap
         - [0x5DB48, asm, browser/browser_filestuff1_0]
-        - [0x5DB80, asm, core/gap_05DB80]  # 2936 bytes gap
+        - [0x5DB80, asm, core/align_05DB80]  # 2936 bytes gap
         - [0x5E6F8, asm, browser/browser_filestuff1_1]
-        - [0x5E714, asm, core/gap_05E714]  # 540 bytes gap
+        - [0x5E714, asm, core/align_05E714]  # 540 bytes gap
         - [0x5E930, asm, browser/browser_sync_pfs2]
-        - [0x5E9AC, asm, core/gap_05E9AC]  # 4 bytes gap
+        - [0x5E9AC, asm, core/align_05E9AC]  # 4 bytes gap
         - [0x5E9B0, asm, browser/browser_filestuff1_7]
-        - [0x5EB74, asm, core/gap_05EB74]  # 196 bytes gap
+        - [0x5EB74, asm, core/align_05EB74]  # 196 bytes gap
         - [0x5EC38, asm, browser/browser_filestuff1_9]
-        - [0x5EDF4, asm, core/gap_05EDF4]  # 212 bytes gap
+        - [0x5EDF4, asm, core/align_05EDF4]  # 212 bytes gap
         - [0x5EEC8, asm, browser/browser_filestuff1_11]
-        - [0x5EFFC, asm, core/gap_05EFFC]  # 52 bytes gap
+        - [0x5EFFC, asm, core/align_05EFFC]  # 52 bytes gap
         - [0x5F030, asm, browser/browser_hdd_instsec]
         - [0x5F060, asm, browser/browser_filestuff1_15_hddzonefreesz]
-        - [0x5F180, asm, core/gap_05F180]  # 72 bytes gap
+        - [0x5F180, asm, core/align_05F180]  # 72 bytes gap
         - [0x5F1C8, asm, browser/browser_filestuff1_16_hddzonefree]
         - [0x5F288, asm, browser/do_browser_instsec_3]
-        - [0x5F2B4, asm, core/gap_05F2B4]  # 4 bytes gap
+        - [0x5F2B4, asm, core/align_05F2B4]  # 4 bytes gap
         - [0x5F2B8, asm, browser/browser_filestuff1_17]
         - [0x5F330, asm, browser/browser_hdd_closeall]
         - [0x5F380, asm, browser/browser_filestuff1_13]
-        - [0x5F480, asm, core/gap_05F480]  # 64 bytes gap
+        - [0x5F480, asm, core/align_05F480]  # 64 bytes gap
         - [0x5F4C0, asm, browser/browser_filestuff1_14_hdd_recreate]
-        - [0x5F63C, asm, core/gap_05F63C]  # 164 bytes gap
+        - [0x5F63C, asm, core/align_05F63C]  # 164 bytes gap
         - [0x5F6E0, asm, browser/browser_filestuff1_18]
-        - [0x5F72C, asm, core/gap_05F72C]  # 1476 bytes gap
+        - [0x5F72C, asm, core/align_05F72C]  # 1476 bytes gap
         - [0x5FCF0, asm, browser/browser_filestuff1_19]
-        - [0x5FD3C, asm, core/gap_05FD3C]  # 2860 bytes gap
+        - [0x5FD3C, asm, core/align_05FD3C]  # 2860 bytes gap
         - [0x60868, asm, browser/browser_filestuff1_20]
-        - [0x609F8, asm, core/gap_0609F8]  # 48 bytes gap
+        - [0x609F8, asm, core/align_0609F8]  # 48 bytes gap
         - [0x60A28, asm, browser/browser_hdd_sendtask]
-        - [0x60BD4, asm, core/gap_060BD4]  # 4 bytes gap
+        - [0x60BD4, asm, core/align_060BD4]  # 4 bytes gap
         - [0x60BD8, asm, browser/browser_hdd_sendtask2]
-        - [0x60E78, asm, core/gap_060E78]  # 2024 bytes gap
+        - [0x60E78, asm, core/align_060E78]  # 2024 bytes gap
         - [0x61660, asm, browser/browser_hdd_genpath]
-        - [0x616D8, asm, core/gap_0616D8]  # 3280 bytes gap
+        - [0x616D8, asm, core/align_0616D8]  # 3280 bytes gap
         - [0x623A8, asm, browser/browser_cdplayer_related4]
-        - [0x6299C, asm, core/gap_06299C]  # 4 bytes gap
+        - [0x6299C, asm, core/align_06299C]  # 4 bytes gap
         - [0x629A0, asm, browser/browser_cdplayer_related5]
-        - [0x62F6C, asm, core/gap_062F6C]  # 4 bytes gap
+        - [0x62F6C, asm, core/align_062F6C]  # 4 bytes gap
         - [0x62F70, asm, browser/browser_cdplayer_related6]
-        - [0x6319C, asm, core/gap_06319C]  # 4 bytes gap
+        - [0x6319C, asm, core/align_06319C]  # 4 bytes gap
         - [0x631A0, asm, browser/browser_cdplayer_playoptions]
-        - [0x63260, asm, core/gap_063260]  # 1472 bytes gap
+        - [0x63260, asm, core/align_063260]  # 1472 bytes gap
         - [0x63820, asm, browser/browser_cdplayer_related3]
         - [0x63E58, asm, core/nullsub_10]
         - [0x63E60, asm, browser/browser_cdplayer_related7]
         - [0x64060, asm, browser/module_browser_263060]
         - [0x64068, asm, core/j_j_sceUsbKbEnd]
-        - [0x64070, asm, core/gap_064070]  # 2160 bytes gap
+        - [0x64070, asm, core/align_064070]  # 2160 bytes gap
         - [0x648E0, asm, core/nullsub_15]
-        - [0x648E8, asm, core/gap_0648E8]  # 2840 bytes gap
+        - [0x648E8, asm, core/align_0648E8]  # 2840 bytes gap
         - [0x65400, asm, core/nullsub_9]
-        - [0x65408, asm, core/gap_065408]  # 1240 bytes gap
+        - [0x65408, asm, core/align_065408]  # 1240 bytes gap
         - [0x658E0, asm, core/nullsub_6]
-        - [0x658E8, asm, core/gap_0658E8]  # 472 bytes gap
+        - [0x658E8, asm, core/align_0658E8]  # 472 bytes gap
         - [0x65AC0, asm, browser/interruptFromKey]
-        - [0x65B98, asm, core/gap_065B98]  # 192 bytes gap
+        - [0x65B98, asm, core/align_065B98]  # 192 bytes gap
         - [0x65C58, asm, browser/prepare_skb_resources]
-        - [0x65E80, asm, core/gap_065E80]  # 608 bytes gap
+        - [0x65E80, asm, core/align_065E80]  # 608 bytes gap
         - [0x660E0, asm, browser/Fep_SetInputMode]
-        - [0x66254, asm, core/gap_066254]  # 916 bytes gap
+        - [0x66254, asm, core/align_066254]  # 916 bytes gap
         - [0x665E8, asm, browser/check_atok_erx_exists]
         - [0x66650, asm, browser/Fep_IsAtokEnabled]
-        - [0x6665C, asm, core/gap_06665C]  # 4 bytes gap
+        - [0x6665C, asm, core/align_06665C]  # 4 bytes gap
         - [0x66660, asm, graph/load_tim2_texture_resource]
-        - [0x66694, asm, core/gap_066694]  # 4 bytes gap
+        - [0x66694, asm, core/align_066694]  # 4 bytes gap
         - [0x66698, asm, graph/do_load_tim2_texture]
-        - [0x66798, asm, core/gap_066798]  # 1256 bytes gap
+        - [0x66798, asm, core/align_066798]  # 1256 bytes gap
         - [0x66C80, asm, graph/Tim2_DrawSprite]
-        - [0x67118, asm, core/gap_067118]  # 1880 bytes gap
+        - [0x67118, asm, core/align_067118]  # 1880 bytes gap
         - [0x67870, asm, core/nullsub_7]
         - [0x67878, asm, graph/Tim2CheckFileHeaer]
-        - [0x6794C, asm, core/gap_06794C]  # 4 bytes gap
+        - [0x6794C, asm, core/align_06794C]  # 4 bytes gap
         - [0x67950, asm, graph/Tim2GetPictureHeader]
-        - [0x679BC, asm, core/gap_0679BC]  # 4 bytes gap
+        - [0x679BC, asm, core/align_0679BC]  # 4 bytes gap
         - [0x679C0, asm, graph/Tim2IsClut2]
-        - [0x679CC, asm, core/gap_0679CC]  # 4 bytes gap
+        - [0x679CC, asm, core/align_0679CC]  # 4 bytes gap
         - [0x679D0, asm, graph/Tim2GetMipMapPictureSize]
         - [0x67A58, asm, graph/Tim2GetMipMapHeader]
         - [0x67A90, asm, graph/Tim2GetUserSpace]
-        - [0x67AEC, asm, core/gap_067AEC]  # 4 bytes gap
+        - [0x67AEC, asm, core/align_067AEC]  # 4 bytes gap
         - [0x67AF0, asm, graph/Tim2GetUserData]
         - [0x67B48, asm, graph/Tim2GetComment]
-        - [0x67B9C, asm, core/gap_067B9C]  # 4 bytes gap
+        - [0x67B9C, asm, core/align_067B9C]  # 4 bytes gap
         - [0x67BA0, asm, graph/Tim2GetImage]
         - [0x67C00, asm, graph/Tim2GetClut]
-        - [0x67C24, asm, core/gap_067C24]  # 4 bytes gap
+        - [0x67C24, asm, core/align_067C24]  # 4 bytes gap
         - [0x67C28, asm, graph/Tim2GetClutColor]
         - [0x67E18, asm, graph/Tim2SetClutColor]
         - [0x68080, asm, graph/Tim2GetTexel]
         - [0x68208, asm, graph/Tim2SetTexel]
         - [0x683F8, asm, graph/Tim2GetTextureColor]
-        - [0x68504, asm, core/gap_068504]  # 4 bytes gap
+        - [0x68504, asm, core/align_068504]  # 4 bytes gap
         - [0x68508, asm, graph/Tim2LoadPicture]
-        - [0x68554, asm, core/gap_068554]  # 4 bytes gap
+        - [0x68554, asm, core/align_068554]  # 4 bytes gap
         - [0x68558, asm, graph/Tim2LoadImage]
         - [0x688A0, asm, graph/Tim2LoadClut]
-        - [0x68BE4, asm, core/gap_068BE4]  # 4 bytes gap
+        - [0x68BE4, asm, core/align_068BE4]  # 4 bytes gap
         - [0x68BE8, asm, graph/Tim2TakeSnapshot]
         - [0x68FF8, asm, graph/Tim2LoadTexture]
-        - [0x69164, asm, core/gap_069164]  # 4 bytes gap
+        - [0x69164, asm, core/align_069164]  # 4 bytes gap
         - [0x69168, asm, graph/Tim2CalcBufWidth]
-        - [0x691D4, asm, core/gap_0691D4]  # 4 bytes gap
+        - [0x691D4, asm, core/align_0691D4]  # 4 bytes gap
         - [0x691D8, asm, graph/Tim2CalcBufSize]
-        - [0x691F4, asm, core/gap_0691F4]  # 4 bytes gap
+        - [0x691F4, asm, core/align_0691F4]  # 4 bytes gap
         - [0x691F8, asm, graph/Tim2GetLog2]
-        - [0x69234, asm, core/gap_069234]  # 4 bytes gap
+        - [0x69234, asm, core/align_069234]  # 4 bytes gap
         - [0x69238, asm, core/nullsub_16]
         - [0x69240, asm, core/nullsub_17]
         - [0x69248, asm, core/nullsub_18]
-        - [0x69250, asm, core/gap_069250]  # 8488 bytes gap
+        - [0x69250, asm, core/align_069250]  # 8488 bytes gap
         - [0x6B378, asm, graph/Font_SetBGColorArray]
-        - [0x6B420, asm, core/gap_06B420]  # 5816 bytes gap
+        - [0x6B420, asm, core/align_06B420]  # 5816 bytes gap
         - [0x6CAD8, asm, browser/Fep_Init]
-        - [0x6CCEC, asm, core/gap_06CCEC]  # 4 bytes gap
+        - [0x6CCEC, asm, core/align_06CCEC]  # 4 bytes gap
         - [0x6CCF0, asm, browser/Fep_Exit]
-        - [0x6CD70, asm, core/gap_06CD70]  # 464 bytes gap
+        - [0x6CD70, asm, core/align_06CD70]  # 464 bytes gap
         - [0x6CF40, asm, browser/getContext]
-        - [0x6D168, asm, core/gap_06D168]  # 104 bytes gap
+        - [0x6D168, asm, core/align_06D168]  # 104 bytes gap
         - [0x6D1D0, asm, browser/Fep_SetData2Fifo]
         - [0x6D2E8, asm, browser/edit_input_thread_proc]
-        - [0x6D464, asm, core/gap_06D464]  # 4 bytes gap
+        - [0x6D464, asm, core/align_06D464]  # 4 bytes gap
         - [0x6D468, asm, browser/Fep_Cmd]
-        - [0x6DF8C, asm, core/gap_06DF8C]  # 4 bytes gap
+        - [0x6DF8C, asm, core/align_06DF8C]  # 4 bytes gap
         - [0x6DF90, asm, browser/FepSetConfig]
-        - [0x6E08C, asm, core/gap_06E08C]  # 2428 bytes gap
+        - [0x6E08C, asm, core/align_06E08C]  # 2428 bytes gap
         - [0x6EA08, asm, browser/ascii2UCS4]
-        - [0x6EA74, asm, core/gap_06EA74]  # 4 bytes gap
+        - [0x6EA74, asm, core/align_06EA74]  # 4 bytes gap
         - [0x6EA78, asm, browser/FepTreatSkb]
-        - [0x6EBC0, asm, core/gap_06EBC0]  # 400 bytes gap
+        - [0x6EBC0, asm, core/align_06EBC0]  # 400 bytes gap
         - [0x6ED50, asm, browser/FepTreatKeyDirectSkb]
-        - [0x6F15C, asm, core/gap_06F15C]  # 4 bytes gap
+        - [0x6F15C, asm, core/align_06F15C]  # 4 bytes gap
         - [0x6F160, asm, browser/FepTreatSkbAtok]
-        - [0x6F490, asm, core/gap_06F490]  # 3144 bytes gap
+        - [0x6F490, asm, core/align_06F490]  # 3144 bytes gap
         - [0x700D8, asm, core/nullsub_19]
-        - [0x700E0, asm, core/gap_0700E0]  # 3960 bytes gap
+        - [0x700E0, asm, core/align_0700E0]  # 3960 bytes gap
         - [0x71058, asm, core/nullsub_8]
-        - [0x71060, asm, core/gap_071060]  # 2376 bytes gap
+        - [0x71060, asm, core/align_071060]  # 2376 bytes gap
         - [0x719A8, asm, core/nullsub_20]
-        - [0x719B0, asm, core/gap_0719B0]  # 680 bytes gap
+        - [0x719B0, asm, core/align_0719B0]  # 680 bytes gap
         - [0x71C58, asm, browser/module_browser_270C58]
         - [0x71CC8, asm, core/j_sceUsbKbEnd]
-        - [0x71CD0, asm, core/gap_071CD0]  # 1416 bytes gap
+        - [0x71CD0, asm, core/align_071CD0]  # 1416 bytes gap
         - [0x72258, asm, browser/do_makesema]
         - [0x722B0, asm, browser/FifoDelete]
-        - [0x722B8, asm, core/gap_0722B8]  # 584 bytes gap
+        - [0x722B8, asm, core/align_0722B8]  # 584 bytes gap
         - [0x72500, asm, browser/FifoSendData]
-        - [0x725F8, asm, core/gap_0725F8]  # 272 bytes gap
+        - [0x725F8, asm, core/align_0725F8]  # 272 bytes gap
         - [0x72708, asm, core/nullsub_21]
-        - [0x72710, asm, core/gap_072710]  # 2408 bytes gap
+        - [0x72710, asm, core/align_072710]  # 2408 bytes gap
         - [0x73078, asm, core/nullsub_22]
-        - [0x73080, asm, core/gap_073080]  # 14152 bytes gap
+        - [0x73080, asm, core/align_073080]  # 14152 bytes gap
         - [0x767C8, asm, browser/sendKeyAtok]
-        - [0x76944, asm, core/gap_076944]  # 428 bytes gap
+        - [0x76944, asm, core/align_076944]  # 428 bytes gap
         - [0x76AF0, asm, browser/CharHanToZen]
         - [0x76B60, asm, browser/CharZenToHan]
-        - [0x76C84, asm, core/gap_076C84]  # 4 bytes gap
+        - [0x76C84, asm, core/align_076C84]  # 4 bytes gap
         - [0x76C88, asm, browser/StrHanToZen]
-        - [0x76CFC, asm, core/gap_076CFC]  # 4 bytes gap
+        - [0x76CFC, asm, core/align_076CFC]  # 4 bytes gap
         - [0x76D00, asm, browser/StrZenToHan]
-        - [0x76D6C, asm, core/gap_076D6C]  # 5132 bytes gap
+        - [0x76D6C, asm, core/align_076D6C]  # 5132 bytes gap
         - [0x78178, asm, browser/sceAtok_INITFIXME1]
         - [0x78238, asm, browser/sceAtok_INITFIXME2]
-        - [0x7826C, asm, core/gap_07826C]  # 4 bytes gap
+        - [0x7826C, asm, core/align_07826C]  # 4 bytes gap
         - [0x78270, asm, browser/sceAtok_INITFIXME3]
-        - [0x782DC, asm, core/gap_0782DC]  # 4 bytes gap
+        - [0x782DC, asm, core/align_0782DC]  # 4 bytes gap
         - [0x782E0, asm, browser/sceAtok_INITFIXME4]
         - [0x78388, asm, browser/sceAtok_INITFIXME5]
-        - [0x7846C, asm, core/gap_07846C]  # 4 bytes gap
+        - [0x7846C, asm, core/align_07846C]  # 4 bytes gap
         - [0x78470, asm, browser/sceAtok_INITFIXME6]
         - [0x784F0, asm, browser/sceAtok_STUBFIXME1]
         - [0x784F8, asm, browser/sceAtokInit]
         - [0x787A0, asm, browser/sceAtokExit]
         - [0x78810, asm, browser/sceAtokGetConfig]
-        - [0x78C0C, asm, core/gap_078C0C]  # 4 bytes gap
+        - [0x78C0C, asm, core/align_078C0C]  # 4 bytes gap
         - [0x78C10, asm, browser/sceAtokSetConfig]
-        - [0x78FAC, asm, core/gap_078FAC]  # 4 bytes gap
+        - [0x78FAC, asm, core/align_078FAC]  # 4 bytes gap
         - [0x78FB0, asm, browser/sceAtokCmd]
         - [0x78FF0, asm, browser/sceAtokEditConv]
-        - [0x7907C, asm, core/gap_07907C]  # 4 bytes gap
+        - [0x7907C, asm, core/align_07907C]  # 4 bytes gap
         - [0x79080, asm, browser/sceAtokKanjiOn]
-        - [0x790A4, asm, core/gap_0790A4]  # 4 bytes gap
+        - [0x790A4, asm, core/align_0790A4]  # 4 bytes gap
         - [0x790A8, asm, browser/sceAtokKanjiOff]
-        - [0x790CC, asm, core/gap_0790CC]  # 4 bytes gap
+        - [0x790CC, asm, core/align_0790CC]  # 4 bytes gap
         - [0x790D0, asm, browser/sceAtokUndoClear]
-        - [0x790F4, asm, core/gap_0790F4]  # 4 bytes gap
+        - [0x790F4, asm, core/align_0790F4]  # 4 bytes gap
         - [0x790F8, asm, browser/sceAtokReset]
-        - [0x7911C, asm, core/gap_07911C]  # 4 bytes gap
+        - [0x7911C, asm, core/align_07911C]  # 4 bytes gap
         - [0x79120, asm, browser/sceAtokConvAll]
         - [0x79190, asm, browser/sceAtokLearningLoad]
-        - [0x791B4, asm, core/gap_0791B4]  # 4 bytes gap
+        - [0x791B4, asm, core/align_0791B4]  # 4 bytes gap
         - [0x791B8, asm, browser/sceAtokLearningSave]
-        - [0x791DC, asm, core/gap_0791DC]  # 4 bytes gap
+        - [0x791DC, asm, core/align_0791DC]  # 4 bytes gap
         - [0x791E0, asm, browser/sceAtokDicInfo]
         - [0x792C8, asm, browser/sceAtokDefDicNo]
-        - [0x792EC, asm, core/gap_0792EC]  # 4 bytes gap
+        - [0x792EC, asm, core/align_0792EC]  # 4 bytes gap
         - [0x792F0, asm, browser/sceAtokDicDelWord]
-        - [0x793B4, asm, core/gap_0793B4]  # 4 bytes gap
+        - [0x793B4, asm, core/align_0793B4]  # 4 bytes gap
         - [0x793B8, asm, browser/sceAtokDicRegWord]
-        - [0x7944C, asm, core/gap_07944C]  # 4 bytes gap
+        - [0x7944C, asm, core/align_07944C]  # 4 bytes gap
         - [0x79450, asm, browser/sceAtokGetKanjiState]
         - [0x79458, asm, browser/sceAtokGetInputState]
         - [0x79460, asm, browser/sceAtokGetErrorInfo]
@@ -1331,15 +1331,15 @@ segments:
         - [0x79488, asm, browser/sceAtokGetCurrentCandidateIndex]
         - [0x79490, asm, browser/sceAtok_278490]
         - [0x79498, asm, browser/sceAtokFlushConverted]
-        - [0x794A4, asm, core/gap_0794A4]  # 4 bytes gap
+        - [0x794A4, asm, core/align_0794A4]  # 4 bytes gap
         - [0x794A8, asm, browser/sceAtokGetConvertedStr]
-        - [0x7950C, asm, core/gap_07950C]  # 4 bytes gap
+        - [0x7950C, asm, core/align_07950C]  # 4 bytes gap
         - [0x79510, asm, browser/sceAtokGetConvertedReadStr]
-        - [0x79574, asm, core/gap_079574]  # 4 bytes gap
+        - [0x79574, asm, core/align_079574]  # 4 bytes gap
         - [0x79578, asm, browser/sceAtokGetConvertingStr]
-        - [0x795DC, asm, core/gap_0795DC]  # 4 bytes gap
+        - [0x795DC, asm, core/align_0795DC]  # 4 bytes gap
         - [0x795E0, asm, browser/sceAtokGetConvertingReadStr]
-        - [0x79644, asm, core/gap_079644]  # 4 bytes gap
+        - [0x79644, asm, core/align_079644]  # 4 bytes gap
         - [0x79648, asm, browser/sceAtokGetConvertingClause]
         - [0x796E8, asm, browser/sceAtok_2786E8]
         - [0x79760, asm, browser/sceAtokGetCandidateList]
@@ -1347,167 +1347,167 @@ segments:
         - [0x797E8, asm, browser/sceAtok_FIXME13]
         - [0x797F8, asm, browser/sceAtok_FIXME12]
         - [0x79808, asm, browser/sceAtok_FIXME11]
-        - [0x7981C, asm, core/gap_07981C]  # 4 bytes gap
+        - [0x7981C, asm, core/align_07981C]  # 4 bytes gap
         - [0x79820, asm, browser/sceAtok_FIXME10]
-        - [0x7982C, asm, core/gap_07982C]  # 4 bytes gap
+        - [0x7982C, asm, core/align_07982C]  # 4 bytes gap
         - [0x79830, asm, browser/sceAtok_FIXME9]
-        - [0x79844, asm, core/gap_079844]  # 4 bytes gap
+        - [0x79844, asm, core/align_079844]  # 4 bytes gap
         - [0x79848, asm, browser/sceAtok_FIXME8]
-        - [0x79854, asm, core/gap_079854]  # 4 bytes gap
+        - [0x79854, asm, core/align_079854]  # 4 bytes gap
         - [0x79858, asm, browser/sceAtok_FIXME7]
         - [0x79898, asm, browser/sceAtok_FIXME6]
-        - [0x79CEC, asm, core/gap_079CEC]  # 4 bytes gap
+        - [0x79CEC, asm, core/align_079CEC]  # 4 bytes gap
         - [0x79CF0, asm, browser/sceAtok_FIXME5]
         - [0x79F20, asm, browser/sceAtok_FIXME4]
-        - [0x7A2B4, asm, core/gap_07A2B4]  # 4 bytes gap
+        - [0x7A2B4, asm, core/align_07A2B4]  # 4 bytes gap
         - [0x7A2B8, asm, browser/sceAtokLoadErx]
-        - [0x7A3FC, asm, core/gap_07A3FC]  # 4 bytes gap
+        - [0x7A3FC, asm, core/align_07A3FC]  # 4 bytes gap
         - [0x7A400, asm, browser/sceAtok_FIXME2]
-        - [0x7A4FC, asm, core/gap_07A4FC]  # 4 bytes gap
+        - [0x7A4FC, asm, core/align_07A4FC]  # 4 bytes gap
         - [0x7A500, asm, browser/sceAtok_FIXME1]
         - [0x7A5B0, asm, browser/sceAtok_FIXME3]
         - [0x7A630, asm, core/sceUsbKbInit]
-        - [0x7A814, asm, core/gap_07A814]  # 4 bytes gap
+        - [0x7A814, asm, core/align_07A814]  # 4 bytes gap
         - [0x7A818, asm, core/sceUsbKbEnd]
-        - [0x7A884, asm, core/gap_07A884]  # 4 bytes gap
+        - [0x7A884, asm, core/align_07A884]  # 4 bytes gap
         - [0x7A888, asm, core/sceUsbKbGetInfo]
-        - [0x7A924, asm, core/gap_07A924]  # 4 bytes gap
+        - [0x7A924, asm, core/align_07A924]  # 4 bytes gap
         - [0x7A928, asm, core/sceUsbKbRead]
         - [0x7A9F8, asm, core/sceUsbKbGetLocation]
         - [0x7AAC8, asm, core/sceUsbKbSetLEDStatus]
-        - [0x7AB94, asm, core/gap_07AB94]  # 4 bytes gap
+        - [0x7AB94, asm, core/align_07AB94]  # 4 bytes gap
         - [0x7AB98, asm, core/sceUsbKbSetLEDMode]
-        - [0x7AC84, asm, core/gap_07AC84]  # 4 bytes gap
+        - [0x7AC84, asm, core/align_07AC84]  # 4 bytes gap
         - [0x7AC88, asm, core/sceUsbKbSetRepeat]
-        - [0x7ACCC, asm, core/gap_07ACCC]  # 4 bytes gap
+        - [0x7ACCC, asm, core/align_07ACCC]  # 4 bytes gap
         - [0x7ACD0, asm, core/sceUsbKbSetCodeType]
-        - [0x7AD1C, asm, core/gap_07AD1C]  # 4 bytes gap
+        - [0x7AD1C, asm, core/align_07AD1C]  # 4 bytes gap
         - [0x7AD20, asm, core/sceUsbKbSetArrangement]
-        - [0x7AD6C, asm, core/gap_07AD6C]  # 4 bytes gap
+        - [0x7AD6C, asm, core/align_07AD6C]  # 4 bytes gap
         - [0x7AD70, asm, core/sceUsbKbSync]
         - [0x7AE00, asm, core/rpccall_end]
-        - [0x7AE0C, asm, core/gap_07AE0C]  # 4 bytes gap
+        - [0x7AE0C, asm, core/align_07AE0C]  # 4 bytes gap
         - [0x7AE10, asm, core/SetResult]
-        - [0x7AE74, asm, core/gap_07AE74]  # 4 bytes gap
+        - [0x7AE74, asm, core/align_07AE74]  # 4 bytes gap
         - [0x7AE78, asm, core/SetResult_GetInfo]
         - [0x7AED0, asm, core/SetResult_Read]
-        - [0x7B444, asm, core/gap_07B444]  # 4 bytes gap
+        - [0x7B444, asm, core/align_07B444]  # 4 bytes gap
         - [0x7B448, asm, core/SetResult_GetLocation]
-        - [0x7B494, asm, core/gap_07B494]  # 4 bytes gap
+        - [0x7B494, asm, core/align_07B494]  # 4 bytes gap
         - [0x7B498, asm, core/SetResult_SetLEDStatus]
         - [0x7B4B8, asm, core/SetResult_SetLEDMode]
         - [0x7B4D8, asm, core/vblank_e_handler]
-        - [0x7B55C, asm, core/gap_07B55C]  # 4 bytes gap
+        - [0x7B55C, asm, core/align_07B55C]  # 4 bytes gap
         - [0x7B560, asm, core/clear_repbuf]
         - [0x7B590, asm, core/push_repbuf]
-        - [0x7B5FC, asm, core/gap_07B5FC]  # 4 bytes gap
+        - [0x7B5FC, asm, core/align_07B5FC]  # 4 bytes gap
         - [0x7B600, asm, core/pop_repbuf]
         - [0x7B668, asm, core/cnv_keycode]
         - [0x7B7B8, asm, core/sceUsbKbCnvRawCode]
         - [0x7B900, asm, core/cnv_keypad]
         - [0x7B970, asm, core/sceUsbKbSetReadMode]
-        - [0x7B9DC, asm, core/gap_07B9DC]  # 4 bytes gap
+        - [0x7B9DC, asm, core/align_07B9DC]  # 4 bytes gap
         - [0x7B9E0, asm, core/sceUsbKbClearRbuf]
-        - [0x7BABC, asm, core/gap_07BABC]  # 4 bytes gap
+        - [0x7BABC, asm, core/align_07BABC]  # 4 bytes gap
         - [0x7BAC0, asm, core/sceUsbKbCnvRawCode_FIXME1]
-        - [0x7BD04, asm, core/gap_07BD04]  # 4 bytes gap
+        - [0x7BD04, asm, core/align_07BD04]  # 4 bytes gap
         - [0x7BD08, asm, core/sceUsbKb_27AD08]
-        - [0x7BD9C, asm, core/gap_07BD9C]  # 4 bytes gap
+        - [0x7BD9C, asm, core/align_07BD9C]  # 4 bytes gap
         - [0x7BDA0, asm, core/sceUsbKb_27ADA0]
-        - [0x7BE14, asm, core/gap_07BE14]  # 4 bytes gap
+        - [0x7BE14, asm, core/align_07BE14]  # 4 bytes gap
         - [0x7BE18, asm, core/sceVu0ApplyMatrix]
-        - [0x7BE44, asm, core/gap_07BE44]  # 4 bytes gap
+        - [0x7BE44, asm, core/align_07BE44]  # 4 bytes gap
         - [0x7BE48, asm, core/sceVu0MulMatrix]
-        - [0x7BE8C, asm, core/gap_07BE8C]  # 4 bytes gap
+        - [0x7BE8C, asm, core/align_07BE8C]  # 4 bytes gap
         - [0x7BE90, asm, core/sceVu0OuterProduct]
-        - [0x7BEAC, asm, core/gap_07BEAC]  # 4 bytes gap
+        - [0x7BEAC, asm, core/align_07BEAC]  # 4 bytes gap
         - [0x7BEB0, asm, core/sceVu0InnerProduct]
-        - [0x7BED4, asm, core/gap_07BED4]  # 4 bytes gap
+        - [0x7BED4, asm, core/align_07BED4]  # 4 bytes gap
         - [0x7BED8, asm, core/sceVu0Normalize]
-        - [0x7BF14, asm, core/gap_07BF14]  # 4 bytes gap
+        - [0x7BF14, asm, core/align_07BF14]  # 4 bytes gap
         - [0x7BF18, asm, core/sceVu0TransposeMatrix]
-        - [0x7BF5C, asm, core/gap_07BF5C]  # 4 bytes gap
+        - [0x7BF5C, asm, core/align_07BF5C]  # 4 bytes gap
         - [0x7BF60, asm, core/sceVu0InversMatrix]
-        - [0x7BFCC, asm, core/gap_07BFCC]  # 4 bytes gap
+        - [0x7BFCC, asm, core/align_07BFCC]  # 4 bytes gap
         - [0x7BFD0, asm, core/sceVu0DivVector]
         - [0x7BFF0, asm, core/sceVu0DivVectorXYZ]
         - [0x7C010, asm, core/sceVu0InterVector]
         - [0x7C038, asm, core/sceVu0AddVector]
-        - [0x7C04C, asm, core/gap_07C04C]  # 4 bytes gap
+        - [0x7C04C, asm, core/align_07C04C]  # 4 bytes gap
         - [0x7C050, asm, core/sceVu0SubVector]
-        - [0x7C064, asm, core/gap_07C064]  # 4 bytes gap
+        - [0x7C064, asm, core/align_07C064]  # 4 bytes gap
         - [0x7C068, asm, core/sceVu0MulVector]
-        - [0x7C07C, asm, core/gap_07C07C]  # 4 bytes gap
+        - [0x7C07C, asm, core/align_07C07C]  # 4 bytes gap
         - [0x7C080, asm, core/sceVu0ScaleVector]
         - [0x7C098, asm, core/sceVu0TransMatrix]
-        - [0x7C0C4, asm, core/gap_07C0C4]  # 4 bytes gap
+        - [0x7C0C4, asm, core/align_07C0C4]  # 4 bytes gap
         - [0x7C0C8, asm, core/sceVu0CopyVector]
-        - [0x7C0D4, asm, core/gap_07C0D4]  # 4 bytes gap
+        - [0x7C0D4, asm, core/align_07C0D4]  # 4 bytes gap
         - [0x7C0D8, asm, core/sceVu0CopyMatrix]
-        - [0x7C0FC, asm, core/gap_07C0FC]  # 4 bytes gap
+        - [0x7C0FC, asm, core/align_07C0FC]  # 4 bytes gap
         - [0x7C100, asm, core/sceVu0FTOI4Vector]
         - [0x7C110, asm, core/sceVu0FTOI0Vector]
         - [0x7C120, asm, core/sceVu0ITOF4Vector]
         - [0x7C130, asm, core/sceVu0ITOF0Vector]
         - [0x7C140, asm, core/sceVu0UnitMatrix]
         - [0x7C168, asm, core/_sceVu0ecossin]
-        - [0x7C1DC, asm, core/gap_07C1DC]  # 4 bytes gap
+        - [0x7C1DC, asm, core/align_07C1DC]  # 4 bytes gap
         - [0x7C1E0, asm, core/sceVu0RotMatrixZ]
-        - [0x7C284, asm, core/gap_07C284]  # 4 bytes gap
+        - [0x7C284, asm, core/align_07C284]  # 4 bytes gap
         - [0x7C288, asm, core/sceVu0RotMatrixX]
         - [0x7C330, asm, core/sceVu0RotMatrixY]
         - [0x7C3D8, asm, core/sceVu0RotMatrix]
         - [0x7C428, asm, core/sceVu0ClampVector]
-        - [0x7C44C, asm, core/gap_07C44C]  # 4 bytes gap
+        - [0x7C44C, asm, core/align_07C44C]  # 4 bytes gap
         - [0x7C450, asm, core/sceVu0CameraMatrix]
         - [0x7C500, asm, core/sceVu0NormalLightMatrix]
         - [0x7C5C0, asm, core/sceVu0LightColorMatrix]
         - [0x7C628, asm, core/sceVu0ViewScreenMatrix]
-        - [0x7C72C, asm, core/gap_07C72C]  # 4 bytes gap
+        - [0x7C72C, asm, core/align_07C72C]  # 4 bytes gap
         - [0x7C730, asm, core/sceVu0DropShadowMatrix]
         - [0x7C8C0, asm, core/sceVu0RotTransPersN]
         - [0x7C918, asm, core/sceVu0RotTransPers]
-        - [0x7C95C, asm, core/gap_07C95C]  # 4 bytes gap
+        - [0x7C95C, asm, core/align_07C95C]  # 4 bytes gap
         - [0x7C960, asm, core/sceVu0CopyVectorXYZ]
-        - [0x7C97C, asm, core/gap_07C97C]  # 4 bytes gap
+        - [0x7C97C, asm, core/align_07C97C]  # 4 bytes gap
         - [0x7C980, asm, core/sceVu0InterVectorXYZ]
-        - [0x7C9AC, asm, core/gap_07C9AC]  # 4 bytes gap
+        - [0x7C9AC, asm, core/align_07C9AC]  # 4 bytes gap
         - [0x7C9B0, asm, core/sceVu0ScaleVectorXYZ]
         - [0x7C9C8, asm, core/sceVu0ClipScreen]
         - [0x7CA10, asm, core/sceVu0ClipScreen3]
         - [0x7CA70, asm, core/sceVu0ClipAll]
-        - [0x7CAFC, asm, core/gap_07CAFC]  # 4 bytes gap
+        - [0x7CAFC, asm, core/align_07CAFC]  # 4 bytes gap
         - [0x7CB00, asm, core/sceVpu0Reset]
-        - [0x7CB5C, asm, core/gap_07CB5C]  # 4 bytes gap
+        - [0x7CB5C, asm, core/align_07CB5C]  # 4 bytes gap
         - [0x7CB60, asm, core/memclr]
-        - [0x7CB94, asm, core/gap_07CB94]  # 4 bytes gap
+        - [0x7CB94, asm, core/align_07CB94]  # 4 bytes gap
         - [0x7CB98, asm, core/sceDmaGetChan]
         - [0x7CBC0, asm, core/sceDmaReset]
-        - [0x7CC9C, asm, core/gap_07CC9C]  # 4 bytes gap
+        - [0x7CC9C, asm, core/align_07CC9C]  # 4 bytes gap
         - [0x7CCA0, asm, core/sceDmaDebug]
         - [0x7CCB0, asm, core/sceDmaPutEnv]
         - [0x7CE88, asm, core/sceDmaGetEnv]
         - [0x7CEC0, asm, core/sceDmaPutStallAddr]
         - [0x7CEE8, asm, core/sceDmaSend]
         - [0x7CFC0, asm, core/sceDmaSendN]
-        - [0x7D0A4, asm, core/gap_07D0A4]  # 4 bytes gap
+        - [0x7D0A4, asm, core/align_07D0A4]  # 4 bytes gap
         - [0x7D0A8, asm, core/sceDmaSendI]
-        - [0x7D18C, asm, core/gap_07D18C]  # 4 bytes gap
+        - [0x7D18C, asm, core/align_07D18C]  # 4 bytes gap
         - [0x7D190, asm, core/sceDmaRecv]
-        - [0x7D254, asm, core/gap_07D254]  # 4 bytes gap
+        - [0x7D254, asm, core/align_07D254]  # 4 bytes gap
         - [0x7D258, asm, core/sceDmaRecvN]
-        - [0x7D344, asm, core/gap_07D344]  # 4 bytes gap
+        - [0x7D344, asm, core/align_07D344]  # 4 bytes gap
         - [0x7D348, asm, core/sceDmaRecvI]
         - [0x7D438, asm, core/sceDmaSync]
-        - [0x7D4FC, asm, core/gap_07D4FC]  # 4 bytes gap
+        - [0x7D4FC, asm, core/align_07D4FC]  # 4 bytes gap
         - [0x7D500, asm, core/sceDmaWatch]
         - [0x7D5D0, asm, core/sceDmaPause]
         - [0x7D618, asm, core/sceDmaRestart]
-        - [0x7D62C, asm, core/gap_07D62C]  # 4 bytes gap
+        - [0x7D62C, asm, core/align_07D62C]  # 4 bytes gap
         - [0x7D630, asm, core/sceDevVu0CheckBusy]
-        - [0x7D644, asm, core/gap_07D644]  # 4 bytes gap
+        - [0x7D644, asm, core/align_07D644]  # 4 bytes gap
         - [0x7D648, asm, core/sceDevVu0Reset]
-        - [0x7D65C, asm, core/gap_07D65C]  # 4 bytes gap
+        - [0x7D65C, asm, core/align_07D65C]  # 4 bytes gap
         - [0x7D660, asm, core/sceDevVu0Pause]
         - [0x7D6C0, asm, core/sceDevVu0Continue]
         - [0x7D710, asm, core/sceDevVu0PutDBit]
@@ -1517,17 +1517,17 @@ segments:
         - [0x7D790, asm, core/sceDevVu0Sync]
         - [0x7D7D0, asm, core/sceDevVu0Exec]
         - [0x7D7E0, asm, core/sceDevVu0GetTpc]
-        - [0x7D7EC, asm, core/gap_07D7EC]  # 4 bytes gap
+        - [0x7D7EC, asm, core/align_07D7EC]  # 4 bytes gap
         - [0x7D7F0, asm, core/sceDevVu0GetCnd]
         - [0x7D8D0, asm, core/sceDevVu0PutCnd]
-        - [0x7DA3C, asm, core/gap_07DA3C]  # 4 bytes gap
+        - [0x7DA3C, asm, core/align_07DA3C]  # 4 bytes gap
         - [0x7DA40, asm, core/sceVuCheckBusy]
-        - [0x7DA6C, asm, core/gap_07DA6C]  # 4 bytes gap
+        - [0x7DA6C, asm, core/align_07DA6C]  # 4 bytes gap
         - [0x7DA70, asm, core/sceVu0MemWriteQ]
         - [0x7DAB0, asm, core/sceVu0MemReadQ]
-        - [0x7DAF4, asm, core/gap_07DAF4]  # 4 bytes gap
+        - [0x7DAF4, asm, core/align_07DAF4]  # 4 bytes gap
         - [0x7DAF8, asm, core/sceDevVu1Reset]
-        - [0x7DB0C, asm, core/gap_07DB0C]  # 4 bytes gap
+        - [0x7DB0C, asm, core/align_07DB0C]  # 4 bytes gap
         - [0x7DB10, asm, core/sceDevVu1Pause]
         - [0x7DB70, asm, core/sceDevVu1Continue]
         - [0x7DBC0, asm, core/sceDevVu1PutDBit]
@@ -1537,46 +1537,46 @@ segments:
         - [0x7DC40, asm, core/sceDevVu1Sync]
         - [0x7DC88, asm, core/sceDevVu1Exec]
         - [0x7DC98, asm, core/sceDevVu1GetTpc]
-        - [0x7DCBC, asm, core/gap_07DCBC]  # 4 bytes gap
+        - [0x7DCBC, asm, core/align_07DCBC]  # 4 bytes gap
         - [0x7DCC0, asm, core/sceDevVu1GetCnd]
-        - [0x7DE4C, asm, core/gap_07DE4C]  # 4 bytes gap
+        - [0x7DE4C, asm, core/align_07DE4C]  # 4 bytes gap
         - [0x7DE50, asm, core/sceDevVu1PutCnd]
         - [0x7DF98, asm, core/sceDevGifReset]
-        - [0x7DFAC, asm, core/gap_07DFAC]  # 4 bytes gap
+        - [0x7DFAC, asm, core/align_07DFAC]  # 4 bytes gap
         - [0x7DFB0, asm, core/sceDevGifPause]
         - [0x7DFC8, asm, core/sceDevGifContinue]
         - [0x7E000, asm, core/sceDevGifPutImtMode]
-        - [0x7E064, asm, core/gap_07E064]  # 4 bytes gap
+        - [0x7E064, asm, core/align_07E064]  # 4 bytes gap
         - [0x7E068, asm, core/sceDevGifGetImtMode]
         - [0x7E080, asm, core/sceDevGifPutP3msk]
         - [0x7E0E8, asm, core/sceDevGifGetP3msk]
         - [0x7E108, asm, core/sceDevGifSync]
-        - [0x7E134, asm, core/gap_07E134]  # 4 bytes gap
+        - [0x7E134, asm, core/align_07E134]  # 4 bytes gap
         - [0x7E138, asm, core/sceDevGifGetCnd]
         - [0x7E1F0, asm, core/sceDevGifPutFifo]
-        - [0x7E24C, asm, core/gap_07E24C]  # 4 bytes gap
+        - [0x7E24C, asm, core/align_07E24C]  # 4 bytes gap
         - [0x7E250, asm, core/sceDevVif0Reset]
-        - [0x7E274, asm, core/gap_07E274]  # 4 bytes gap
+        - [0x7E274, asm, core/align_07E274]  # 4 bytes gap
         - [0x7E278, asm, core/sceDevVif0Pause]
         - [0x7E2E0, asm, core/sceDevVif0Continue]
-        - [0x7E31C, asm, core/gap_07E31C]  # 4 bytes gap
+        - [0x7E31C, asm, core/align_07E31C]  # 4 bytes gap
         - [0x7E320, asm, core/sceDevVif0PutErr]
         - [0x7E340, asm, core/sceDevVif0GetErr]
         - [0x7E350, asm, core/sceDevVif0Sync]
         - [0x7E3A0, asm, core/sceDevVif0GetCnd]
         - [0x7E520, asm, core/sceDevVif0PutFifo]
-        - [0x7E57C, asm, core/gap_07E57C]  # 4 bytes gap
+        - [0x7E57C, asm, core/align_07E57C]  # 4 bytes gap
         - [0x7E580, asm, core/sceDevVif1Reset]
-        - [0x7E5A4, asm, core/gap_07E5A4]  # 4 bytes gap
+        - [0x7E5A4, asm, core/align_07E5A4]  # 4 bytes gap
         - [0x7E5A8, asm, core/sceDevVif1Pause]
         - [0x7E610, asm, core/sceDevVif1Continue]
-        - [0x7E64C, asm, core/gap_07E64C]  # 4 bytes gap
+        - [0x7E64C, asm, core/align_07E64C]  # 4 bytes gap
         - [0x7E650, asm, core/sceDevVif1PutErr]
         - [0x7E670, asm, core/sceDevVif1GetErr]
         - [0x7E680, asm, core/sceDevVif1Sync]
         - [0x7E6D0, asm, core/sceDevVif1GetCnd]
         - [0x7E8A8, asm, core/sceDevVif1PutFifo]
-        - [0x7E904, asm, core/gap_07E904]  # 4 bytes gap
+        - [0x7E904, asm, core/align_07E904]  # 4 bytes gap
         - [0x7E908, asm, core/sceDevVif1GetFifo]
         - [0x7E968, asm, core/sceDmaPkInit]
         - [0x7E978, asm, core/sceDmaPkReset]
@@ -1585,86 +1585,86 @@ segments:
         - [0x7EA38, asm, core/sceVif1PkEnd]
         - [0x7EA90, asm, core/sceVif1PkOpenDirectCode]
         - [0x7EAE8, asm, core/sceVif1PkCloseDirectCode]
-        - [0x7EB14, asm, core/gap_07EB14]  # 4 bytes gap
+        - [0x7EB14, asm, core/align_07EB14]  # 4 bytes gap
         - [0x7EB18, asm, core/sceVif1PkOpenGifTag]
         - [0x7EB30, asm, core/sceVif1PkCloseGifTag]
-        - [0x7EBD4, asm, core/gap_07EBD4]  # 4 bytes gap
+        - [0x7EBD4, asm, core/align_07EBD4]  # 4 bytes gap
         - [0x7EBD8, asm, core/sceVif0PkAlign]
-        - [0x7EC54, asm, core/gap_07EC54]  # 4 bytes gap
+        - [0x7EC54, asm, core/align_07EC54]  # 4 bytes gap
         - [0x7EC58, asm, core/sceVif1PkAddCode]
-        - [0x7EC6C, asm, core/gap_07EC6C]  # 4 bytes gap
+        - [0x7EC6C, asm, core/align_07EC6C]  # 4 bytes gap
         - [0x7EC70, asm, core/sceGifPkAddGsData]
         - [0x7EC98, asm, core/sceVif1PkAddGsAD]
         - [0x7ECC8, asm, core/sceVif1PkRefLoadImage]
         - [0x7EEB0, asm, core/sceVif1PkOpenDirectHLCode]
         - [0x7EF08, asm, core/sceVif1PkCloseDirectHLCode]
-        - [0x7EF34, asm, core/gap_07EF34]  # 4 bytes gap
+        - [0x7EF34, asm, core/align_07EF34]  # 4 bytes gap
         - [0x7EF38, asm, core/sceVif1PkAddGsPacked]
-        - [0x7EF4C, asm, core/gap_07EF4C]  # 4 bytes gap
+        - [0x7EF4C, asm, core/align_07EF4C]  # 4 bytes gap
         - [0x7EF50, asm, core/sceDmaPkRef]
         - [0x7EFE8, asm, core/sceDmaPkReserve]
-        - [0x7EFFC, asm, core/gap_07EFFC]  # 4 bytes gap
+        - [0x7EFFC, asm, core/align_07EFFC]  # 4 bytes gap
         - [0x7F000, asm, core/DPRINT]
         - [0x7F028, asm, core/sceMtapInit]
         - [0x7F2A8, asm, core/sceMtapPortOpen]
-        - [0x7F314, asm, core/gap_07F314]  # 4 bytes gap
+        - [0x7F314, asm, core/align_07F314]  # 4 bytes gap
         - [0x7F318, asm, core/sceMtapPortClose]
-        - [0x7F384, asm, core/gap_07F384]  # 4 bytes gap
+        - [0x7F384, asm, core/align_07F384]  # 4 bytes gap
         - [0x7F388, asm, core/sceMtapGetConnection]
-        - [0x7F3F4, asm, core/gap_07F3F4]  # 4 bytes gap
+        - [0x7F3F4, asm, core/align_07F3F4]  # 4 bytes gap
         - [0x7F3F8, asm, core/sceMtapChangeThreadPriority]
         - [0x7F468, asm, core/sceMtapGetModVersion]
-        - [0x7F4CC, asm, core/gap_07F4CC]  # 4 bytes gap
+        - [0x7F4CC, asm, core/align_07F4CC]  # 4 bytes gap
         - [0x7F4D0, asm, core/_send_to_iop]
-        - [0x7F5E4, asm, core/gap_07F5E4]  # 4 bytes gap
+        - [0x7F5E4, asm, core/align_07F5E4]  # 4 bytes gap
         - [0x7F5E8, asm, core/scePadInit]
         - [0x7F730, asm, core/scePadInit2]
-        - [0x7F7FC, asm, core/gap_07F7FC]  # 4 bytes gap
+        - [0x7F7FC, asm, core/align_07F7FC]  # 4 bytes gap
         - [0x7F800, asm, core/scePadEnd]
         - [0x7F880, asm, core/scePad_27E880]
-        - [0x7F8CC, asm, core/gap_07F8CC]  # 4 bytes gap
+        - [0x7F8CC, asm, core/align_07F8CC]  # 4 bytes gap
         - [0x7F8D0, asm, core/scePadPortOpen]
-        - [0x7FAB4, asm, core/gap_07FAB4]  # 4 bytes gap
+        - [0x7FAB4, asm, core/align_07FAB4]  # 4 bytes gap
         - [0x7FAB8, asm, core/scePadPortClose]
         - [0x7FB70, asm, core/scePadPortClose2]
         - [0x7FC28, asm, core/scePadGetDmaStr]
         - [0x7FC88, asm, core/scePadGetFrameCount]
         - [0x7FCD8, asm, core/scePadRead]
-        - [0x7FD54, asm, core/gap_07FD54]  # 4 bytes gap
+        - [0x7FD54, asm, core/align_07FD54]  # 4 bytes gap
         - [0x7FD58, asm, core/scePadGetState]
         - [0x7FDD0, asm, core/scePadStateIntToStr]
-        - [0x7FE04, asm, core/gap_07FE04]  # 4 bytes gap
+        - [0x7FE04, asm, core/align_07FE04]  # 4 bytes gap
         - [0x7FE08, asm, core/scePadSetReqState]
-        - [0x7FE6C, asm, core/gap_07FE6C]  # 4 bytes gap
+        - [0x7FE6C, asm, core/align_07FE6C]  # 4 bytes gap
         - [0x7FE70, asm, core/scePadGetReqState]
         - [0x7FEC0, asm, core/scePadReqIntToStr]
-        - [0x7FEF4, asm, core/gap_07FEF4]  # 4 bytes gap
+        - [0x7FEF4, asm, core/align_07FEF4]  # 4 bytes gap
         - [0x7FEF8, asm, core/scePadInfoAct]
         - [0x80018, asm, core/scePadInfoComb]
-        - [0x80134, asm, core/gap_080134]  # 4 bytes gap
+        - [0x80134, asm, core/align_080134]  # 4 bytes gap
         - [0x80138, asm, core/scePadInfoMode]
         - [0x80270, asm, core/scePadSetMainMode]
-        - [0x80324, asm, core/gap_080324]  # 4 bytes gap
+        - [0x80324, asm, core/align_080324]  # 4 bytes gap
         - [0x80328, asm, core/scePadSetActDirect]
         - [0x803E8, asm, core/scePadSetActAlign]
         - [0x804C0, asm, core/scePadGetButtonMask]
-        - [0x80574, asm, core/gap_080574]  # 4 bytes gap
+        - [0x80574, asm, core/align_080574]  # 4 bytes gap
         - [0x80578, asm, core/scePadSetButtonInfo]
         - [0x80628, asm, core/scePadInfoPressMode]
-        - [0x80684, asm, core/gap_080684]  # 4 bytes gap
+        - [0x80684, asm, core/align_080684]  # 4 bytes gap
         - [0x80688, asm, core/scePadEnterPressMode]
-        - [0x806DC, asm, core/gap_0806DC]  # 4 bytes gap
+        - [0x806DC, asm, core/align_0806DC]  # 4 bytes gap
         - [0x806E0, asm, core/scePadExitPressMode]
-        - [0x80734, asm, core/gap_080734]  # 4 bytes gap
+        - [0x80734, asm, core/align_080734]  # 4 bytes gap
         - [0x80738, asm, core/scePadSetVrefParam]
-        - [0x80804, asm, core/gap_080804]  # 4 bytes gap
+        - [0x80804, asm, core/align_080804]  # 4 bytes gap
         - [0x80808, asm, core/scePadGetPortMax]
-        - [0x8086C, asm, core/gap_08086C]  # 4 bytes gap
+        - [0x8086C, asm, core/align_08086C]  # 4 bytes gap
         - [0x80870, asm, core/scePadGetSlotMax]
         - [0x808D8, asm, core/scePad_27F8D8]
-        - [0x8091C, asm, core/gap_08091C]  # 4 bytes gap
+        - [0x8091C, asm, core/align_08091C]  # 4 bytes gap
         - [0x80920, asm, core/scePadGetModVersion]
-        - [0x80984, asm, core/gap_080984]  # 4 bytes gap
+        - [0x80984, asm, core/align_080984]  # 4 bytes gap
         - [0x80988, asm, core/scePadSetWarningLevel]
         - [0x809F0, asm, core/DisableIntc]
         - [0x80A00, asm, core/RemoveIntcHandler]
@@ -1698,39 +1698,39 @@ segments:
         - [0x80BC0, asm, core/sceSifDmaStat]
         - [0x80BD0, asm, core/sceSifSetDma]
         - [0x80BE0, asm, core/sceResetttyinit]
-        - [0x80BEC, asm, core/gap_080BEC]  # 4 bytes gap
+        - [0x80BEC, asm, core/align_080BEC]  # 4 bytes gap
         - [0x80BF0, asm, core/VSync_WaitVblankStart]
         - [0x80C80, asm, core/VSync2]
-        - [0x80D24, asm, core/gap_080D24]  # 4 bytes gap
+        - [0x80D24, asm, core/align_080D24]  # 4 bytes gap
         - [0x80D28, asm, core/write]
-        - [0x80DA4, asm, core/gap_080DA4]  # 4 bytes gap
+        - [0x80DA4, asm, core/align_080DA4]  # 4 bytes gap
         - [0x80DA8, asm, core/read]
-        - [0x80E1C, asm, core/gap_080E1C]  # 4 bytes gap
+        - [0x80E1C, asm, core/align_080E1C]  # 4 bytes gap
         - [0x80E20, asm, core/open]
         - [0x80E48, asm, core/close]
         - [0x80E50, asm, core/ioctl]
         - [0x80E58, asm, core/lseek]
         - [0x80E60, asm, core/sbrk]
-        - [0x80F0C, asm, core/gap_080F0C]  # 4 bytes gap
+        - [0x80F0C, asm, core/align_080F0C]  # 4 bytes gap
         - [0x80F10, asm, core/isatty]
         - [0x80F18, asm, core/fstat]
-        - [0x80F2C, asm, core/gap_080F2C]  # 4 bytes gap
+        - [0x80F2C, asm, core/align_080F2C]  # 4 bytes gap
         - [0x80F30, asm, core/getpid]
         - [0x80F38, asm, core/kill]
         - [0x80F60, asm, core/stat]
         - [0x80F88, asm, core/unlink]
         - [0x80FB0, asm, core/_sceSDC]
-        - [0x81054, asm, core/gap_081054]  # 4 bytes gap
+        - [0x81054, asm, core/align_081054]  # 4 bytes gap
         - [0x81058, asm, core/SyncDCache]
-        - [0x810D4, asm, core/gap_0810D4]  # 4 bytes gap
+        - [0x810D4, asm, core/align_0810D4]  # 4 bytes gap
         - [0x810D8, asm, core/iSyncDCache]
-        - [0x810EC, asm, core/gap_0810EC]  # 4 bytes gap
+        - [0x810EC, asm, core/align_0810EC]  # 4 bytes gap
         - [0x810F0, asm, core/_sceIDC]
-        - [0x81194, asm, core/gap_081194]  # 4 bytes gap
+        - [0x81194, asm, core/align_081194]  # 4 bytes gap
         - [0x81198, asm, core/InvalidDCache]
-        - [0x81214, asm, core/gap_081214]  # 4 bytes gap
+        - [0x81214, asm, core/align_081214]  # 4 bytes gap
         - [0x81218, asm, core/iInvalidDCache]
-        - [0x8122C, asm, core/gap_08122C]  # 4 bytes gap
+        - [0x8122C, asm, core/align_08122C]  # 4 bytes gap
         - [0x81230, asm, core/DisableIntc_0]
         - [0x81298, asm, core/EnableIntc]
         - [0x81300, asm, core/DisableDmac]
@@ -1744,153 +1744,153 @@ segments:
         - [0x81470, asm, core/kCopy]
         - [0x814A8, asm, core/GetEntryAddress_1]
         - [0x814B8, asm, core/InitAlarm]
-        - [0x8158C, asm, core/gap_08158C]  # 4 bytes gap
+        - [0x8158C, asm, core/align_08158C]  # 4 bytes gap
         - [0x81590, asm, core/topThread]
         - [0x81668, asm, core/InitThread]
-        - [0x8173C, asm, core/gap_08173C]  # 4 bytes gap
+        - [0x8173C, asm, core/align_08173C]  # 4 bytes gap
         - [0x81740, asm, core/iWakeupThread]
-        - [0x817D4, asm, core/gap_0817D4]  # 4 bytes gap
+        - [0x817D4, asm, core/align_0817D4]  # 4 bytes gap
         - [0x817D8, asm, core/iRotateThreadReadyQueue]
-        - [0x81854, asm, core/gap_081854]  # 4 bytes gap
+        - [0x81854, asm, core/align_081854]  # 4 bytes gap
         - [0x81858, asm, core/iSuspendThread]
         - [0x818F0, asm, core/QueueInit]
-        - [0x81914, asm, core/gap_081914]  # 4 bytes gap
+        - [0x81914, asm, core/align_081914]  # 4 bytes gap
         - [0x81918, asm, core/QueuePeekWriteDone]
-        - [0x81954, asm, core/gap_081954]  # 4 bytes gap
+        - [0x81954, asm, core/align_081954]  # 4 bytes gap
         - [0x81958, asm, core/QueuePeekReadDone]
-        - [0x81994, asm, core/gap_081994]  # 4 bytes gap
+        - [0x81994, asm, core/align_081994]  # 4 bytes gap
         - [0x81998, asm, core/sceTtyHandler]
-        - [0x81B2C, asm, core/gap_081B2C]  # 4 bytes gap
+        - [0x81B2C, asm, core/align_081B2C]  # 4 bytes gap
         - [0x81B30, asm, core/sceTtyWrite]
         - [0x81C80, asm, core/sceTtyRead]
         - [0x81D50, asm, core/sceTtyInit]
-        - [0x81E0C, asm, core/gap_081E0C]  # 4 bytes gap
+        - [0x81E0C, asm, core/align_081E0C]  # 4 bytes gap
         - [0x81E10, asm, core/kputchar]
         - [0x81E48, asm, core/deci2Putchar]
         - [0x81EF8, asm, core/serialPutchar]
-        - [0x81F2C, asm, core/gap_081F2C]  # 4 bytes gap
+        - [0x81F2C, asm, core/align_081F2C]  # 4 bytes gap
         - [0x81F30, asm, core/ftoi]
         - [0x81FC0, asm, core/printfloat]
         - [0x82128, asm, core/_printf]
         - [0x826F0, asm, core/kprintf]
         - [0x82728, asm, core/scePrintf]
         - [0x82788, asm, core/_set_sreg]
-        - [0x827A4, asm, core/gap_0827A4]  # 4 bytes gap
+        - [0x827A4, asm, core/align_0827A4]  # 4 bytes gap
         - [0x827A8, asm, core/_change_addr]
-        - [0x827B4, asm, core/gap_0827B4]  # 4 bytes gap
+        - [0x827B4, asm, core/align_0827B4]  # 4 bytes gap
         - [0x827B8, asm, core/sceSifGetSreg]
         - [0x827D0, asm, core/sceSifSetSreg]
-        - [0x827EC, asm, core/gap_0827EC]  # 4 bytes gap
+        - [0x827EC, asm, core/align_0827EC]  # 4 bytes gap
         - [0x827F0, asm, core/sceSifGetDataTable]
-        - [0x827FC, asm, core/gap_0827FC]  # 4 bytes gap
+        - [0x827FC, asm, core/align_0827FC]  # 4 bytes gap
         - [0x82800, asm, core/sceSifInitCmd]
         - [0x82A80, asm, core/sceSifExitCmd]
-        - [0x82AB4, asm, core/gap_082AB4]  # 4 bytes gap
+        - [0x82AB4, asm, core/align_082AB4]  # 4 bytes gap
         - [0x82AB8, asm, core/sceSifSetCmdBuffer]
         - [0x82AD0, asm, core/sceSifSetSysCmdBuffer]
         - [0x82AE8, asm, core/sceSifAddCmdHandler]
-        - [0x82B14, asm, core/gap_082B14]  # 4 bytes gap
+        - [0x82B14, asm, core/align_082B14]  # 4 bytes gap
         - [0x82B18, asm, core/sceSifRemoveCmdHandler]
         - [0x82B40, asm, core/_sceSifSendCmd]
-        - [0x82C74, asm, core/gap_082C74]  # 4 bytes gap
+        - [0x82C74, asm, core/align_082C74]  # 4 bytes gap
         - [0x82C78, asm, core/sceSifSendCmd]
-        - [0x82CB4, asm, core/gap_082CB4]  # 4 bytes gap
+        - [0x82CB4, asm, core/align_082CB4]  # 4 bytes gap
         - [0x82CB8, asm, core/isceSifSendCmd]
-        - [0x82CF4, asm, core/gap_082CF4]  # 4 bytes gap
+        - [0x82CF4, asm, core/align_082CF4]  # 4 bytes gap
         - [0x82CF8, asm, core/_sceSifCmdIntrHdlr]
         - [0x82E20, asm, core/sceSifWriteBackDCache]
         - [0x82ECC, asm, core/sceSif_unused1]
         - [0x82ED0, asm, core/sceSifInitRpc]
-        - [0x8306C, asm, core/gap_08306C]  # 4 bytes gap
+        - [0x8306C, asm, core/align_08306C]  # 4 bytes gap
         - [0x83070, asm, core/sceSifExitRpc]
-        - [0x83094, asm, core/gap_083094]  # 4 bytes gap
+        - [0x83094, asm, core/align_083094]  # 4 bytes gap
         - [0x83098, asm, core/_sceRpcGetPacket]
         - [0x83140, asm, core/_sceRpcFreePacket]
-        - [0x8315C, asm, core/gap_08315C]  # 4 bytes gap
+        - [0x8315C, asm, core/align_08315C]  # 4 bytes gap
         - [0x83160, asm, core/_sceRpcGetFPacket]
         - [0x83190, asm, core/_sceRpcGetFPacket2]
         - [0x831D0, asm, core/_request_end]
-        - [0x83284, asm, core/gap_083284]  # 4 bytes gap
+        - [0x83284, asm, core/align_083284]  # 4 bytes gap
         - [0x83288, asm, core/_request_rdata]
         - [0x832E8, asm, core/sceSifGetOtherData]
         - [0x83440, asm, core/_search_svdata]
-        - [0x8348C, asm, core/gap_08348C]  # 4 bytes gap
+        - [0x8348C, asm, core/align_08348C]  # 4 bytes gap
         - [0x83490, asm, core/_request_bind]
         - [0x83540, asm, core/sceSifBindRpc]
         - [0x83680, asm, core/_request_call]
-        - [0x8370C, asm, core/gap_08370C]  # 4 bytes gap
+        - [0x8370C, asm, core/align_08370C]  # 4 bytes gap
         - [0x83710, asm, core/sceSifCallRpc]
-        - [0x838FC, asm, core/gap_0838FC]  # 4 bytes gap
+        - [0x838FC, asm, core/align_0838FC]  # 4 bytes gap
         - [0x83900, asm, core/sceSifCheckStatRpc]
-        - [0x8393C, asm, core/gap_08393C]  # 4 bytes gap
+        - [0x8393C, asm, core/align_08393C]  # 4 bytes gap
         - [0x83940, asm, core/sceSifSetRpcQueue]
-        - [0x839D4, asm, core/gap_0839D4]  # 4 bytes gap
+        - [0x839D4, asm, core/align_0839D4]  # 4 bytes gap
         - [0x839D8, asm, core/sceSifRegisterRpc]
         - [0x83AA8, asm, core/sceSifRemoveRpc]
-        - [0x83B3C, asm, core/gap_083B3C]  # 4 bytes gap
+        - [0x83B3C, asm, core/align_083B3C]  # 4 bytes gap
         - [0x83B40, asm, core/sceSifRemoveRpcQueue]
         - [0x83BD0, asm, core/sceSifGetNextRequest]
         - [0x83C28, asm, core/sceSifExecRequest]
-        - [0x83DEC, asm, core/gap_083DEC]  # 4 bytes gap
+        - [0x83DEC, asm, core/align_083DEC]  # 4 bytes gap
         - [0x83DF0, asm, core/sceSifRpcLoop]
         - [0x83E30, asm, core/_sceFsIobSemaMK]
-        - [0x83E8C, asm, core/gap_083E8C]  # 4 bytes gap
+        - [0x83E8C, asm, core/align_083E8C]  # 4 bytes gap
         - [0x83E90, asm, core/new_iob]
         - [0x83F18, asm, core/get_iob]
-        - [0x83F84, asm, core/gap_083F84]  # 4 bytes gap
+        - [0x83F84, asm, core/align_083F84]  # 4 bytes gap
         - [0x83F88, asm, core/_sceFs_Rcv_Intr_0]
         - [0x84348, asm, core/_sceFsSemInit]
-        - [0x84394, asm, core/gap_084394]  # 4 bytes gap
+        - [0x84394, asm, core/align_084394]  # 4 bytes gap
         - [0x84398, asm, core/_sceFsWaitS]
-        - [0x843C4, asm, core/gap_0843C4]  # 4 bytes gap
+        - [0x843C4, asm, core/align_0843C4]  # 4 bytes gap
         - [0x843C8, asm, core/_sceFsSigSema]
-        - [0x843D4, asm, core/gap_0843D4]  # 4 bytes gap
+        - [0x843D4, asm, core/align_0843D4]  # 4 bytes gap
         - [0x843D8, asm, core/scePowerOffHandler]
         - [0x84468, asm, core/_sceFs_Poff_Intr]
-        - [0x84494, asm, core/gap_084494]  # 4 bytes gap
+        - [0x84494, asm, core/align_084494]  # 4 bytes gap
         - [0x84498, asm, core/sceFsInit]
         - [0x84660, asm, core/_fs_version]
-        - [0x846EC, asm, core/gap_0846EC]  # 4 bytes gap
+        - [0x846EC, asm, core/align_0846EC]  # 4 bytes gap
         - [0x846F0, asm, core/sceFsReset]
-        - [0x84724, asm, core/gap_084724]  # 4 bytes gap
+        - [0x84724, asm, core/align_084724]  # 4 bytes gap
         - [0x84728, asm, core/sceOpen]
-        - [0x849AC, asm, core/gap_0849AC]  # 4 bytes gap
+        - [0x849AC, asm, core/align_0849AC]  # 4 bytes gap
         - [0x849B0, asm, core/sceClose]
-        - [0x84B2C, asm, core/gap_084B2C]  # 4 bytes gap
+        - [0x84B2C, asm, core/align_084B2C]  # 4 bytes gap
         - [0x84B30, asm, core/sceLseek]
         - [0x84D68, asm, core/sceRead]
         - [0x84FD8, asm, core/sceWrite]
         - [0x85298, asm, core/sceIoctl]
-        - [0x855E4, asm, core/gap_0855E4]  # 4 bytes gap
+        - [0x855E4, asm, core/align_0855E4]  # 4 bytes gap
         - [0x855E8, asm, core/sceIoctl2]
-        - [0x857C4, asm, core/gap_0857C4]  # 4 bytes gap
+        - [0x857C4, asm, core/align_0857C4]  # 4 bytes gap
         - [0x857C8, asm, core/_sceCallCode]
-        - [0x8596C, asm, core/gap_08596C]  # 4 bytes gap
+        - [0x8596C, asm, core/align_08596C]  # 4 bytes gap
         - [0x85970, asm, core/sceRemove]
-        - [0x8598C, asm, core/gap_08598C]  # 4 bytes gap
+        - [0x8598C, asm, core/align_08598C]  # 4 bytes gap
         - [0x85990, asm, core/sceMkdir]
-        - [0x85B3C, asm, core/gap_085B3C]  # 4 bytes gap
+        - [0x85B3C, asm, core/align_085B3C]  # 4 bytes gap
         - [0x85B40, asm, core/sceRmdir]
-        - [0x85B5C, asm, core/gap_085B5C]  # 4 bytes gap
+        - [0x85B5C, asm, core/align_085B5C]  # 4 bytes gap
         - [0x85B60, asm, core/sceFormat]
-        - [0x85DCC, asm, core/gap_085DCC]  # 4 bytes gap
+        - [0x85DCC, asm, core/align_085DCC]  # 4 bytes gap
         - [0x85DD0, asm, core/sceAddDrv]
         - [0x85EF0, asm, core/sceDelDrv]
-        - [0x85F0C, asm, core/gap_085F0C]  # 4 bytes gap
+        - [0x85F0C, asm, core/align_085F0C]  # 4 bytes gap
         - [0x85F10, asm, core/sceDopen]
         - [0x85FD8, asm, core/sceDclose]
         - [0x86140, asm, core/sceDread]
         - [0x86298, asm, core/sceGetstat]
         - [0x86438, asm, core/sceChstat]
-        - [0x86674, asm, core/gap_086674]  # 4 bytes gap
+        - [0x86674, asm, core/align_086674]  # 4 bytes gap
         - [0x86678, asm, core/sceRename]
         - [0x86868, asm, core/sceChdir]
-        - [0x86884, asm, core/gap_086884]  # 4 bytes gap
+        - [0x86884, asm, core/align_086884]  # 4 bytes gap
         - [0x86888, asm, core/sceSync]
         - [0x86A20, asm, core/sceMount]
-        - [0x86C8C, asm, core/gap_086C8C]  # 4 bytes gap
+        - [0x86C8C, asm, core/align_086C8C]  # 4 bytes gap
         - [0x86C90, asm, core/sceUmount]
-        - [0x86CAC, asm, core/gap_086CAC]  # 4 bytes gap
+        - [0x86CAC, asm, core/align_086CAC]  # 4 bytes gap
         - [0x86CB0, asm, core/sceLseek64]
         - [0x86EE8, asm, core/sceDevctl]
         - [0x87120, asm, core/sceSymlink]
@@ -1900,11 +1900,11 @@ segments:
         - [0x875C0, asm, core/sceSifAllocSysMemory]
         - [0x87640, asm, core/sceSifFreeSysMemory]
         - [0x876B8, asm, core/sceSifFreeIopHeap]
-        - [0x876D4, asm, core/gap_0876D4]  # 4 bytes gap
+        - [0x876D4, asm, core/align_0876D4]  # 4 bytes gap
         - [0x876D8, asm, core/sceSifLoadIopHeap]
         - [0x877C8, asm, core/_lf_bind]
         - [0x878C8, asm, core/_lf_version]
-        - [0x87954, asm, core/gap_087954]  # 4 bytes gap
+        - [0x87954, asm, core/align_087954]  # 4 bytes gap
         - [0x87958, asm, core/sceSifLoadFileReset]
         - [0x87990, asm, core/_sceSifLoadModuleBuffer]
         - [0x87B98, asm, core/sceSifStopModule]
@@ -1912,29 +1912,29 @@ segments:
         - [0x87E30, asm, core/sceSifSearchModuleByName]
         - [0x87ED0, asm, core/sceSifSearchModuleByAddress]
         - [0x87F60, asm, core/sceSifLoadModuleBuffer]
-        - [0x87F7C, asm, core/gap_087F7C]  # 4 bytes gap
+        - [0x87F7C, asm, core/align_087F7C]  # 4 bytes gap
         - [0x87F80, asm, core/sceSifLoadStartModuleBuffer]
-        - [0x87F9C, asm, core/gap_087F9C]  # 4 bytes gap
+        - [0x87F9C, asm, core/align_087F9C]  # 4 bytes gap
         - [0x87FA0, asm, core/_sceSifLoadModule]
-        - [0x881C4, asm, core/gap_0881C4]  # 4 bytes gap
+        - [0x881C4, asm, core/align_0881C4]  # 4 bytes gap
         - [0x881C8, asm, core/sceSifLoadModule]
         - [0x881E8, asm, core/sceSifLoadStartModule]
-        - [0x88204, asm, core/gap_088204]  # 4 bytes gap
+        - [0x88204, asm, core/align_088204]  # 4 bytes gap
         - [0x88208, asm, core/sceSifLoadKModule]
         - [0x88228, asm, core/_sceSifLoadElfPart]
-        - [0x8832C, asm, core/gap_08832C]  # 4 bytes gap
+        - [0x8832C, asm, core/align_08832C]  # 4 bytes gap
         - [0x88330, asm, core/sceSifLoadElfPart]
-        - [0x8834C, asm, core/gap_08834C]  # 4 bytes gap
+        - [0x8834C, asm, core/align_08834C]  # 4 bytes gap
         - [0x88350, asm, core/sceSifLoadElf]
         - [0x88378, asm, core/sceSifLoadKElfPart]
-        - [0x88394, asm, core/gap_088394]  # 4 bytes gap
+        - [0x88394, asm, core/align_088394]  # 4 bytes gap
         - [0x88398, asm, core/sceSifLoadKElf]
         - [0x883C0, asm, core/sceSifGetIopAddr]
-        - [0x884AC, asm, core/gap_0884AC]  # 4 bytes gap
+        - [0x884AC, asm, core/align_0884AC]  # 4 bytes gap
         - [0x884B0, asm, core/sceSifSetIopAddr]
-        - [0x8858C, asm, core/gap_08858C]  # 4 bytes gap
+        - [0x8858C, asm, core/align_08858C]  # 4 bytes gap
         - [0x88590, asm, core/sceSifResetIop]
-        - [0x886CC, asm, core/gap_0886CC]  # 4 bytes gap
+        - [0x886CC, asm, core/align_0886CC]  # 4 bytes gap
         - [0x886D0, asm, core/sceSifIsAliveIop]
         - [0x886F8, asm, core/sceSifSyncIop]
         - [0x88730, asm, core/sceSifRebootIop]
@@ -1942,27 +1942,27 @@ segments:
         - [0x88888, asm, core/EIntr]
         - [0x888A0, asm, core/supplement_crt0]
         - [0x888E8, asm, core/do_copy_to_kernel_area]
-        - [0x8891C, asm, core/gap_08891C]  # 4 bytes gap
+        - [0x8891C, asm, core/align_08891C]  # 4 bytes gap
         - [0x88920, asm, core/FindAddress]
         - [0x88930, asm, core/InitSystemCallTableAddress]
-        - [0x8896C, asm, core/gap_08896C]  # 4 bytes gap
+        - [0x8896C, asm, core/align_08896C]  # 4 bytes gap
         - [0x88970, asm, core/setup_0]
         - [0x88980, asm, core/setup_FIXME1]
-        - [0x8899C, asm, core/gap_08899C]  # 4 bytes gap
+        - [0x8899C, asm, core/align_08899C]  # 4 bytes gap
         - [0x889A0, asm, core/_InitSys]
-        - [0x889DC, asm, core/gap_0889DC]  # 4 bytes gap
+        - [0x889DC, asm, core/align_0889DC]  # 4 bytes gap
         - [0x889E0, asm, core/setup_1]
         - [0x889F0, asm, core/Copy_1]
         - [0x88A00, asm, core/kCopy_0]
         - [0x88A38, asm, core/GetEntryAddress_0]
         - [0x88A48, asm, core/PatchIsNeeded]
         - [0x88AB0, asm, core/InitHddOsdPatch]
-        - [0x88B5C, asm, core/gap_088B5C]  # 4 bytes gap
+        - [0x88B5C, asm, core/align_088B5C]  # 4 bytes gap
         - [0x88B60, asm, core/InitExecPS2]
-        - [0x88C0C, asm, core/gap_088C0C]  # 4 bytes gap
+        - [0x88C0C, asm, core/align_088C0C]  # 4 bytes gap
         - [0x88C10, asm, core/j_InitTLB]
         - [0x88C18, asm, core/ExecPS2]
-        - [0x88C74, asm, core/gap_088C74]  # 4 bytes gap
+        - [0x88C74, asm, core/align_088C74]  # 4 bytes gap
         - [0x88C78, asm, core/LoadExecPS2]
         - [0x88CC0, asm, core/Exit_kernel]
         - [0x88CE8, asm, core/ExecOSD]
@@ -1992,32 +1992,32 @@ segments:
         - [0x88E90, asm, core/sceSifGetReg]
         - [0x88EA0, asm, core/_ExecOSD]
         - [0x88EB0, asm, core/sceDeci2Open]
-        - [0x88EF4, asm, core/gap_088EF4]  # 4 bytes gap
+        - [0x88EF4, asm, core/align_088EF4]  # 4 bytes gap
         - [0x88EF8, asm, core/sceDeci2Close]
-        - [0x88F1C, asm, core/gap_088F1C]  # 4 bytes gap
+        - [0x88F1C, asm, core/align_088F1C]  # 4 bytes gap
         - [0x88F20, asm, core/sceDeci2ReqSend]
         - [0x88F50, asm, core/sceDeci2Poll]
-        - [0x88F74, asm, core/gap_088F74]  # 4 bytes gap
+        - [0x88F74, asm, core/align_088F74]  # 4 bytes gap
         - [0x88F78, asm, core/sceDeci2ExRecv]
-        - [0x88FAC, asm, core/gap_088FAC]  # 4 bytes gap
+        - [0x88FAC, asm, core/align_088FAC]  # 4 bytes gap
         - [0x88FB0, asm, core/sceDeci2ExSend]
-        - [0x88FE4, asm, core/gap_088FE4]  # 4 bytes gap
+        - [0x88FE4, asm, core/align_088FE4]  # 4 bytes gap
         - [0x88FE8, asm, core/sceDeci2ExReqSend]
         - [0x89018, asm, core/sceDeci2ExLock]
-        - [0x8903C, asm, core/gap_08903C]  # 4 bytes gap
+        - [0x8903C, asm, core/align_08903C]  # 4 bytes gap
         - [0x89040, asm, core/sceDeci2ExUnLock]
-        - [0x89064, asm, core/gap_089064]  # 4 bytes gap
+        - [0x89064, asm, core/align_089064]  # 4 bytes gap
         - [0x89068, asm, core/kputs]
-        - [0x8908C, asm, core/gap_08908C]  # 4 bytes gap
+        - [0x8908C, asm, core/align_08908C]  # 4 bytes gap
         - [0x89090, asm, core/SetTLBHandler]
         - [0x890F0, asm, core/SetDebugHandler]
-        - [0x89174, asm, core/gap_089174]  # 4 bytes gap
+        - [0x89174, asm, core/align_089174]  # 4 bytes gap
         - [0x89178, asm, core/Copy]
         - [0x89188, asm, core/kCopy_1]
         - [0x891C0, asm, core/GetEntryAddress]
         - [0x891D0, asm, core/setup]
         - [0x891E0, asm, core/InitTLBFunctions]
-        - [0x89294, asm, core/gap_089294]  # 4 bytes gap
+        - [0x89294, asm, core/align_089294]  # 4 bytes gap
         - [0x89298, asm, core/PutTLBEntry]
         - [0x892A8, asm, core/RFU085_iClearEventFlag]
         - [0x892B8, asm, core/_SetTLBEntry]
@@ -2030,10 +2030,10 @@ segments:
         - [0x89348, asm, core/RFU089_ReferEventFlagStatus]
         - [0x89358, asm, core/InitTLB]
         - [0x89398, asm, core/InitTLB32MB]
-        - [0x8958C, asm, core/gap_08958C]  # 52 bytes gap
+        - [0x8958C, asm, core/align_08958C]  # 52 bytes gap
         - [0x895C0, asm, core/_kTLBException]
         - [0x896C0, asm, core/_kExitTLBHandler]
-        - [0x897F4, asm, core/gap_0897F4]  # 12 bytes gap
+        - [0x897F4, asm, core/align_0897F4]  # 12 bytes gap
         - [0x89800, asm, core/_kDebugException]
         - [0x898FC, asm, core/_kDebugException_epilogue]
         - [0x89920, asm, core/SetVTLBRefillHandler]
@@ -2043,56 +2043,56 @@ segments:
         - [0x89960, asm, core/_InitTLB]
         - [0x89970, asm, core/sceGsResetGraph]
         - [0x89BC8, c, core/sceGsGetGParam]
-        - [0x89BD4, asm, core/gap_089BD4]  # 4 bytes gap
+        - [0x89BD4, asm, core/align_089BD4]  # 4 bytes gap
         - [0x89BD8, asm, core/sceGsResetPath]
         - [0x89C40, asm, core/sceGsSetDefDrawEnv]
-        - [0x89E24, asm, core/gap_089E24]  # 4 bytes gap
+        - [0x89E24, asm, core/align_089E24]  # 4 bytes gap
         - [0x89E28, asm, core/sceGsSetDefClear]
-        - [0x89F2C, asm, core/gap_089F2C]  # 4 bytes gap
+        - [0x89F2C, asm, core/align_089F2C]  # 4 bytes gap
         - [0x89F30, asm, core/sceGsPutDrawEnv]
         - [0x8A018, asm, core/sceGsSetDefDBuff]
         - [0x8A2B0, asm, core/sceGsSwapDBuff]
-        - [0x8A30C, asm, core/gap_08A30C]  # 4 bytes gap
+        - [0x8A30C, asm, core/align_08A30C]  # 4 bytes gap
         - [0x8A310, asm, core/sceGsSyncV]
-        - [0x8A3A4, asm, core/gap_08A3A4]  # 4 bytes gap
+        - [0x8A3A4, asm, core/align_08A3A4]  # 4 bytes gap
         - [0x8A3A8, asm, core/sceGsSyncPath]
-        - [0x8A6BC, asm, core/gap_08A6BC]  # 4 bytes gap
+        - [0x8A6BC, asm, core/align_08A6BC]  # 4 bytes gap
         - [0x8A6C0, asm, core/sceGsSetDefTexEnv]
-        - [0x8A7CC, asm, core/gap_08A7CC]  # 4 bytes gap
+        - [0x8A7CC, asm, core/align_08A7CC]  # 4 bytes gap
         - [0x8A7D0, asm, core/sceGsSetDefAlphaEnv]
-        - [0x8A82C, asm, core/gap_08A82C]  # 4 bytes gap
+        - [0x8A82C, asm, core/align_08A82C]  # 4 bytes gap
         - [0x8A830, asm, core/sceGsSetDefLoadImage]
-        - [0x8AA14, asm, core/gap_08AA14]  # 4 bytes gap
+        - [0x8AA14, asm, core/align_08AA14]  # 4 bytes gap
         - [0x8AA18, asm, core/sceGsSetDefStoreImage]
         - [0x8AB58, asm, core/sceGsExecLoadImage]
-        - [0x8ACD4, asm, core/gap_08ACD4]  # 4 bytes gap
+        - [0x8ACD4, asm, core/align_08ACD4]  # 4 bytes gap
         - [0x8ACD8, asm, core/sceGsExecStoreImage]
-        - [0x8B364, asm, core/gap_08B364]  # 4 bytes gap
+        - [0x8B364, asm, core/align_08B364]  # 4 bytes gap
         - [0x8B368, asm, core/sceGsSetHalfOffset]
         - [0x8B3F0, asm, core/sceGsSetDefDispEnv]
         - [0x8B660, asm, core/sceGsPutDispEnv]
-        - [0x8B71C, asm, core/gap_08B71C]  # 4 bytes gap
+        - [0x8B71C, asm, core/align_08B71C]  # 4 bytes gap
         - [0x8B720, asm, core/sceGszbufaddr]
         - [0x8B7E8, asm, core/CB_DelayTh]
-        - [0x8B80C, asm, core/gap_08B80C]  # 4 bytes gap
+        - [0x8B80C, asm, core/align_08B80C]  # 4 bytes gap
         - [0x8B810, asm, core/sceCdDelayThread]
         - [0x8B878, asm, core/sceCdCallback]
         - [0x8B8D0, asm, core/_sceCd_cd_callback]
-        - [0x8B984, asm, core/gap_08B984]  # 4 bytes gap
+        - [0x8B984, asm, core/align_08B984]  # 4 bytes gap
         - [0x8B988, asm, core/_Cdvd_cbLoop]
-        - [0x8BA64, asm, core/gap_08BA64]  # 4 bytes gap
+        - [0x8BA64, asm, core/align_08BA64]  # 4 bytes gap
         - [0x8BA68, asm, core/sceCdInitEeCB]
-        - [0x8BB44, asm, core/gap_08BB44]  # 4 bytes gap
+        - [0x8BB44, asm, core/align_08BB44]  # 4 bytes gap
         - [0x8BB48, asm, core/_sceCd_cd_read_intr]
-        - [0x8BBEC, asm, core/gap_08BBEC]  # 4 bytes gap
+        - [0x8BBEC, asm, core/align_08BBEC]  # 4 bytes gap
         - [0x8BBF0, asm, core/cmd_sem_init]
         - [0x8BC98, asm, cdvd/cdvd_exit]
-        - [0x8BD2C, asm, core/gap_08BD2C]  # 4 bytes gap
+        - [0x8BD2C, asm, core/align_08BD2C]  # 4 bytes gap
         - [0x8BD30, asm, core/sceCdPOffCallback]
         - [0x8BDA0, asm, core/_sceCd_Poff_Intr]
         - [0x8BDE0, asm, core/PowerOffCB]
         - [0x8BE48, asm, core/sceCdSearchFile]
-        - [0x8C16C, asm, core/gap_08C16C]  # 4 bytes gap
+        - [0x8C16C, asm, core/align_08C16C]  # 4 bytes gap
         - [0x8C170, asm, core/_sceCd_ncmd_prechk]
         - [0x8C308, asm, core/sceCdNcmdDiskReady]
         - [0x8C3A0, asm, core/sceCdSync]
@@ -2101,16 +2101,16 @@ segments:
         - [0x8C668, asm, core/sceCdInit]
         - [0x8C920, asm, core/sceCdDiskReady]
         - [0x8CB38, asm, core/sceCdMmode]
-        - [0x8CBF4, asm, core/gap_08CBF4]  # 4 bytes gap
+        - [0x8CBF4, asm, core/align_08CBF4]  # 4 bytes gap
         - [0x8CBF8, asm, core/sceCdApplySCmd]
         - [0x8CE50, asm, core/sceCdApplyNCmd]
         - [0x8D060, asm, core/sceCdIntToPos]
-        - [0x8D124, asm, core/gap_08D124]  # 4 bytes gap
+        - [0x8D124, asm, core/align_08D124]  # 4 bytes gap
         - [0x8D128, asm, core/sceCdPosToInt]
         - [0x8D1A8, asm, core/sceCdGetToc]
         - [0x8D430, asm, core/sceCdStandby]
         - [0x8D4F8, asm, core/sceCdStop]
-        - [0x8D5BC, asm, core/gap_08D5BC]  # 4 bytes gap
+        - [0x8D5BC, asm, core/align_08D5BC]  # 4 bytes gap
         - [0x8D5C0, asm, core/sceCdGetDiskType]
         - [0x8D658, asm, core/sceCdGetError]
         - [0x8D700, asm, core/sceCdStatus]
@@ -2118,126 +2118,126 @@ segments:
         - [0x8D8B0, asm, core/sceCdGetMVersion]
         - [0x8D988, asm, core/sceCdReadSUBQ]
         - [0x8DA70, asm, core/sceCdBootCertify]
-        - [0x8DB3C, asm, core/gap_08DB3C]  # 4 bytes gap
+        - [0x8DB3C, asm, core/align_08DB3C]  # 4 bytes gap
         - [0x8DB40, asm, core/sceCdPowerOff]
-        - [0x8DBF4, asm, core/gap_08DBF4]  # 4 bytes gap
+        - [0x8DBF4, asm, core/align_08DBF4]  # 4 bytes gap
         - [0x8DBF8, asm, core/sceCdCtrlADout]
         - [0x8DCD0, asm, core/sceCdAAdjustCtrl]
         - [0x8DDA8, asm, core/sceCdReadClock]
         - [0x8DEB0, asm, core/sceCdWriteClock]
-        - [0x8DFB4, asm, core/gap_08DFB4]  # 4 bytes gap
+        - [0x8DFB4, asm, core/align_08DFB4]  # 4 bytes gap
         - [0x8DFB8, asm, core/sceCdOpenConfig]
         - [0x8E0E0, asm, core/sceCdCloseConfig]
-        - [0x8E19C, asm, core/gap_08E19C]  # 4 bytes gap
+        - [0x8E19C, asm, core/align_08E19C]  # 4 bytes gap
         - [0x8E1A0, asm, core/sceCdReadConfig]
-        - [0x8E284, asm, core/gap_08E284]  # 4 bytes gap
+        - [0x8E284, asm, core/align_08E284]  # 4 bytes gap
         - [0x8E288, asm, core/sceCdWriteConfig]
         - [0x8E380, asm, core/_sceCdDG]
         - [0x8E4B0, asm, core/sceCdTrayReq]
         - [0x8E598, asm, core/sceCddaStream]
         - [0x8E718, asm, core/sceCdRcBypassCtl]
         - [0x8E7F0, asm, core/sceMcInit]
-        - [0x8E9A4, asm, core/gap_08E9A4]  # 4 bytes gap
+        - [0x8E9A4, asm, core/align_08E9A4]  # 4 bytes gap
         - [0x8E9A8, asm, core/sceMcEnd]
         - [0x8E9E8, asm, core/_lmcGetClientPtr]
         - [0x8EA18, asm, core/sceMcChangeThreadPriority]
-        - [0x8EACC, asm, core/gap_08EACC]  # 4 bytes gap
+        - [0x8EACC, asm, core/align_08EACC]  # 4 bytes gap
         - [0x8EAD0, asm, core/sceMcGetSlotMax]
         - [0x8EB90, asm, core/sceMcOpen]
-        - [0x8ECC4, asm, core/gap_08ECC4]  # 4 bytes gap
+        - [0x8ECC4, asm, core/align_08ECC4]  # 4 bytes gap
         - [0x8ECC8, asm, core/sceMcMkdir]
-        - [0x8ECFC, asm, core/gap_08ECFC]  # 4 bytes gap
+        - [0x8ECFC, asm, core/align_08ECFC]  # 4 bytes gap
         - [0x8ED00, asm, core/sceMcClose]
-        - [0x8EDB4, asm, core/gap_08EDB4]  # 4 bytes gap
+        - [0x8EDB4, asm, core/align_08EDB4]  # 4 bytes gap
         - [0x8EDB8, asm, core/sceMcSeek]
-        - [0x8EE8C, asm, core/gap_08EE8C]  # 4 bytes gap
+        - [0x8EE8C, asm, core/align_08EE8C]  # 4 bytes gap
         - [0x8EE90, asm, core/mceIntrReadFixAlign]
         - [0x8EF20, asm, core/sceMcRead]
-        - [0x8F03C, asm, core/gap_08F03C]  # 4 bytes gap
+        - [0x8F03C, asm, core/align_08F03C]  # 4 bytes gap
         - [0x8F040, asm, core/sceMcWrite]
-        - [0x8F1BC, asm, core/gap_08F1BC]  # 4 bytes gap
+        - [0x8F1BC, asm, core/align_08F1BC]  # 4 bytes gap
         - [0x8F1C0, asm, core/mcHearAlarm]
-        - [0x8F1E4, asm, core/gap_08F1E4]  # 4 bytes gap
+        - [0x8F1E4, asm, core/align_08F1E4]  # 4 bytes gap
         - [0x8F1E8, asm, core/mcDelayThread]
-        - [0x8F22C, asm, core/gap_08F22C]  # 4 bytes gap
+        - [0x8F22C, asm, core/align_08F22C]  # 4 bytes gap
         - [0x8F230, asm, core/sceMcSync]
         - [0x8F310, asm, core/mceGetInfoApdx]
-        - [0x8F364, asm, core/gap_08F364]  # 4 bytes gap
+        - [0x8F364, asm, core/align_08F364]  # 4 bytes gap
         - [0x8F368, asm, core/sceMcGetInfo]
-        - [0x8F4EC, asm, core/gap_08F4EC]  # 4 bytes gap
+        - [0x8F4EC, asm, core/align_08F4EC]  # 4 bytes gap
         - [0x8F4F0, asm, core/sceMcGetDir]
         - [0x8F648, asm, core/mceStorePwd]
-        - [0x8F6CC, asm, core/gap_08F6CC]  # 4 bytes gap
+        - [0x8F6CC, asm, core/align_08F6CC]  # 4 bytes gap
         - [0x8F6D0, asm, core/sceMcChdir]
         - [0x8F820, asm, core/sceMcFormat]
         - [0x8F8E8, asm, core/sceMcDelete]
         - [0x8FA10, asm, core/sceMcFlush]
-        - [0x8FAC4, asm, core/gap_08FAC4]  # 4 bytes gap
+        - [0x8FAC4, asm, core/align_08FAC4]  # 4 bytes gap
         - [0x8FAC8, asm, core/sceMcSetFileInfo]
         - [0x8FCA0, asm, core/sceMcRename]
         - [0x8FE08, asm, core/sceMcUnformat]
         - [0x8FED0, asm, core/sceMcGetEntSpace]
         - [0x8FFE8, asm, core/sceMcCloseAll]
-        - [0x90094, asm, core/gap_090094]  # 4 bytes gap
+        - [0x90094, asm, core/align_090094]  # 4 bytes gap
         - [0x90098, asm, core/sceCccDecodeSJIS]
         - [0x90210, asm, core/sceCccEncodeSJIS]
         - [0x903B0, asm, core/sceCccUTF8toUTF16]
         - [0x90540, asm, core/sceCccUTF8toSJIS]
-        - [0x906AC, asm, core/gap_0906AC]  # 4 bytes gap
+        - [0x906AC, asm, core/align_0906AC]  # 4 bytes gap
         - [0x906B0, asm, core/sceCccSJIStoUTF8]
         - [0x90860, asm, core/sceCccSJIStoUTF16]
-        - [0x909D4, asm, core/gap_0909D4]  # 4 bytes gap
+        - [0x909D4, asm, core/align_0909D4]  # 4 bytes gap
         - [0x909D8, asm, core/sceCccUTF16toSJIS]
-        - [0x90B34, asm, core/gap_090B34]  # 4 bytes gap
+        - [0x90B34, asm, core/align_090B34]  # 4 bytes gap
         - [0x90B38, asm, core/sceCccUTF16toUTF8]
         - [0x90CF0, asm, core/sceCcc_unused1]
-        - [0x90E6C, asm, core/gap_090E6C]  # 4 bytes gap
+        - [0x90E6C, asm, core/align_090E6C]  # 4 bytes gap
         - [0x90E70, asm, core/sceCccSetTable]
-        - [0x90E84, asm, core/gap_090E84]  # 4 bytes gap
+        - [0x90E84, asm, core/align_090E84]  # 4 bytes gap
         - [0x90E88, asm, core/sceCccStrlenUTF16]
-        - [0x90EC4, asm, core/gap_090EC4]  # 4 bytes gap
+        - [0x90EC4, asm, core/align_090EC4]  # 4 bytes gap
         - [0x90EC8, asm, core/sceCccStrlenUTF8]
-        - [0x90F04, asm, core/gap_090F04]  # 4 bytes gap
+        - [0x90F04, asm, core/align_090F04]  # 4 bytes gap
         - [0x90F08, asm, core/sceCccStrlenSJIS]
-        - [0x90F44, asm, core/gap_090F44]  # 4 bytes gap
+        - [0x90F44, asm, core/align_090F44]  # 4 bytes gap
         - [0x90F48, asm, core/sceCcc_unused2]
-        - [0x90F7C, asm, core/gap_090F7C]  # 4 bytes gap
+        - [0x90F7C, asm, core/align_090F7C]  # 4 bytes gap
         - [0x90F80, asm, core/sceCccIsValidUCS4]
-        - [0x90F8C, asm, core/gap_090F8C]  # 4 bytes gap
+        - [0x90F8C, asm, core/align_090F8C]  # 4 bytes gap
         - [0x90F90, asm, core/sceCccIsValidUCS2]
         - [0x90FA0, asm, core/sceCccIsValidJIS]
-        - [0x9101C, asm, core/gap_09101C]  # 4 bytes gap
+        - [0x9101C, asm, core/align_09101C]  # 4 bytes gap
         - [0x91020, asm, core/sceCccIsValidUTF8]
-        - [0x9102C, asm, core/gap_09102C]  # 4 bytes gap
+        - [0x9102C, asm, core/align_09102C]  # 4 bytes gap
         - [0x91030, asm, core/sceCccIsValidUTF16]
         - [0x91060, asm, core/sceCccIsValidSJIS]
         - [0x910F8, asm, core/sceCccDecodeUTF16]
-        - [0x9115C, asm, core/gap_09115C]  # 4 bytes gap
+        - [0x9115C, asm, core/align_09115C]  # 4 bytes gap
         - [0x91160, asm, core/sceCccDecodeUTF8]
-        - [0x911D4, asm, core/gap_0911D4]  # 4 bytes gap
+        - [0x911D4, asm, core/align_0911D4]  # 4 bytes gap
         - [0x911D8, asm, core/sceCccEncodeUTF16]
-        - [0x9125C, asm, core/gap_09125C]  # 4 bytes gap
+        - [0x9125C, asm, core/align_09125C]  # 4 bytes gap
         - [0x91260, asm, core/sceCccEncodeUTF8]
-        - [0x9132C, asm, core/gap_09132C]  # 4 bytes gap
+        - [0x9132C, asm, core/align_09132C]  # 4 bytes gap
         - [0x91330, asm, core/sceCccUCStoJIS]
-        - [0x91364, asm, core/gap_091364]  # 4 bytes gap
+        - [0x91364, asm, core/align_091364]  # 4 bytes gap
         - [0x91368, asm, core/sceCccJIStoUCS]
         - [0x91388, asm, core/sceCcc_unused3]
-        - [0x913A4, asm, core/gap_0913A4]  # 4 bytes gap
+        - [0x913A4, asm, core/align_0913A4]  # 4 bytes gap
         - [0x913A8, asm, core/sceCcc_unk1]
-        - [0x913BC, asm, core/gap_0913BC]  # 4 bytes gap
+        - [0x913BC, asm, core/align_0913BC]  # 4 bytes gap
         - [0x913C0, asm, core/sceCcc_unused4]
         - [0x914A0, asm, core/sceCccSetErrorCharSJIS]
         - [0x914B0, asm, core/sceCccSetErrorCharUTF8]
         - [0x914C0, asm, core/sceCccSetErrorCharUTF16]
         - [0x914D0, asm, core/sceCcc_unused5]
-        - [0x914E4, asm, core/gap_0914E4]  # 4 bytes gap
+        - [0x914E4, asm, core/align_0914E4]  # 4 bytes gap
         - [0x914E8, asm, core/scePFontRelease]
-        - [0x914F4, asm, core/gap_0914F4]  # 4 bytes gap
+        - [0x914F4, asm, core/align_0914F4]  # 4 bytes gap
         - [0x914F8, asm, core/scePFontSetTexMem]
-        - [0x9150C, asm, core/gap_09150C]  # 4 bytes gap
+        - [0x9150C, asm, core/align_09150C]  # 4 bytes gap
         - [0x91510, asm, core/scePFontFlush]
-        - [0x9159C, asm, core/gap_09159C]  # 4 bytes gap
+        - [0x9159C, asm, core/align_09159C]  # 4 bytes gap
         - [0x915A0, asm, core/scePFontGetGlyph]
         - [0x91770, asm, core/j_sceVu0CopyMatrix]
         - [0x91778, asm, core/scePFontGetScreenMatrix]
@@ -2249,63 +2249,63 @@ segments:
         - [0x917C8, asm, core/scePFontGetColor]
         - [0x917D8, asm, core/_scePFontRefLoadImage]
         - [0x91B10, asm, core/_scePFontSetupTexCache]
-        - [0x91EE4, asm, core/gap_091EE4]  # 4 bytes gap
+        - [0x91EE4, asm, core/align_091EE4]  # 4 bytes gap
         - [0x91EE8, asm, core/_scePFontUpdateTex]
-        - [0x925BC, asm, core/gap_0925BC]  # 4 bytes gap
+        - [0x925BC, asm, core/align_0925BC]  # 4 bytes gap
         - [0x925C0, asm, core/_scePFontSetupTexEnv]
         - [0x92858, asm, core/_scePFont_Putc]
-        - [0x9342C, asm, core/gap_09342C]  # 4 bytes gap
+        - [0x9342C, asm, core/align_09342C]  # 4 bytes gap
         - [0x93430, asm, core/j_scePFontFlush]
         - [0x93438, asm, core/scePFontCalcCacheSize]
-        - [0x93444, asm, core/gap_093444]  # 4 bytes gap
+        - [0x93444, asm, core/align_093444]  # 4 bytes gap
         - [0x93448, asm, core/scePFontInit]
         - [0x93510, asm, core/scePFontAttachData]
-        - [0x9354C, asm, core/gap_09354C]  # 4 bytes gap
+        - [0x9354C, asm, core/align_09354C]  # 4 bytes gap
         - [0x93550, asm, core/scePFontGetFontInfo]
         - [0x93558, asm, core/scePFontGetBlock]
         - [0x93588, asm, core/scePFont_unused1]
         - [0x93590, asm, core/scePFont_unused2]
         - [0x93598, asm, core/scePFontPutc]
-        - [0x935DC, asm, core/gap_0935DC]  # 4 bytes gap
+        - [0x935DC, asm, core/align_0935DC]  # 4 bytes gap
         - [0x935E0, asm, core/scePFontPuts]
-        - [0x93614, asm, core/gap_093614]  # 4 bytes gap
+        - [0x93614, asm, core/align_093614]  # 4 bytes gap
         - [0x93618, asm, core/scePFontPutsContinue]
         - [0x93660, asm, core/scePFontSetFilter]
-        - [0x93674, asm, core/gap_093674]  # 4 bytes gap
+        - [0x93674, asm, core/align_093674]  # 4 bytes gap
         - [0x93678, asm, core/scePFontCalcRect]
         - [0x93810, asm, core/_scePFontDefaultFilter]
-        - [0x938AC, asm, core/gap_0938AC]  # 4 bytes gap
+        - [0x938AC, asm, core/align_0938AC]  # 4 bytes gap
         - [0x938B0, asm, core/_scePFontGetColorDepth]
         - [0x938C8, asm, core/_scePFontFlushTex]
-        - [0x938F4, asm, core/gap_0938F4]  # 4 bytes gap
+        - [0x938F4, asm, core/align_0938F4]  # 4 bytes gap
         - [0x938F8, asm, core/_scePFont_Getc]
         - [0x93998, asm, core/_scePFont_Ungetc]
-        - [0x939E4, asm, core/gap_0939E4]  # 4 bytes gap
+        - [0x939E4, asm, core/align_0939E4]  # 4 bytes gap
         - [0x939E8, asm, core/_scePFont_unk1]
         - [0x939F0, asm, core/_scePFont_unk2]
         - [0x939F8, asm, core/_scePFont_unk3]
         - [0x93A00, asm, core/_scePFont_unk4]
         - [0x93A08, asm, core/sceSifRebootIopWithRawImage]
-        - [0x93BEC, asm, core/gap_093BEC]  # 4 bytes gap
+        - [0x93BEC, asm, core/align_093BEC]  # 4 bytes gap
         - [0x93BF0, asm, core/iopbtconf_modify_code]
         - [0x93DB0, asm, core/sceSimulKLoadExec]
-        - [0x93EF4, asm, core/gap_093EF4]  # 4 bytes gap
+        - [0x93EF4, asm, core/align_093EF4]  # 4 bytes gap
         - [0x93EF8, asm, core/_sceBindLoadFileRpc]
         - [0x93F80, asm, core/_sceFreeLoadFileRpc]
-        - [0x93FA4, asm, core/gap_093FA4]  # 4 bytes gap
+        - [0x93FA4, asm, core/align_093FA4]  # 4 bytes gap
         - [0x93FA8, asm, core/_scePatchLoadFile]
-        - [0x94124, asm, core/gap_094124]  # 4 bytes gap
+        - [0x94124, asm, core/align_094124]  # 4 bytes gap
         - [0x94128, asm, core/patchloadfile_common1]
-        - [0x943D4, asm, core/gap_0943D4]  # 4 bytes gap
+        - [0x943D4, asm, core/align_0943D4]  # 4 bytes gap
         - [0x943D8, asm, core/patchloadfile_common2]
-        - [0x945A4, asm, core/gap_0945A4]  # 4 bytes gap
+        - [0x945A4, asm, core/align_0945A4]  # 4 bytes gap
         - [0x945A8, asm, core/patchloadfile_common4]
-        - [0x945C4, asm, core/gap_0945C4]  # 4 bytes gap
+        - [0x945C4, asm, core/align_0945C4]  # 4 bytes gap
         - [0x945C8, asm, core/patchloadfile_common3]
         - [0x94678, asm, core/_scePatchedSifLoadModule]
-        - [0x9473C, asm, core/gap_09473C]  # 4 bytes gap
+        - [0x9473C, asm, core/align_09473C]  # 4 bytes gap
         - [0x94740, asm, core/_scePatchedSifLoadKModule]
-        - [0x94804, asm, core/gap_094804]  # 4 bytes gap
+        - [0x94804, asm, core/align_094804]  # 4 bytes gap
         - [0x94808, asm, core/_scePatchedSifLoadStartModuleBuffer]
         - [0x949B8, asm, core/copy_and_boot_blob]
         - [0x94A60, asm, core/decryption_common2]
@@ -2314,91 +2314,91 @@ segments:
         - [0x94C5C, asm, core/decryption_common5]
         - [0x94CA8, asm, core/decryption_common4]
         - [0x94D08, asm, core/decryption_xommon1]
-        - [0x94E1C, asm, core/gap_094E1C]  # 4 bytes gap
+        - [0x94E1C, asm, core/align_094E1C]  # 4 bytes gap
         - [0x94E20, asm, core/Rm2Init]
         - [0x94F40, asm, core/Rm2End]
         - [0x94FB8, asm, core/Rm2Close]
-        - [0x950AC, asm, core/gap_0950AC]  # 4 bytes gap
+        - [0x950AC, asm, core/align_0950AC]  # 4 bytes gap
         - [0x950B0, asm, core/Rm2Open]
         - [0x95120, asm, core/Rm2GetDmaStr]
-        - [0x95174, asm, core/gap_095174]  # 4 bytes gap
+        - [0x95174, asm, core/align_095174]  # 4 bytes gap
         - [0x95178, asm, core/Rm2Read]
         - [0x952C8, asm, core/Rm2ReadState]
         - [0x95320, asm, core/Rm2PortGetConnection]
         - [0x95390, asm, core/Rm2GetButtonString]
         - [0x95438, asm, core/Rm2SetConnected]
-        - [0x95464, asm, core/gap_095464]  # 4 bytes gap
+        - [0x95464, asm, core/align_095464]  # 4 bytes gap
         - [0x95468, asm, core/Rm2GetConnected]
-        - [0x9549C, asm, core/gap_09549C]  # 4 bytes gap
+        - [0x9549C, asm, core/align_09549C]  # 4 bytes gap
         - [0x954A0, asm, core/Rm2GetConnectionStateString]
-        - [0x954D4, asm, core/gap_0954D4]  # 4 bytes gap
+        - [0x954D4, asm, core/align_0954D4]  # 4 bytes gap
         - [0x954D8, asm, core/Rm2GetXferStateString]
-        - [0x9550C, asm, core/gap_09550C]  # 4 bytes gap
+        - [0x9550C, asm, core/align_09550C]  # 4 bytes gap
         - [0x95510, asm, core/Rm2Call6]
-        - [0x9558C, asm, core/gap_09558C]  # 4 bytes gap
+        - [0x9558C, asm, core/align_09558C]  # 4 bytes gap
         - [0x95590, asm, core/Rm2Call7]
         - [0x955F8, asm, core/sceSdRemoteInit]
-        - [0x9569C, asm, core/gap_09569C]  # 4 bytes gap
+        - [0x9569C, asm, core/align_09569C]  # 4 bytes gap
         - [0x956A0, asm, core/sceSdTransToIOP]
-        - [0x95724, asm, core/gap_095724]  # 4 bytes gap
+        - [0x95724, asm, core/align_095724]  # 4 bytes gap
         - [0x95728, asm, core/sceSdCallBack]
         - [0x95738, asm, core/sceSdRemote]
         - [0x95928, asm, core/cos]
         - [0x95A30, asm, core/sin]
-        - [0x95B24, asm, core/gap_095B24]  # 4 bytes gap
+        - [0x95B24, asm, core/align_095B24]  # 4 bytes gap
         - [0x95B28, asm, core/cosf]
         - [0x95C10, asm, core/floorf]
-        - [0x95CF4, asm, core/gap_095CF4]  # 4 bytes gap
+        - [0x95CF4, asm, core/align_095CF4]  # 4 bytes gap
         - [0x95CF8, asm, core/modff]
-        - [0x95D94, asm, core/gap_095D94]  # 4 bytes gap
+        - [0x95D94, asm, core/align_095D94]  # 4 bytes gap
         - [0x95D98, asm, core/sinf]
         - [0x95E88, asm, core/fmodf]
-        - [0x95FC4, asm, core/gap_095FC4]  # 4 bytes gap
+        - [0x95FC4, asm, core/align_095FC4]  # 4 bytes gap
         - [0x95FC8, asm, core/sqrtf]
-        - [0x960DC, asm, core/gap_0960DC]  # 4 bytes gap
+        - [0x960DC, asm, core/align_0960DC]  # 4 bytes gap
         - [0x960E0, asm, core/__ieee754_rem_pio2]
-        - [0x965FC, asm, core/gap_0965FC]  # 4 bytes gap
+        - [0x965FC, asm, core/align_0965FC]  # 4 bytes gap
         - [0x96600, asm, core/__ieee754_fmodf]
         - [0x96850, asm, core/__ieee754_rem_pio2f]
         - [0x96C30, asm, core/__ieee754_sqrtf]
         - [0x96D68, asm, core/__kernel_cos]
-        - [0x96FB4, asm, core/gap_096FB4]  # 4 bytes gap
+        - [0x96FB4, asm, core/align_096FB4]  # 4 bytes gap
         - [0x96FB8, asm, core/__kernel_rem_pio2]
         - [0x97B20, asm, core/__kernel_sin]
-        - [0x97CF4, asm, core/gap_097CF4]  # 4 bytes gap
+        - [0x97CF4, asm, core/align_097CF4]  # 4 bytes gap
         - [0x97CF8, asm, core/__kernel_cosf]
         - [0x97E50, asm, core/__kernel_rem_pio2f]
-        - [0x9879C, asm, core/gap_09879C]  # 4 bytes gap
+        - [0x9879C, asm, core/align_09879C]  # 4 bytes gap
         - [0x987A0, asm, core/__kernel_sinf]
-        - [0x988A4, asm, core/gap_0988A4]  # 4 bytes gap
+        - [0x988A4, asm, core/align_0988A4]  # 4 bytes gap
         - [0x988A8, asm, core/fabs]
-        - [0x988DC, asm, core/gap_0988DC]  # 4 bytes gap
+        - [0x988DC, asm, core/align_0988DC]  # 4 bytes gap
         - [0x988E0, asm, core/floor]
         - [0x98AB8, asm, core/matherr]
-        - [0x98ADC, asm, core/gap_098ADC]  # 4 bytes gap
+        - [0x98ADC, asm, core/align_098ADC]  # 4 bytes gap
         - [0x98AE0, asm, core/scalbn]
-        - [0x98C94, asm, core/gap_098C94]  # 4 bytes gap
+        - [0x98C94, asm, core/align_098C94]  # 4 bytes gap
         - [0x98C98, asm, core/fabsf]
-        - [0x98CB4, asm, core/gap_098CB4]  # 4 bytes gap
+        - [0x98CB4, asm, core/align_098CB4]  # 4 bytes gap
         - [0x98CB8, asm, core/isnanf]
-        - [0x98CDC, asm, core/gap_098CDC]  # 4 bytes gap
+        - [0x98CDC, asm, core/align_098CDC]  # 4 bytes gap
         - [0x98CE0, asm, core/scalbnf]
         - [0x98E40, asm, core/copysign]
-        - [0x98E84, asm, core/gap_098E84]  # 4 bytes gap
+        - [0x98E84, asm, core/align_098E84]  # 4 bytes gap
         - [0x98E88, asm, core/copysignf]
         - [0x98EB8, asm, core/do_call_dtors]
-        - [0x98F0C, asm, core/gap_098F0C]  # 4 bytes gap
+        - [0x98F0C, asm, core/align_098F0C]  # 4 bytes gap
         - [0x98F10, asm, core/do_call_ctors_inner]
         - [0x98FC0, asm, core/do_call_ctors]
         - [0x98FE0, asm, core/__divdi3]
-        - [0x996CC, asm, core/gap_0996CC]  # 4 bytes gap
+        - [0x996CC, asm, core/align_0996CC]  # 4 bytes gap
         - [0x996D0, asm, core/exit]
         - [0x99700, asm, core/__fixsfdi]
-        - [0x9973C, asm, core/gap_09973C]  # 4 bytes gap
+        - [0x9973C, asm, core/align_09973C]  # 4 bytes gap
         - [0x99740, asm, core/__fixunsdfdi]
-        - [0x9982C, asm, core/gap_09982C]  # 4 bytes gap
+        - [0x9982C, asm, core/align_09982C]  # 4 bytes gap
         - [0x99830, asm, core/__fixunssfdi]
-        - [0x99924, asm, core/gap_099924]  # 4 bytes gap
+        - [0x99924, asm, core/align_099924]  # 4 bytes gap
         - [0x99928, asm, core/__floatdidf]
         - [0x999C0, asm, core/__floatdisf]
         - [0x99AA0, asm, core/__moddi3]
@@ -2406,76 +2406,76 @@ segments:
         - [0x9A168, asm, core/__udivdi3]
         - [0x9A738, asm, core/__umoddi3]
         - [0x9AC78, asm, core/__pack_d]
-        - [0x9ADA4, asm, core/gap_09ADA4]  # 4 bytes gap
+        - [0x9ADA4, asm, core/align_09ADA4]  # 4 bytes gap
         - [0x9ADA8, asm, core/__unpack_d]
-        - [0x9AE44, asm, core/gap_09AE44]  # 4 bytes gap
+        - [0x9AE44, asm, core/align_09AE44]  # 4 bytes gap
         - [0x9AE48, asm, core/_fpadd_parts]
         - [0x9B088, asm, core/dpadd]
         - [0x9B0E0, asm, core/dpsub]
-        - [0x9B144, asm, core/gap_09B144]  # 4 bytes gap
+        - [0x9B144, asm, core/align_09B144]  # 4 bytes gap
         - [0x9B148, asm, core/dpmul]
         - [0x9B3F0, asm, core/dpdiv]
         - [0x9B558, asm, core/__fpcmp_parts_d]
-        - [0x9B66C, asm, core/gap_09B66C]  # 4 bytes gap
+        - [0x9B66C, asm, core/align_09B66C]  # 4 bytes gap
         - [0x9B670, asm, core/dpcmp]
-        - [0x9B6BC, asm, core/gap_09B6BC]  # 4 bytes gap
+        - [0x9B6BC, asm, core/align_09B6BC]  # 4 bytes gap
         - [0x9B6C0, asm, core/litodp]
         - [0x9B778, asm, core/dptoli]
-        - [0x9B80C, asm, core/gap_09B80C]  # 4 bytes gap
+        - [0x9B80C, asm, core/align_09B80C]  # 4 bytes gap
         - [0x9B810, asm, core/dptoul]
         - [0x9B8B0, asm, core/__negdf2]
         - [0x9B8E8, asm, core/__make_dp]
-        - [0x9B914, asm, core/gap_09B914]  # 4 bytes gap
+        - [0x9B914, asm, core/align_09B914]  # 4 bytes gap
         - [0x9B918, asm, core/dptofp]
-        - [0x9B96C, asm, core/gap_09B96C]  # 4 bytes gap
+        - [0x9B96C, asm, core/align_09B96C]  # 4 bytes gap
         - [0x9B970, asm, core/__pack_f]
-        - [0x9BA7C, asm, core/gap_09BA7C]  # 4 bytes gap
+        - [0x9BA7C, asm, core/align_09BA7C]  # 4 bytes gap
         - [0x9BA80, asm, core/__unpack_f]
         - [0x9BB10, asm, core/_fpadd_parts_0]
-        - [0x9BD44, asm, core/gap_09BD44]  # 4 bytes gap
+        - [0x9BD44, asm, core/align_09BD44]  # 4 bytes gap
         - [0x9BD48, asm, core/fpadd]
         - [0x9BDA0, asm, core/fpsub]
-        - [0x9BE04, asm, core/gap_09BE04]  # 4 bytes gap
+        - [0x9BE04, asm, core/align_09BE04]  # 4 bytes gap
         - [0x9BE08, asm, core/fpmul]
-        - [0x9BFFC, asm, core/gap_09BFFC]  # 4 bytes gap
+        - [0x9BFFC, asm, core/align_09BFFC]  # 4 bytes gap
         - [0x9C000, asm, core/fpdiv]
         - [0x9C160, asm, core/__fpcmp_parts_f]
-        - [0x9C274, asm, core/gap_09C274]  # 4 bytes gap
+        - [0x9C274, asm, core/align_09C274]  # 4 bytes gap
         - [0x9C278, asm, core/fpcmp]
-        - [0x9C2C4, asm, core/gap_09C2C4]  # 4 bytes gap
+        - [0x9C2C4, asm, core/align_09C2C4]  # 4 bytes gap
         - [0x9C2C8, asm, core/sitofp]
         - [0x9C380, asm, core/fptosi]
-        - [0x9C40C, asm, core/gap_09C40C]  # 4 bytes gap
+        - [0x9C40C, asm, core/align_09C40C]  # 4 bytes gap
         - [0x9C410, asm, core/fptoui]
         - [0x9C4A8, asm, core/__negsf2]
         - [0x9C4E0, asm, core/__make_fp]
-        - [0x9C50C, asm, core/gap_09C50C]  # 4 bytes gap
+        - [0x9C50C, asm, core/align_09C50C]  # 4 bytes gap
         - [0x9C510, asm, core/fptodp]
         - [0x9C550, asm, core/abort]
         - [0x9C570, asm, core/__assert]
-        - [0x9C5A4, asm, core/gap_09C5A4]  # 4 bytes gap
+        - [0x9C5A4, asm, core/align_09C5A4]  # 4 bytes gap
         - [0x9C5A8, asm, core/atof]
-        - [0x9C5C4, asm, core/gap_09C5C4]  # 4 bytes gap
+        - [0x9C5C4, asm, core/align_09C5C4]  # 4 bytes gap
         - [0x9C5C8, asm, core/atoi]
         - [0x9C5F0, asm, core/__errno]
-        - [0x9C5FC, asm, core/gap_09C5FC]  # 4 bytes gap
+        - [0x9C5FC, asm, core/align_09C5FC]  # 4 bytes gap
         - [0x9C600, asm, core/std]
         - [0x9C658, asm, core/__sfmoreglue]
         - [0x9C6C8, asm, core/__sfp]
         - [0x9C7A8, asm, core/_cleanup_r]
-        - [0x9C7B4, asm, core/gap_09C7B4]  # 4 bytes gap
+        - [0x9C7B4, asm, core/align_09C7B4]  # 4 bytes gap
         - [0x9C7B8, asm, core/cleanup_r]
-        - [0x9C7C4, asm, core/gap_09C7C4]  # 4 bytes gap
+        - [0x9C7C4, asm, core/align_09C7C4]  # 4 bytes gap
         - [0x9C7C8, asm, core/__sinit]
-        - [0x9C854, asm, core/gap_09C854]  # 4 bytes gap
+        - [0x9C854, asm, core/align_09C854]  # 4 bytes gap
         - [0x9C858, asm, core/fiprintf]
-        - [0x9C88C, asm, core/gap_09C88C]  # 4 bytes gap
+        - [0x9C88C, asm, core/align_09C88C]  # 4 bytes gap
         - [0x9C890, asm, core/_fwalk]
-        - [0x9C924, asm, core/gap_09C924]  # 4 bytes gap
+        - [0x9C924, asm, core/align_09C924]  # 4 bytes gap
         - [0x9C928, asm, core/malloc]
         - [0x9C950, asm, core/free_0]
         - [0x9C960, asm, core/malloc_extend_top]
-        - [0x9CBB4, asm, core/gap_09CBB4]  # 4 bytes gap
+        - [0x9CBB4, asm, core/align_09CBB4]  # 4 bytes gap
         - [0x9CBB8, asm, core/_malloc_r]
         - [0x9D330, asm, core/memcmp]
         - [0x9D3C4, asm, core/memcpy]
@@ -2484,31 +2484,31 @@ segments:
         - [0x9D638, asm, core/__malloc_lock]
         - [0x9D640, asm, core/__malloc_unlock]
         - [0x9D648, asm, core/_printf_r]
-        - [0x9D684, asm, core/gap_09D684]  # 4 bytes gap
+        - [0x9D684, asm, core/align_09D684]  # 4 bytes gap
         - [0x9D688, asm, core/printf]
         - [0x9D6D8, asm, core/srand]
         - [0x9D6E8, asm, core/rand]
         - [0x9D718, asm, core/_sbrk_r]
-        - [0x9D774, asm, core/gap_09D774]  # 4 bytes gap
+        - [0x9D774, asm, core/align_09D774]  # 4 bytes gap
         - [0x9D778, asm, core/_init_signal_r]
         - [0x9D7E8, asm, core/_signal_r]
-        - [0x9D874, asm, core/gap_09D874]  # 4 bytes gap
+        - [0x9D874, asm, core/align_09D874]  # 4 bytes gap
         - [0x9D878, asm, core/_raise_r]
         - [0x9D968, asm, core/__sigtramp_r]
         - [0x9DA20, asm, core/raise]
         - [0x9DA48, asm, core/signal]
-        - [0x9DA74, asm, core/gap_09DA74]  # 4 bytes gap
+        - [0x9DA74, asm, core/align_09DA74]  # 4 bytes gap
         - [0x9DA78, asm, core/_init_signal]
-        - [0x9DA9C, asm, core/gap_09DA9C]  # 4 bytes gap
+        - [0x9DA9C, asm, core/align_09DA9C]  # 4 bytes gap
         - [0x9DAA0, asm, core/__sigtramp]
         - [0x9DAC8, asm, core/_kill_r]
-        - [0x9DB24, asm, core/gap_09DB24]  # 4 bytes gap
+        - [0x9DB24, asm, core/align_09DB24]  # 4 bytes gap
         - [0x9DB28, asm, core/_getpid_r]
-        - [0x9DB44, asm, core/gap_09DB44]  # 4 bytes gap
+        - [0x9DB44, asm, core/align_09DB44]  # 4 bytes gap
         - [0x9DB48, asm, core/_sprintf_r]
         - [0x9DBB0, asm, graph/sprintf]
         - [0x9DC20, asm, core/__sread]
-        - [0x9DC84, asm, core/gap_09DC84]  # 4 bytes gap
+        - [0x9DC84, asm, core/align_09DC84]  # 4 bytes gap
         - [0x9DC88, asm, core/__swrite]
         - [0x9DD08, asm, core/__sseek]
         - [0x9DD70, asm, core/__sclose]
@@ -2517,103 +2517,103 @@ segments:
         - [0x9E04C, asm, core/strcmp]
         - [0x9E190, asm, core/strcpy]
         - [0x9E2A4, asm, core/strlen]
-        - [0x9E3DC, asm, core/gap_09E3DC]  # 4 bytes gap
+        - [0x9E3DC, asm, core/align_09E3DC]  # 4 bytes gap
         - [0x9E3E0, asm, core/strncat]
-        - [0x9E58C, asm, core/gap_09E58C]  # 4 bytes gap
+        - [0x9E58C, asm, core/align_09E58C]  # 4 bytes gap
         - [0x9E590, asm, core/strncmp]
         - [0x9E748, asm, core/strncpy]
-        - [0x9E904, asm, core/gap_09E904]  # 4 bytes gap
+        - [0x9E904, asm, core/align_09E904]  # 4 bytes gap
         - [0x9E908, asm, core/strrchr]
         - [0x9E958, asm, core/strstr]
-        - [0x9E9C4, asm, core/gap_09E9C4]  # 4 bytes gap
+        - [0x9E9C4, asm, core/align_09E9C4]  # 4 bytes gap
         - [0x9E9C8, asm, core/_strtod_r]
         - [0x9F8C8, asm, core/strtod]
-        - [0x9F8F4, asm, core/gap_09F8F4]  # 4 bytes gap
+        - [0x9F8F4, asm, core/align_09F8F4]  # 4 bytes gap
         - [0x9F8F8, asm, core/strtodf]
-        - [0x9F91C, asm, core/gap_09F91C]  # 4 bytes gap
+        - [0x9F91C, asm, core/align_09F91C]  # 4 bytes gap
         - [0x9F920, asm, core/_strtol_r]
         - [0x9FB58, asm, core/strtol]
-        - [0x9FB8C, asm, core/gap_09FB8C]  # 4 bytes gap
+        - [0x9FB8C, asm, core/align_09FB8C]  # 4 bytes gap
         - [0x9FB90, asm, core/__sprint]
-        - [0x9FBD4, asm, core/gap_09FBD4]  # 4 bytes gap
+        - [0x9FBD4, asm, core/align_09FBD4]  # 4 bytes gap
         - [0x9FBD8, asm, core/__sbprintf]
-        - [0x9FC8C, asm, core/gap_09FC8C]  # 4 bytes gap
+        - [0x9FC8C, asm, core/align_09FC8C]  # 4 bytes gap
         - [0x9FC90, asm, core/vfiprintf]
         - [0x9FD08, asm, core/_vfiprintf_r]
-        - [0xA08D4, asm, core/gap_0A08D4]  # 4 bytes gap
+        - [0xA08D4, asm, core/align_0A08D4]  # 4 bytes gap
         - [0xA08D8, asm, core/__sprint_0]
-        - [0xA091C, asm, core/gap_0A091C]  # 4 bytes gap
+        - [0xA091C, asm, core/align_0A091C]  # 4 bytes gap
         - [0xA0920, asm, core/__sbprintf_0]
-        - [0xA09D4, asm, core/gap_0A09D4]  # 4 bytes gap
+        - [0xA09D4, asm, core/align_0A09D4]  # 4 bytes gap
         - [0xA09D8, asm, core/vfprintf]
         - [0xA0A50, asm, core/_vfprintf_r]
         - [0xA1F68, asm, core/cvt]
         - [0xA2118, asm, core/exponent]
         - [0xA21F8, asm, core/_write_r]
         - [0xA2258, asm, core/__swsetup]
-        - [0xA2364, asm, core/gap_0A2364]  # 4 bytes gap
+        - [0xA2364, asm, core/align_0A2364]  # 4 bytes gap
         - [0xA2368, asm, core/_close_r]
         - [0xA23C0, asm, core/quorem]
-        - [0xA25D4, asm, core/gap_0A25D4]  # 4 bytes gap
+        - [0xA25D4, asm, core/align_0A25D4]  # 4 bytes gap
         - [0xA25D8, asm, core/_dtoa_r]
-        - [0xA37A4, asm, core/gap_0A37A4]  # 4 bytes gap
+        - [0xA37A4, asm, core/align_0A37A4]  # 4 bytes gap
         - [0xA37A8, asm, core/fflush]
-        - [0xA38AC, asm, core/gap_0A38AC]  # 4 bytes gap
+        - [0xA38AC, asm, core/align_0A38AC]  # 4 bytes gap
         - [0xA38B0, asm, core/_free_r]
-        - [0xA3BCC, asm, core/gap_0A3BCC]  # 4 bytes gap
+        - [0xA3BCC, asm, core/align_0A3BCC]  # 4 bytes gap
         - [0xA3BD0, asm, core/_malloc_trim_r]
-        - [0xA3D3C, asm, core/gap_0A3D3C]  # 4 bytes gap
+        - [0xA3D3C, asm, core/align_0A3D3C]  # 4 bytes gap
         - [0xA3D40, asm, core/__sfvwrite]
         - [0xA4118, asm, core/_setlocale_r]
-        - [0xA419C, asm, core/gap_0A419C]  # 4 bytes gap
+        - [0xA419C, asm, core/align_0A419C]  # 4 bytes gap
         - [0xA41A0, asm, core/_localeconv_r]
-        - [0xA41AC, asm, core/gap_0A41AC]  # 4 bytes gap
+        - [0xA41AC, asm, core/align_0A41AC]  # 4 bytes gap
         - [0xA41B0, asm, core/setlocale]
-        - [0xA41DC, asm, core/gap_0A41DC]  # 4 bytes gap
+        - [0xA41DC, asm, core/align_0A41DC]  # 4 bytes gap
         - [0xA41E0, asm, core/localeconv]
-        - [0xA4204, asm, core/gap_0A4204]  # 4 bytes gap
+        - [0xA4204, asm, core/align_0A4204]  # 4 bytes gap
         - [0xA4208, asm, core/_lseek_r]
         - [0xA4268, asm, core/__smakebuf]
         - [0xA43B8, asm, core/_mbtowc_r]
         - [0xA43F4, asm, core/memchr]
-        - [0xA44D4, asm, core/gap_0A44D4]  # 4 bytes gap
+        - [0xA44D4, asm, core/align_0A44D4]  # 4 bytes gap
         - [0xA44D8, asm, core/_Balloc]
         - [0xA4580, asm, core/_Bfree]
-        - [0xA45AC, asm, core/gap_0A45AC]  # 4 bytes gap
+        - [0xA45AC, asm, core/align_0A45AC]  # 4 bytes gap
         - [0xA45B0, asm, core/_multadd]
-        - [0xA46C4, asm, core/gap_0A46C4]  # 4 bytes gap
+        - [0xA46C4, asm, core/align_0A46C4]  # 4 bytes gap
         - [0xA46C8, asm, core/_s2b]
         - [0xA4810, asm, core/_hi0bits]
-        - [0xA4894, asm, core/gap_0A4894]  # 4 bytes gap
+        - [0xA4894, asm, core/align_0A4894]  # 4 bytes gap
         - [0xA4898, asm, core/_lo0bits]
         - [0xA4958, asm, core/_i2b]
         - [0xA4990, asm, core/_multiply]
-        - [0xA4BBC, asm, core/gap_0A4BBC]  # 4 bytes gap
+        - [0xA4BBC, asm, core/align_0A4BBC]  # 4 bytes gap
         - [0xA4BC0, asm, core/_pow5mult]
         - [0xA4CC0, asm, core/_lshift]
         - [0xA4E38, asm, core/__mcmp]
         - [0xA4EA0, asm, core/__mdiff]
         - [0xA5030, asm, core/_ulp]
         - [0xA50C8, asm, core/_b2d]
-        - [0xA5244, asm, core/gap_0A5244]  # 4 bytes gap
+        - [0xA5244, asm, core/align_0A5244]  # 4 bytes gap
         - [0xA5248, asm, core/_d2b]
-        - [0xA53C4, asm, core/gap_0A53C4]  # 4 bytes gap
+        - [0xA53C4, asm, core/align_0A53C4]  # 4 bytes gap
         - [0xA53C8, asm, core/_ratio]
         - [0xA5488, asm, core/_mprec_log10]
-        - [0xA54F4, asm, core/gap_0A54F4]  # 4 bytes gap
+        - [0xA54F4, asm, core/align_0A54F4]  # 4 bytes gap
         - [0xA54F8, asm, core/_read_r]
         - [0xA5558, asm, core/isinf]
         - [0xA55A0, asm, core/isnan]
         - [0xA55D8, asm, core/_calloc_r]
-        - [0xA5694, asm, core/gap_0A5694]  # 4 bytes gap
+        - [0xA5694, asm, core/align_0A5694]  # 4 bytes gap
         - [0xA5698, asm, core/_fstat_r]
-        - [0xA56F4, asm, core/gap_0A56F4]  # 12 bytes gap
+        - [0xA56F4, asm, core/align_0A56F4]  # 12 bytes gap
         - [0xA5700, asm, core/SetGsCrt]
         - [0xA5710, asm, core/ReferThreadStatus]
         - [0xA5720, asm, graph/GsGetIMR]
         - [0xA5730, asm, graph/GsPutIMR]
         - [0xA5740, asm, core/__fixdfdi]
-        - [0xA579C, asm, core/gap_text_end]
+        - [0xA579C, asm, core/align_text_end]
         - [0xA57A0, data, datasect]
         - [0x1487E0, rodata, rodatasect]
         - [0x170980, sdata, sdatasect]
