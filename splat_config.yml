@@ -646,7 +646,7 @@ segments:
         - [0x12FF8, asm, cdvd/cdvd_cmd_disc_key]
         - [0x13038, asm, cdvd/cdvd_cmd_modifyconfig]
         - [0x13114, asm, core/align_013114]  # 4 bytes gap
-        - [0x13118, asm, cdvd/cdvd_cmd_aadjustctrl]
+        - [0x13118, c, cdvd/cdvd_cmd_aadjustctrl]
         - [0x13194, asm, core/align_013194]  # 4 bytes gap
         - [0x13198, asm, cdvd/cdvd_cmd_rcbypassctl]
         - [0x13208, asm, core/callback_queue_prepare]
@@ -774,27 +774,27 @@ segments:
         - [0x16770, asm, core/align_016770]  # 160 bytes gap
         - [0x16810, asm, sound/sound_handler_215810]
         - [0x16BEC, asm, core/align_016BEC]  # 4 bytes gap
-        - [0x16BF0, asm, cdvd/thunk_sceCdDiskReady]
+        - [0x16BF0, c, cdvd/thunk_sceCdDiskReady]
         - [0x16C0C, asm, core/align_016C0C]  # 4 bytes gap
-        - [0x16C10, asm, cdvd/thunk_sceCdGetDiskType]
+        - [0x16C10, c, cdvd/thunk_sceCdGetDiskType]
         - [0x16C2C, asm, core/align_016C2C]  # 4 bytes gap
-        - [0x16C30, asm, cdvd/thunk_sceCdGetError]
+        - [0x16C30, c, cdvd/thunk_sceCdGetError]
         - [0x16C4C, asm, core/align_016C4C]  # 60 bytes gap
-        - [0x16C88, asm, cdvd/thunk_sceCdInit]
+        - [0x16C88, c, cdvd/thunk_sceCdInit]
         - [0x16CA4, asm, core/align_016CA4]  # 4 bytes gap
-        - [0x16CA8, asm, cdvd/thunk_sceCdIntToPos]
+        - [0x16CA8, c, cdvd/thunk_sceCdIntToPos]
         - [0x16CEC, asm, core/align_016CEC]  # 4 bytes gap
-        - [0x16CF0, asm, cdvd/thunk_sceCdPosToInit]
+        - [0x16CF0, c, cdvd/thunk_sceCdPosToInit]
         - [0x16D20, asm, core/align_016D20]  # 8 bytes gap
-        - [0x16D28, asm, cdvd/thunk_sceCdSync]
+        - [0x16D28, c, cdvd/thunk_sceCdSync]
         - [0x16D44, asm, core/align_016D44]  # 20 bytes gap
-        - [0x16D58, asm, cdvd/thunk_sceCdStandby]
+        - [0x16D58, c, cdvd/thunk_sceCdStandby]
         - [0x16D74, asm, core/align_016D74]  # 4 bytes gap
-        - [0x16D78, asm, cdvd/thunk_sceCdStop]
+        - [0x16D78, c, cdvd/thunk_sceCdStop]
         - [0x16D94, asm, core/align_016D94]  # 4 bytes gap
-        - [0x16D98, asm, cdvd/thunk_sceCdTrayReq]
+        - [0x16D98, c, cdvd/thunk_sceCdTrayReq]
         - [0x16DB4, asm, core/align_016DB4]  # 4 bytes gap
-        - [0x16DB8, asm, cdvd/thunk_sceCddaStream]
+        - [0x16DB8, c, cdvd/thunk_sceCddaStream]
         - [0x16DF4, asm, cdvd/D_00215DF4]
         - [0x16DF8, asm, cdvd/func_00215DF8]
         - [0x170DC, asm, core/align_0170DC]  # 4 bytes padding
