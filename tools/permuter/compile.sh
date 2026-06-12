@@ -1,28 +1,33 @@
-#!/bin/bash
-# CrystalOSD permuter compile script
-# Used by decomp-permuter to compile C → .o for MIPS R5900 (PS2 EE)
+#!/usr/bin/env bash
+# CrystalOSD permuter compile script — compiles C -> .o with the MATCHING compiler
+# (ee-gcc 2.9-991111), for decomp-permuter. The permuter invokes:
+#     compile.sh <source.c> -o <output.o>
 #
-# Usage (by permuter): bash compile.sh -c source.c -o output.o
-#
-# The permuter passes: compile.sh <file.c> -o <file.o>
-# ee-gcc needs -c for compilation-only, which we inject.
+# Three WSL realities are handled here:
+#  - Matching compiler is ee-gcc 2.9 (NOT modern ps2dev gcc — that won't byte-match).
+#  - ee-gcc is a 32-bit 1999 binary; stat() EOVERFLOWs on the 9p /mnt/c mount, so we
+#    copy the source to native ext4 (/tmp) and compile there.
+#  - Small-data threshold (-G) is per-function; pass PERMUTER_G=-G0/-G8 (default -G8).
+set -e
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+EE_GCC="${EE_GCC:-/home/jeanxpereira/ee-gcc2.9-991111/bin/ee-gcc}"
+GFLAG="${PERMUTER_G:--G8}"
 
-# Toolchain — use absolute path (~/ps2dev may not expand in all envs)
-EE_GCC="${EE_GCC:-/Users/jeanxpereira/ps2dev/ee/bin/mips64r5900el-ps2-elf-gcc}"
-PS2SDK="${PS2SDK:-/Users/jeanxpereira/ps2dev/ps2sdk}"
+SRC=""; OUT=""; extra=()
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -o) OUT="$2"; shift 2 ;;
+    *.c) SRC="$1"; shift ;;
+    *) extra+=("$1"); shift ;;
+  esac
+done
+[ -n "$SRC" ] || { echo "compile.sh: no source .c in args" >&2; exit 2; }
+[ -n "$OUT" ] || { echo "compile.sh: no -o output" >&2; exit 2; }
 
-# CI override: if EE_GCC_PATH is set, use that
-if [ -n "$EE_GCC_PATH" ]; then
-    EE_GCC="$EE_GCC_PATH"
-fi
-
-exec "$EE_GCC" -O2 -G0 -mabi=eabi -mno-abicalls \
-    -fno-common -fno-exceptions \
-    -Wno-implicit-function-declaration -Wno-int-to-pointer-cast -Wno-int-conversion \
-    -I "$PROJECT_ROOT/include" \
-    -I "$PS2SDK/ee/include" \
-    -I "$PS2SDK/common/include" \
-    -c "$@"
+W=$(mktemp -d /tmp/permc.XXXXXX)
+trap 'rm -rf "$W"' EXIT
+cp "$SRC" "$W/x.c"
+# ee-gcc 2.9 rejects modern -Wno-int-* flags; keep the minimal matching set (as match_one.sh).
+"$EE_GCC" -O2 "$GFLAG" -Wall -D_EE -mabi=eabi -mno-abicalls -fno-common -fno-exceptions \
+  "${extra[@]}" -c "$W/x.c" -o "$W/x.o"
+cp "$W/x.o" "$OUT"
