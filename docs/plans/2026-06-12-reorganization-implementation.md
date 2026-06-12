@@ -65,33 +65,31 @@ git add README.md
 git commit -m "docs(readme): reframe goals — byte-perfect ELF + sequenced desktop north star"
 ```
 
-### Task 0.2: Fix decomp.dev shields (DOL/REL → overall progress) `[sonnet]`
+### Task 0.2: Fix DOL/REL measures — decomp.dev platform setting (NOT a repo change) `[user action]`
 
-**Files:**
-- Modify: `README.md` (shield/badge markdown)
+> **CORRECTED 2026-06-12 during execution.** Original assumption (DOL/REL badges in
+> README) was false. Verified: the README badges are already correct (Build Status +
+> `measure=code` ELF progress + decomp.dev SVG); there is NO `DOL`/`REL`/`platform`
+> reference anywhere in the repo (`grep` across `.github/`, `objdiff.json`,
+> `generate_objdiff.py` → zero hits). The DOL/REL shields Ethanol saw are a
+> **decomp.dev project-side setting** (the project's `platform` field on decomp.dev),
+> not anything this repo controls.
 
-- [ ] **Step 1: Locate the shields**
+**This cannot be fixed by editing repo files.** Action required on decomp.dev:
 
-Run: `grep -nE 'DOL|REL|img.shields.io|badge|decomp.dev' README.md`
-Expected: find the DOL/REL badge markdown (GameCube concepts, meaningless for PS2).
+- [ ] **Step 1: Set the project platform to PS2 on decomp.dev**
 
-- [ ] **Step 2: Replace with overall-progress only**
+Via the decomp.dev web UI (project settings) or their API using `DECOMP_ME_API_KEY`,
+set the CrystalOSD project's platform to PS2 so it stops rendering GameCube DOL/REL
+measures and shows the PS2 `code` measure only. This is a user action (requires the
+decomp.dev account that owns the project).
 
-Remove DOL/REL badges. Keep (or add) a single overall-progress badge sourced from decomp.dev. If unsure of the exact decomp.dev badge URL, use the project page link form:
-`[![Progress](https://decomp.dev/JeanxPereira/CrystalOSD/badge.svg)](https://decomp.dev/JeanxPereira/CrystalOSD)`
-(verify the URL resolves; if it 404s, fall back to a plain link to the project page and note it in the commit body.)
+- [ ] **Step 2: Verify on the project page**
 
-- [ ] **Step 3: Verify**
+Load `https://decomp.dev/JeanxPereira/CrystalOSD` and confirm no DOL/REL measures
+appear — only overall code progress.
 
-Run: `grep -niE 'DOL|REL' README.md`
-Expected: no matches (no GameCube-format shields remain).
-
-- [ ] **Step 4: Commit**
-
-```bash
-git add README.md
-git commit -m "docs(readme): replace DOL/REL shields with overall-progress badge (PS2, not GC)"
-```
+*No commit (no repo files change).*
 
 ### Task 0.3: Rename mislabeled `pad_*` function symbols `[opus]`
 
