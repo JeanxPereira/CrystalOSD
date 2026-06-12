@@ -22,7 +22,16 @@ already uses the correct matching compiler. The mess is **inconsistency**, not b
 
 **Goal (re-confirmed):** byte-identical OSDSYS ELF, rebuilt from C, with an
 AI-assisted per-function port loop that is *easy to run*. SDK library matching is a
-welcome side effect (useful to other PS2 decomps). **Non-goal:** desktop port (dropped).
+welcome side effect (useful to other PS2 decomps).
+
+**North star (sequenced, not dropped):** a desktop reimplementation of the OSDSYS
+aesthetic (crystal clock, fog, towers, refraction cube) is the long-term *why*. It is
+**not** built now and the byte-perfect ELF does **not** run on PC — the port is a
+separate reimplementation that *reuses the understanding* the decomp produces (structs,
+the clock 5-pass pipeline, VU0 axis-angle decode). Consequence for ordering: when
+choosing decomp targets, the **render subsystems (clock / opening / graph) are
+prioritized** because they feed the port. The decomp is the prerequisite; the port is
+the payoff.
 
 ---
 
@@ -54,11 +63,14 @@ isn't on disk) must still report byte-perfect after each merged change.
 ### Phase 0 — Reframe (docs only, zero build risk)
 *Can land immediately, independent of everything else.*
 
-- README.md: drop desktop-port aspiration; state goals = byte-identical ELF + research
-  value (SDK libs for other PS2 decomps).
+- README.md: state goals = byte-identical ELF + research value (SDK libs for other PS2
+  decomps), **with the desktop reimplementation as the stated long-term north star**
+  (not the immediate goal). Make explicit that the byte-perfect ELF is PS2/MIPS and does
+  not run on PC; the port is a downstream reimplementation enabled by the decomp.
 - Fix decomp.dev shields: remove/replace DOL/REL badges with overall-progress only
   (per Ethanol: "just the overall progress is enough").
-- CLAUDE.md: mark desktop port as explicitly out of scope.
+- CLAUDE.md: record decomp-target priority — render subsystems (clock/opening/graph)
+  first, because they feed the port north star.
 - Rename the 9 mislabeled `pad_*` function symbols in `symbol_addrs.txt` to honest names
   (`pad_handler_*` ones that are real pad-input handlers keep meaningful names; the
   point is none should *look like* padding). Requires `make split` + `make verify` after.
@@ -80,10 +92,18 @@ isn't on disk) must still report byte-perfect after each merged change.
    `decomp.yaml`, `tools/README.md`, `tools/permuter/compile.sh`, `permuter_import.sh`,
    CLAUDE.md, PS2_PROJECT_STATE.md. Add a checked-in `env.example.sh` (sourceable) documenting
    the required exports.
-4. Acceptance gate: inside WSL, `python3 configure.py -c && make -j elf && make verify`
-   → byte-perfect. This re-validates the whole splat→asm→link pipeline on Linux.
+4. **Fetch the byte-perfect oracle:** the original ELF is gitignored and NOT on disk
+   locally — without it `make verify` cannot run (only `make sha1` against
+   `config/build.sha1`, which only proves a match *after* one exists). WSL setup must
+   `git clone` the private `crystalosd-build` repo (as CI does, via a token) to land
+   `OSDSYS_A_XLF_decrypted_unpacked.elf` at repo root, OR fall back to `make sha1` if the
+   token is unavailable. The setup script documents both paths.
+5. Acceptance gate: inside WSL, `python3 configure.py -c && make -j elf && make verify`
+   (or `make sha1` if no original ELF) → byte-perfect. Re-validates the whole
+   splat→asm→link pipeline on Linux.
 
-**Deliverable:** clean checkout + documented setup script = green `make verify` in WSL.
+**Deliverable:** clean checkout + documented setup script = green `make verify` (or
+`make sha1`) in WSL.
 
 ### Phase 2 — Single compiler truth
 *The fix Ethanol called out.*
@@ -194,7 +214,9 @@ Phase 5 (AI loop)       — needs 2,3; 4 desirable but not blocking
 
 ## 6. Out of scope
 
-- Desktop port (dropped permanently per 2026-05-10 Discord discussion).
+- **Building** the desktop port now. It is the sequenced north star (Section 1), not
+  current implementation work — render-subsystem decomp is prioritized to enable it,
+  but no desktop code is written in this reorg.
 - PSX/PSP XMB research (fun, but "one thing at a time" — Ethanol).
 - Re-dumping a fresh OSDSYS from BIOS.
 - Full `gap_*` resolution (Phase 4 commits to mechanism + first pass only).
