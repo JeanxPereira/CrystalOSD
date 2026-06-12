@@ -872,10 +872,10 @@ segments:
         - [0x1BB34, asm, core/align_01BB34]  # 4 bytes gap
         - [0x1BB38, asm, opening/module_opening_setup]
         - [0x1BB88, asm, module/module_dummy_setup]
-        - [0x1BBD0, asm, opening/module_opening_thread_proc]
-        - [0x1BC50, asm, opening/OpeningInit]
+        - [0x1BBD0, c, opening/module_opening_thread_proc]
+        - [0x1BC50, c, opening/OpeningInit]
         - [0x1BCD4, asm, core/align_01BCD4]  # 4 bytes gap
-        - [0x1BCD8, asm, opening/OpeningProcess]
+        - [0x1BCD8, c, opening/OpeningProcess]
         - [0x1BD58, asm, opening/OpeningDrawEnd]
         - [0x1BD9C, asm, core/align_01BD9C]  # 4 bytes gap
         - [0x1BDA0, asm, opening/OpeningDoOpeningIllegal]
@@ -885,10 +885,10 @@ segments:
         - [0x1BEE0, asm, core/opening_transition_to_clock]
         - [0x1C090, asm, core/func_0021B090]
         - [0x1C108, asm, core/func_0021B108]
-        - [0x1C128, asm, opening/OpeningInitRender]
+        - [0x1C128, c, opening/OpeningInitRender]
         - [0x1C1A8, asm, graph/gsAllocExtraBuffers]
         - [0x1C208, asm, opening/OpeningInitTextures]
-        - [0x1C2F8, asm, opening/InitDMA]
+        - [0x1C2F8, c, opening/InitDMA]
         - [0x1C35C, asm, core/align_01C35C]  # 4 bytes gap
         - [0x1C360, asm, graph/pktSetFlatRect]
         - [0x1C4C4, asm, core/align_01C4C4]  # 4 bytes gap
@@ -980,7 +980,7 @@ segments:
         - [0x2144C, asm, core/align_02144C]  # 4 bytes padding
         - [0x21450, asm, opening/func_00220450]
         - [0x219E0, asm, opening/InitLightsCubes]
-        - [0x21CE8, asm, opening/OpeningDrawLightsAndCubes]
+        - [0x21CE8, c, opening/OpeningDrawLightsAndCubes]
         - [0x21D60, asm, opening/func_00220D60]
         - [0x220B0, asm, opening/func_002210B0]
         - [0x22140, asm, opening/func_00221140]
@@ -998,14 +998,14 @@ segments:
         - [0x22CB0, asm, opening/OpeningDrawOpeningScene]
         - [0x22D2C, asm, core/align_022D2C]  # 4 bytes gap
         - [0x22D30, asm, opening/OpeningInitTowersFog]
-        - [0x23180, asm, opening/OpeningDoOpening]
+        - [0x23180, c, opening/OpeningDoOpening]
         - [0x231F0, asm, opening/D_002221F0]
         - [0x23674, asm, core/align_023674]  # 4 bytes padding
         - [0x23678, asm, opening/func_00222678]
         - [0x23BE8, asm, opening/func_00222BE8]
         - [0x23DD4, asm, core/align_023DD4]  # 4 bytes padding
-        - [0x23DD8, asm, opening/func_00222DD8]
-        - [0x23E38, asm, opening/func_00222E38]
+        - [0x23DD8, c, opening/func_00222DD8]
+        - [0x23E38, c, opening/func_00222E38]
         - [0x23E70, asm, opening/OpeningDoIllegalDisc]
         - [0x23EE0, asm, opening/func_00222EE0]
         - [0x2422C, asm, core/align_02422C]  # 4 bytes padding

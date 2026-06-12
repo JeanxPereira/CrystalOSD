@@ -3,3 +3,5 @@
 *.sh text eol=lf
 *.py text eol=lf
 tools/wsl/* text eol=lf
+*.c text eol=lf
+*.h text eol=lf
