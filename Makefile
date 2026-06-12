@@ -36,6 +36,13 @@ OBJCOPY := $(PREFIX)objcopy
 # Match original OSDSYS: ee-gcc 2.9-991111 + -O2 -G0
 CFLAGS  := -O2 -G0 -Wall -D_EE -mabi=eabi -mno-abicalls
 CFLAGS  += -fno-common -fno-exceptions
+
+# Per-function small-data threshold (-G) override. Globals in .sdata/.sbss are accessed
+# gp-relative and need -G8; the default -G0 keeps others absolute. The LAST -G on the
+# command line wins, so $(GADD) overrides CFLAGS' -G0. Add one line per gp-relative
+# function. Keep in sync with tools/wsl/build_verify.sh's ee_g_for().
+GADD :=
+build/base/graph/pktSetAD.o build/src/graph/pktSetAD.c.o: GADD := -G8
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
 ASFLAGS := -march=r5900 -mabi=eabi -G0 -I include
 LDFLAGS := -m elf32lr5900 -EL -nostdlib --no-check-sections -G 0 --defsym=_gp=0x377970 -e 0x200008 -s
@@ -112,7 +119,7 @@ require-match-cc:
 # Pattern: src/foo.c → build/src/foo.c.o
 build/src/%.c.o: src/%.c | require-match-cc
 	@mkdir -p $(dir $@)
-	$(MATCH_CC) $(CFLAGS) -c -o $@ $<
+	$(MATCH_CC) $(CFLAGS) $(GADD) -c -o $@ $<
 
 # Verify byte-perfect rebuild against original
 verify: $(ELF_OUT)
@@ -162,7 +169,7 @@ base: $(C_OBJS)
 
 $(BASE_DIR)/%.o: $(SRC_DIR)/%.c | dirs require-match-cc
 	@mkdir -p $(dir $@)
-	$(MATCH_CC) $(CFLAGS) -c -o $@ $<
+	$(MATCH_CC) $(CFLAGS) $(GADD) -c -o $@ $<
 
 # ── Clean ──────────────────────────────────────────────
 clean:
