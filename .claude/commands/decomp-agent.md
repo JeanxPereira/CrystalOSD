@@ -1,12 +1,16 @@
 ---
 name: decomp-agent
-description: Generic worker prompt for any decomp target. Edit the TARGET block at the top to point at a function or subsystem; runs the full match/iterate/promote loop via the orchestrator in agent mode.
+description: Generic worker prompt for any decomp target. Edit the TARGET block at the top to point at a function or subsystem; runs the full objdiff match/iterate/promote loop.
 ---
 
 # /decomp-agent
 
 Reusable prompt for any IDE agent (Claude Code, Antigravity, Cursor) to drive the
-CrystalOSD orchestrator end-to-end. Edit only the `## TARGET` block before running.
+CrystalOSD decomp workflow end-to-end via the **objdiff golden path**.
+Edit only the `## TARGET` block before running.
+
+> The former orchestrator (`python3 -m tools.orchestrator`) is archived in `tools/attic/`.
+> Do not invoke it. The workflow below replaces it entirely.
 
 ---
 
@@ -18,174 +22,172 @@ Auto-promote: true      # move to src/ + flip splat + make verify on success
 
 ## ROLE
 You are the WORKER for CrystalOSD. Match MIPS R5900 functions to byte-perfect C
-using the orchestrator in agent mode. The orchestrator handles ASM extraction,
-decomp.me submit/iterate, and scoring. You write the C.
+using the objdiff golden path. You write the C; `make all` builds the comparison objects.
 
 ## PROJECT
-/Users/jeanxpereira/CodingProjects/CrystalOSD
+Repo root: infer from cwd or `git rev-parse --show-toplevel`.
 
 ## TOOLCHAIN PRELOAD (run once before anything)
 ```bash
-export PATH=/Users/jeanxpereira/ps2dev/ee/bin:/Users/jeanxpereira/ps2dev/iop/bin:/Users/jeanxpereira/ps2dev/dvp/bin:$PATH
-export PS2DEV=/Users/jeanxpereira/ps2dev
+export PATH=$PS2DEV/ee/bin:$PS2DEV/iop/bin:$PS2DEV/dvp/bin:$PATH
+export PS2DEV=/path/to/ps2dev          # set to your actual ps2dev prefix
 export PS2SDK=$PS2DEV/ps2sdk
+export MATCH_CC=/path/to/ee-gcc2.9-991111/bin/ee-gcc
 ```
 
 ## DISPATCH BY MODE
 
 ### Mode = function
-Process a single function `$Name` from `queue.json` (or build adhoc if missing).
+Process a single function `$Name`.
 
 ### Mode = subsystem
-1. Run: `python3 -m tools.orchestrator queue show --top 50`
-2. Filter to subsystem `$Name`; pick the lowest-score (easiest) function not yet matched
+1. Run: `python3 tools/progress.py --markdown`
+2. Filter to subsystem `$Name`; pick the easiest unmatched function (smallest, fewest callees)
 3. Process that one function via the function workflow below
-4. After SOLVED+promoted, return here, pick next, repeat until 5 functions done OR
-   no more candidates in subsystem OR user interrupts
+4. After PROMOTED, return here, pick next, repeat until 5 functions done OR
+   no more unmatched candidates in subsystem OR user interrupts
 
 ## FUNCTION WORKFLOW (apply to one function `$FUNC` at a time)
 
-### 1. BUILD BRIEF (no LLM call; pure data fetch)
-```bash
-python3 -m tools.orchestrator plan $FUNC --save
-```
-Read `.orchestrator/briefs/$FUNC.json`. Note: subsystem, asm_file, target_asm,
-system_prompt, hard-flags. If hard-flags include MMI / MULT1 / COP2: warn user,
-may need inline asm or unmatchable.
+### 1. LOCATE TARGET
+- Confirm `asm/<subsystem>/$FUNC.s` exists (unmatched splat output)
+- Identify subsystem from `symbol_addrs.txt`: `grep "^$FUNC " symbol_addrs.txt`
 
-### 2. ENRICH CONTEXT (optional, recommended)
+### 2. ANALYZE IN GHIDRA
+- Call `mcp__ghidra__decompile_function` with `name=$FUNC`
+- Note: address, subsystem, control flow, callees, data types, MMI/COP2 instructions
+- If hard-flags include MMI / MULT1 / COP2: warn user — may need inline asm or be unmatchable
 
-**2a. Ghidra decompile**
-- Call `mcp__ghidra-mcp__decompile_function` with name=`$FUNC`
-- Save output to `/tmp/$FUNC.ghidra.c`
+### 3. ENRICH CONTEXT (optional, recommended)
+- Cross-reference with PS2SDK via `/crossref $FUNC`
+- Check `reference/COMPILER_QUIRKS.md` for known ee-gcc 2.9 patterns relevant to this function
 
-**2b. Similar matched functions (RAG)**
-- Call `mcp__decomp-me-mcp__decomp_search_context` with the asm or func info
-- Save list as JSON: `[{"name":..., "asm":..., "c_source":...}]`
-- Save to `/tmp/$FUNC.similar.json`
+### 4. WRITE C
+Path: `src/<subsystem>/$FUNC.c`
 
-**2c. Re-plan with extras**
-```bash
-python3 -m tools.orchestrator plan $FUNC \
-  --ghidra-pseudo /tmp/$FUNC.ghidra.c \
-  --similar-json /tmp/$FUNC.similar.json \
-  --save
-```
-
-### 3. WRITE C
-Path: `src/stubs/<subsystem>/$FUNC.c` (use subsystem from brief)
-
-Rules from `brief.system_prompt` — strict adherence:
+Rules — strict adherence:
 - Compiler: `ee-gcc2.9-991111`, flags `-O2 -G0`
 - PS2SDK types only (`u8`/`u16`/`u32`/`s8`/`s16`/`s32`/`u64`/`s64`); never `stdint.h`
 - C99, `/* */` comments only
-- Line above function definition: `/* 0x<ADDRESS> - <FUNC> */`
+- Line above function definition: `/* 0x<ADDRESS> - $FUNC */`
 - Match every branch and call exactly; no invented code paths
 
-ee-gcc 2.9 quirks:
+ee-gcc 2.9 quirks (see `reference/COMPILER_QUIRKS.md` for full list):
 - Negative masks: `var = ((s32)var & -7);` to force `li` not `lui+ori`
 - Delay-slot hoisting: declare locals AFTER conditionals consuming the same reg
 - Sub-byte bitfields: NEVER use C bitfields when target uses `lw + srl + andi`;
   use plain `u32` + bitwise math
-- No `volatile` hacks; ee-gcc 2.9 does NOT cache pointers via `addiu`
 - Reordering local declarations changes register allocation
-- MMI / MULT1 / 128-bit `lq`/`sq` / COP2 ops are NOT C-emittable; inline asm only
+- MMI / MULT1 / 128-bit `lq`/`sq` / COP2 ops: inline asm only
 
-### 4. SUBMIT TO DECOMP.ME
+### 5. BUILD COMPARISON OBJECTS
 ```bash
-python3 -m tools.orchestrator submit $FUNC src/stubs/<subsystem>/$FUNC.c
+make all
 ```
-Capture JSON: `{slug, url, score, max_score, match}`. Save the slug. Print URL.
+Builds:
+- `build/target/<sub>/$FUNC.o` from `asm/<sub>/$FUNC.s`
+- `build/base/<sub>/$FUNC.o` from `src/<sub>/$FUNC.c` via `$MATCH_CC`
 
-### 5. EVALUATE
-- IF `match=true` (score == 0): jump to step 8 (PROMOTE)
-- IF `score <= 15` (symbol-only): jump to step 8 (PROMOTE)
-- IF `score > 15`: proceed to step 6
+### 6. EVALUATE DIFF IN OBJDIFF
+Open objdiff, navigate to `$FUNC`. Inspect the `.text` diff.
 
-### 6. ITERATE (max 4 more attempts; total 5)
+- IF diff is zero: jump to step 9 (PROMOTE)
+- IF diff is small (symbol-only, NOP padding, one instruction): proceed to step 7
+- IF diff is large: step back, re-read Ghidra output, adjust C structure
 
-**6a.** Fetch diff: call `mcp__decomp-me-mcp__decomp_get_scratch` with `slug`.
-Read diff. Identify: instruction order? register allocation? mask form? branch
-direction? type signedness? loop vs goto?
+### 7. ITERATE (max `Max iterations` total attempts)
 
-**6b.** Edit `src/stubs/<subsystem>/$FUNC.c` with one targeted change.
+**7a.** Read the objdiff. Identify: instruction order? register allocation? mask form?
+branch direction? type signedness? loop vs goto?
 
-**6c.** Re-iterate:
+**7b.** Edit `src/<subsystem>/$FUNC.c` with one targeted change at a time.
+
+**7c.** Re-run `make all` and re-check objdiff.
+
+**7d.** Track diff history. If 3 iterations in a row show the same diff:
+declare STUCK, jump to step 8.
+
+**7e.** If diff is zero: jump to step 9.
+
+**7f.** Else: repeat 7a–7e until iteration cap reached.
+
+### 8. STUCK / EXHAUSTED
+
+IF stuck (3 same-diff iters):
 ```bash
-python3 -m tools.orchestrator iterate <slug> src/stubs/<subsystem>/$FUNC.c
+./tools/permuter_import.sh $FUNC src/<subsystem>/$FUNC.c
 ```
-
-**6d.** Track score history. If 3 iterations in a row at the same score:
-declare STUCK, jump to step 7.
-
-**6e.** If `score == 0` or `<= 15`: jump to step 8.
-
-**6f.** Else: repeat 6a–6e until iteration cap reached.
-
-### 7. STUCK / EXHAUSTED
-
-IF stuck (3 same-score iters):
+Print: `STUCK — imported into decomp-permuter. Run:`
 ```bash
-./tools/permuter_import.sh $FUNC src/stubs/<subsystem>/$FUNC.c
+cd tools/decomp-permuter && python3 ./permuter.py nonmatchings/$FUNC -j8
 ```
-Print: `STUCK at score N — imported into decomp-permuter; user should run
-cd tools/decomp-permuter && python3 ./permuter.py nonmatchings/$FUNC -j8`
-
 Move to next function (subsystem mode) or stop (function mode).
 
-IF iteration cap hit without improvement:
-Print: `EXHAUSTED at score N — best-effort C left at src/stubs/<subsystem>/$FUNC.c`
-
+IF iteration cap hit without progress:
+Print: `EXHAUSTED — best-effort C left at src/<subsystem>/$FUNC.c`
 Move to next function or stop.
 
-### 8. PROMOTE (only if `Auto-promote == true`)
-```bash
-python3 -m tools.orchestrator promote --func $FUNC --apply --build
-```
+### 9. PROMOTE (only if `Auto-promote == true`)
 
-This:
-- moves `src/stubs/<sub>/$FUNC.c` → `src/<sub>/$FUNC.c`
-- flips `splat_config.yml` subsegment from `asm` to `c`
-- runs `make verify` (must report byte-perfect match)
+1. Flip the splat subsegment in `splat_config.yml` from `asm` → `c` for `$FUNC`
+2. Run:
+   ```bash
+   python3 configure.py -c && make -j16 elf && make verify
+   ```
+   Must report byte-perfect match.
 
 IF `make verify` fails:
 ```bash
 git checkout -- splat_config.yml
-git clean -f src/<sub>/$FUNC.c include/$FUNC.ctx.h 2>/dev/null
 ```
 Print: `PROMOTE FAILED: make verify broke. Stub kept; splat reverted.` Stop.
 
 IF promote succeeds:
-Print: `PROMOTED $FUNC at score N. Build still byte-perfect.`
+Print: `PROMOTED $FUNC — build still byte-perfect.`
 
-### 9. NEXT (subsystem mode only)
+### 10. COMMIT
+```bash
+git add src/<sub>/$FUNC.c splat_config.yml
+git commit -m "decomp(<sub>): match $FUNC"
+```
+
+### 11. NEXT (subsystem mode only)
 Return to MODE DISPATCH. Pick next easiest in `$Name`. Cap at 5 total functions
 per session unless user says continue.
 
+---
+
 ## OUTPUT REQUIREMENTS
 - After every shell command, print stdout/stderr verbatim.
-- After SOLVED: print `{func, score, decomp.me URL, file path}`
+- After SOLVED: print `{func, objdiff score (lines differing), file path}`
 - After STUCK or EXHAUSTED: print state + recovery hint.
 - Do not invent function names. Use `FUN_XXXXXXXX` for unknown callees.
-- Do not modify files outside `src/stubs/<sub>/`, `src/<sub>/`, `splat_config.yml`,
-  `/tmp/`, `.orchestrator/briefs/`, `include/`.
+- Do not modify files outside `src/<sub>/`, `splat_config.yml`, `include/`.
 
 ## STOP CONDITIONS (always)
 - User interrupts with new instruction
 - 5 functions completed (subsystem mode)
-- Network error on decomp.me API after 3 consecutive retries
-- `make verify` breaks (revert + stop)
+- `make verify` breaks (revert splat_config.yml + stop)
+
+---
 
 ## QUICK REFERENCE
 ```bash
-python3 -m tools.orchestrator queue show --top 20      # next targets
-python3 -m tools.orchestrator plan <FUNC> --save       # build brief
-python3 -m tools.orchestrator submit <FUNC> <c>        # new scratch
-python3 -m tools.orchestrator iterate <slug> <c>       # recompile
-python3 -m tools.orchestrator promote --func <FUNC> --apply --build
-python3 tools/commit_organizer.py --commit \
-    --co-author "Claude Opus 4.7 <noreply@anthropic.com>"
+python3 tools/progress.py --markdown            # pick next targets
+make all                                         # build target + base .o
+python3 tools/generate_objdiff.py               # regenerate objdiff.json
+./tools/permuter_import.sh <FUNC> src/<sub>/<FUNC>.c
+cd tools/decomp-permuter && python3 ./permuter.py nonmatchings/<FUNC> -j8
+python3 configure.py -c && make -j16 elf && make verify
+python3 tools/commit_organizer.py --commit
 ```
+
+## Fallback 2 — decomp.me (community sharing only)
+```bash
+python3 tools/decomp_match.py submit <FUNC> asm/<sub>/<FUNC>.s src/<sub>/<FUNC>.c
+python3 tools/decomp_match.py iterate <slug> src/<sub>/<FUNC>.c
+```
+Not required for local matching. Use to share scratches with the decomp community.
 
 ## TARGET cheat sheet
 | Want | Edit TARGET block |
