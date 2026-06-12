@@ -84,26 +84,28 @@ make all      # objdiff matching workflow (target/base .o for diffs)
 - ps2sdk NOT yet built — fetch artifact `ps2sdk-*` separately when needed for C with PS2SDK headers
 - Hackintosh (x86_64 macOS 26.4): brew/Docker/source-build all failed; pre-built CI artifact is the working path
 
-### Compiler Mismatch (IMPORTANT)
-The Makefile uses **modern ps2dev GCC 15.2** (`mips64r5900el-ps2-elf-gcc`) for assembly and linking. This works for the byte-perfect rebuild because everything is still assembly.
+### Compiler split (single source of truth)
+Two compilers, each with ONE job — the inconsistency is resolved (no silent fallback):
 
-**However**, the original OSDSYS was compiled with **ee-gcc 2.9-991111** (`-O2 -G0`). As C files replace assembly in the link pipeline, GCC 15 will NOT produce matching output — the matching compiler must be used.
+| Role | Tool | Used for |
+|------|------|----------|
+| **C compilation** (`MATCH_CC`) | `ee-gcc2.9-991111` (`-O2 -G0`) | every `src/**.c` — the compiler the original was built with |
+| **Assemble + link** (`PREFIX`) | `mips64r5900el-ps2-elf-` GCC/binutils 15.2 / 2.45.1 | `.s` → `.o`, `ld` |
 
-| Context | Compiler | Version |
-|---------|----------|---------|
-| **decomp.me** (matching) | `ee-gcc2.9-991111` | Sony EE GCC 2.9 |
-| **Makefile** (build) | `mips64r5900el-ps2-elf-gcc` | ps2dev GCC 15.2.0 |
+The Makefile **requires** `MATCH_CC` for any C compile (`require-match-cc` guard fails
+loudly if unset) — modern GCC will NOT byte-match C. decomp.me remains available for
+collaborative matching but is no longer required: matching is reproducible offline.
 
-**To get ee-gcc2.9-991111 locally:**
+**Get ee-gcc2.9-991111 (runs natively on Linux/WSL — no QEMU):**
 ```bash
-# Download from decompme/compilers (Linux ELF binary — needs Linux or QEMU)
 curl -LO https://github.com/decompme/compilers/releases/download/compilers/ee-gcc2.9-991111.tar.xz
 tar xf ee-gcc2.9-991111.tar.xz
-# Set MATCH_CC in Makefile or environment
-export MATCH_CC=/path/to/ee-gcc2.9-991111/bin/ee-gcc
+export MATCH_CC=$HOME/ee-gcc2.9-991111/bin/ee-gcc   # needs libc6:i386 libstdc++6:i386
 ```
 
-> ⚠️ The ee-gcc binary is a Linux ELF — on macOS it requires QEMU user-mode or a Docker container. Until resolved, C matching is done exclusively on decomp.me.
+> ⚠️ **WSL /mnt/c gotcha:** ee-gcc is a 32-bit 1999 binary; `stat()` EOVERFLOWs on the
+> 9p `/mnt/c` mount ("Value too large"). Compile C from **native ext4** — use
+> `tools/wsl/build_verify.sh` (compiles via `/tmp`) or a native WSL clone. See `docs/SETUP_WSL.md`.
 
 ## Code Rules
 - Use PS2SDK types (`u32`, `s16`, `u8`) not stdint
