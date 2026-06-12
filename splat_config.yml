@@ -372,35 +372,35 @@ segments:
         - [0xA0F0, asm, core/get_module_update_config]
         - [0xA200, asm, module/module_machine_prepare]
         - [0xA39C, asm, core/align_00A39C]  # 4 bytes gap
-        - [0xA3A0, asm, module/module_machine_getdesc]
+        - [0xA3A0, c, module/module_machine_getdesc]
         - [0xA3BC, asm, core/align_00A3BC]  # 4 bytes gap
-        - [0xA3C0, asm, module/module_machine_getversion]
+        - [0xA3C0, c, module/module_machine_getversion]
         - [0xA3CC, asm, core/align_00A3CC]  # 4 bytes gap
-        - [0xA3D0, asm, module/module_machine_option_str]
+        - [0xA3D0, c, module/module_machine_option_str]
         - [0xA434, asm, core/align_00A434]  # 4 bytes gap
-        - [0xA438, asm, module/module_machine_setup]
+        - [0xA438, c, module/module_machine_setup]
         - [0xA490, asm, module/module_cdplayer_prepare]
-        - [0xA600, asm, module/module_cdplayer_getdesc]
+        - [0xA600, c, module/module_cdplayer_getdesc]
         - [0xA61C, asm, core/align_00A61C]  # 4 bytes gap
-        - [0xA620, asm, module/module_cdplayer_getversion]
+        - [0xA620, c, module/module_cdplayer_getversion]
         - [0xA62C, asm, core/align_00A62C]  # 4 bytes gap
-        - [0xA630, asm, module/module_cdplayer_option_str]
+        - [0xA630, c, module/module_cdplayer_option_str]
         - [0xA67C, asm, core/align_00A67C]  # 4 bytes gap
         - [0xA680, asm, module/module_cdplayer_pathrelated]
         - [0xA78C, asm, core/align_00A78C]  # 4 bytes gap
-        - [0xA790, asm, module/module_cdplayer_setup]
+        - [0xA790, c, module/module_cdplayer_setup]
         - [0xA7F0, asm, module/module_ps1drv_prepare]
-        - [0xAC10, asm, module/module_ps1drv_getname]
+        - [0xAC10, c, module/module_ps1drv_getname]
         - [0xAC2C, asm, core/align_00AC2C]  # 4 bytes gap
-        - [0xAC30, asm, module/module_ps1drv_getversion]
+        - [0xAC30, c, module/module_ps1drv_getversion]
         - [0xAC3C, asm, core/align_00AC3C]  # 4 bytes gap
         - [0xAC40, asm, module/module_ps1drv_option_str]
         - [0xACCC, asm, core/align_00ACCC]  # 4 bytes gap
         - [0xACD0, asm, module/module_ps1drv_pathrelated]
         - [0xADDC, asm, core/align_00ADDC]  # 4 bytes gap
-        - [0xADE0, asm, module/module_ps1drv_setup]
+        - [0xADE0, c, module/module_ps1drv_setup]
         - [0xAE40, asm, module/module_dvdplayer_prepare]
-        - [0xB100, asm, module/module_dvdplayer_getdesc]
+        - [0xB100, c, module/module_dvdplayer_getdesc]
         - [0xB11C, asm, core/align_00B11C]  # 4 bytes gap
         - [0xB120, asm, module/module_dvdplayer_getver]
         - [0xB1BC, asm, core/align_00B1BC]  # 4 bytes gap
@@ -412,13 +412,13 @@ segments:
         - [0xB678, asm, module/module_dvdplayer_unused_20A678]
         - [0xB70C, asm, core/align_00B70C]  # 4 bytes gap
         - [0xB710, asm, module/module_dvdplayer_option_str]
-        - [0xB780, asm, module/module_dvdplayer_setup]
+        - [0xB780, c, module/module_dvdplayer_setup]
         - [0xB7E0, asm, module/module_smap_prepare]
-        - [0xB860, asm, module/module_smap_getdesc]
+        - [0xB860, c, module/module_smap_getdesc]
         - [0xB87C, asm, core/align_00B87C]  # 4 bytes gap
         - [0xB880, asm, module/module_smap_getver]
         - [0xB934, asm, core/align_00B934]  # 4 bytes gap
-        - [0xB938, asm, module/module_smap_setup]
+        - [0xB938, c, module/module_smap_setup]
         - [0xB988, asm, core/handle_version_info]
         - [0xBAD4, asm, core/D_0020AAD4]
         - [0xBAD8, asm, core/D_0020AAD8]
@@ -871,7 +871,7 @@ segments:
         - [0x1BAC8, asm, opening/module_opening_prepare]
         - [0x1BB34, asm, core/align_01BB34]  # 4 bytes gap
         - [0x1BB38, asm, opening/module_opening_setup]
-        - [0x1BB88, asm, module/module_dummy_setup]
+        - [0x1BB88, c, module/module_dummy_setup]
         - [0x1BBD0, c, opening/module_opening_thread_proc]
         - [0x1BC50, c, opening/OpeningInit]
         - [0x1BCD4, asm, core/align_01BCD4]  # 4 bytes gap

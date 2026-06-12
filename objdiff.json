@@ -42250,34 +42250,31 @@
     {
       "name": "module/module_cdplayer_getdesc",
       "target_path": "build/target/module/module_cdplayer_getdesc.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_cdplayer_getdesc.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_cdplayer_getversion",
       "target_path": "build/target/module/module_cdplayer_getversion.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_cdplayer_getversion.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_cdplayer_option_str",
       "target_path": "build/target/module/module_cdplayer_option_str.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_cdplayer_option_str.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42305,34 +42302,31 @@
     {
       "name": "module/module_cdplayer_setup",
       "target_path": "build/target/module/module_cdplayer_setup.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_cdplayer_setup.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_dummy_setup",
       "target_path": "build/target/module/module_dummy_setup.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_dummy_setup.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_dvdplayer_getdesc",
       "target_path": "build/target/module/module_dvdplayer_getdesc.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_dvdplayer_getdesc.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42393,12 +42387,11 @@
     {
       "name": "module/module_dvdplayer_setup",
       "target_path": "build/target/module/module_dvdplayer_setup.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_dvdplayer_setup.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42426,34 +42419,31 @@
     {
       "name": "module/module_machine_getdesc",
       "target_path": "build/target/module/module_machine_getdesc.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_machine_getdesc.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_machine_getversion",
       "target_path": "build/target/module/module_machine_getversion.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_machine_getversion.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_machine_option_str",
       "target_path": "build/target/module/module_machine_option_str.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_machine_option_str.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42470,34 +42460,31 @@
     {
       "name": "module/module_machine_setup",
       "target_path": "build/target/module/module_machine_setup.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_machine_setup.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_ps1drv_getname",
       "target_path": "build/target/module/module_ps1drv_getname.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_ps1drv_getname.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_ps1drv_getversion",
       "target_path": "build/target/module/module_ps1drv_getversion.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_ps1drv_getversion.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42536,23 +42523,21 @@
     {
       "name": "module/module_ps1drv_setup",
       "target_path": "build/target/module/module_ps1drv_setup.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_ps1drv_setup.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "module/module_smap_getdesc",
       "target_path": "build/target/module/module_smap_getdesc.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_smap_getdesc.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42580,12 +42565,11 @@
     {
       "name": "module/module_smap_setup",
       "target_path": "build/target/module/module_smap_setup.o",
-      "base_path": null,
+      "base_path": "build/base/module/module_smap_setup.o",
       "metadata": {
         "progress_categories": [
           "module"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
