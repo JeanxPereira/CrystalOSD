@@ -57,11 +57,10 @@ AS="${AS:-mips64r5900el-ps2-elf-as}"
 # 2. Copy source file
 cp "$PROJECT_ROOT/$SRC" "$FUNC_DIR/base.c"
 
-# 3. Create compile script
-cat > "$FUNC_DIR/compile.sh" << 'COMPILE_EOF'
-#!/bin/bash
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-bash "$SCRIPT_DIR/../../permuter/compile.sh" "$@"
+# 3. Create compile script (delegates to the project's ee-gcc wrapper via absolute path)
+cat > "$FUNC_DIR/compile.sh" << COMPILE_EOF
+#!/usr/bin/env bash
+exec bash "$PROJECT_ROOT/tools/permuter/compile.sh" "\$@"
 COMPILE_EOF
 chmod +x "$FUNC_DIR/compile.sh"
 
