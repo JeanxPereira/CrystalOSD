@@ -39,10 +39,14 @@ CFLAGS  += -fno-common -fno-exceptions
 
 # Per-function small-data threshold (-G) override. Globals in .sdata/.sbss are accessed
 # gp-relative and need -G8; the default -G0 keeps others absolute. The LAST -G on the
-# command line wins, so $(GADD) overrides CFLAGS' -G0. Add one line per gp-relative
-# function. Keep in sync with tools/wsl/build_verify.sh's ee_g_for().
+# command line wins, so $(GADD) overrides CFLAGS' -G0. List the gp-relative functions
+# here; keep in sync with tools/wsl/build_verify.sh's ee_g_for().
 GADD :=
-build/base/graph/pktSetAD.o build/src/graph/pktSetAD.c.o: GADD := -G8
+G8_FUNCS := graph/pktSetAD \
+            opening/InitDMA opening/OpeningDoOpening opening/OpeningDrawLightsAndCubes \
+            opening/OpeningInit opening/OpeningProcess opening/func_00222DD8 \
+            opening/func_00222E38 opening/module_opening_thread_proc
+$(foreach f,$(G8_FUNCS),$(eval build/base/$(f).o build/src/$(f).c.o: GADD := -G8))
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
 ASFLAGS := -march=r5900 -mabi=eabi -G0 -I include
 LDFLAGS := -m elf32lr5900 -EL -nostdlib --no-check-sections -G 0 --defsym=_gp=0x377970 -e 0x200008 -s

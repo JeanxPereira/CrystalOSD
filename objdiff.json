@@ -42646,12 +42646,11 @@
     {
       "name": "opening/InitDMA",
       "target_path": "build/target/opening/InitDMA.o",
-      "base_path": null,
+      "base_path": "build/base/opening/InitDMA.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42700,12 +42699,11 @@
     {
       "name": "opening/OpeningDoOpening",
       "target_path": "build/target/opening/OpeningDoOpening.o",
-      "base_path": null,
+      "base_path": "build/base/opening/OpeningDoOpening.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42784,12 +42782,11 @@
     {
       "name": "opening/OpeningDrawLightsAndCubes",
       "target_path": "build/target/opening/OpeningDrawLightsAndCubes.o",
-      "base_path": null,
+      "base_path": "build/base/opening/OpeningDrawLightsAndCubes.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42806,12 +42803,11 @@
     {
       "name": "opening/OpeningInit",
       "target_path": "build/target/opening/OpeningInit.o",
-      "base_path": null,
+      "base_path": "build/base/opening/OpeningInit.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42849,12 +42845,11 @@
     {
       "name": "opening/OpeningInitRender",
       "target_path": "build/target/opening/OpeningInitRender.o",
-      "base_path": null,
+      "base_path": "build/base/opening/OpeningInitRender.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -42893,12 +42888,11 @@
     {
       "name": "opening/OpeningProcess",
       "target_path": "build/target/opening/OpeningProcess.o",
-      "base_path": null,
+      "base_path": "build/base/opening/OpeningProcess.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -43091,23 +43085,21 @@
     {
       "name": "opening/func_00222DD8",
       "target_path": "build/target/opening/func_00222DD8.o",
-      "base_path": null,
+      "base_path": "build/base/opening/func_00222DD8.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
       "name": "opening/func_00222E38",
       "target_path": "build/target/opening/func_00222E38.o",
-      "base_path": null,
+      "base_path": "build/base/opening/func_00222E38.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
@@ -43352,12 +43344,11 @@
     {
       "name": "opening/module_opening_thread_proc",
       "target_path": "build/target/opening/module_opening_thread_proc.o",
-      "base_path": null,
+      "base_path": "build/base/opening/module_opening_thread_proc.o",
       "metadata": {
         "progress_categories": [
           "opening"
-        ],
-        "auto_generated": true
+        ]
       }
     },
     {
