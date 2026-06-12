@@ -1,76 +1,127 @@
 ---
 name: decomp-loop
-description: Agent-driven decomp loop. Match a function using Claude Code as the LLM (no API key burn). Wraps the orchestrator in agent mode.
+description: Agent-driven decomp loop. Match a single OSDSYS function to byte-perfect C using the objdiff golden path. Fully offline — no API key burn.
 ---
 
 # /decomp-loop <func_name>
 
-Match a single OSDSYS function to byte-perfect C, with **YOU** (Claude Code) as the LLM in the loop. The orchestrator handles ASM extraction, decomp.me submit/iterate, and scoring; you write and refine the C.
+Match a single OSDSYS function to byte-perfect C using the **objdiff golden path**.
+The orchestrator is archived in `tools/attic/` — do not invoke it.
 
 ## Prereqs
 
-- `.orchestrator/config.yml` has `worker.provider: agent` (no LLM API call from orchestrator)
-- `python3 -m tools.orchestrator queue build` has been run
+- `MATCH_CC` points to `ee-gcc2.9-991111` (the matching compiler)
+- `$PS2DEV`, `$PS2SDK` exported
+- `objdiff` binary on `$PATH`
+- `python3 tools/generate_objdiff.py` has been run at least once to produce `objdiff.json`
 
-## Steps to perform
+## Steps
 
-### 1. Build the brief
+### 1. Pick target and locate ASM
+
+Confirm the function exists in `asm/<subsystem>/<func>.s` (unmatched splat output).
+If not found, check `symbol_addrs.txt` for the address and subsystem.
+
+### 2. Analyze in Ghidra
+
+Call `mcp__ghidra__decompile_function` with `name=<func>`.
+Note: subsystem, address, control flow, called functions, data types.
+Cross-reference with PS2SDK (`/crossref`) for known API usage.
+
+### 3. Write C reconstruction
+
+Path: `src/<subsystem>/<func>.c`
+
+Rules — strict adherence:
+- Compiler target: `ee-gcc2.9-991111`, flags `-O2 -G0`
+- PS2SDK types only (`u8`/`u16`/`u32`/`s8`/`s16`/`s32`/`u64`/`s64`); never `stdint.h`
+- C99; `/* */` comments only
+- Line above every function definition: `/* 0x<ADDRESS> - <FUNC> */`
+- Match every branch and call exactly; no invented code paths
+- See `reference/COMPILER_QUIRKS.md` for ee-gcc 2.9 delay-slot / mask / bitfield rules
+
+### 4. Build target + base .o
+
 ```bash
-python3 -m tools.orchestrator plan <func> --save
+make all
 ```
-Reads `.orchestrator/briefs/<func>.json`. Has: target ASM, system_prompt (worker rules + ee-gcc quirks), user_prompt scaffold, flags (MMI/MULT1/COP2 warnings).
 
-### 2. Optional: enrich context
-- **Ghidra decompile** via `mcp__ghidra-mcp__decompile_function` — save to `/tmp/<func>.ghidra.c`, then re-plan with `--ghidra-pseudo /tmp/<func>.ghidra.c`.
-- **Similar funcs** via `mcp__decomp-me-mcp__decomp_search_context` — save list as JSON `[{"name":...,"asm":...,"c_source":...}]` to `/tmp/<func>.similar.json`, then re-plan with `--similar-json`.
+This builds:
+- `build/target/<sub>/<func>.o` — assembled from `asm/<sub>/<func>.s`
+- `build/base/<sub>/<func>.o` — compiled from `src/<sub>/<func>.c` via `$MATCH_CC`
 
-### 3. Write C
-Write your reconstruction to `src/stubs/<subsystem>/<func>.c`. Apply the rules from the brief's `system_prompt` (PS2SDK types, ee-gcc 2.9 quirks).
+### 5. Compare with objdiff
 
-### 4. Submit to decomp.me
+Open objdiff and navigate to `<func>`. Read the diff:
+- Instruction order differences → reorder local declarations or statements
+- Register allocation differences → adjust variable types or declaration order
+- Mask form (`li` vs `lui+ori`) → use negative masks `((s32)var & -7)`
+- Branch direction → check signed vs unsigned comparisons
+- Extra/missing `nop` in delay slot → review `reference/COMPILER_QUIRKS.md`
+
+### 6. Iterate
+
+Edit `src/<sub>/<func>.c`, re-run `make all`, re-check objdiff. Repeat until diff is zero.
+
+**Stop conditions during iteration:**
+- **SOLVED**: diff is zero → proceed to step 7
+- **STUCK** (same diff after 3 targeted edits): switch to Fallback 1 (decomp-permuter)
+- **MMI/MULT1/COP2 instructions in target**: these are not C-emittable — use inline asm, then verify
+
+### 7. Fallback 1 — decomp-permuter (if stuck)
+
 ```bash
-python3 -m tools.orchestrator submit <func> src/stubs/<sub>/<func>.c
+./tools/permuter_import.sh <func> src/<sub>/<func>.c
+cd tools/decomp-permuter && python3 ./permuter.py nonmatchings/<func> -j8
 ```
-Returns JSON: `{"slug": "...", "url": "...", "score": N, "max_score": M, "match": bool}`. **Save the slug.**
 
-### 5. Iterate (if score > 0)
-- Read the slug's diff at `https://decomp.me/scratch/<slug>` (or via `mcp__decomp-me-mcp__decomp_get_scratch`)
-- Edit `src/stubs/<sub>/<func>.c` based on the diff
-- Re-submit:
+When permuter finds a match, copy the winning source back to `src/<sub>/<func>.c`.
+
+### 8. Promote into build
+
+Once the objdiff diff is zero:
+
+1. Flip the splat subsegment in `splat_config.yml` from type `asm` to `c` for `<func>`
+2. Run the full build:
+   ```bash
+   python3 configure.py -c && make -j16 elf && make verify
+   ```
+   Must report byte-perfect match. If `make verify` fails, revert `splat_config.yml` and investigate.
+
+### 9. Commit
+
 ```bash
-python3 -m tools.orchestrator iterate <slug> src/stubs/<sub>/<func>.c
-```
-- Repeat until `match: true` or 5 attempts exhausted
-
-### 6. Stop conditions
-- **SOLVED**: score == 0 → tell user the URL, suggest manual promote (`mv src/stubs/<sub>/<func>.c src/<sub>/`, splat config update, `make verify`)
-- **SYMBOL_ONLY**: score ≤ 15 → effectively matched, same promote step
-- **STUCK**: same score 3 iterations in a row → run `./tools/permuter_import.sh <func> src/stubs/<sub>/<func>.c` and tell user the function needs brute-force permutation
-- **EXHAUSTED**: 5 attempts without improvement → save best-effort C, log to `.orchestrator/ask_human/<func>.c`, ask user for hints
-
-## Switch back to API mode
-
-Edit `.orchestrator/config.yml`:
-```yaml
-worker:
-  provider: claude       # or deepseek, gemini
-  model: claude-sonnet-4-6
+git add src/<sub>/<func>.c splat_config.yml
+git commit -m "decomp(<sub>): match <func>"
 ```
 
-Then use the original `/decomp <func>` command which calls the LLM directly.
+---
 
-## Why this exists
+## Fallback 2 — decomp.me (community sharing)
 
-Free-tier Gemini/DeepSeek hit RPM caps fast on serial batches. Running through Claude Code instead means:
-- No new API key needed
-- Uses existing Claude Code session quota
-- Can manually steer when stuck (you the human can intervene mid-loop)
-- Antigravity / Cursor / any other code agent works the same way
+If you want to share progress or get a hosted scratch for collaboration:
+
+```bash
+python3 tools/decomp_match.py submit <func> asm/<sub>/<func>.s src/<sub>/<func>.c
+python3 tools/decomp_match.py iterate <slug> src/<sub>/<func>.c
+```
+
+This is not required for local byte-perfect matching — it is supplementary.
+
+---
 
 ## Quick reference
+
 ```bash
-python3 -m tools.orchestrator plan <func> --save           # build brief
-python3 -m tools.orchestrator submit <func> <c>            # new scratch
-python3 -m tools.orchestrator iterate <slug> <c>           # recompile
-python3 -m tools.orchestrator queue show --top 20          # pick next target
+make all                                              # build target + base .o
+python3 tools/generate_objdiff.py                     # regenerate objdiff.json
+./tools/permuter_import.sh <func> src/<sub>/<func>.c  # import into permuter
+cd tools/decomp-permuter && python3 ./permuter.py nonmatchings/<func> -j8
+python3 configure.py -c && make -j16 elf && make verify
 ```
+
+## Note on archived orchestrator
+
+The former `tools/orchestrator/` (LLM-driven PLANNER/WORKER/JUDGE pipeline) is archived in
+`tools/attic/orchestrator/`. The objdiff golden path above replaces it entirely.
+Do not invoke `python3 -m tools.orchestrator` — that module no longer exists at the live path.
