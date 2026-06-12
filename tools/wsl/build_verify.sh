@@ -24,22 +24,33 @@ echo "=== [2/6] regenerate gitignored splat outputs (asm/data, undefined_*.txt) 
 # with the committed code asm. Without it, a stale cache yields undefined `$L*` locals.
 "$VENV_PY" configure.py -c >/tmp/cosd_cfg.log 2>&1 || { tail -5 /tmp/cosd_cfg.log; exit 1; }
 
-echo "=== [3/6] restore committed code asm + linker script ==="
-git checkout -- asm OSDSYS_A.ld
+echo "=== [3/6] restore committed code asm (keep the freshly regenerated linker script) ==="
+# Only restore code asm (configure.py regenerates it lossily). Do NOT restore OSDSYS_A.ld:
+# configure.py regenerates+postprocesses it from splat_config every run, so the fresh one
+# is authoritative — restoring the committed copy would discard splat_config changes
+# (e.g. an asm->c subsegment flip).
+git checkout -- asm
 echo "committed asm files: $(git ls-files asm | wc -l); on disk: $(find asm -name '*.s' | wc -l)"
 
 echo "=== [4/6] patch missing data labels (glabel + D_ aliases) ==="
 python3 tools/wsl/patch_data_labels.py | tail -1
 
-echo "=== [5/6] compile the one C subsegment with ee-gcc 2.9 (matching compiler) ==="
-# ee-gcc 2.9 is a 32-bit 1999 binary: stat() on the 9p /mnt/c mount EOVERFLOWs. Compile
-# from native ext4 (/tmp), then copy the .o back.
-mkdir -p build/src/core
-TMPC=$(mktemp -d /tmp/cosd.XXXXXX)
-cp src/core/sceGsGetGParam.c "$TMPC/"
-( cd "$TMPC" && "$EEGCC" -O2 -G0 -c -o sceGsGetGParam.c.o sceGsGetGParam.c )
-cp "$TMPC/sceGsGetGParam.c.o" build/src/core/sceGsGetGParam.c.o
-rm -rf "$TMPC"
+echo "=== [5/6] compile C subsegments with ee-gcc 2.9 (matching compiler) ==="
+# Compile every C object the linker script references. ee-gcc 2.9 is a 32-bit 1999 binary:
+# stat() on the 9p /mnt/c mount EOVERFLOWs, so compile from native ext4 (/tmp).
+# -G (small-data threshold) is PER-FUNCTION: globals in .sdata/.sbss need gp-relative (-G8),
+# others use absolute (-G0). Map known exceptions; default -G0.
+ee_g_for() { case "$1" in graph/pktSetAD) echo "-G8";; *) echo "-G0";; esac; }
+for obj in $(grep -oE 'build/src/[A-Za-z0-9_./-]+\.c\.o' OSDSYS_A.ld | sort -u); do
+  rel="${obj#build/}"; rel="${rel%.o}"          # src/<sub>/<fn>.c
+  key="${rel#src/}"; key="${key%.c}"            # <sub>/<fn>
+  G=$(ee_g_for "$key")
+  mkdir -p "build/$(dirname "$rel")"
+  T=$(mktemp -d /tmp/cosd.XXXXXX); cp "$rel" "$T/x.c"
+  ( cd "$T" && "$EEGCC" -O2 $G -c -o x.o x.c )
+  cp "$T/x.o" "$obj"; rm -rf "$T"
+  echo "  $key  [$G]"
+done
 
 echo "=== [6/6] link + verify byte-perfect ==="
 make PREFIX="$PREFIX" PS2SDK="$PS2SDK" MATCH_CC="$EEGCC" -j"$(nproc)" elf >/tmp/cosd_elf.log 2>&1 || {

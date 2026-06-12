@@ -902,7 +902,7 @@ segments:
         - [0x1C6EC, asm, core/align_01C6EC]  # 4 bytes gap
         - [0x1C6F0, asm, graph/vif1End]
         - [0x1C764, asm, core/align_01C764]  # 4 bytes gap
-        - [0x1C768, asm, graph/pktSetAD]
+        - [0x1C768, c, graph/pktSetAD]
         - [0x1C79C, asm, core/align_01C79C]  # 4 bytes gap
         - [0x1C7A0, asm, graph/pktSetTexRect]
         - [0x1C970, asm, graph/pktSetTEST_1]
