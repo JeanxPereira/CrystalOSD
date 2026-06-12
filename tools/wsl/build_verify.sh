@@ -41,7 +41,7 @@ echo "=== [5/6] compile C subsegments with ee-gcc 2.9 (matching compiler) ==="
 # -G (small-data threshold) is PER-FUNCTION: globals in .sdata/.sbss need gp-relative (-G8),
 # others use absolute (-G0). Map known exceptions; default -G0.
 ee_g_for() { case "$1" in
-  graph/pktSetAD|opening/InitDMA|opening/OpeningDoOpening|opening/OpeningDrawLightsAndCubes|opening/OpeningInit|opening/OpeningProcess|opening/func_00222DD8|opening/func_00222E38|opening/module_opening_thread_proc) echo "-G8";;
+  graph/pktSetAD|opening/InitDMA|opening/OpeningDoOpening|opening/OpeningDrawLightsAndCubes|opening/OpeningInit|opening/OpeningProcess|opening/func_00222DD8|opening/func_00222E38|opening/module_opening_thread_proc|core/get_clock_should_render_orbs|opening/InitSPR|opening/OpeningDrawEnd|opening/OpeningDrawIllegalScene) echo "-G8";;
   *) echo "-G0";; esac; }
 for obj in $(grep -oE 'build/src/[A-Za-z0-9_./-]+\.c\.o' OSDSYS_A.ld | sort -u); do
   rel="${obj#build/}"; rel="${rel%.o}"          # src/<sub>/<fn>.c

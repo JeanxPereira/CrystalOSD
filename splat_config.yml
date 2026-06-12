@@ -38,8 +38,8 @@ segments:
       subsegments:
         - [0x1000, asm, core/start]
         - [0x10B4, asm, core/align_0010B4]  # 4 bytes gap
-        - [0x10B8, asm, core/_exit]
-        - [0x10C0, asm, core/ExitThread]
+        - [0x10B8, c, core/_exit]
+        - [0x10C0, c, core/ExitThread]
         - [0x10C8, asm, sound/sceSpu2DmaWriteEe2Iop]
         - [0x1134, asm, core/align_001134]  # 4 bytes gap
         - [0x1138, asm, sound/sound_handle_bd]
@@ -211,7 +211,7 @@ segments:
         - [0x5E58, asm, config/config_get_dvdp_support_clear_progressive]
         - [0x5E6C, asm, core/align_005E6C]  # 4 bytes gap
         - [0x5E70, asm, config/config_set_dvdp_support_clear_progressive]
-        - [0x5E98, asm, core/nullsub_1]
+        - [0x5E98, c, core/nullsub_1]
         - [0x5EA0, asm, config/config_hdd_open_write_ini]
         - [0x5F38, asm, config/config_hdd_open_read_ini]
         - [0x5FF8, asm, config/config_hdd_close_ini]
@@ -313,10 +313,10 @@ segments:
         - [0x86F0, asm, core/func_002076F0]
         - [0x8850, asm, core/GetDefaultIconPath]
         - [0x89D0, asm, history/history_check_exists]
-        - [0x8B38, asm, history/check_or_clear_history]
+        - [0x8B38, c, history/check_or_clear_history]
         - [0x8B80, asm, core/align_008B80]  # 424 bytes gap
         - [0x8D28, asm, history/history_write_mc]
-        - [0x9040, asm, history/history_add_entry]
+        - [0x9040, c, history/history_add_entry]
         - [0x90CC, asm, core/align_0090CC]  # 4 bytes gap
         - [0x90D0, asm, core/thunk_config_get_osd_language]
         - [0x90EC, asm, core/D_002080EC]
@@ -429,7 +429,7 @@ segments:
         - [0xCE38, asm, graph/graph_reset_related3]
         - [0xCEFC, asm, core/align_00CEFC]  # 4 bytes gap
         - [0xCF00, asm, graph/StartFrame]
-        - [0xCFA8, asm, opening/OpeningDoWaitNextFrame]
+        - [0xCFA8, c, opening/OpeningDoWaitNextFrame]
         - [0xCFD8, asm, graph/graph_swap_frame_thread_proc]
         - [0xD010, asm, graph/SwapBuffers]
         - [0xD0B4, asm, core/align_00D0B4]  # 4 bytes gap
@@ -477,7 +477,7 @@ segments:
         - [0xE4D0, asm, core/main]
         - [0xF338, asm, core/prepare_system_folder_name]
         - [0xF3D4, asm, core/align_00F3D4]  # 4 bytes gap
-        - [0xF3D8, asm, core/get_system_folder_name]
+        - [0xF3D8, c, core/get_system_folder_name]
         - [0xF3E4, asm, core/align_00F3E4]  # 20 bytes gap
         - [0xF3F8, asm, core/get_update_folder_path]
         - [0xF404, asm, core/align_00F404]  # 4 bytes gap
@@ -535,7 +535,7 @@ segments:
         - [0x10470, asm, core/fileops_cmd_sync]
         - [0x104D8, asm, core/fileops_cmd_format]
         - [0x105B0, asm, core/fileops_cmd_mount]
-        - [0x10698, asm, core/fileops_cmd_umount]
+        - [0x10698, c, core/fileops_cmd_umount]
         - [0x106E4, asm, core/align_0106E4]  # 4 bytes gap
         - [0x106E8, asm, core/fileops_cmd_devctl]
         - [0x107BC, asm, core/align_0107BC]  # 4 bytes gap
@@ -679,12 +679,12 @@ segments:
         - [0x13754, asm, core/align_013754]  # 4 bytes padding
         - [0x13758, asm, graph/D_00212758]
         - [0x13778, asm, graph/Font_SetPitch]
-        - [0x137A8, asm, graph/Font_SetProp]
+        - [0x137A8, c, graph/Font_SetProp]
         - [0x137B4, asm, core/align_0137B4]  # 4 bytes gap
         - [0x137B8, asm, graph/Font_SetRatio]
-        - [0x137D0, asm, graph/Font_SetRetHeight]
+        - [0x137D0, c, graph/Font_SetRetHeight]
         - [0x137DC, asm, core/align_0137DC]  # 4 bytes gap
-        - [0x137E0, asm, graph/Font_SetTvFontRatio]
+        - [0x137E0, c, graph/Font_SetTvFontRatio]
         - [0x13804, asm, graph/D_00212804]
         - [0x13808, asm, graph/func_00212808]
         - [0x13818, asm, graph/func_00212818]
@@ -737,7 +737,7 @@ segments:
         - [0x15218, asm, graph/func_00214218]
         - [0x15228, asm, graph/Font_Load]
         - [0x15428, asm, core/align_015428]  # 96 bytes gap
-        - [0x15488, asm, core/nullsub_12]
+        - [0x15488, c, core/nullsub_12]
         - [0x15490, asm, core/func_00214490]
         - [0x15524, asm, core/align_015524]  # 4 bytes padding
         - [0x15528, asm, core/func_00214528]
@@ -864,19 +864,19 @@ segments:
         - [0x1BA08, asm, sound/D_0021AA08]
         - [0x1BA9C, asm, core/align_01BA9C]  # 4 bytes padding
         - [0x1BAA0, asm, sound/D_0021AAA0]
-        - [0x1BAA8, asm, opening/module_opening_getdesc]
+        - [0x1BAA8, c, opening/module_opening_getdesc]
         - [0x1BAB4, asm, core/align_01BAB4]  # 4 bytes gap
-        - [0x1BAB8, asm, opening/module_opening_getversion]
+        - [0x1BAB8, c, opening/module_opening_getversion]
         - [0x1BAC4, asm, core/align_01BAC4]  # 4 bytes gap
         - [0x1BAC8, asm, opening/module_opening_prepare]
         - [0x1BB34, asm, core/align_01BB34]  # 4 bytes gap
-        - [0x1BB38, asm, opening/module_opening_setup]
+        - [0x1BB38, c, opening/module_opening_setup]
         - [0x1BB88, c, module/module_dummy_setup]
         - [0x1BBD0, c, opening/module_opening_thread_proc]
         - [0x1BC50, c, opening/OpeningInit]
         - [0x1BCD4, asm, core/align_01BCD4]  # 4 bytes gap
         - [0x1BCD8, c, opening/OpeningProcess]
-        - [0x1BD58, asm, opening/OpeningDrawEnd]
+        - [0x1BD58, c, opening/OpeningDrawEnd]
         - [0x1BD9C, asm, core/align_01BD9C]  # 4 bytes gap
         - [0x1BDA0, asm, opening/OpeningDoOpeningIllegal]
         - [0x1BE2C, asm, core/align_01BE2C]  # 4 bytes gap
@@ -927,7 +927,7 @@ segments:
         - [0x1CFD0, asm, graph/sprInitChains]
         - [0x1CFE0, asm, graph/sprSetBasePtr]
         - [0x1CFF0, asm, graph/sprInit]
-        - [0x1D010, asm, opening/InitSPR]
+        - [0x1D010, c, opening/InitSPR]
         - [0x1D064, asm, core/align_01D064]  # 4 bytes gap
         - [0x1D068, asm, graph/sprTransformVertex]
         - [0x1D104, asm, core/align_01D104]  # 4 bytes gap
@@ -943,7 +943,7 @@ segments:
         - [0x1D440, asm, opening/OpeningInitTexture]
         - [0x1DB64, asm, core/align_01DB64]  # 4 bytes gap
         - [0x1DB68, asm, graph/vif1SetTextureMIP]
-        - [0x1DDA8, asm, graph/vif1SetTexture]
+        - [0x1DDA8, c, graph/vif1SetTexture]
         - [0x1DDB8, asm, graph/gsInitAlloc]
         - [0x1DDF0, asm, graph/vif1SetZTest]
         - [0x1DE38, asm, graph/vif1SetZWrite]
@@ -963,7 +963,7 @@ segments:
         - [0x1ED90, asm, graph/func_0021DD90]
         - [0x1EE4C, asm, core/align_01EE4C]  # 4 bytes padding
         - [0x1EE50, asm, graph/func_0021DE50]
-        - [0x1EE88, asm, opening/OpeningDoText]
+        - [0x1EE88, c, opening/OpeningDoText]
         - [0x1EEA4, asm, opening/D_0021DEA4]
         - [0x1EEA8, asm, opening/func_0021DEA8]
         - [0x1F168, asm, opening/OpeningDrawFog]
@@ -1019,7 +1019,7 @@ segments:
         - [0x252C8, asm, opening/func_002242C8]
         - [0x253F8, asm, opening/func_002243F8]
         - [0x254A0, asm, opening/OpeningInitIllegalScene]
-        - [0x25578, asm, opening/OpeningDrawIllegalScene]
+        - [0x25578, c, opening/OpeningDrawIllegalScene]
         - [0x255C0, asm, opening/func_002245C0]
         - [0x256C4, asm, core/align_0256C4]  # 4 bytes padding
         - [0x256C8, asm, opening/func_002246C8]
@@ -1036,19 +1036,19 @@ segments:
         - [0x264E0, asm, opening/func_002254E0]
         - [0x26728, asm, opening/module_opening_225728]
         - [0x2686C, asm, core/align_02686C]  # 4 bytes gap
-        - [0x26870, asm, clock/module_clock_getdesc]
+        - [0x26870, c, clock/module_clock_getdesc]
         - [0x2687C, asm, core/align_02687C]  # 4 bytes gap
-        - [0x26880, asm, clock/module_clock_getversion]
+        - [0x26880, c, clock/module_clock_getversion]
         - [0x2688C, asm, core/align_02688C]  # 4 bytes gap
         - [0x26890, asm, clock/module_clock_prepare]
         - [0x268FC, asm, core/align_0268FC]  # 4 bytes gap
-        - [0x26900, asm, clock/module_clock_setup]
+        - [0x26900, c, clock/module_clock_setup]
         - [0x26950, asm, clock/clock_stuff1]
         - [0x269B4, asm, core/align_0269B4]  # 4 bytes gap
         - [0x269B8, asm, clock/clock_input_check_handler_p6_p7_tgt]
         - [0x26D2C, asm, core/align_026D2C]  # 4 bytes gap
-        - [0x26D30, asm, clock/module_clock_thread_proc]
-        - [0x26D98, asm, clock/module_clock_225D98]
+        - [0x26D30, c, clock/module_clock_thread_proc]
+        - [0x26D98, c, clock/module_clock_225D98]
         - [0x26DAC, asm, core/align_026DAC]  # 4 bytes gap
         - [0x26DB0, asm, clock/module_clock_init_resources]
         - [0x26E80, asm, clock/clock_orb_rendering_func]
@@ -1121,7 +1121,7 @@ segments:
         - [0x2965C, asm, core/align_02965C]  # 4 bytes padding
         - [0x29660, asm, clock/D_00228660]
         - [0x29730, asm, core/j_config_mark_dirty]
-        - [0x29738, asm, core/nullsub_4]
+        - [0x29738, c, core/nullsub_4]
         - [0x29740, asm, core/nullsub_11]
         - [0x29748, asm, core/D_00228748]
         - [0x29978, asm, core/func_00228978]
@@ -1163,7 +1163,7 @@ segments:
         - [0x2B410, asm, clock/func_0022A410]
         - [0x2B7A4, asm, core/align_02B7A4]  # 4 bytes padding
         - [0x2B7A8, asm, clock/func_0022A7A8]
-        - [0x2B990, asm, clock/module_clock_22A990]
+        - [0x2B990, c, clock/module_clock_22A990]
         - [0x2B9C0, asm, core/align_02B9C0]  # 296 bytes gap
         - [0x2BAE8, asm, core/j_sound_handler_queue_command_0]
         - [0x2BAF0, asm, core/func_0022AAF0]
@@ -1289,7 +1289,7 @@ segments:
         - [0x3019C, asm, core/align_03019C]  # 4 bytes padding
         - [0x301A0, asm, core/func_0022F1A0]
         - [0x30298, asm, clock/module_clock_22F298]
-        - [0x302C0, asm, clock/module_clock_22F2C0]
+        - [0x302C0, c, clock/module_clock_22F2C0]
         - [0x302E8, asm, clock/module_clock_22F2E8]
         - [0x30380, asm, clock/module_clock_22F380]
         - [0x30474, asm, core/align_030474]  # 4 bytes gap
@@ -1299,7 +1299,7 @@ segments:
         - [0x3075C, asm, core/align_03075C]  # 4 bytes gap
         - [0x30760, asm, clock/module_clock_22F760]
         - [0x30908, asm, clock/module_clock_22F908]
-        - [0x30C88, asm, clock/module_clock_22FC88]
+        - [0x30C88, c, clock/module_clock_22FC88]
         - [0x30CA4, asm, core/align_030CA4]  # 4 bytes gap
         - [0x30CA8, asm, clock/module_clock_22FCA8]
         - [0x30D10, asm, clock/module_clock_22FD10]
@@ -1329,12 +1329,12 @@ segments:
         - [0x31860, asm, core/align_031860]  # 144 bytes gap
         - [0x318F0, asm, clock/module_clock_2308F0]
         - [0x31BFC, asm, core/align_031BFC]  # 4 bytes gap
-        - [0x31C00, asm, clock/module_clock_230C00]
+        - [0x31C00, c, clock/module_clock_230C00]
         - [0x31C28, asm, clock/func_00230C28]
         - [0x31C80, asm, clock/func_00230C80]
         - [0x31CE8, asm, clock/func_00230CE8]
         - [0x31D58, asm, clock/func_00230D58]
-        - [0x31DF0, asm, clock/module_clock_230DF0]
+        - [0x31DF0, c, clock/module_clock_230DF0]
         - [0x31E10, asm, core/align_031E10]  # 176 bytes gap
         - [0x31EC0, asm, clock/StartSysConfig]
         - [0x31F48, asm, clock/func_00230F48]
@@ -1347,7 +1347,7 @@ segments:
         - [0x32B34, asm, core/align_032B34]  # 4 bytes padding
         - [0x32B38, asm, browser/func_00231B38]
         - [0x32C50, asm, browser/func_00231C50]
-        - [0x32E48, asm, clock/module_clock_231E48]
+        - [0x32E48, c, clock/module_clock_231E48]
         - [0x32E78, asm, clock/func_00231E78]
         - [0x32F68, asm, clock/func_00231F68]
         - [0x32FAC, asm, core/align_032FAC]  # 4 bytes padding
@@ -1361,7 +1361,7 @@ segments:
         - [0x332E0, asm, graph/menupos_p3_p8_tgt]
         - [0x33404, asm, core/align_033404]  # 52 bytes gap
         - [0x33438, asm, clock/module_clock_232438]
-        - [0x33458, asm, clock/module_clock_232458]
+        - [0x33458, c, clock/module_clock_232458]
         - [0x334C4, asm, clock/D_002324C4]
         - [0x334C8, asm, clock/func_002324C8]
         - [0x3363C, asm, core/align_03363C]  # 4 bytes padding
@@ -1444,7 +1444,7 @@ segments:
         - [0x35AC0, asm, clock/func_00234AC0]
         - [0x35AE0, asm, clock/func_00234AE0]
         - [0x35B10, asm, clock/func_00234B10]
-        - [0x35B78, asm, core/get_clock_should_render_orbs]
+        - [0x35B78, c, core/get_clock_should_render_orbs]
         - [0x35B80, asm, core/func_00234B80]
         - [0x35B88, asm, core/func_00234B88]
         - [0x35C24, asm, core/align_035C24]  # 4 bytes padding
@@ -1456,9 +1456,9 @@ segments:
         - [0x35D60, asm, core/func_00234D60]
         - [0x35E04, asm, core/align_035E04]  # 4 bytes padding
         - [0x35E08, asm, core/func_00234E08]
-        - [0x35E70, asm, clock/module_clock_234E70]
+        - [0x35E70, c, clock/module_clock_234E70]
         - [0x35EA8, asm, core/align_035EA8]  # 144 bytes gap
-        - [0x35F38, asm, clock/module_clock_get_config_item]
+        - [0x35F38, c, clock/module_clock_get_config_item]
         - [0x35F4C, asm, core/align_035F4C]  # 60 bytes gap
         - [0x35F88, asm, config/config_load_clock_osd]
         - [0x36138, asm, core/align_036138]  # 56 bytes gap
@@ -2576,7 +2576,7 @@ segments:
         - [0x665E8, asm, browser/check_atok_erx_exists]
         - [0x66650, asm, browser/Fep_IsAtokEnabled]
         - [0x6665C, asm, core/align_06665C]  # 4 bytes gap
-        - [0x66660, asm, graph/load_tim2_texture_resource]
+        - [0x66660, c, graph/load_tim2_texture_resource]
         - [0x66694, asm, core/align_066694]  # 4 bytes gap
         - [0x66698, asm, graph/do_load_tim2_texture]
         - [0x66798, asm, graph/func_00265798]
@@ -2598,7 +2598,7 @@ segments:
         - [0x6794C, asm, core/align_06794C]  # 4 bytes gap
         - [0x67950, asm, graph/Tim2GetPictureHeader]
         - [0x679BC, asm, core/align_0679BC]  # 4 bytes gap
-        - [0x679C0, asm, graph/Tim2IsClut2]
+        - [0x679C0, c, graph/Tim2IsClut2]
         - [0x679CC, asm, core/align_0679CC]  # 4 bytes gap
         - [0x679D0, asm, graph/Tim2GetMipMapPictureSize]
         - [0x67A58, asm, graph/Tim2GetMipMapHeader]
@@ -2626,7 +2626,7 @@ segments:
         - [0x69164, asm, core/align_069164]  # 4 bytes gap
         - [0x69168, asm, graph/Tim2CalcBufWidth]
         - [0x691D4, asm, core/align_0691D4]  # 4 bytes gap
-        - [0x691D8, asm, graph/Tim2CalcBufSize]
+        - [0x691D8, c, graph/Tim2CalcBufSize]
         - [0x691F4, asm, core/align_0691F4]  # 4 bytes gap
         - [0x691F8, asm, graph/Tim2GetLog2]
         - [0x69234, asm, core/align_069234]  # 4 bytes gap
@@ -3171,7 +3171,7 @@ segments:
         - [0x7CB98, asm, core/sceDmaGetChan]
         - [0x7CBC0, asm, core/sceDmaReset]
         - [0x7CC9C, asm, core/align_07CC9C]  # 4 bytes gap
-        - [0x7CCA0, asm, core/sceDmaDebug]
+        - [0x7CCA0, c, core/sceDmaDebug]
         - [0x7CCB0, asm, core/sceDmaPutEnv]
         - [0x7CE88, asm, core/sceDmaGetEnv]
         - [0x7CEC0, asm, core/sceDmaPutStallAddr]
@@ -3760,7 +3760,7 @@ segments:
         - [0x8B660, asm, core/sceGsPutDispEnv]
         - [0x8B71C, asm, core/align_08B71C]  # 4 bytes gap
         - [0x8B720, asm, core/sceGszbufaddr]
-        - [0x8B7E8, asm, core/CB_DelayTh]
+        - [0x8B7E8, c, core/CB_DelayTh]
         - [0x8B80C, asm, core/align_08B80C]  # 4 bytes gap
         - [0x8B810, asm, core/sceCdDelayThread]
         - [0x8B878, asm, core/sceCdCallback]
