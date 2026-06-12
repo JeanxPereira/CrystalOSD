@@ -11,7 +11,11 @@
 
 Clean-room reconstruction of the PlayStation 2 **OSDSYS**! the iconic system menu with its crystalline towers, floating orbs, and memory card browser.
 
-Built by analyzing the binary in [Ghidra](https://ghidra-sre.org/) and cross-referencing against [PS2SDK](https://github.com/ps2dev/ps2sdk) and [PCSX2](https://github.com/PCSX2/pcsx2) source. The goal: a fully buildable, byte-identical ELF that can serve as a foundation for PS2 homebrew, custom system menus, and preservation efforts.
+Built by analyzing the binary in [Ghidra](https://ghidra-sre.org/) and cross-referencing against [PS2SDK](https://github.com/ps2dev/ps2sdk) and [PCSX2](https://github.com/PCSX2/pcsx2) source.
+
+**Primary goal:** a fully buildable, byte-identical OSDSYS ELF rebuilt from C. The reconstructed SDK library code has multiplier value — every matched function becomes reusable reference for the broader PS2 decomp community.
+
+The byte-perfect ELF is PS2/MIPS and does not run on PC. The long-term north star is a desktop *reimplementation* of the OSDSYS aesthetic — crystal clock, fog, towers, refraction cube — enabled by and sequenced after the decomp. That future port reuses the understanding the decomp produces (structs, the 5-pass render pipeline, VU0 decode), not the binary itself.
 
 ---
 
@@ -65,9 +69,6 @@ splat_config.yml → configure.py → asm/*.s + OSDSYS_A.ld → make elf → byt
 As functions are reverse-engineered, assembly stubs in `asm/` are replaced by
 C reconstructions in `src/`, verified to produce identical machine code via
 [decomp.me](https://decomp.me/) and objdiff.
-
-> **Note**: Many functions in the OSDSYS binary come from Sony's SDK (linked statically).
-> Matching these has multiplier value for the broader PS2 decomp community.
 
 ## Architecture
 

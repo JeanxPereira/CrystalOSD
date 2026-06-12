@@ -50,9 +50,11 @@ ORIG_ELF    := OSDSYS_A_XLF_decrypted_unpacked.elf
 LINKER      := OSDSYS_A.ld
 
 # ── ELF link inputs ────────────────────────────────────
-# Automatically grab all splat-generated .s files
-ALL_SPLIT_ASM := $(shell find $(ASM_DIR) -name '*.s' -not -path '*/nonmatchings/*' -type f 2>/dev/null)
-ELF_OBJS := $(patsubst $(ASM_DIR)/%.s,$(ASM_BUILD)/%.s.o,$(ALL_SPLIT_ASM))
+# Link EXACTLY the objects the linker script references — not every *.s in the tree.
+# The committed asm tree contains orphan duplicates (gap_*.s superseded by align_*.s, and
+# per-symbol D_*.s overlapping align_* blocks) left behind by split_aligns.py. Linking the
+# whole tree yields "multiple definition". OSDSYS_A.ld is the authoritative object set.
+ELF_OBJS := $(sort $(shell grep -oE 'build/[A-Za-z0-9_./-]+\.o' $(LINKER) 2>/dev/null))
 
 # ── objdiff match inputs ───────────────────────────────
 SUBSYSTEMS     := core browser cdvd clock config graph history module opening sound data

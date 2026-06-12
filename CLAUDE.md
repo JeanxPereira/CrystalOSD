@@ -139,6 +139,11 @@ Scope should be the module name (`graph`, `core`, `browser`, `sound`, etc.) or l
 | History | `src/history/` | Play history tracking |
 | Module | `src/module/` | Dynamic module system |
 
+## Decomp Priority
+Render subsystems — **clock**, **opening**, **graph** — are prioritized for decompilation.
+These three feed the long-term north star: a clean desktop reimplementation of the OSDSYS visual layer.
+All other subsystems (browser, config, sound, cdvd, history, module) follow after the render core is matched.
+
 ## MCP Integration
 - **ghidra-mcp**: Always available for binary analysis
 - **context-mode**: Session state sandboxing and tool output management
@@ -237,9 +242,11 @@ section_order: [".text", ".data", ".rodata", ".sdata", ".sbss", ".bss", ".module
 
 ### Makefile Linker Flags
 ```makefile
-LDFLAGS := -m elf32lr5900 -EL -nostdlib --no-check-sections -G 0 --defsym=_gp=0x377970 -e 0x200008 -s
+LDFLAGS := -m elf32lr5900 -EL -nostdlib --no-check-sections -G 0 --defsym=_gp=0x377970 -e 0x200008 -s \
+           -T undefined_syms_auto.txt -T undefined_funcs_auto.txt
 ```
 - **`-G 0`** (NOT `-G 0x10000`): Prevents linker from placing data in small-data sections, avoiding GPREL16 overflow.
+- **`-T undefined_syms_auto.txt`** / **`-T undefined_funcs_auto.txt`**: splat-generated extern symbol and function tables; resolved at link time so the assembler does not need to see all definitions.
 - The ELF header is replaced post-link: the Makefile strips the linker-generated header and prepends the original 4KB header from `OSDSYS_A_XLF_decrypted_unpacked.elf`.
 
 ### Known Solved Issues (DO NOT RE-INTRODUCE)

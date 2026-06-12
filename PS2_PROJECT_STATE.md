@@ -36,9 +36,9 @@ The absolute focus now is **Decompilation (Decomp)** of individual functions fro
 | `src/core/romdir.c` | `romdir_get_offset`, `romdir_search_entry` | ✅ Done |
 | `src/graph/gs_util.c` | `GetTexExponent`, `gsAllocBuffer` | ✅ Done |
 
-### ⚠️ Known Issue: Ghidra Function Boundaries
-Some mega-functions still exist (e.g., `FUN_0020d490` containing `main()`).
-Most named functions decompile cleanly — focus on those first.
+### ℹ️ Function Boundaries
+`main` is a standalone symbol at `0x0020d4d0` (size `0xe68`), split to its own file `asm/core/main.s` — no wrapping mega-function.
+Some other large unnamed mega-functions (`FUN_*`) may still exist in the binary; named functions decompile cleanly — focus on those first.
 
 ### ⚠️ Non-matchable from C (need inline asm or layout fix)
 - `gsAllocBuffer` — uses `mult1` (R5900 pipe-1 multiply); compiler-scheduled, not controllable from C

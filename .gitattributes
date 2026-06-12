@@ -1,0 +1,5 @@
+# Shell scripts and WSL tooling MUST stay LF — they run under bash in WSL, where a
+# CRLF (\r) trailing each line breaks variable assignments and shebangs.
+*.sh text eol=lf
+*.py text eol=lf
+tools/wsl/* text eol=lf
