@@ -42,7 +42,7 @@ cp "$TMPC/sceGsGetGParam.c.o" build/src/core/sceGsGetGParam.c.o
 rm -rf "$TMPC"
 
 echo "=== [6/6] link + verify byte-perfect ==="
-make PREFIX="$PREFIX" PS2SDK="$PS2SDK" -j"$(nproc)" elf >/tmp/cosd_elf.log 2>&1 || {
+make PREFIX="$PREFIX" PS2SDK="$PS2SDK" MATCH_CC="$EEGCC" -j"$(nproc)" elf >/tmp/cosd_elf.log 2>&1 || {
   echo "LINK FAILED:"; grep -aiE "error|undefined|multiple|overflow|cannot" /tmp/cosd_elf.log | grep -av "march=r5900" | head; exit 1; }
 
 if cmp -s build/OSDSYS.elf OSDSYS_A_XLF_decrypted_unpacked.elf; then

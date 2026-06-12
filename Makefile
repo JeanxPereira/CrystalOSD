@@ -20,11 +20,14 @@
 # ── Toolchain ──────────────────────────────────────────
 PREFIX  ?= mips64r5900el-ps2-elf-
 CC      := $(PREFIX)gcc
-# Matching compiler (ee-gcc 2.9-991111) — for C files that must match original binary.
-# The modern GCC 15 (CC) works for assembly/linking but will NOT produce matching
-# output for C code. Install ee-gcc2.9-991111 from decompme/compilers and set
-# MATCH_CC to point to it. Until then, C matching is done on decomp.me.
-MATCH_CC ?= $(CC)
+# Matching compiler (ee-gcc 2.9-991111) — REQUIRED for ALL C compilation. Modern GCC
+# ($(CC)) is used ONLY to assemble + link; it will NOT produce byte-matching C output.
+# Install ee-gcc2.9-991111 (decompme/compilers) and export MATCH_CC to point at it.
+# No silent fallback to $(CC): a wrong-compiler C object would break the byte-perfect ELF.
+# NOTE (WSL): ee-gcc is a 32-bit 1999 binary; its stat() EOVERFLOWs on the /mnt/c (9p)
+# mount, so C sources must live on native ext4. Use tools/wsl/build_verify.sh (compiles
+# via /tmp) or a native WSL clone of the repo. See docs/SETUP_WSL.md.
+MATCH_CC ?=
 AS      := $(PREFIX)as
 LD      := $(PREFIX)ld
 OBJCOPY := $(PREFIX)objcopy
@@ -66,7 +69,7 @@ C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 C_OBJS         := $(patsubst $(SRC_DIR)/%.c,$(BASE_DIR)/%.o,$(C_SRCS))
 
 # ── Phony targets ──────────────────────────────────────
-.PHONY: all elf split verify sha1 clean check-toolchain dirs target base progress progress-json progress-crossref progress-md stats coverage help
+.PHONY: all elf split verify sha1 clean check-toolchain require-match-cc dirs target base progress progress-json progress-crossref progress-md stats coverage help
 
 # default: objdiff workflow (legacy behaviour)
 all: check-toolchain dirs target base
@@ -97,10 +100,19 @@ $(ASM_BUILD)/%.s.o: $(ASM_DIR)/%.s
 	@mkdir -p $(dir $@)
 	$(AS) $(ASFLAGS) -o $@ $<
 
+# Fail loudly if a C compile is attempted without the matching compiler set.
+require-match-cc:
+	@test -n "$(MATCH_CC)" && test -x "$(MATCH_CC)" || ( \
+	  echo "ERROR: MATCH_CC is not set to an executable ee-gcc 2.9-991111." ; \
+	  echo "  C must be compiled with the matching compiler, not modern GCC." ; \
+	  echo "  Install: https://github.com/decompme/compilers/releases (ee-gcc2.9-991111)" ; \
+	  echo "  Then:    export MATCH_CC=\$$HOME/ee-gcc2.9-991111/bin/ee-gcc" ; \
+	  exit 1 )
+
 # Pattern: src/foo.c → build/src/foo.c.o
-build/src/%.c.o: src/%.c
+build/src/%.c.o: src/%.c | require-match-cc
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(MATCH_CC) $(CFLAGS) -c -o $@ $<
 
 # Verify byte-perfect rebuild against original
 verify: $(ELF_OUT)
@@ -148,9 +160,9 @@ $(TARGET_DIR)/%.o: $(ASM_DIR)/%.s | dirs
 
 base: $(C_OBJS)
 
-$(BASE_DIR)/%.o: $(SRC_DIR)/%.c | dirs
+$(BASE_DIR)/%.o: $(SRC_DIR)/%.c | dirs require-match-cc
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(MATCH_CC) $(CFLAGS) -c -o $@ $<
 
 # ── Clean ──────────────────────────────────────────────
 clean:
