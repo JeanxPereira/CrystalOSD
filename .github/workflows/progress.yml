@@ -55,23 +55,17 @@ jobs:
             rm -rf /tmp/orig
           fi
 
-      # Build matching objects (target + base)
+      # Build objdiff matching objects (target asm .o + base C .o).
+      # C compiles with the matching compiler (MATCH_CC=ee-gcc 2.9); asm assembles with
+      # the apt binutils (PREFIX=mips-linux-gnu-). This produces the objdiff report only.
       - name: Build
-        run: make all PREFIX=mips-linux-gnu- CC=$COMPILER_DIR/bin/ee-gcc
+        run: make all PREFIX=mips-linux-gnu- CC=$COMPILER_DIR/bin/ee-gcc MATCH_CC=$COMPILER_DIR/bin/ee-gcc
 
-      # SHA1 verification (works without original ELF)
-      - name: SHA1 Verify
-        run: |
-          if [ -f build/OSDSYS.elf ]; then
-            make sha1
-          else
-            echo "⚠️ No ELF built — skipping SHA1 check"
-          fi
-
-      # Byte-perfect verification (only if original ELF available)
-      - name: Byte-perfect Verify
-        if: env.HAVE_ORIG_ELF == '1'
-        run: make verify
+      # NOTE: byte-perfect `make elf`/`make verify` is intentionally NOT run in CI.
+      # It requires the exact ps2dev binutils 2.45.1 (not apt's mips-linux-gnu-) plus the
+      # configure.py -> patch_data_labels -> ee-gcc pipeline. It is verified locally via
+      # tools/wsl/build_verify.sh against the committed config/build.sha1. CI's job here is
+      # the decomp.dev progress report below.
 
       # Generate objdiff progress report
       - name: Download objdiff-cli
