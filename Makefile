@@ -45,7 +45,9 @@ GADD :=
 G8_FUNCS := graph/pktSetAD \
             opening/InitDMA opening/OpeningDoOpening opening/OpeningDrawLightsAndCubes \
             opening/OpeningInit opening/OpeningProcess opening/func_00222DD8 \
-            opening/func_00222E38 opening/module_opening_thread_proc
+            opening/func_00222E38 opening/module_opening_thread_proc \
+            core/get_clock_should_render_orbs opening/InitSPR opening/OpeningDrawEnd \
+            opening/OpeningDrawIllegalScene
 $(foreach f,$(G8_FUNCS),$(eval build/base/$(f).o build/src/$(f).c.o: GADD := -G8))
 CFLAGS  += -I include -I $(PS2SDK)/ee/include -I $(PS2SDK)/common/include
 ASFLAGS := -march=r5900 -mabi=eabi -G0 -I include
