@@ -35,7 +35,13 @@ def main():
             
         for s_file in sorted(subsys_dir.rglob("*.s")):
             name = s_file.stem
-            
+
+            # Skip orphan gap_* objects: split_aligns.py superseded them with align_*
+            # (the linker uses align_, not gap_). They are not linked and would only
+            # pollute the decomp.dev progress graph with duplicate/dead units.
+            if name.startswith("gap_"):
+                continue
+
             target_path = f"build/target/{subsys}/{name}.o"
             
             # Check if C file exists
