@@ -76,22 +76,12 @@ jobs:
       - name: Generate progress report
         run: ./objdiff-cli report generate -o report.json
 
+      # decomp.dev ingests THIS artifact automatically via its GitHub App — no API key,
+      # no manual POST. The artifact MUST be named "<version>_report" matching the project's
+      # version on decomp.dev (here: HDDOSD_110U). Install the app + add the project at
+      # https://decomp.dev/manage  (repo admin). See https://github.com/encounter/decomp.dev
       - name: Upload progress report
         uses: actions/upload-artifact@v4
         with:
           name: HDDOSD_110U_report
           path: report.json
-
-      # Upload to decomp.dev (on push to main only)
-      - name: Upload to decomp.dev
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        continue-on-error: true
-        run: |
-          if [ -n "${{ secrets.DECOMP_ME_API_KEY }}" ]; then
-            curl -X POST "https://decomp.dev/api/v1/projects/JeanxPereira/CrystalOSD/report" \
-              -H "Authorization: Bearer ${{ secrets.DECOMP_ME_API_KEY }}" \
-              -H "Content-Type: application/json" \
-              -d @report.json
-          else
-            echo "⚠️ DECOMP_ME_API_KEY not set — skipping upload"
-          fi
