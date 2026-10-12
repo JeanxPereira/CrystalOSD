@@ -23,7 +23,13 @@ jobs:
           cache: true
 
       - name: Install LLVM 23
-        run: choco upgrade llvm --version=23.1.2 -y --allow-downgrade --no-progress
+        shell: pwsh
+        run: |
+          $name = 'clang+llvm-23.1.2-x86_64-pc-windows-msvc'
+          Invoke-WebRequest "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.2/$name.tar.xz" -OutFile "$env:RUNNER_TEMP/llvm.tar.xz"
+          tar -xf "$env:RUNNER_TEMP/llvm.tar.xz" -C "$env:RUNNER_TEMP"
+          if (Test-Path 'C:/Program Files/LLVM') { Remove-Item -Recurse -Force 'C:/Program Files/LLVM' }
+          Move-Item "$env:RUNNER_TEMP/$name" 'C:/Program Files/LLVM'
 
       - name: Check the compiler
         shell: pwsh
