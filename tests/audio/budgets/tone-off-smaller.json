@@ -1,0 +1,7 @@
+{
+ "samples": 4800,
+ "differ": 1,
+ "maxAbs": 2,
+ "first": 5,
+ "last": 5
+}

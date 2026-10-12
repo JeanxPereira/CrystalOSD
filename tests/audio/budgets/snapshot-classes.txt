@@ -1,0 +1,15 @@
+# class from to bytes: the bytes of the built images that differ from the boot-b capture start, exact both ways.
+# libsd region (IOP 0x80000..0x90130): modules the sound driver does not use (padman and its neighbours), libsd's loadcore links, libsd's runtime state.
+libsd-other-modules 80000 8b830 26035
+libsd-export-links 8b830 8b838 7
+libsd-import-links 8f440 8f580 100
+libsd-state 8f580 900c8 17
+libsd-past-module 900c8 90130 70
+# OSDSND region (IOP 0x90130..0x9b130).
+sdr-import-links 98560 98810 161
+sdr-data-runtime 98810 99320 4
+sdr-bss-runtime 99320 9a670 463
+osdsnd-other-modules 9a670 9b130 1636
+# sound area (IOP 0xeb000..0xfa000).
+iop-cdvd-tail eb000 ebc00 2127
+iop-staging-runtime ebc00 fa000 30

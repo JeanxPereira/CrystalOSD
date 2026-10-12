@@ -1,0 +1,60 @@
+{
+ "differences": [
+  {
+   "delta": 103,
+   "scope": "draw-027",
+   "target": "fb0000",
+   "x": 255,
+   "y": 155
+  },
+  {
+   "delta": 63,
+   "scope": "draw-027",
+   "target": "fb0000",
+   "x": 255,
+   "y": 156
+  },
+  {
+   "delta": 103,
+   "scope": "draw-028",
+   "target": "fb1a40",
+   "x": 255,
+   "y": 155
+  },
+  {
+   "delta": 63,
+   "scope": "draw-028",
+   "target": "fb1a40",
+   "x": 255,
+   "y": 156
+  },
+  {
+   "delta": 103,
+   "scope": "chained",
+   "target": "fb0000",
+   "x": 255,
+   "y": 155
+  },
+  {
+   "delta": 63,
+   "scope": "chained",
+   "target": "fb0000",
+   "x": 255,
+   "y": 156
+  },
+  {
+   "delta": 103,
+   "scope": "chained",
+   "target": "fb1a40",
+   "x": 255,
+   "y": 155
+  },
+  {
+   "delta": 63,
+   "scope": "chained",
+   "target": "fb1a40",
+   "x": 255,
+   "y": 156
+  }
+ ]
+}

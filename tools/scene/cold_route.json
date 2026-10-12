@@ -1,0 +1,17 @@
+{
+  "build": "hdd",
+  "args": "SkipSearchLater",
+  "video": "ntsc",
+  "counterToCaptureFrame": 149,
+  "note": "Capture frame = clock counter + counterToCaptureFrame (the clock's first frame, counter 0, is capture frame 149 or 150). Presses are given by counter: down on the main menu, cross to open System Configuration, square to hide the list (the clock alone).",
+  "steps": [
+    { "counter": 1500, "press": ["down"], "frames": 6 },
+    { "counter": 1560, "press": ["cross"], "frames": 6 },
+    { "counter": 1758, "press": ["square"], "frames": 6 }
+  ],
+  "captures": {
+    "menu": { "target": 1471, "until": 1500, "steps": 0 },
+    "square": { "target": 1809, "until": 1830, "steps": 3 },
+    "clock": { "target": 1940, "until": 1965, "steps": 3 }
+  }
+}

@@ -1,0 +1,7514 @@
+[
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "hddosd-110U-pal-whole2-aspect2",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "hddosd-110U-whole2-aspect-cancel",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "hddosd-110U-whole2-aspect-set",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "hddosd-110U-whole2-aspect1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "hddosd-110U-whole2-aspect2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "hddosd-110U-whole2-aspect3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "rom-0230A-whole2-aspect-cancel",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "rom-0230A-whole2-aspect0-bit3",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "rom-0230A-whole2-aspect1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "rom-0230A-whole2-aspect2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "model_aspect.mjs",
+  "capture": "rom-0230A-whole2-aspect2-gate",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "hddosd-110U-boot-approach",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "hddosd-110U-pal-boot-approach",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "hddosd-110U-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "hddosd-110U-trans-boot-opening",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "hddosd-110U-trans-return",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "rom-0230A-boot-approach",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "rom-0230A-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "rom-0230A-trans-return",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_approach.mjs",
+  "capture": "rom-0230E-pal-boot-approach",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-pal-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "hddosd-110U-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230A-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230E-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_background.mjs",
+  "capture": "rom-0230E-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-pal-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-poke-mode3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "hddosd-110U-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-poke-mode3",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230A-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230E-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_blur.mjs",
+  "capture": "rom-0230E-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_camera.mjs",
+  "capture": "hddosd-110U-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_camera.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_camera.mjs",
+  "capture": "rom-0230A-clock-rod",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_camera.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-flow-pal-fade-up",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-flow-pal-hour",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-flow-pal-hour-free",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-stim-hour",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-stim-hour-free",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-stim-poked-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-stim-poked-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-trans-close",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "hddosd-110U-trans-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-clock-hour",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-clock-state",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-clock-state-poked-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-clock-state-poked-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-stim-hour-free",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-trans-close",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230A-trans-open",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230E-flow-pal-fade-up",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230E-flow-pal-hour",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_clock_state.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-cubes-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-cubes-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-cubes-leave",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-cubes-pulse",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-pal-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "hddosd-110U-pal-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-conveyor",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-leave",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230A-cubes-pulse",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230E-flow-pal-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cubes.mjs",
+  "capture": "rom-0230E-pal-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_exits.mjs",
+  "files": [
+   "hddosd-110U-flow-exits.log",
+   "rom-0230A-flow-exits.log"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_first_run.mjs",
+  "capture": "hddosd-110U-flow-fr-end",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_first_run.mjs",
+  "capture": "hddosd-110U-flow-fr-lang",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_first_run.mjs",
+  "capture": "hddosd-110U-flow-fr-logos",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_first_run.mjs",
+  "capture": "rom-0230A-flow-fr-cold",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_first_run.mjs",
+  "capture": "rom-0230A-flow-fr-full",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_first_run.mjs",
+  "capture": "rom-0230A-flow-fr-logos",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-cutover-check",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-flow-options-close",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-flow-options-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-pal-clock-frame",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-pal-config-frame",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-pal-whole-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-pal-whole2-aspect2",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-pal-whole3-config",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-pal-whole3-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-boot-opening",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-long",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-adjust-cancel",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-adjust-cancel-summer",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-adjust-confirm",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-adjust-hour",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-adjust-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-aspect-cancel",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-aspect-reset",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-aspect-set",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-aspect1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-aspect2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-aspect3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-back",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-leave",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-mode1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-mode4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole2-up",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole3-adjust-hour",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole3-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole3-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole3-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole3-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "hddosd-110U-whole3-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-flow-options-close",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-flow-options-open",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole-long",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole-menu",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole-to-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-adjust-cancel",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-adjust-cancel-summer",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-adjust-confirm",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-adjust-hour",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-adjust-open",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-aspect-cancel",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-aspect0-bit3",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-aspect1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-aspect2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-aspect2-gate",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-back",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-down",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-leave",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-mode1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-mode4",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230A-whole2-to-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230E-pal-clock-b",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230E-pal-whole-config",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230E-pal-whole-menu",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_frame.mjs",
+  "capture": "rom-0230E-pal-whole2-enter",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-cubes-gs-state",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-pal-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-poke-mode3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_gs_state.mjs",
+  "capture": "hddosd-110U-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_rom_v2.mjs",
+  "capture": "rom-0230A-opening2-timeline-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_rom.mjs",
+  "capture": "rom-0230A-opening2-timeline-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_v2.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_v2.mjs",
+  "capture": "hddosd-110U-opening-timeline",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_v2.mjs",
+  "capture": "hddosd-110U-opening-towers3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_v2.mjs",
+  "capture": "hddosd-110U-opening-towers4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera_v2.mjs",
+  "capture": "hddosd-110U-pal-opening-timeline",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera.mjs",
+  "capture": "hddosd-110U-opening-timeline",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera.mjs",
+  "capture": "hddosd-110U-opening-towers3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera.mjs",
+  "capture": "hddosd-110U-opening-towers4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_camera.mjs",
+  "capture": "hddosd-110U-pal-opening-timeline",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "hddosd-110U-opening-cubes1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "rom-0230A-opening2-cubes-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes.mjs",
+  "capture": "hddosd-110U-opening-cubes1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes.mjs",
+  "capture": "rom-0230A-opening2-cubes-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_cubes.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening2-flat",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc65-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc65-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc69",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc6a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc6b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc6c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc6d",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc6e",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc6f",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc70",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc71",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-disc73",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-forced",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-forcedsnap",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ill72-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ill72-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ill74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ill74-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ill74-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ill74-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-late-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-mecha",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-pal-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ready-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-ready-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-readyclear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-readymid",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "hddosd-110U-opening3-readyneg",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening2-flat-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening3-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening3-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening3-ill74-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening3-ill74-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_flat.mjs",
+  "capture": "rom-0230E-opening3-pal-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "hddosd-110U-opening-fog1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog.mjs",
+  "capture": "hddosd-110U-opening-fog1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_fog.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening-full2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening-over1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc65-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc65-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc69",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc6a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc6b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc6c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc6d",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc6e",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc6f",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc70",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc71",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-disc73",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-forced",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-forcedsnap",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ill72-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ill72-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ill74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ill74-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ill74-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ill74-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-late-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-mecha",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-pal-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ready-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-ready-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-readyclear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-readymid",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "hddosd-110U-opening3-readyneg",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230A-opening2-flat-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230A-opening3-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230A-opening3-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230A-opening3-ill74-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230A-opening3-ill74-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_ghost.mjs",
+  "capture": "rom-0230E-opening3-pal-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff.mjs",
+  "capture": "hddosd-110U-opening2-handoff-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff.mjs",
+  "capture": "hddosd-110U-opening2-handoff-probes",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff.mjs",
+  "capture": "hddosd-110U-opening3-late-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_handoff.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "hddosd-110U-opening3-pal-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "rom-0230A-opening3-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "rom-0230A-opening3-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "rom-0230A-opening3-ill74-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "rom-0230A-opening3-ill74-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_illegal_cubes.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_inputs.mjs",
+  "capture": "hddosd-110U-opening2-setup",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_inputs.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_inputs.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_inputs.mjs",
+  "capture": "rom-0230A-opening2-timeline-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_inputs.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_inputs.mjs",
+  "capture": "rom-0230E-opening3-pal-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "hddosd-110U-opening-lights1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights.mjs",
+  "capture": "hddosd-110U-opening-full",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights.mjs",
+  "capture": "hddosd-110U-opening-lights1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_lights.mjs",
+  "capture": "rom-0230A-opening3-intro-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening-full2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening-over1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening3-disc65-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening3-ill74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening3-late-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays_v2.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening-full2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening-over1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening3-disc65-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening3-ill74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "hddosd-110U-opening3-late-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_overlays.mjs",
+  "capture": "rom-0230A-opening2-scene-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc65-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-late-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_stages.mjs",
+  "capture": "hddosd-110U-opening3-stages-try",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "hddosd-110U-opening2-ee-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "hddosd-110U-opening2-ee-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "hddosd-110U-opening2-ee-late",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "hddosd-110U-opening3-pal-towers-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "hddosd-110U-opening3-pal-towers-late",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "rom-0230A-opening2-ee-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "rom-0230A-opening3-towers-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "rom-0230A-opening3-towers-late-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "rom-0230E-opening3-pal-towers-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_ee.mjs",
+  "capture": "rom-0230E-opening3-pal-towers-late-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_v2.mjs",
+  "capture": "hddosd-110U-opening-towers2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_v2.mjs",
+  "capture": "hddosd-110U-opening-towers3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_v2.mjs",
+  "capture": "hddosd-110U-opening-towers4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_v2.mjs",
+  "capture": "hddosd-110U-opening2-ee-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_v2.mjs",
+  "capture": "hddosd-110U-opening2-ee-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers_v2.mjs",
+  "capture": "hddosd-110U-opening2-moved",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers.mjs",
+  "capture": "hddosd-110U-opening-towers2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers.mjs",
+  "capture": "hddosd-110U-opening-towers3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers.mjs",
+  "capture": "hddosd-110U-opening-towers4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers.mjs",
+  "capture": "hddosd-110U-opening2-ee-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers.mjs",
+  "capture": "hddosd-110U-opening2-ee-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_towers.mjs",
+  "capture": "hddosd-110U-opening2-moved",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening-towers2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening-towers3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening-towers4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening2-bounds",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening2-ee-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening2-ee-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening2-ee-late",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening2-moved",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening2-moved-bounds",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-towers-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-towers-late",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "rom-0230A-opening2-ee-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "rom-0230A-opening3-towers-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "rom-0230A-opening3-towers-late-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-towers-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-towers-late-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening-towers2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening-towers3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening-towers4",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening2-bounds",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening2-ee-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening2-ee-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening2-ee-late",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening2-moved",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "hddosd-110U-opening2-moved-bounds",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening_vu1.mjs",
+  "capture": "rom-0230A-opening2-ee-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "OPENING_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-count",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d65",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d69",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d6a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d6b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d6d",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d6e",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d6f",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d70",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d71",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d72",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d73",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-d75",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-forced",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedexec",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedexecsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedready",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedreadyneg",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill-m1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill72-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill72-c",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill74-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill74-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ill74-c",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-ready-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-readyexec",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-readyexec2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-readyexecsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-readyneg",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-readynegsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230A-opening3-readysnd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-count",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-readyexec",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-readysnd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening2-handoff-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening2-handoff-probes",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc65-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc69",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc6a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc6b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc6c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc6d",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc6e",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc6f",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc70",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc71",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-disc73",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-forced",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-forcedsnap",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-ill72-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-ill74-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-ill74-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-late-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-pal-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-ready-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-readyclear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_handoff.mjs",
+  "capture": "hddosd-110U-opening3-readyneg",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "hddosd-110U-opening3-pal-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "rom-0230A-opening3-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "rom-0230A-opening3-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "rom-0230A-opening3-ill74-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "rom-0230A-opening3-ill74-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-a-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal_v2.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-b-as-hdd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_illegal.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-count",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d65",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d69",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d6a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d6b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d6d",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d6e",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d6f",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d70",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d71",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d71z",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d72",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d73",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-d75",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-forced",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedexec",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedexecsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedready",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedreadyneg",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-forcedsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill-m1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill-m2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill72-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill72-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill72-c",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill74-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill74-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ill74-c",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ready-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-ready-b",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readyclear",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readyexec",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readyexec2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readyexecsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readymid",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readyneg",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readynegsnap",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readysnd",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230A-opening3-readywait",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-count",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-d71z",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-ill-b",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-readyexec",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-readymid",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages_rom.mjs",
+  "capture": "rom-0230E-opening3-pal-readysnd",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc65-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc65-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc69",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc6a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc6b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc6c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc6d",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc6e",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc6f",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc70",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc71",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-disc73",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-forced",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-forcedsnap",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill72-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill72-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill74-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill74-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ill74-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-illdraw",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-late-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-late-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-mecha",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-pal-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-pal-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ready-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-ready-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-readyclear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-readymid",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-readyneg",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_opening3_stages.mjs",
+  "capture": "hddosd-110U-opening3-stages-try",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_options.mjs",
+  "capture": "hddosd-110U-flow-options-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_options.mjs",
+  "capture": "rom-0230A-flow-options-open",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-clock-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-flow-pal-close",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-flow-pal-fade-up2",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-flow-pal-hour-free",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-flow-pal-open",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-pal-clock-b",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-pal-fade-down",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-stim-fade-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-stim-fade-up",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-stim-hour-free",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "hddosd-110U-trans-leave",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230A-clock-orb-fade",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230A-clock-orbs",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230A-clock-placement",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230A-stim-fade-up",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230A-stim-hour-free",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230A-trans-leave",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-flow-pal-close",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-flow-pal-fade-up2",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-flow-pal-fade-up3",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-flow-pal-open",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-pal-clock-b",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_orbs.mjs",
+  "capture": "rom-0230E-pal-fade-down",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-pal-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-poke-mode3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "hddosd-110U-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-menu",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-poke-item1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-poke-item2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-poke-mode1",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-poke-mode3",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-to-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230A-rest-to-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230E-pal-clock-c",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_overlays.mjs",
+  "capture": "rom-0230E-pal-config-c",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-flow-pal-fade-up",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-flow-pal-hour",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-flow-pal-hour-free",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-stim-hour",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "hddosd-110U-stim-hour-free",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "rom-0230A-clock-hour",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "rom-0230A-clock-placement",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "rom-0230A-stim-hour-free",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "rom-0230E-flow-pal-fade-up",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "rom-0230E-flow-pal-hour",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_placement.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_rand.mjs",
+  "files": [
+   "hddosd-110U-flow-rand-boot.log"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_rand.mjs",
+  "files": [
+   "hddosd-110U-flow-rand-opening.log"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_rand.mjs",
+  "files": [
+   "rom-0230A-flow-rand-boot.log"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-clock-d",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-leave",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-cubes-pulse",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-pal-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "hddosd-110U-pal-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-clock-reflection",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-conveyor",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-leave",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230A-cubes-pulse",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230E-flow-pal-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_reflection.mjs",
+  "capture": "rom-0230E-pal-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-enter",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-leave",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-cubes-pulse",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-pal-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "hddosd-110U-pal-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-clock-refraction",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-clock-rod",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-a",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-conveyor",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-enter",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-leave",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230A-cubes-pulse",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230E-flow-pal-cubes-appear",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_refraction.mjs",
+  "capture": "rom-0230E-pal-cubes-down",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_rod_pieces.mjs",
+  "capture": "hddosd-110U-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_rod_pieces.mjs",
+  "capture": "hddosd-110U-pal-clock-b",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_rod_pieces.mjs",
+  "capture": "rom-0230A-clock-pieces",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_rod_pieces.mjs",
+  "capture": "rom-0230E-pal-clock-b",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_rod.mjs",
+  "capture": "hddosd-110U-clock-c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_rod.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_rod.mjs",
+  "capture": "rom-0230A-clock-rod",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_rod.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "hddosd-110U-clock-scale",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "hddosd-110U-pal-boot-approach",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "hddosd-110U-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "hddosd-110U-trans-boot-opening",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "hddosd-110U-trans-return",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "rom-0230A-clock-scale",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "rom-0230A-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_scale.mjs",
+  "capture": "rom-0230E-pal-boot-approach",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_sound_banks.mjs",
+  "files": [
+   "hddosd-110U-sound-enter-config.start.spuram.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_banks.mjs",
+  "files": [
+   "hddosd-110U-sound-hide.start.spuram.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_banks.mjs",
+  "files": [
+   "hddosd-110U-sound-show.start.spuram.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_banks.mjs",
+  "files": [
+   "hddosd-110U-sound-steady.start.spuram.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=3"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-boot-forced",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-config-entry",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-65",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-6a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-6c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-6c-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-6c-config-busy",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-6f",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-72",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-72-d58",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-74-ff98",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-75",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-ff98",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-mode-held",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_clock_senders.mjs",
+  "capture": "hddosd-110U-sound-clock-disc-mode-release",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_ee_queue.mjs",
+  "capture": "hddosd-110U-sound-ee-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_sound_ee_queue.mjs",
+  "capture": "hddosd-110U-sound-ee-queue",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_sound_ee_queue.mjs",
+  "capture": "rom-0230A-sound-ee-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_sound_ee_queue.mjs",
+  "capture": "rom-0230A-sound-ee-queue",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-config-circle",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-config-dedup",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-config-entry0",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=6"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-config-entry0-confirm",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-config-entry1",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=5"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-config-list",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-cross-browser",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-cross-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-cursor",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-cursor-ends",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-dedup",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-ramp-rising-write",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=1"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-square-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=4"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-version",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=5"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-version-edges",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=6"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-version-rising",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-square-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-cross-mode-write",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=0"
+  ]
+ },
+ {
+  "verifier": "verify_sound_effects.mjs",
+  "files": [
+   "hddosd-110U-sound-bad-effect.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_effects.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-b.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_effects.mjs",
+  "files": [
+   "hddosd-110U-sound-fx-steal.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_expand.mjs",
+  "capture": "hddosd-110U-sound-expand-image",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_sound_expand.mjs",
+  "capture": "rom-0230A-sound-expand-image",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_sound_init.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-a.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_ramp.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-a.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-pal-sound-boot.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-bad-effect.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-a.spu.jsonl",
+   "hddosd-110U-sound-boot-b.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-fx-steal.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-modes-1.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-modes-2.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-modes-3.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-modes-4.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-modes-5.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-modes-6.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-steady-long.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-voice-steal.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-enter-config.start.osdsnd.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-enter-config.start.osdsnd.bin"
+  ],
+  "env": {},
+  "args": [
+   "stress"
+  ]
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-hide.start.osdsnd.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-hide.start.osdsnd.bin"
+  ],
+  "env": {},
+  "args": [
+   "stress"
+  ]
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-show.start.osdsnd.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-show.start.osdsnd.bin"
+  ],
+  "env": {},
+  "args": [
+   "stress"
+  ]
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-steady.start.osdsnd.bin"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_sequencer_code.mjs",
+  "files": [
+   "hddosd-110U-sound-steady.start.osdsnd.bin"
+  ],
+  "env": {},
+  "args": [
+   "stress"
+  ]
+ },
+ {
+  "verifier": "verify_sound_sequencer.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-b.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_sequencer.mjs",
+  "files": [
+   "hddosd-110U-sound-steady-long.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-a.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-b.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-enter-config.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-hide.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-show.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-steady.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-adjust",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-close",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-de-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-de-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-de-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-es-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-fr-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-fr-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-fr-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-it-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-jatable-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry",
+   "--table=0x00348c30"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-nl-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pal-adjust",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pal-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pal-config",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pal-down",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pal-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pal-version",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-pt-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text_frame.mjs",
+  "capture": "hddosd-110U-text2-version",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "--carry"
+  ]
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-adjust",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-config-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text-version",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-adjust",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-close",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "hddosd-110U-text2-version",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "rom-0230A-text-adjust",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "rom-0230A-text-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "rom-0230A-text-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text.mjs",
+  "capture": "rom-0230A-text-menu",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-adjust",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-de-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-de-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-de-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-down",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-es-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-fr-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-fr-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-fr-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-it-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-jatable-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-nl-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pal-adjust",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pal-clock",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pal-config",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pal-down",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pal-menu",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pal-version",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-pt-config",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "hddosd-110U-text2-version",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230A-text2-adjust",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230A-text2-clock",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230A-text2-config",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230A-text2-down",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230A-text2-menu",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230A-text2-open",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230E-text2-pal-adjust",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230E-text2-pal-clock",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230E-text2-pal-config",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230E-text2-pal-down",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_text2.mjs",
+  "capture": "rom-0230E-text2-pal-menu",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_trail_fill.mjs",
+  "capture": "hddosd-110U-flow-pal-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_trail_fill.mjs",
+  "capture": "hddosd-110U-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_trail_fill.mjs",
+  "capture": "hddosd-110U-trans-boot-opening",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_trail_fill.mjs",
+  "capture": "hddosd-110U-trans-return",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_trail_fill.mjs",
+  "capture": "rom-0230A-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_trail_fill.mjs",
+  "capture": "rom-0230A-trans-return",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-flow-fr-lang",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-flow-fr-logos",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-flow-pal-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-flow-pal-close",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-trans-boot-opening",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-trans-close",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-trans-leave",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-trans-open",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "hddosd-110U-trans-return",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230A-trans-boot",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230A-trans-close",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230A-trans-leave",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230A-trans-open",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230A-trans-poke-mode2",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230A-trans-return",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_transitions.mjs",
+  "capture": "rom-0230E-flow-pal-close",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_version.mjs",
+  "capture": "hddosd-110U-version-nav",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_version.mjs",
+  "capture": "hddosd-110U-version-stim",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_version.mjs",
+  "capture": "hddosd-110U-version-stim2",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_version.mjs",
+  "capture": "hddosd-110U-version-stim3",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_version.mjs",
+  "capture": "hddosd-110U-whole3-version",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_view_matrix.mjs",
+  "capture": "hddosd-110U-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_view_matrix.mjs",
+  "capture": "hddosd-110U-stim-view",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_view_matrix.mjs",
+  "capture": "rom-0230A-stim-view",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_view_matrix.mjs",
+  "capture": "rom-0230E-pal-clock-a",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_ramps.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_ramps.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_ramps.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cold_ramps.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_time.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_time.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_time.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cold_time.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_camera.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_camera.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_camera.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cold_camera.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "measure_cold_config_items.mjs",
+  "files": [
+   "hddosd-110U-cold-items-session.writes.json"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_cold_font.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_font.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "measure_cold_menu_leaves.mjs",
+  "files": [
+   "hddosd-110U-cold-menu-session.writes.json"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_cold_rand_chain.mjs",
+  "files": [
+   "hddosd-110U-cold-rand-direct.rand.json",
+   "hddosd-110U-cold-rand-opening.rand.json",
+   "hddosd-110U-cold-rand-history.rand.json"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "measure_cold_records.mjs",
+  "files": [
+   "hddosd-110U-cold-records-session.writes.json"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_cold_state.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_state.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_state.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cold_config.mjs",
+  "files": [],
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_interpreter.mjs",
+  "capture": "hddosd-110U-cold-init-ntsc",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_cold_interpreter.mjs",
+  "capture": "hddosd-110U-cold-init-pal",
+  "env": {
+   "CLOCK_BUILD": "hdd",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_cold_interpreter.mjs",
+  "capture": "rom-0230A-cold-init-ntsc",
+  "env": {
+   "CLOCK_BUILD": "rom"
+  }
+ },
+ {
+  "verifier": "verify_cold_interpreter.mjs",
+  "capture": "rom-0230E-cold-init-pal",
+  "env": {
+   "CLOCK_BUILD": "rom",
+   "CLOCK_VIDEO": "pal"
+  }
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-intro",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-illegal",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-forced",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-ready-b",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-6a",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-6c",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=3"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-6e",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=3"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-6f",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-72",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-73",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-disc-74",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=2"
+  ]
+ },
+ {
+  "verifier": "verify_sound_opening_senders.mjs",
+  "capture": "hddosd-110U-sound-opening-go-wait",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=3"
+  ]
+ },
+ {
+  "verifier": "verify_clock_write.mjs",
+  "capture": "hddosd-110U-adjust-write",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_write.mjs",
+  "capture": "hddosd-110U-adjust-write-summer",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_clock_write.mjs",
+  "capture": "hddosd-110U-adjust-write-zone",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_sound_chain.mjs",
+  "capture": "hddosd-110U-sound-chain",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_sound_ee_queue.mjs",
+  "capture": "hddosd-110U-sound-chain",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  }
+ },
+ {
+  "verifier": "verify_sound_chain_timeline.mjs",
+  "files": [
+   "hddosd-110U-sound-chain-spu.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_chain_timeline.mjs",
+  "files": [
+   "hddosd-110U-sound-boot-a.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_ramp.mjs",
+  "files": [
+   "hddosd-110U-sound-chain-spu.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_scenario.mjs",
+  "files": [
+   "hddosd-110U-sound-chain-spu.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_trace.mjs",
+  "files": [
+   "hddosd-110U-sound-chain-spu.spu.jsonl"
+  ],
+  "env": {}
+ },
+ {
+  "verifier": "verify_sound_menu_senders.mjs",
+  "capture": "hddosd-110U-sound-menu-version-subpage-probes",
+  "env": {
+   "CLOCK_BUILD": "hdd"
+  },
+  "args": [
+   "sounds=4"
+  ]
+ }
+]

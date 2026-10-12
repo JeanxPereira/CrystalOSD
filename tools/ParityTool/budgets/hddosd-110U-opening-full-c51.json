@@ -1,0 +1,32 @@
+{
+ "differences": [
+  {
+   "delta": 6,
+   "scope": "draw-435",
+   "target": "fb1a40",
+   "x": 234,
+   "y": 93
+  },
+  {
+   "delta": 5,
+   "scope": "draw-435",
+   "target": "fb1a40",
+   "x": 234,
+   "y": 94
+  },
+  {
+   "delta": 8,
+   "scope": "draw-435",
+   "target": "fb1a40",
+   "x": 293,
+   "y": 106
+  },
+  {
+   "delta": 6,
+   "scope": "draw-435",
+   "target": "fb1a40",
+   "x": 294,
+   "y": 106
+  }
+ ]
+}

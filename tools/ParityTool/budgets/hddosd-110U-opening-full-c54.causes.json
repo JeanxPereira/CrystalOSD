@@ -1,0 +1,243 @@
+{
+ "rule": "bilinear tap one texel outside the draw texture rectangle (PCSX2 software texture cache reads zero there)",
+ "entries": [
+  {
+   "scope": "draw-642",
+   "target": "fb1a40",
+   "x": 234,
+   "y": 92,
+   "delta": 1,
+   "bilinear": true,
+   "rectangle": {
+    "u": [
+     240,
+     301
+    ],
+    "v": [
+     73,
+     103
+    ]
+   },
+   "events": [
+    {
+     "u": 239.955,
+     "v": 87.364,
+     "coverage": 16396,
+     "tapsU": [
+      239,
+      240
+     ],
+     "tapsV": [
+      87,
+      88
+     ],
+     "outsideBy": 1
+    },
+    {
+     "u": 239.961,
+     "v": 87.38,
+     "coverage": 15099,
+     "tapsU": [
+      239,
+      240
+     ],
+     "tapsV": [
+      87,
+      88
+     ],
+     "outsideBy": 1
+    }
+   ],
+   "explained": true
+  },
+  {
+   "scope": "draw-642",
+   "target": "fb1a40",
+   "x": 234,
+   "y": 93,
+   "delta": 4,
+   "bilinear": true,
+   "rectangle": {
+    "u": [
+     240,
+     301
+    ],
+    "v": [
+     73,
+     103
+    ]
+   },
+   "events": [
+    {
+     "u": 239.94,
+     "v": 87.316,
+     "coverage": 45138,
+     "tapsU": [
+      239,
+      240
+     ],
+     "tapsV": [
+      87,
+      88
+     ],
+     "outsideBy": 1
+    },
+    {
+     "u": 239.955,
+     "v": 87.364,
+     "coverage": 49138,
+     "tapsU": [
+      239,
+      240
+     ],
+     "tapsV": [
+      87,
+      88
+     ],
+     "outsideBy": 1
+    }
+   ],
+   "explained": true
+  },
+  {
+   "scope": "draw-642",
+   "target": "fb1a40",
+   "x": 293,
+   "y": 105,
+   "delta": 1,
+   "bilinear": true,
+   "rectangle": {
+    "u": [
+     240,
+     301
+    ],
+    "v": [
+     73,
+     103
+    ]
+   },
+   "events": [
+    {
+     "u": 299.133,
+     "v": 99.045,
+     "coverage": 37795,
+     "tapsU": [
+      299,
+      300
+     ],
+     "tapsV": [
+      99,
+      100
+     ],
+     "outsideBy": 0
+    },
+    {
+     "u": 299.13,
+     "v": 99.033,
+     "coverage": 36854,
+     "tapsU": [
+      299,
+      300
+     ],
+     "tapsV": [
+      99,
+      100
+     ],
+     "outsideBy": 0
+    },
+    {
+     "u": 278.563,
+     "v": 103.081,
+     "coverage": 25675,
+     "tapsU": [
+      278,
+      279
+     ],
+     "tapsV": [
+      103,
+      104
+     ],
+     "outsideBy": 1
+    },
+    {
+     "u": 277.985,
+     "v": 102.612,
+     "coverage": 34701,
+     "tapsU": [
+      277,
+      278
+     ],
+     "tapsV": [
+      102,
+      103
+     ],
+     "outsideBy": 0
+    }
+   ],
+   "explained": true
+  },
+  {
+   "scope": "draw-642",
+   "target": "fb1a40",
+   "x": 294,
+   "y": 105,
+   "delta": 1,
+   "bilinear": true,
+   "rectangle": {
+    "u": [
+     240,
+     301
+    ],
+    "v": [
+     73,
+     103
+    ]
+   },
+   "events": [
+    {
+     "u": 300.131,
+     "v": 99.225,
+     "coverage": 49410,
+     "tapsU": [
+      300,
+      301
+     ],
+     "tapsV": [
+      99,
+      100
+     ],
+     "outsideBy": 0
+    },
+    {
+     "u": 300.133,
+     "v": 99.231,
+     "coverage": 49975,
+     "tapsU": [
+      300,
+      301
+     ],
+     "tapsV": [
+      99,
+      100
+     ],
+     "outsideBy": 0
+    },
+    {
+     "u": 278.307,
+     "v": 103.081,
+     "coverage": 22485,
+     "tapsU": [
+      278,
+      279
+     ],
+     "tapsV": [
+      103,
+      104
+     ],
+     "outsideBy": 1
+    }
+   ],
+   "explained": true
+  }
+ ]
+}

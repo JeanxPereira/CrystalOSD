@@ -1,0 +1,13 @@
+0x6120 events 2 equal 2 differ 0
+0x60d0 events 2 equal 2 differ 0
+0x60c0 events 11 equal 11 differ 0
+tick events 145 equal 145 differ 0
+0x60a0 events 1 equal 1 differ 0
+0x8010 events 7 equal 7 differ 0
+0x8070 events 18 equal 18 differ 0
+0x6130 events 4 equal 4 differ 0
+0x6140 events 4 equal 4 differ 0
+0x6150 events 28 equal 28 differ 0
+0x6300 events 10 equal 10 differ 0
+0x6310 events 1 equal 1 differ 0
+0x6010 events 1 equal 1 differ 0

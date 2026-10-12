@@ -1,0 +1,55 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": { "major": 4, "minor": 2, "patch": 0 },
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang++.exe",
+                "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang.exe",
+                "CMAKE_RC_COMPILER": "C:/Program Files/LLVM/bin/llvm-rc.exe",
+                "CMAKE_LINKER_TYPE": "LLD",
+                "CMAKE_CONFIGURATION_TYPES": "Debug;Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CLOCK_DEPS_DIR": "${sourceDir}/build/_deps"
+            }
+        },
+        {
+            "name": "app",
+            "displayName": "App only (Clang, Ninja Multi-Config)",
+            "inherits": "base",
+            "cacheVariables": { "CLOCK_BUILD_TESTS": "OFF" }
+        },
+        {
+            "name": "tests",
+            "displayName": "Tests, ParityTool and parity gates (Clang, Ninja Multi-Config)",
+            "inherits": "base",
+            "cacheVariables": { "CLOCK_BUILD_TESTS": "ON" }
+        }
+    ],
+    "buildPresets": [
+        { "name": "app-debug", "configurePreset": "app", "configuration": "Debug" },
+        { "name": "app-release", "configurePreset": "app", "configuration": "Release" },
+        { "name": "tests-debug", "configurePreset": "tests", "configuration": "Debug" },
+        { "name": "tests-release", "configurePreset": "tests", "configuration": "Release" }
+    ],
+    "testPresets": [
+        {
+            "name": "tests-debug",
+            "configurePreset": "tests",
+            "configuration": "Debug",
+            "output": { "outputOnFailure": true },
+            "execution": { "jobs": 12 }
+        },
+        {
+            "name": "tests-release",
+            "configurePreset": "tests",
+            "configuration": "Release",
+            "output": { "outputOnFailure": true },
+            "execution": { "jobs": 12 }
+        }
+    ]
+}

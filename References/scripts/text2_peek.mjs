@@ -1,0 +1,10 @@
+import { readTraceFor } from '../lib/trace.mjs';
+process.env.CLOCK_BUILD = 'rom';
+const { PROBES } = await import('./verify_text2.mjs');
+const t = readTraceFor(process.argv[2], PROBES);
+const p = t.probes.find((q) => q.pc === 0x0022d728 && q.mem.every((m) => m.bytes));
+const word = (a) => { for (const m of p.mem) if (a >= m.address && a + 4 <= m.address + m.bytes.length) return m.bytes.readInt32LE(a - m.address); };
+const hx = (v) => (v >>> 0).toString(16);
+console.log('record', [0, 4, 8, 0xc, 0x10, 0x14, 0x18].map((o) => hx(word(0x28aff0 + o))));
+for (let i = 0; i < 6; i++) console.log(i, Array.from({ length: 12 }, (_, k) => hx(word(0x296b90 + i * 0x30 + k * 4))).join(' '));
+for (let i = 0; i < 5; i++) console.log('item', i, Array.from({ length: 14 }, (_, k) => hx(word(0x28ae30 + i * 0x38 + k * 4))).join(' '));

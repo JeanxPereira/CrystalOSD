@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "instances": 5,
+  "watson": "0.1",
+  "builds": [
+    {
+      "id": "rom-0230A",
+      "launch": {
+        "bios": "../CrystalOSD-Data/bios/megadump/ps2-0230a-20080220.bin"
+      },
+      "states": {
+        "menu": "../Watson/Runtime/states/rom-0230A-menu.p2s",
+        "config": "../Watson/Runtime/states/rom-0230A-config.p2s",
+        "clock": "../Watson/Runtime/states/rom-0230A-clock.p2s"
+      }
+    },
+    {
+      "id": "hddosd-1.10U",
+      "launch": {
+        "bios": "../CrystalOSD-Data/bios/megadump/ps2-0230a-20080220.bin",
+        "elf": "../hddosd-recomp-artifacts/hddosd.elf"
+      }
+    },
+    {
+      "id": "hddosd-1.10U-host",
+      "launch": {
+        "bios": "../CrystalOSD-Data/bios/megadump/ps2-0230a-20080220.bin",
+        "elf": "../CrystalOSD-Data/dumps/hddosd-host/hddosd.elf"
+      },
+      "states": {
+        "menu": "../Watson/Runtime/states/hddosd-1.10U-host-menu.p2s",
+        "config": "../Watson/Runtime/states/hddosd-1.10U-host-config.p2s",
+        "clock": "../Watson/Runtime/states/hddosd-1.10U-host-clock.p2s"
+      }
+    }
+  ]
+}

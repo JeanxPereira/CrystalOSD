@@ -1,0 +1,11 @@
+# class from to bytes: the bytes of IOP RAM that differ after the boot events between the model run from the capture snapshot and the run from the built images, exact both ways.
+# OSDSND import tables: loadcore's links to the IOP kernel libraries (the library chain pointers, flags and the jumps into the kernel).
+sdr-import-links 98560 98810 161
+# OSDSND words the real handlers write and the model does not (0x8a28, 0x91f0..0x9205, 0x921c and 0x92a0..0x92b8 of the module): the replayed boot events do not read them.
+sdr-handler-word 98b58 98b5c 4
+sdr-handler-state-a 99320 99338 13
+sdr-effect-table-pointer 9934c 99350 3
+sdr-handler-state-b 993d0 993f0 17
+# Modules of the IOP that the sound driver never reads.
+osdsnd-other-modules 9a670 9b130 1636
+iop-cdvd-tail eb000 ebc00 2127

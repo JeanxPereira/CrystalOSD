@@ -1,0 +1,50 @@
+name: CrystalOSD Build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    name: Build (Windows)
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Vulkan SDK
+        uses: jakoch/install-vulkan-sdk-action@v1
+        with:
+          cache: true
+
+      - name: Install LLVM 23
+        run: choco upgrade llvm --version=23.1.2 -y --allow-downgrade --no-progress
+
+      - name: Check the compiler
+        shell: pwsh
+        run: |
+          $version = & 'C:/Program Files/LLVM/bin/clang++.exe' --version | Select-Object -First 1
+          $version
+          if ($version -notmatch 'clang version 23\.') { throw "expected clang 23, got: $version" }
+
+      - name: Developer shell
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Cache dependency sources
+        uses: actions/cache@v4
+        with:
+          path: build/_deps
+          key: deps-${{ hashFiles('CMakeLists.txt') }}
+
+      - name: Configure
+        run: cmake --preset app
+
+      - name: Build
+        run: cmake --build --preset app-release

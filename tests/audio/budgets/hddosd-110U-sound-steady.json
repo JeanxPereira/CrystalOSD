@@ -1,0 +1,151 @@
+{
+ "capture": "hddosd-110U-sound-steady",
+ "stages": {
+  "c0.dry.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.dry.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.mix.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.mix.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.out.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.out.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.post.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.post.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.pre.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.pre.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.wet.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c0.wet.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.dry.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.dry.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.mix.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.mix.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.post.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.post.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.pre.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.pre.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.wet.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "c1.wet.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "out.l": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  },
+  "out.r": {
+   "differ": 0,
+   "maxAbs": 0,
+   "first": -1,
+   "last": -1
+  }
+ },
+ "wavDiffer": 0,
+ "ramDiffer": 0
+}

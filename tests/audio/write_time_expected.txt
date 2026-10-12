@@ -1,0 +1,39 @@
+boot-a writes 2508 real-code stream equal from Watson's
+  rpc6010 exact 558
+  rpc60c0 exact 120
+  rpc60d0 exact 900
+  rpc6120 exact 4
+  rpc6150 exact 4
+  rpc8010 exact 1
+  rpc8070 exact 5
+  tick exact 916
+boot-b writes 993 real-code stream equal from Watson's
+  rpc6300 exact 102
+  tick exact 891
+bad-effect writes 51 real-code stream equal from Watson's
+  rpc6300 exact 34 interrupt-lump 17
+fx-steal writes 522 real-code stream equal from Watson's
+  rpc6300 exact 425 interrupt-lump 34
+  tick exact 63
+voice-steal writes 919 real-code stream equal from Watson's
+  rpc6300 exact 17
+  tick exact 887 exact-vblank 7 interrupt-lump 8
+modes-1 writes 27 real-code stream equal from Watson's
+  rpc6150 exact 10
+  rpc6300 exact 17
+modes-2 writes 110 real-code stream equal from Watson's
+  rpc6300 exact 51
+  tick exact 59
+modes-3 writes 51 real-code stream equal from Watson's
+  rpc6300 exact 51
+modes-4 writes 88 real-code stream equal from Watson's
+  rpc6300 exact 51
+  tick exact 37
+modes-5 writes 69 real-code stream equal from Watson's
+  rpc6150 exact 18
+  rpc6300 exact 34 interrupt-lump 17
+modes-6 writes 53 real-code stream equal from Watson's
+  rpc6150 exact 2
+  rpc6300 exact 51
+steady-long writes 954 real-code stream equal from Watson's
+  tick exact 952 exact-vblank 2

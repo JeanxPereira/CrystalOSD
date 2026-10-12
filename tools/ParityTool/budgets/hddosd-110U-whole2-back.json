@@ -1,0 +1,67 @@
+{
+ "differences": [
+  {
+   "delta": 21,
+   "scope": "draw-084",
+   "target": "fb08c0",
+   "x": 349,
+   "y": 90
+  },
+  {
+   "delta": 25,
+   "scope": "draw-084",
+   "target": "fb08c0",
+   "x": 349,
+   "y": 91
+  },
+  {
+   "delta": 11,
+   "scope": "draw-084",
+   "target": "fb08c0",
+   "x": 355,
+   "y": 97
+  },
+  {
+   "delta": 43,
+   "scope": "draw-085",
+   "target": "fb1a40",
+   "x": 349,
+   "y": 90
+  },
+  {
+   "delta": 52,
+   "scope": "draw-085",
+   "target": "fb1a40",
+   "x": 349,
+   "y": 91
+  },
+  {
+   "delta": 13,
+   "scope": "draw-085",
+   "target": "fb1a40",
+   "x": 355,
+   "y": 97
+  },
+  {
+   "delta": 43,
+   "scope": "chained",
+   "target": "fb1a40",
+   "x": 349,
+   "y": 90
+  },
+  {
+   "delta": 52,
+   "scope": "chained",
+   "target": "fb1a40",
+   "x": 349,
+   "y": 91
+  },
+  {
+   "delta": 13,
+   "scope": "chained",
+   "target": "fb1a40",
+   "x": 355,
+   "y": 97
+  }
+ ]
+}

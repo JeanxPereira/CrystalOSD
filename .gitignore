@@ -1,0 +1,48 @@
+# Build artifacts
+build/
+bin/
+
+# IDE / Editor / Agent
+.vscode/
+.idea/
+.cache/
+.claude/*
+!.claude/settings.json
+!.claude/agents/
+!.claude/skills/
+!.claude/workflows/
+!.claude/AGENT_KIT.md
+*.swp
+*.swo
+*~
+.DS_Store
+imgui.ini
+compile_commands.json
+__pycache__/
+*.pyc
+
+# Logs and run output
+*.log
+.superpowers/
+out/
+cache/
+
+# Scratch work, and the local MCP configuration
+/lab/
+/.mcp.json
+
+# Page images of the patent, derived from the PDF
+/docs/clock_patent/pages-to-jpg/
+
+# Data read from the console (ELF tables, ROM font, meshes, captured start states): kept local, out of git
+/References/model/opening-tables.json
+/References/model/opening-towers.json
+/References/model/font-osd.json
+/References/model/font-rom.json
+/References/model/opening-vu1-microprogram.json
+/References/model/cube-mesh.json
+/facts/data/rod-mesh.json
+/tests/data/start/start.json
+/tests/data/start/start-boot.json
+/tests/data/start/start-menu.json
+/tests/data/start/start-clock.json
